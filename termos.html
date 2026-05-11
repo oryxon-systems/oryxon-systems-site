@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos e Condições | Oryxon Systems</title>
+  <meta name="description" content="Termos e Condições de Uso da Oryxon Systems. Conheça as regras que regem a prestação de serviços de gestão de TI, segurança e automação." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:820px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.14),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;text-decoration:none}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .back-link{color:var(--muted);font-size:.88rem;font-weight:700;display:flex;align-items:center;gap:6px;transition:.2s}
+    .back-link:hover{color:#fff;text-decoration:none}
+    .page-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;padding:56px 0 80px}
+    .page-header{margin-bottom:48px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.12)}
+    .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:12px}
+    h1{font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.1;letter-spacing:-.05em;margin-bottom:14px}
+    .last-update{color:var(--muted2);font-size:.85rem;margin-top:8px}
+    .toc{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:18px;padding:22px 26px;margin-bottom:42px}
+    .toc h2{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted2);margin-bottom:12px;font-weight:800}
+    .toc ol{padding-left:18px;display:grid;gap:6px}
+    .toc li a{color:var(--muted);font-size:.9rem;font-weight:600;transition:.2s}
+    .toc li a:hover{color:#fff;text-decoration:none}
+    .section{margin-bottom:44px;scroll-margin-top:90px}
+    .section h2{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;margin-bottom:14px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .section h3{font-size:1rem;font-weight:700;margin:18px 0 8px;color:#c8d7e9}
+    .section p{color:var(--muted);margin-bottom:12px;font-size:.97rem}
+    .section ul,.section ol{color:var(--muted);padding-left:20px;display:grid;gap:6px;margin-bottom:12px;font-size:.97rem}
+    .section li{padding-left:4px}
+    .highlight{border:1px solid rgba(103,232,255,.20);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:16px 0}
+    .highlight p{margin:0;color:#c8e8ff}
+    .warning{border:1px solid rgba(255,160,50,.22);background:rgba(255,120,0,.06);border-radius:14px;padding:16px 20px;margin:16px 0}
+    .warning p{margin:0;color:#ffd4a0}
+    .contact-box{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:18px;padding:22px 26px;margin-top:16px}
+    .contact-box p{margin:0 0 6px;color:var(--muted);font-size:.95rem}
+    .contact-box a{color:var(--blue2);font-weight:700}
+    .chapter-divider{border:none;border-top:2px solid rgba(103,232,255,.15);margin:52px 0 44px;position:relative}
+    .chapter-divider::after{content:attr(data-label);position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#061226;padding:0 16px;color:var(--blue2);font-size:.75rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:24px 0;text-align:center;color:var(--muted2);font-size:.84rem}
+    .page-footer a{color:var(--muted2)}
+    .page-footer a:hover{color:#fff}
+    @media(max-width:600px){.page-wrap{padding:36px 0 60px}}
+  </style>
+</head>
+<body>
+
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" class="brand">
+        <div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div>
+      </a>
+      <a href="/" class="back-link">← Voltar ao site</a>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <div class="page-header">
+      <div class="kicker">Legal</div>
+      <h1>Termos e Condições de Uso</h1>
+      <p style="color:var(--muted);font-size:1rem;margin-top:10px">Ao contratar ou utilizar os serviços da <strong style="color:#dff9ff">Oryxon Systems</strong>, você declara que leu, entendeu e concorda com os termos abaixo. Caso não concorde, não utilize nossos serviços.</p>
+      <p class="last-update">Última atualização: maio de 2026</p>
+    </div>
+
+    <div class="highlight" style="margin-bottom:36px">
+      <p>Os serviços são prestados pela <strong>Oryxon Systems</strong> — CNPJ 66.498.962/0001-20, com atuação no Alto Tietê e São Paulo, SP — doravante denominada <strong>CONTRATADA</strong>. A empresa ou pessoa física que contrata os serviços é denominada <strong>CONTRATANTE</strong>.</p>
+    </div>
+
+    <nav class="toc">
+      <h2>Índice</h2>
+      <ol>
+        <li><a href="#objeto">Objeto do contrato</a></li>
+        <li><a href="#vinculo">Vínculo empregatício</a></li>
+        <li><a href="#suporte">Suporte técnico</a></li>
+        <li><a href="#garantias">Garantias e disponibilidade</a></li>
+        <li><a href="#confidencialidade">Confidencialidade</a></li>
+        <li><a href="#acessos">Logins e senhas</a></li>
+        <li><a href="#prazo">Prazo e rescisão</a></li>
+        <li><a href="#inadimplencia">Suspensão por inadimplência</a></li>
+        <li><a href="#reajustes">Reajustes</a></li>
+        <li><a href="#restauracao">Restauração de dados</a></li>
+        <li><a href="#pagamento">Cobrança e pagamento</a></li>
+        <li><a href="#ativacao">Ativação dos serviços</a></li>
+        <li><a href="#lgpd">Tratamento de dados — LGPD</a></li>
+        <li><a href="#foro">Foro</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 -->
+    <div class="section" id="objeto">
+      <h2>1. Objeto do contrato</h2>
+      <p>A CONTRATADA se compromete a prestar à CONTRATANTE os serviços de gestão de TI, monitoramento, segurança da informação, backup, automação de infraestrutura e suporte técnico, conforme escopo definido na proposta comercial aceita pelas partes.</p>
+      <p>Os serviços podem incluir, mas não se limitam a:</p>
+      <ul>
+        <li>Monitoramento proativo de endpoints, servidores e redes (24x7)</li>
+        <li>Gestão de patches, atualizações e hardening de segurança</li>
+        <li>Backup e estratégia de continuidade operacional</li>
+        <li>Automação de rotinas e padronização de infraestrutura</li>
+        <li>Suporte técnico remoto e presencial</li>
+        <li>Consultoria e planejamento de TI</li>
+      </ul>
+      <p>O escopo exato, valores e SLAs são definidos na proposta comercial ou contrato de serviço firmado entre as partes, que prevalece sobre este documento em caso de conflito.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section" id="vinculo">
+      <h2>2. Vínculo empregatício</h2>
+      <p>A prestação de serviços pela CONTRATADA não gera qualquer vínculo empregatício, societário ou de exclusividade entre as partes. Os profissionais alocados pela CONTRATADA são seus próprios colaboradores ou subcontratados, e não empregados da CONTRATANTE.</p>
+      <p>A CONTRATADA possui autonomia técnica e organizacional para definir como os serviços serão executados, desde que respeitados os objetivos e prazos acordados.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="section" id="suporte">
+      <h2>3. Suporte técnico</h2>
+      <p>O suporte técnico é prestado conforme os canais, horários e SLAs definidos na proposta comercial. Os canais oficiais de atendimento são:</p>
+      <ul>
+        <li>WhatsApp: <a href="https://wa.me/5511934932992">(11) 93493-2992</a></li>
+        <li>E-mail: <a href="mailto:contato@oryxonsystems.com.br">contato@oryxonsystems.com.br</a></li>
+      </ul>
+      <h3>Responsabilidades do suporte</h3>
+      <ul>
+        <li>Atendimento a incidentes e problemas relacionados ao escopo contratado</li>
+        <li>Orientação e treinamento básico de usuários finais</li>
+        <li>Registro e acompanhamento de chamados até resolução</li>
+      </ul>
+      <h3>Fora do escopo do suporte</h3>
+      <ul>
+        <li>Equipamentos ou sistemas não cobertos pelo contrato</li>
+        <li>Danos causados por uso indevido, vírus introduzidos pela CONTRATANTE ou desastres físicos</li>
+        <li>Desenvolvimento de software ou customizações que não constem no escopo</li>
+        <li>Suporte a equipamentos pessoais de colaboradores</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="section" id="garantias">
+      <h2>4. Garantias e disponibilidade</h2>
+      <p>A CONTRATADA empregará seus melhores esforços técnicos para manter a disponibilidade dos ambientes gerenciados, com meta de <strong style="color:#dff9ff">99,9% de uptime</strong> para os sistemas sob sua gestão direta.</p>
+      <div class="warning">
+        <p>⚠️ A meta de disponibilidade não se aplica a interrupções causadas por: fornecedores de internet e telecomunicações, quedas de energia, falhas de hardware não cobertas pelo contrato, ataques de força maior, ou ações da própria CONTRATANTE.</p>
+      </div>
+      <p>A CONTRATADA não garante a inexistência absoluta de falhas, incidentes de segurança ou perda de dados decorrentes de fatores externos ao seu controle. Em caso de incidente, a CONTRATADA se compromete a agir com urgência para minimizar impactos e comunicar a CONTRATANTE dentro dos prazos do SLA.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="section" id="confidencialidade">
+      <h2>5. Confidencialidade</h2>
+      <p>Ambas as partes se comprometem a manter sigilo sobre todas as informações confidenciais obtidas durante a vigência do contrato, incluindo dados de clientes, processos internos, credenciais de acesso, arquitetura de sistemas e informações estratégicas.</p>
+      <p>Esta obrigação de confidencialidade:</p>
+      <ul>
+        <li>Permanece em vigor por <strong style="color:#dff9ff">5 (cinco) anos</strong> após o término do contrato</li>
+        <li>Se aplica igualmente a colaboradores, subcontratados e parceiros de ambas as partes</li>
+        <li>Não se aplica a informações que já sejam de domínio público ou cuja divulgação seja exigida por lei</li>
+      </ul>
+      <p>A CONTRATADA não divulgará dados, credenciais ou informações da CONTRATANTE a terceiros sem autorização expressa, salvo quando exigido por lei ou por determinação judicial.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section" id="acessos">
+      <h2>6. Logins e senhas</h2>
+      <p>Para a prestação dos serviços, a CONTRATANTE poderá fornecer credenciais de acesso a sistemas, servidores, redes e ferramentas. A CONTRATADA se compromete a:</p>
+      <ul>
+        <li>Utilizar as credenciais exclusivamente para as finalidades do contrato</li>
+        <li>Armazenar credenciais com segurança, utilizando cofre de senhas criptografado</li>
+        <li>Não compartilhar acessos com terceiros não autorizados</li>
+        <li>Comunicar imediatamente qualquer suspeita de comprometimento de credenciais</li>
+        <li>Devolver ou revogar acessos ao término do contrato</li>
+      </ul>
+      <p>Recomendamos fortemente que a CONTRATANTE altere todas as senhas compartilhadas com a CONTRATADA após o encerramento do contrato.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section" id="prazo">
+      <h2>7. Prazo e rescisão</h2>
+      <p>O contrato de serviços tem prazo mínimo de <strong style="color:#dff9ff">12 (doze) meses</strong>, salvo disposição diferente na proposta comercial, com renovação automática por períodos iguais.</p>
+      <h3>Rescisão pela CONTRATANTE</h3>
+      <ul>
+        <li>Com aviso prévio de <strong style="color:#dff9ff">30 dias</strong> por escrito, ao final do período mínimo contratado</li>
+        <li>Rescisão antecipada está sujeita a multa correspondente às mensalidades restantes do período mínimo, limitada a 3 (três) mensalidades</li>
+      </ul>
+      <h3>Rescisão pela CONTRATADA</h3>
+      <ul>
+        <li>Com aviso prévio de 30 dias, a qualquer momento</li>
+        <li>Imediatamente, em caso de inadimplência superior a 30 dias ou uso indevido dos serviços</li>
+      </ul>
+      <h3>Após a rescisão</h3>
+      <ul>
+        <li>A CONTRATADA realizará a devolução de credenciais e dados dentro de 15 dias úteis</li>
+        <li>Não há obrigação de manutenção do ambiente após o término do contrato</li>
+      </ul>
+    </div>
+
+    <!-- 8 -->
+    <div class="section" id="inadimplencia">
+      <h2>8. Suspensão por inadimplência</h2>
+      <p>Em caso de inadimplência, a CONTRATADA seguirá o seguinte fluxo:</p>
+      <ul>
+        <li><strong style="color:#dff9ff">Até 15 dias de atraso:</strong> notificação por WhatsApp e e-mail</li>
+        <li><strong style="color:#dff9ff">Entre 15 e 30 dias:</strong> suspensão parcial de serviços não críticos</li>
+        <li><strong style="color:#dff9ff">Acima de 30 dias:</strong> suspensão total dos serviços e início de processo de rescisão contratual</li>
+      </ul>
+      <p>A reativação dos serviços após suspensão está sujeita ao pagamento de todos os valores em aberto acrescidos de multa de 2% e juros de 1% ao mês, além de taxa de reativação quando aplicável.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="section" id="reajustes">
+      <h2>9. Reajustes</h2>
+      <p>Os valores dos serviços serão reajustados anualmente com base no <strong style="color:#dff9ff">IGPM</strong> (Índice Geral de Preços do Mercado) ou outro índice que o substitua, aplicado na data de aniversário do contrato.</p>
+      <p>Reajustes extraordinários podem ser aplicados em casos de:</p>
+      <ul>
+        <li>Aumento substancial no custo de ferramentas e licenças de terceiros</li>
+        <li>Expansão do escopo solicitada pela CONTRATANTE</li>
+        <li>Mudanças regulatórias ou tributárias que impactem a prestação do serviço</li>
+      </ul>
+      <p>Qualquer reajuste extraordinário será comunicado com antecedência mínima de 30 dias, e a CONTRATANTE terá o direito de rescisão sem multa caso não concorde.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="section" id="restauracao">
+      <h2>10. Restauração de dados</h2>
+      <p>A CONTRATADA oferece serviços de backup conforme o escopo contratado. Em caso de necessidade de restauração:</p>
+      <ul>
+        <li>Restaurações inclusas no contrato serão realizadas dentro do SLA acordado</li>
+        <li>Restaurações fora do escopo ou decorrentes de ações da CONTRATANTE poderão ser cobradas à parte</li>
+        <li>A CONTRATADA não se responsabiliza por perdas de dados anteriores à contratação do serviço de backup</li>
+        <li>A CONTRATADA recomenda que a CONTRATANTE valide periodicamente a integridade dos backups</li>
+      </ul>
+      <div class="warning">
+        <p>⚠️ Nenhum sistema de backup elimina 100% do risco de perda de dados. A CONTRATADA empregará as melhores práticas disponíveis, mas não garante a recuperação integral em todos os cenários de desastre.</p>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="section" id="pagamento">
+      <h2>11. Cobrança e pagamento</h2>
+      <p>O faturamento ocorre mensalmente, com vencimento definido na proposta comercial. São aceitas as seguintes formas de pagamento:</p>
+      <ul>
+        <li>PIX</li>
+        <li>Transferência bancária (TED/DOC)</li>
+        <li>Boleto bancário</li>
+      </ul>
+      <p>O não pagamento até a data de vencimento acarreta multa de 2% sobre o valor em aberto e juros de mora de 1% ao mês, calculados pro rata die. Faturas em aberto podem ser encaminhadas para cobrança extrajudicial ou judicial após 60 dias de inadimplência.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="section" id="ativacao">
+      <h2>12. Ativação dos serviços</h2>
+      <p>Após a assinatura do contrato ou aceite da proposta, a ativação dos serviços ocorrerá em até <strong style="color:#dff9ff">5 dias úteis</strong>, sujeito a:</p>
+      <ul>
+        <li>Recebimento do primeiro pagamento ou confirmação de crédito</li>
+        <li>Fornecimento das credenciais e acessos necessários pela CONTRATANTE</li>
+        <li>Disponibilidade de acesso remoto ou presencial ao ambiente</li>
+      </ul>
+      <p>O prazo de ativação pode ser estendido em caso de ambientes complexos, múltiplas unidades ou necessidade de migração de dados, com comunicação prévia à CONTRATANTE.</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="section" id="lgpd">
+      <h2>13. Tratamento de dados pessoais — LGPD</h2>
+      <p>Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), a CONTRATADA atuará como <strong style="color:#dff9ff">operadora</strong> dos dados pessoais quando processar dados em nome da CONTRATANTE, e como <strong style="color:#dff9ff">controladora</strong> dos dados dos contatos e usuários do próprio site e serviços administrativos.</p>
+      <h3>Compromissos da CONTRATADA como operadora</h3>
+      <ul>
+        <li>Tratar os dados pessoais somente conforme as instruções documentadas da CONTRATANTE</li>
+        <li>Não subcontratar o tratamento de dados sem autorização prévia</li>
+        <li>Implementar medidas de segurança técnicas e organizacionais adequadas</li>
+        <li>Notificar a CONTRATANTE em até 48 horas sobre qualquer incidente de segurança que envolva dados pessoais</li>
+        <li>Excluir ou devolver todos os dados pessoais ao término do contrato</li>
+      </ul>
+      <h3>Responsabilidades da CONTRATANTE</h3>
+      <ul>
+        <li>Garantir que possui base legal para o tratamento dos dados que compartilha com a CONTRATADA</li>
+        <li>Comunicar alterações nas finalidades de tratamento que possam impactar os serviços</li>
+        <li>Responder pelos dados pessoais de seus clientes e colaboradores</li>
+      </ul>
+      <p>Para mais detalhes sobre o tratamento de dados, consulte nossa <a href="/privacidade.html">Política de Privacidade</a>.</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="section" id="foro">
+      <h2>14. Foro</h2>
+      <p>As partes elegem o foro da <strong style="color:#dff9ff">Comarca de Suzano, São Paulo</strong>, para dirimir quaisquer controvérsias decorrentes deste contrato, com renúncia expressa a qualquer outro, por mais privilegiado que seja.</p>
+      <p>As partes se comprometem a tentar solucionar eventuais disputas de forma amigável antes de recorrer ao judiciário, com prazo de 30 dias para negociação direta.</p>
+      <div class="highlight" style="margin-top:20px">
+        <p>Ao contratar os serviços da Oryxon Systems, você confirma que leu, compreendeu e concordou integralmente com estes Termos e Condições.</p>
+      </div>
+    </div>
+
+    <hr class="chapter-divider" data-label="Dúvidas?">
+
+    <div class="section">
+      <h2>Fale conosco</h2>
+      <p>Para dúvidas sobre estes termos, entre em contato:</p>
+      <div class="contact-box">
+        <p><strong style="color:#dff9ff">Oryxon Systems</strong></p>
+        <p><strong style="color:#dff9ff">CNPJ:</strong> 66.498.962/0001-20</p>
+        <p><strong style="color:#dff9ff">Responsável:</strong> Uedson Azevedo — CEO & Head de Infraestrutura de TI</p>
+        <p><strong style="color:#dff9ff">E-mail:</strong> <a href="mailto:contato@oryxonsystems.com.br">contato@oryxonsystems.com.br</a></p>
+        <p><strong style="color:#dff9ff">WhatsApp:</strong> <a href="https://wa.me/5511934932992">(11) 93493-2992</a></p>
+        <p style="margin-top:10px"><a href="/privacidade.html">→ Ver Política de Privacidade</a></p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="page-footer">
+    <div style="width:min(820px,calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <span>© 2026 Oryxon Systems. CNPJ: 66.498.962/0001-20</span>
+      <a href="/">← Voltar ao site principal</a>
+    </div>
+  </footer>
+
+</body>
+</html>
