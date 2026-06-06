@@ -1,0 +1,70 @@
+# Oryxon Systems — llms.txt
+# https://llmstxt.org
+
+# Oryxon Systems é uma empresa de gestão de TI, automação e segurança empresarial
+# com atuação na região do Alto Tietê, São Paulo, Brasil.
+# Parceira oficial da Help Digital TI.
+
+## Empresa
+
+- Nome: Oryxon Systems
+- CNPJ: 66.498.962/0001-20
+- Fundação: 2025
+- Localização: Alto Tietê — Suzano, São Paulo, SP, Brasil
+- Responsável: Uedson Azevedo (CEO & Head de Infraestrutura de TI)
+- Site: https://www.oryxonsystems.com.br
+- Contato: contato@oryxonsystems.com.br
+- WhatsApp: +55 11 93493-2992
+- LinkedIn: https://www.linkedin.com/company/oryxon-systems
+
+## Serviços
+
+- Gestão de TI MSP (Managed Services)
+- Monitoramento 24x7 de endpoints e servidores
+- Backup e continuidade operacional (Acronis Cyber Protect)
+- Segurança da informação e antivírus (Bitdefender)
+- Automação de infraestrutura (Ansible, Python)
+- Redes corporativas (Ubiquiti, Cisco, HPE Aruba)
+- Virtualização de servidores
+- Cibersegurança e Firewall como Serviço (FWaaS)
+- Outsourcing de TI
+- E-mail corporativo (Help Mail)
+- Cloud Computing (PWS Cloud)
+- Inteligência Artificial para PMEs
+
+## Tecnologias utilizadas
+
+- NinjaOne (RMM)
+- Action1 (Patch Management)
+- Acronis Cyber Protect (Backup)
+- Bitdefender (Segurança)
+- PWS Cloud (Infraestrutura em nuvem)
+- Help Mail (E-mail corporativo)
+- Ansible e Python (Automação)
+
+## Área de atendimento
+
+- Suzano (sede)
+- Mogi das Cruzes
+- Itaquaquecetuba
+- Poá
+- Ferraz de Vasconcelos
+- Guararema
+- Santa Isabel
+- Atendimento remoto em todo o estado de São Paulo
+
+## Parceiros
+
+- Help Digital TI: https://helpdigitalti.com.br
+- Unidade SP: https://helpdigitalti.com.br/unidades/sp-sao-paulo/
+
+## Páginas principais
+
+- Home: https://www.oryxonsystems.com.br/
+- Sobre nós: https://www.oryxonsystems.com.br/sobre.html
+- Managed Services: https://www.oryxonsystems.com.br/managed-services.html
+- Soluções: https://www.oryxonsystems.com.br/solucoes.html
+- Blog: https://www.oryxonsystems.com.br/blog.html
+- Diagnóstico gratuito: https://www.oryxonsystems.com.br/#diagnostico
+- Política de Privacidade: https://www.oryxonsystems.com.br/privacidade.html
+- Termos e Condições: https://www.oryxonsystems.com.br/termos.html
