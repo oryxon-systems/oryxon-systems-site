@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cibersegurança para Empresas | Oryxon Systems — Alto Tietê</title>
+  <meta name="description" content="Proteção completa contra ameaças digitais para PMEs do Alto Tietê. FWaaS, hardening, Bitdefender, vulnerability assessment e conscientização em segurança."/>
+  <meta name="keywords" content="cibersegurança empresarial, firewall como serviço, FWaaS, hardening, vulnerability assessment, Bitdefender, segurança da informação Suzano, cibersegurança Alto Tietê, pentest, proteção ransomware"/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/ciberseguranca.html"/>
+  <meta property="og:title" content="Cibersegurança para Empresas | Oryxon Systems"/>
+  <meta property="og:description" content="Proteção completa contra ameaças digitais para PMEs do Alto Tietê. FWaaS, hardening, Bitdefender e vulnerability assessment."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/ciberseguranca.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--red:#ff4d4d;--orange:#ff6b35;--shadow:0 30px 100px rgba(0,104,255,.18);--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 75% 8%,rgba(255,50,50,.10),transparent 22rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.16),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;text-decoration:none}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;white-space:nowrap;text-decoration:none}
+    .btn-nav:hover{opacity:.9;text-decoration:none}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:12px}
+    .kicker-red{color:#ff8888}
+    h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:.94;letter-spacing:-.07em;margin-bottom:20px}
+    h2{font-size:clamp(1.7rem,3.5vw,2.8rem);line-height:1.04;letter-spacing:-.055em;margin-bottom:16px}
+    h3{font-size:1.15rem;letter-spacing:-.03em;margin-bottom:8px}
+    .grad{background:linear-gradient(135deg,#fff 12%,#9df7ff 40%,#00b7ff 62%,#1478ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .grad-red{background:linear-gradient(135deg,#fff 12%,#ffaaaa 40%,#ff4d4d 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .muted{color:var(--muted)}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .72s ease,transform .72s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    section{padding:80px 0}
+    .btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 28px;border-radius:999px;border:1px solid transparent;font-family:inherit;font-weight:850;letter-spacing:-.02em;cursor:pointer;transition:.2s ease;text-decoration:none;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px);text-decoration:none}
+    .btn-primary{color:#001224;background:linear-gradient(135deg,#67e8ff 0%,#00b7ff 35%,#1478ff 100%);box-shadow:0 22px 70px rgba(0,183,255,.28)}
+    .btn-ghost{color:#fff;background:rgba(255,255,255,.045);border-color:rgba(103,232,255,.28)}
+    .btn-row{display:flex;gap:14px;flex-wrap:wrap}
+
+    /* HERO */
+    .hero{padding:72px 0 64px;border-bottom:1px solid rgba(255,80,80,.12)}
+    .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .hero p{color:var(--muted);font-size:1.08rem;max-width:560px;line-height:1.7;margin-bottom:28px}
+    .threat-panel{border:1px solid rgba(255,80,80,.2);background:radial-gradient(circle at 50% 0%,rgba(255,50,50,.08),transparent 14rem),rgba(8,21,43,.72);border-radius:28px;padding:24px}
+    .threat-panel h3{font-size:.88rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#ff8888;margin-bottom:16px}
+    .threat-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,80,80,.08);font-size:.9rem;color:var(--muted)}
+    .threat-item:last-child{border-bottom:0}
+    .threat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+    .dot-red{background:#ff4d4d;box-shadow:0 0 10px rgba(255,77,77,.6)}
+    .dot-orange{background:#ff8c00;box-shadow:0 0 10px rgba(255,140,0,.6)}
+    .dot-yellow{background:#ffd700;box-shadow:0 0 10px rgba(255,215,0,.5)}
+
+    /* SERVIÇOS */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .svc-card{border-radius:28px;padding:28px;transition:.24s;position:relative;overflow:hidden}
+    .svc-card:hover{transform:translateY(-5px)}
+    .svc-default{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028))}
+    .svc-featured{border:1px solid rgba(255,80,80,.3);background:linear-gradient(180deg,rgba(255,50,50,.08),rgba(255,50,50,.02))}
+    .svc-partner{border:1px solid rgba(255,180,50,.22);background:linear-gradient(180deg,rgba(255,140,0,.07),rgba(255,140,0,.02))}
+    .svc-icon{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.07)}
+    .svc-icon-red{border-color:rgba(255,80,80,.3);background:rgba(255,50,50,.08)}
+    .svc-icon-orange{border-color:rgba(255,180,50,.3);background:rgba(255,140,0,.08)}
+    .svc-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;font-size:.7rem;font-weight:900;letter-spacing:.06em;margin-bottom:14px;width:fit-content}
+    .badge-red{background:rgba(255,80,80,.12);border:1px solid rgba(255,80,80,.3);color:#ff9999}
+    .badge-blue{background:rgba(0,183,255,.12);border:1px solid rgba(103,232,255,.3);color:#67e8ff}
+    .badge-orange{background:rgba(255,140,0,.12);border:1px solid rgba(255,180,50,.3);color:#ffcc77}
+    .badge-green{background:rgba(55,245,161,.10);border:1px solid rgba(55,245,161,.28);color:#37f5a1}
+    .svc-card h3{font-size:1.12rem;margin-bottom:10px}
+    .svc-card p{color:var(--muted);font-size:.92rem;line-height:1.65}
+    .svc-features{display:grid;gap:7px;margin-top:16px}
+    .svc-feature{display:flex;align-items:center;gap:8px;font-size:.86rem;color:#c8d7e9;font-weight:600}
+    .svc-feature .dot{width:5px;height:5px;border-radius:50%;background:var(--success);flex-shrink:0}
+    .svc-link{margin-top:18px;display:inline-flex;align-items:center;gap:6px;font-size:.84rem;font-weight:800;color:var(--blue2);transition:.2s}
+    .svc-link:hover{gap:10px;text-decoration:none}
+
+    /* AMEAÇAS */
+    .threats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .threat-card{border:1px solid rgba(255,80,80,.16);background:rgba(255,30,30,.04);border-radius:22px;padding:22px;text-align:center;transition:.2s}
+    .threat-card:hover{border-color:rgba(255,80,80,.35);transform:translateY(-3px)}
+    .threat-card .icon{font-size:2rem;margin-bottom:12px}
+    .threat-card h4{font-size:.94rem;font-weight:800;margin-bottom:6px;color:#dff9ff}
+    .threat-card p{color:var(--muted);font-size:.82rem;line-height:1.55}
+
+    /* PROCESSO */
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+    .process-step{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:22px;padding:22px;position:relative}
+    .process-step:before{counter-increment:step;content:"0" counter(step);display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:950;font-size:.88rem;margin-bottom:14px}
+    .process-step h4{font-size:.95rem;font-weight:800;margin-bottom:8px;color:#dff9ff}
+    .process-step p{color:var(--muted);font-size:.86rem;line-height:1.6}
+
+    /* GLOSSÁRIO */
+    .glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:860px;margin:0 auto}
+    .gloss-item{border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:16px;padding:18px 20px}
+    .gloss-term{font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px}
+    .gloss-item p{color:var(--muted);font-size:.88rem;line-height:1.6;margin:0}
+
+    /* CTA */
+    .cta-band{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 16rem),rgba(8,21,43,.62);border-radius:34px;padding:clamp(32px,5vw,52px);text-align:center}
+    .cta-band p{color:var(--muted);font-size:1.05rem;margin-bottom:28px;max-width:560px;margin-inline:auto}
+    .btn-row-center{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+    /* FOOTER */
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:24px 0;color:var(--muted2);font-size:.84rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.services-grid{grid-template-columns:repeat(2,1fr)}.threats-grid,.process-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
+    @media(max-width:600px){.services-grid,.threats-grid,.process-grid,.glossary-grid{grid-template-columns:1fr}section{padding:56px 0}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" class="brand"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/solucoes.html">Soluções</a>
+        <a href="/managed-services.html">Planos</a>
+        <a href="/sobre.html">Sobre</a>
+      </nav>
+      <a href="/#diagnostico" class="btn-nav">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="reveal">
+          <div class="kicker kicker-red">🛡️ Cibersegurança empresarial</div>
+          <h1>Sua empresa está<br><span class="grad-red">protegida de verdade?</span></h1>
+          <p>Ataques cibernéticos não escolhem tamanho de empresa. PMEs do Alto Tietê são alvos frequentes justamente por terem menos proteção. A Oryxon oferece um conjunto completo de serviços de cibersegurança para fechar as brechas antes que alguém as explore.</p>
+          <div class="btn-row">
+            <a href="/#diagnostico" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20ciberseguran%C3%A7a%20para%20minha%20empresa." target="_blank" rel="noopener" class="btn btn-ghost">Falar no WhatsApp</a>
+          </div>
+        </div>
+        <div class="threat-panel reveal">
+          <h3>⚠️ Ameaças mais comuns em PMEs</h3>
+          <div class="threat-item"><span class="threat-dot dot-red"></span>Ransomware — sequestro de dados com pedido de resgate</div>
+          <div class="threat-item"><span class="threat-dot dot-red"></span>Phishing — e-mails falsos que roubam credenciais</div>
+          <div class="threat-item"><span class="threat-dot dot-orange"></span>Acesso remoto não autorizado via RDP exposto</div>
+          <div class="threat-item"><span class="threat-dot dot-orange"></span>Malware em pendrive ou download acidental</div>
+          <div class="threat-item"><span class="threat-dot dot-orange"></span>Senhas fracas ou reutilizadas em sistemas críticos</div>
+          <div class="threat-item"><span class="threat-dot dot-yellow"></span>Software desatualizado com vulnerabilidades conhecidas</div>
+          <div class="threat-item"><span class="threat-dot dot-yellow"></span>Ausência de backup validado para recuperação</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS DE CIBERSEGURANÇA -->
+    <section>
+      <div class="container">
+        <div class="reveal" style="max-width:700px;margin-bottom:40px">
+          <div class="kicker">Nossos serviços</div>
+          <h2>Proteção em camadas.<br>Do endpoint à rede.</h2>
+          <p class="muted">Cibersegurança eficaz não é um produto — é uma estratégia. Combinamos ferramentas, processos e conscientização para proteger sua empresa em todas as frentes.</p>
+        </div>
+        <div class="services-grid">
+
+          <!-- FWaaS -->
+          <div class="svc-card svc-featured reveal">
+            <div class="svc-badge badge-red">🔥 Firewall</div>
+            <div class="svc-icon svc-icon-red">🔥</div>
+            <h3>Firewall como Serviço (FWaaS)</h3>
+            <p>Proteção do perímetro da rede sem precisar de hardware dedicado. Bloqueamos tráfego malicioso, controlamos o acesso à internet e segmentamos a rede para limitar o impacto de um eventual incidente.</p>
+            <div class="svc-features">
+              <div class="svc-feature"><span class="dot"></span>Bloqueio de sites maliciosos e categorias de risco</div>
+              <div class="svc-feature"><span class="dot"></span>Controle de acesso por usuário e dispositivo</div>
+              <div class="svc-feature"><span class="dot"></span>Inspeção de tráfego criptografado (SSL)</div>
+              <div class="svc-feature"><span class="dot"></span>Relatórios de uso e alertas em tempo real</div>
+            </div>
+            <a href="https://wa.me/5511934932992?text=Quero%20saber%20mais%20sobre%20Firewall%20como%20Servi%C3%A7o." target="_blank" rel="noopener" class="svc-link">Falar sobre FWaaS →</a>
+          </div>
+
+          <!-- BITDEFENDER -->
+          <div class="svc-card svc-default reveal">
+            <div class="svc-badge badge-blue">🛡️ Endpoint Security</div>
+            <div class="svc-icon">🔐</div>
+            <h3>Proteção de Endpoints com Bitdefender</h3>
+            <p>Antivírus e EDR empresarial gerenciado pela Oryxon. O Bitdefender protege computadores, notebooks e servidores contra malware, ransomware e ameaças avançadas — com IA e análise comportamental, sem impactar a performance.</p>
+            <div class="svc-features">
+              <div class="svc-feature"><span class="dot"></span>Proteção em tempo real com IA</div>
+              <div class="svc-feature"><span class="dot"></span>Detecção e resposta a incidentes (EDR)</div>
+              <div class="svc-feature"><span class="dot"></span>Controle de dispositivos USB e aplicações</div>
+              <div class="svc-feature"><span class="dot"></span>Console centralizado gerenciado pela Oryxon</div>
+            </div>
+            <a href="https://wa.me/5511934932992?text=Quero%20saber%20mais%20sobre%20antiv%C3%ADrus%20empresarial%20Bitdefender." target="_blank" rel="noopener" class="svc-link">Falar sobre Bitdefender →</a>
+          </div>
+
+          <!-- HARDENING -->
+          <div class="svc-card svc-default reveal">
+            <div class="svc-badge badge-blue">⚙️ Hardening</div>
+            <div class="svc-icon">🔩</div>
+            <h3>Hardening de Sistemas</h3>
+            <p>Configuração segura de servidores, estações e sistemas operacionais segundo boas práticas de segurança. Reduzimos a superfície de ataque desativando serviços desnecessários, aplicando políticas restritivas e removendo vetores de risco.</p>
+            <div class="svc-features">
+              <div class="svc-feature"><span class="dot"></span>Auditoria e reforço de configurações de SO</div>
+              <div class="svc-feature"><span class="dot"></span>Políticas de senha e bloqueio de conta</div>
+              <div class="svc-feature"><span class="dot"></span>Desativação de serviços e portas desnecessárias</div>
+              <div class="svc-feature"><span class="dot"></span>Conformidade com boas práticas CIS Benchmark</div>
+            </div>
+            <a href="https://wa.me/5511934932992?text=Quero%20saber%20mais%20sobre%20hardening%20de%20sistemas." target="_blank" rel="noopener" class="svc-link">Falar sobre hardening →</a>
+          </div>
+
+          <!-- VULNERABILITY ASSESSMENT -->
+          <div class="svc-card svc-featured reveal">
+            <div class="svc-badge badge-red">🔎 Vulnerability Assessment</div>
+            <div class="svc-icon svc-icon-red">🔍</div>
+            <h3>Vulnerability Assessment</h3>
+            <p>Varredura automatizada e análise técnica de toda a sua infraestrutura para identificar vulnerabilidades conhecidas antes que atacantes as explorem. Geramos um relatório priorizado com o que corrigir primeiro e por quê.</p>
+            <div class="svc-features">
+              <div class="svc-feature"><span class="dot"></span>Varredura de endpoints, servidores e rede</div>
+              <div class="svc-feature"><span class="dot"></span>Identificação de CVEs e vulnerabilidades conhecidas</div>
+              <div class="svc-feature"><span class="dot"></span>Relatório com risco priorizado (crítico, alto, médio)</div>
+              <div class="svc-feature"><span class="dot"></span>Plano de remediação documentado</div>
+            </div>
+            <a href="https://wa.me/5511934932992?text=Quero%20solicitar%20um%20Vulnerability%20Assessment." target="_blank" rel="noopener" class="svc-link">Solicitar assessment →</a>
+          </div>
+
+          <!-- CONSCIENTIZAÇÃO -->
+          <div class="svc-card svc-default reveal">
+            <div class="svc-badge badge-green">👥 People Security</div>
+            <div class="svc-icon">🎓</div>
+            <h3>Conscientização em Segurança</h3>
+            <p>O elo mais fraco da segurança é humano. Treinamos sua equipe para reconhecer phishing, uso seguro de senhas, boas práticas no dia a dia e comportamentos de risco — reduzindo drasticamente a chance de um colaborador ser o vetor de um ataque.</p>
+            <div class="svc-features">
+              <div class="svc-feature"><span class="dot"></span>Treinamento de equipe em segurança digital</div>
+              <div class="svc-feature"><span class="dot"></span>Simulações de phishing controladas</div>
+              <div class="svc-feature"><span class="dot"></span>Políticas de uso aceitável de TI</div>
+              <div class="svc-feature"><span class="dot"></span>Material educativo personalizado</div>
+            </div>
+            <a href="https://wa.me/5511934932992?text=Quero%20saber%20mais%20sobre%20conscientiza%C3%A7%C3%A3o%20em%20seguran%C3%A7a." target="_blank" rel="noopener" class="svc-link">Falar sobre treinamento →</a>
+          </div>
+
+          <!-- PENTEST (via parceiro) -->
+          <div class="svc-card svc-partner reveal">
+            <div class="svc-badge badge-orange">🤝 Via parceiro</div>
+            <div class="svc-icon svc-icon-orange">🎯</div>
+            <h3>Pentest Profissional</h3>
+            <p>Teste de invasão conduzido por especialistas certificados (CEH, OSCP) para simular um ataque real ao seu ambiente. Oferecemos esse serviço via parceiro especializado, com relatório técnico e executivo e acompanhamento da remediação pela Oryxon.</p>
+            <div class="svc-features">
+              <div class="svc-feature"><span class="dot"></span>Pentest externo e interno</div>
+              <div class="svc-feature"><span class="dot"></span>Relatório técnico e executivo</div>
+              <div class="svc-feature"><span class="dot"></span>Conduzido por especialistas certificados</div>
+              <div class="svc-feature"><span class="dot"></span>Acompanhamento de remediação pela Oryxon</div>
+            </div>
+            <a href="https://wa.me/5511934932992?text=Quero%20solicitar%20um%20Pentest%20para%20minha%20empresa." target="_blank" rel="noopener" class="svc-link">Solicitar pentest →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- AMEAÇAS QUE PROTEGEMOS -->
+    <section style="border-top:1px solid rgba(103,232,255,.08)">
+      <div class="container">
+        <div class="reveal" style="max-width:700px;margin:0 auto 36px;text-align:center">
+          <div class="kicker kicker-red">Ameaças que neutralizamos</div>
+          <h2>Do que sua empresa precisa se proteger.</h2>
+          <p class="muted">Conhecer as ameaças é o primeiro passo para se defender delas.</p>
+        </div>
+        <div class="threats-grid">
+          <div class="threat-card reveal">
+            <div class="icon">🔒</div>
+            <h4>Ransomware</h4>
+            <p>Malware que criptografa seus dados e exige resgate. Pode paralisar a operação por dias ou semanas.</p>
+          </div>
+          <div class="threat-card reveal">
+            <div class="icon">🎣</div>
+            <h4>Phishing</h4>
+            <p>E-mails e links falsos que enganam colaboradores para roubar senhas e acessos corporativos.</p>
+          </div>
+          <div class="threat-card reveal">
+            <div class="icon">🕵️</div>
+            <h4>Acesso não autorizado</h4>
+            <p>Invasores exploram portas abertas, senhas fracas ou VPNs mal configuradas para entrar na rede.</p>
+          </div>
+          <div class="threat-card reveal">
+            <div class="icon">💉</div>
+            <h4>Vulnerabilidades conhecidas</h4>
+            <p>Software desatualizado com CVEs públicas — portas abertas que atacantes varrem automaticamente.</p>
+          </div>
+          <div class="threat-card reveal">
+            <div class="icon">📧</div>
+            <h4>Comprometimento de e-mail (BEC)</h4>
+            <p>Contas corporativas invadidas para fraudes financeiras e roubo de informações confidenciais.</p>
+          </div>
+          <div class="threat-card reveal">
+            <div class="icon">💾</div>
+            <h4>Perda de dados</h4>
+            <p>Ausência de backup validado significa que um incidente pode resultar em perda total e irreversível.</p>
+          </div>
+          <div class="threat-card reveal">
+            <div class="icon">🧑‍💻</div>
+            <h4>Ameaça interna</h4>
+            <p>Colaboradores mal-intencionados ou descuidados com acesso a dados sensíveis sem controle adequado.</p>
+          </div>
+          <div class="threat-card reveal">
+            <div class="icon">⚖️</div>
+            <h4>Não conformidade LGPD</h4>
+            <p>Falta de controles de segurança pode resultar em multas da ANPD e danos à reputação da empresa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section style="border-top:1px solid rgba(103,232,255,.08)">
+      <div class="container">
+        <div class="reveal" style="max-width:700px;margin:0 auto 36px;text-align:center">
+          <div class="kicker">Como funciona</div>
+          <h2>Da exposição à proteção em 4 etapas.</h2>
+        </div>
+        <div class="process-grid reveal">
+          <div class="process-step">
+            <h4>Diagnóstico</h4>
+            <p>Mapeamos sua infraestrutura, identificamos exposições e priorizamos riscos por criticidade.</p>
+          </div>
+          <div class="process-step">
+            <h4>Implementação</h4>
+            <p>Implantamos as ferramentas e configurações de segurança adequadas ao seu ambiente e porte.</p>
+          </div>
+          <div class="process-step">
+            <h4>Monitoramento</h4>
+            <p>Monitoramos ameaças em tempo real e respondemos a incidentes dentro do SLA contratado.</p>
+          </div>
+          <div class="process-step">
+            <h4>Evolução contínua</h4>
+            <p>Revisamos periodicamente a postura de segurança e evoluímos os controles conforme o ambiente muda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSÁRIO TÉCNICO -->
+    <section style="border-top:1px solid rgba(103,232,255,.08)">
+      <div class="container">
+        <div class="reveal" style="max-width:700px;margin:0 auto 36px;text-align:center">
+          <div class="kicker">Glossário</div>
+          <h2>Entenda os termos sem precisar ser técnico.</h2>
+          <p class="muted">Traduzimos o vocabulário de cibersegurança para a linguagem do negócio.</p>
+        </div>
+        <div class="glossary-grid">
+          <div class="gloss-item reveal">
+            <div class="gloss-term">FWaaS — Firewall como Serviço</div>
+            <p>Firewall entregue via nuvem, sem hardware físico. Controla o que entra e sai da rede da empresa, bloqueando ameaças e conteúdo malicioso.</p>
+          </div>
+          <div class="gloss-item reveal">
+            <div class="gloss-term">Hardening</div>
+            <p>Processo de reforçar a configuração de sistemas e servidores, removendo o que não é necessário e aplicando regras restritivas para reduzir brechas.</p>
+          </div>
+          <div class="gloss-item reveal">
+            <div class="gloss-term">Vulnerability Assessment (VA)</div>
+            <p>Varredura técnica do ambiente para encontrar vulnerabilidades conhecidas antes que atacantes as descubram. Diferente do pentest — é automatizado e mais abrangente.</p>
+          </div>
+          <div class="gloss-item reveal">
+            <div class="gloss-term">Pentest (Teste de Invasão)</div>
+            <p>Simulação controlada de um ataque real conduzida por especialistas. Diferente do VA — é manual, contextualizado e testa o que um atacante real faria.</p>
+          </div>
+          <div class="gloss-item reveal">
+            <div class="gloss-term">EDR — Endpoint Detection & Response</div>
+            <p>Tecnologia de segurança que monitora comportamentos suspeitos nos dispositivos em tempo real e responde automaticamente a ameaças antes que se espalhem.</p>
+          </div>
+          <div class="gloss-item reveal">
+            <div class="gloss-term">CVE — Common Vulnerabilities & Exposures</div>
+            <p>Base pública de vulnerabilidades conhecidas em softwares. Quando um sistema tem CVEs não corrigidos, atacantes podem explorá-los com ferramentas automatizadas.</p>
+          </div>
+          <div class="gloss-item reveal">
+            <div class="gloss-term">Phishing</div>
+            <p>Ataque por e-mail, SMS ou link falso que engana o usuário para roubar credenciais, instalar malware ou realizar transferências financeiras fraudulentas.</p>
+          </div>
+          <div class="gloss-item reveal">
+            <div class="gloss-term">LGPD e Segurança da Informação</div>
+            <p>A Lei Geral de Proteção de Dados exige que empresas implementem controles técnicos de segurança. Sem isso, a empresa está sujeita a multas da ANPD e responsabilidade civil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA DIAGNÓSTICO -->
+    <section style="border-top:1px solid rgba(103,232,255,.08)">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="kicker">Avalie sua postura de segurança</div>
+          <h2>Descubra o nível de risco<br>da sua empresa hoje.</h2>
+          <p>Fazemos um diagnóstico gratuito da sua infraestrutura com foco em segurança, identificamos as principais brechas e apresentamos um plano de ação claro — sem enrolação.</p>
+          <div class="btn-row-center">
+            <a href="/#diagnostico" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20de%20ciberseguran%C3%A7a%20para%20minha%20empresa." target="_blank" rel="noopener" class="btn btn-ghost">Falar no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCEIRO -->
+    <section style="border-top:1px solid rgba(103,232,255,.08);padding:48px 0">
+      <div class="container reveal" style="text-align:center">
+        <p style="color:var(--muted2);font-size:.84rem;margin-bottom:16px;letter-spacing:.06em;text-transform:uppercase;font-weight:800">Serviços certificados via parceiro oficial</p>
+        <div style="display:inline-flex;align-items:center;gap:16px;padding:16px 28px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:16px">
+          <img src="data:image/png;base64,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" alt="Help Digital TI" style="height:32px;width:auto;filter:brightness(1.1)">
+          <span style="color:var(--muted);font-size:.85rem;font-weight:700;border-left:1px solid rgba(103,232,255,.2);padding-left:16px">Parceiro oficial SP</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="/solucoes.html">Soluções</a>
+        <a href="/managed-services.html">Planos</a>
+        <a href="/privacidade.html">Privacidade</a>
+        <a href="/termos.html">Termos</a>
+        <a href="/">← Site</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add("visible"); }), {threshold:.08});
+    document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
