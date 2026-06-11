@@ -445,6 +445,24 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
     }, { threshold: 0.1 });
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+    // Carta de Valores — tab switching
+    function showValor(idx) {
+      const panels = document.querySelectorAll('.valor-panel');
+      const tabs = document.querySelectorAll('.valor-tab');
+      panels.forEach((p, i) => { p.style.display = i === idx ? 'block' : 'none'; });
+      tabs.forEach((t, i) => {
+        if (i === idx) {
+          t.style.background = 'rgba(0,183,255,.10)';
+          t.style.borderColor = 'rgba(103,232,255,.35)';
+          t.style.color = '#67e8ff';
+        } else {
+          t.style.background = 'transparent';
+          t.style.borderColor = 'rgba(103,232,255,.18)';
+          t.style.color = '#a9bad1';
+        }
+      });
+    }
   </script>
 
 </body>
