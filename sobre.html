@@ -191,42 +191,143 @@
     <!-- VALORES DETALHADOS -->
     <section style="border-top:1px solid rgba(103,232,255,.08)">
       <div class="container">
-        <div class="section-head center reveal" style="max-width:700px;margin:0 auto 36px;text-align:center">
+        <div class="section-head center reveal" style="max-width:700px;margin:0 auto 44px;text-align:center">
           <div class="kicker">Nossa carta de valores</div>
           <h2>O que guia cada decisão.</h2>
+          <p class="muted">Mais do que princípios — são compromissos práticos que a Oryxon assume com cada cliente, todos os dias.</p>
         </div>
-        <div class="valores-grid">
-          <div class="card valor-card reveal">
-            <div class="valor-num">01</div>
-            <h3>Responsabilidade técnica</h3>
-            <p>Assumimos cada ambiente como se fosse nosso. Quando algo falha, somos os primeiros a agir — sem terceirizar o problema.</p>
+
+        <!-- TABS DE VALORES -->
+        <div class="reveal" style="max-width:960px;margin:0 auto">
+          <!-- Tab buttons -->
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;justify-content:center" id="valor-tabs">
+            <button onclick="showValor(0)" class="valor-tab active" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.35);background:rgba(0,183,255,.10);color:#67e8ff;font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">01 · Responsabilidade</button>
+            <button onclick="showValor(1)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">02 · Transparência</button>
+            <button onclick="showValor(2)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">03 · Proatividade</button>
+            <button onclick="showValor(3)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">04 · Comprometimento</button>
+            <button onclick="showValor(4)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">05 · Melhoria Contínua</button>
+            <button onclick="showValor(5)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">06 · Foco no Cliente</button>
           </div>
-          <div class="card valor-card reveal">
-            <div class="valor-num">02</div>
-            <h3>Transparência</h3>
-            <p>Comunicamos problemas antes que virem crises. Relatórios claros, linguagem acessível e sem jargão técnico desnecessário.</p>
-          </div>
-          <div class="card valor-card reveal">
-            <div class="valor-num">03</div>
-            <h3>Proatividade</h3>
-            <p>Não esperamos o sistema cair para agir. Monitoramos, antecipamos e corrigimos antes do impacto chegar na operação.</p>
-          </div>
-          <div class="card valor-card reveal">
-            <div class="valor-num">04</div>
-            <h3>Comprometimento</h3>
-            <p>SLA não é só um número contratual. É um compromisso de respeito ao tempo e à continuidade do seu negócio.</p>
-          </div>
-          <div class="card valor-card reveal">
-            <div class="valor-num">05</div>
-            <h3>Melhoria contínua</h3>
-            <p>Cada incidente é uma oportunidade de aprendizado. Revisamos processos, atualizamos ferramentas e evoluímos constantemente.</p>
-          </div>
-          <div class="card valor-card reveal">
-            <div class="valor-num">06</div>
-            <h3>Foco no cliente</h3>
-            <p>Entendemos o negócio do cliente antes de propor soluções. TI que não gera resultado real para a operação não faz sentido.</p>
-          </div>
-        </div>
+
+          <!-- Tab panels -->
+          <div id="valor-panels">
+
+            <!-- 01 Responsabilidade técnica -->
+            <div class="valor-panel" style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🛠️</div>
+                <div>
+                  <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 01</div>
+                  <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Responsabilidade técnica</h3>
+                  <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Assumimos cada ambiente como se fosse nosso. Quando algo falha, somos os primeiros a agir — sem terceirizar o problema ou empurrar a culpa para terceiros.</p>
+                  <ul style="list-style:none;display:grid;gap:9px">
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Assumir responsabilidade total pelo ambiente gerenciado</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Agir imediatamente em incidentes sem esperar autorização desnecessária</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Documentar cada ação tomada e seus resultados</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Assumir e corrigir erros sem minimizar impactos</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Trabalhar com as melhores ferramentas disponíveis no mercado</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 02 Transparência -->
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🔍</div>
+                <div>
+                  <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 02</div>
+                  <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Transparência</h3>
+                  <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Comunicamos problemas antes que virem crises. Relatórios claros, linguagem acessível e sem jargão técnico desnecessário — o cliente sempre sabe o que está acontecendo com a TI dele.</p>
+                  <ul style="list-style:none;display:grid;gap:9px">
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Comunicar problemas ativamente — não esperar o cliente perguntar</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Traduzir linguagem técnica para linguagem de negócio</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Entregar relatórios mensais claros e objetivos</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Ser sincero sobre limitações e prazos reais</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Honrar o que foi combinado em contrato</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 03 Proatividade -->
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">📡</div>
+                <div>
+                  <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 03</div>
+                  <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Proatividade</h3>
+                  <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Não esperamos o sistema cair para agir. Monitoramos, antecipamos e corrigimos antes do impacto chegar na operação — eliminando o modo bombeiro que paralisa empresas.</p>
+                  <ul style="list-style:none;display:grid;gap:9px">
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Monitorar alertas antes que virem incidentes</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Aplicar patches e atualizações preventivamente</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Identificar gargalos de performance antes de impactar usuários</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Propor melhorias de infraestrutura sem esperar o cliente pedir</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Validar backups periodicamente — não só criar cópias</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 04 Comprometimento -->
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🤝</div>
+                <div>
+                  <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 04</div>
+                  <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Comprometimento</h3>
+                  <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">SLA não é só um número contratual. É um compromisso de respeito ao tempo e à continuidade do negócio do cliente — e levamos isso a sério em cada chamado aberto.</p>
+                  <ul style="list-style:none;display:grid;gap:9px">
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Respeitar os SLAs contratados em todos os chamados</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Cumprir prazos e horários combinados</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Tratar cada tarefa com dedicação total, independente do tamanho</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Estar disponível quando o cliente mais precisa</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Ter consciência de que fazemos parte do resultado final do cliente</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 05 Melhoria Contínua -->
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🔄</div>
+                <div>
+                  <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 05</div>
+                  <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Melhoria Contínua</h3>
+                  <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Cada incidente é uma oportunidade de aprendizado. Revisamos processos, atualizamos ferramentas e evoluímos constantemente — porque a tecnologia não para e nossos clientes merecem o melhor.</p>
+                  <ul style="list-style:none;display:grid;gap:9px">
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Revisar processos após cada incidente relevante</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Manter certificações e capacitações atualizadas</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Adotar novas ferramentas quando trazem vantagem real</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Buscar permanentemente inovação em infraestrutura e segurança</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Compartilhar aprendizados com os clientes de forma proativa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 06 Foco no Cliente -->
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
+                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🎯</div>
+                <div>
+                  <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 06</div>
+                  <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Foco no Cliente</h3>
+                  <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Entendemos o negócio do cliente antes de propor soluções. TI que não gera resultado real para a operação não faz sentido — e não é isso que entregamos.</p>
+                  <ul style="list-style:none;display:grid;gap:9px">
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Entender o negócio do cliente antes de propor qualquer solução</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Priorizar o que reduz risco e melhora operação com melhor custo-benefício</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Colocar-se no lugar do cliente para entender o impacto real dos problemas</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Dar importância igual a clientes de todos os portes</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Medir sucesso pelo impacto no negócio do cliente, não pela complexidade técnica</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end valor-panels -->
+        </div><!-- end max-width wrapper -->
       </div>
     </section>
 
@@ -278,7 +379,7 @@
           </a>
 
           <!-- BNI -->
-          <div style="border:1px solid rgba(220,30,30,.28);background:rgba(220,30,30,.05);border-radius:24px;padding:24px;transition:.22s;display:flex;flex-direction:column;gap:12px" onmouseover="this.style.borderColor='rgba(220,30,30,.55)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(220,30,30,.28)';this.style.transform=''">
+          <a href="https://bnibrasil.net.br/pt-BR/coregroupdetail?chapterId=XnXUivtmAMqqk2IpR7A2FA%3D%3D&name=BNI%20AT%20V%EDnculo" target="_blank" rel="noopener" style="border:1px solid rgba(220,30,30,.28);background:rgba(220,30,30,.05);border-radius:24px;padding:24px;transition:.22s;display:flex;flex-direction:column;gap:12px;text-decoration:none" onmouseover="this.style.borderColor='rgba(220,30,30,.55)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(220,30,30,.28)';this.style.transform=''">
             <div style="display:flex;align-items:center;gap:10px">
               <div style="width:44px;height:44px;border-radius:14px;background:rgba(220,30,30,.12);border:1px solid rgba(220,30,30,.25);display:grid;place-items:center;font-size:1.3rem;flex-shrink:0">🤝</div>
               <div>
@@ -287,8 +388,8 @@
               </div>
             </div>
             <p style="color:var(--muted);font-size:.86rem;line-height:1.6;margin:0">Membro do grupo BNI AT Vínculo em Poá — uma das maiores redes de networking empresarial do mundo, baseada em indicações qualificadas entre membros.</p>
-            <span style="font-size:.78rem;font-weight:800;color:#ff6666">BNI — Business Network International</span>
-          </div>
+            <span style="font-size:.78rem;font-weight:800;color:#ff6666">Ver grupo BNI AT Vínculo →</span>
+          </a>
 
         </div>
       </div>
