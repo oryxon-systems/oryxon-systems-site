@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FXFSLJDCNW');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suporte de TI em Suzano | Gestão de TI Alto Tietê | Oryxon Systems</title>
+  <meta name="description" content="Suporte de TI em Suzano e região do Alto Tietê. Empresa de TI em Suzano com foco em segurança, continuidade e redução de falhas. Diagnóstico gratuito para empresas." />
+  <meta name="keywords" content="suporte de TI em Suzano, empresa de TI em Suzano, gestão de TI Alto Tietê, suporte técnico empresarial, infraestrutura de TI, segurança de redes" />
+  <meta property="og:title" content="Suporte de TI em Suzano | Oryxon Systems" />
+  <meta property="og:description" content="Empresa de TI em Suzano com gestão proativa, backup, segurança e monitoramento 24x7. Diagnóstico gratuito para empresas do Alto Tietê." />
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/ti-suzano/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/ti-suzano/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #090C12;
+      --surface:     #0F1420;
+      --surface2:    #141927;
+      --border:      #1D2535;
+      --border2:     #252E42;
+      --orange:      #EC6824;
+      --orange-lt:   rgba(236,104,36,.14);
+      --orange-glow: rgba(236,104,36,.22);
+      --blue-lt:     rgba(59,130,246,.09);
+      --text:        #EDF0F7;
+      --muted:       #7A869E;
+      --muted2:      #A8B3C7;
+      --white:       #FFFFFF;
+      --danger:      #FF4C4C;
+      --green:       #22C55E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image:
+        linear-gradient(rgba(59,130,246,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow-hero {
+      position: absolute; top: -180px; right: -200px;
+      width: 680px; height: 680px;
+      background: radial-gradient(circle, rgba(236,104,36,.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .glow-blue {
+      position: absolute; bottom: -120px; left: -160px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(59,130,246,.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(9,12,18,.90);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; }
+
+    .brand-mark {
+      width: 36px; height: 36px;
+      background: var(--orange-lt);
+      border: 1.5px solid rgba(236,104,36,.4);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .brand-mark svg { width: 18px; height: 18px; color: var(--orange); }
+
+    .brand-name {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 1.05rem;
+      letter-spacing: .06em; text-transform: uppercase; color: var(--white);
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: .7rem; color: var(--muted);
+      letter-spacing: .06em; text-transform: uppercase;
+    }
+
+    .nav-cta {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--orange); color: var(--white);
+      font-family: 'Barlow', sans-serif; font-weight: 700;
+      font-size: .8rem; letter-spacing: .04em; text-transform: uppercase;
+      padding: 10px 20px; border-radius: 8px; text-decoration: none;
+      transition: background .2s, transform .15s, box-shadow .2s;
+    }
+
+    .nav-cta:hover { background: #d65b1c; transform: translateY(-1px); box-shadow: 0 6px 24px var(--orange-glow); }
+    .nav-cta svg { width: 15px; height: 15px; }
+
+    /* HERO */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: 80px 0 90px;
+    }
+
+    .container {
+      max-width: 1160px; margin: 0 auto; padding: 0 32px;
+      position: relative; z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 420px;
+      gap: 56px; align-items: start;
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: var(--orange-lt);
+      border: 1px solid rgba(236,104,36,.3);
+      color: #FFBF9A;
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 100px;
+      margin-bottom: 24px;
+      animation: fadeUp .5s ease both;
+    }
+
+    .eyebrow-dot {
+      width: 6px; height: 6px; background: var(--orange);
+      border-radius: 50%; animation: blink 2s infinite;
+    }
+
+    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:.3; } }
+
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.6rem, 5.5vw, 4rem);
+      line-height: 1.05; letter-spacing: -.01em; text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeUp .5s .08s ease both;
+    }
+
+    h1 em { font-style: normal; color: var(--orange); }
+
+    .lead {
+      font-size: 1.08rem; color: var(--muted2); font-weight: 300;
+      max-width: 540px; margin-bottom: 36px;
+      animation: fadeUp .5s .16s ease both;
+    }
+
+    .risk-box {
+      background: var(--surface);
+      border: 1px solid var(--border); border-left: 3px solid var(--danger);
+      border-radius: 14px; padding: 22px 24px; margin-bottom: 28px;
+      animation: fadeUp .5s .24s ease both;
+    }
+
+    .risk-box-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 1.1rem;
+      text-transform: uppercase; letter-spacing: .03em; margin-bottom: 12px;
+    }
+
+    .risk-list { list-style: none; display: grid; gap: 8px; }
+
+    .risk-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .9rem; color: var(--muted2);
+      padding: 9px 14px;
+      background: rgba(255,76,76,.05);
+      border: 1px solid rgba(255,76,76,.12);
+      border-radius: 8px;
+    }
+
+    .risk-list li .x { color: var(--danger); font-size: 1rem; flex-shrink: 0; }
+
+    .benefit-list {
+      list-style: none; display: grid; gap: 10px;
+      animation: fadeUp .5s .32s ease both;
+    }
+
+    .benefit-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: .92rem; color: var(--muted2);
+      padding: 11px 16px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; transition: border-color .2s;
+    }
+
+    .benefit-list li:hover { border-color: rgba(236,104,36,.3); }
+    .benefit-list li .ck { color: var(--orange); font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
+
+    .hero-footer {
+      margin-top: 20px; color: var(--muted); font-size: .8rem;
+      display: flex; align-items: center; gap: 6px;
+      animation: fadeUp .5s .4s ease both;
+    }
+
+    .hero-footer svg { color: var(--orange); }
+
+    /* FORM CARD */
+    .form-card {
+      background: var(--white); color: #0F172A;
+      border-radius: 20px; padding: 36px 32px;
+      box-shadow: 0 24px 64px rgba(0,0,0,.36), 0 0 0 1px rgba(0,0,0,.06);
+      position: relative; overflow: hidden;
+      animation: fadeUp .5s .1s ease both;
+    }
+
+    .form-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 4px; background: linear-gradient(90deg, var(--orange), #f89050);
+    }
+
+    .form-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 1.65rem;
+      text-transform: uppercase; letter-spacing: .01em;
+      color: #090C12; line-height: 1.15; margin-bottom: 6px;
+    }
+
+    .form-sub {
+      font-size: .85rem; color: #64748B; margin-bottom: 22px; line-height: 1.5;
+    }
+
+    .field { margin-bottom: 14px; }
+
+    .field label {
+      display: block; font-size: .72rem; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+      color: #334155; margin-bottom: 6px;
+    }
+
+    .field input, .field textarea, .field select {
+      width: 100%; background: #F8FAFC;
+      border: 1.5px solid #CBD5E1; border-radius: 10px;
+      padding: 12px 14px; font-size: .92rem;
+      font-family: 'Barlow', sans-serif; color: #0F172A;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+      -webkit-appearance: none;
+    }
+
+    .field input::placeholder, .field textarea::placeholder { color: #94A3B8; }
+
+    .field input:focus, .field textarea:focus, .field select:focus {
+      border-color: var(--orange); background: #fff;
+      box-shadow: 0 0 0 4px rgba(236,104,36,.11);
+    }
+
+    .field textarea { resize: none; height: 80px; }
+
+    .field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center;
+      padding-right: 38px; cursor: pointer;
+    }
+
+    .field select option { background: #fff; color: #0F172A; }
+
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .btn-wa {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; background: var(--green); color: #fff;
+      border: none; border-radius: 12px; padding: 15px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 1.05rem;
+      letter-spacing: .04em; text-transform: uppercase;
+      cursor: pointer; margin-top: 6px;
+      transition: background .2s, transform .15s, box-shadow .2s;
+    }
+
+    .btn-wa:hover {
+      background: #16a34a; transform: translateY(-1px);
+      box-shadow: 0 8px 28px rgba(34,197,94,.28);
+    }
+
+    .btn-wa:active { transform: translateY(0); }
+    .btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    .form-note {
+      margin-top: 10px; text-align: center;
+      font-size: .73rem; color: #94A3B8; line-height: 1.5;
+    }
+
+    .trust-strip {
+      margin-top: 14px; padding-top: 14px;
+      border-top: 1px solid #E2E8F0;
+      display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: .73rem; color: #475569; font-weight: 600;
+    }
+
+    .trust-item svg { color: var(--green); }
+
+    /* SECTIONS */
+    section { position: relative; z-index: 1; }
+    .section { padding: 80px 0; }
+
+    .section-tag {
+      font-size: .7rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--orange); margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      text-transform: uppercase; letter-spacing: -.01em;
+      line-height: 1.1; margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 1rem; color: var(--muted2); font-weight: 300;
+      max-width: 760px; margin-bottom: 40px;
+    }
+
+    .strip {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Gain cards */
+    .gain-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+
+    .gain-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 16px; padding: 26px 24px 30px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .gain-card:hover { border-color: rgba(236,104,36,.35); transform: translateY(-3px); }
+
+    .gain-icon {
+      width: 44px; height: 44px; background: var(--orange-lt);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      color: var(--orange); margin-bottom: 16px;
+    }
+
+    .gain-icon svg { width: 20px; height: 20px; }
+
+    .gain-card h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 1.15rem;
+      text-transform: uppercase; letter-spacing: .02em; margin-bottom: 8px;
+    }
+
+    .gain-card p { font-size: .88rem; color: var(--muted2); line-height: 1.65; }
+
+    /* Two col */
+    .two-col {
+      display: grid; grid-template-columns: 1.1fr .9fr;
+      gap: 48px; align-items: start;
+    }
+
+    .audience-list { list-style: none; display: grid; gap: 10px; }
+
+    .audience-list li {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; font-size: .9rem; color: var(--muted2);
+      transition: border-color .2s;
+    }
+
+    .audience-list li:hover { border-color: rgba(236,104,36,.3); }
+
+    .audience-list li::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--orange); border-radius: 50%; flex-shrink: 0;
+    }
+
+    /* Steps */
+    .steps-panel {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; padding: 28px;
+    }
+
+    .step { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .step:last-child { border-bottom: none; padding-bottom: 0; }
+    .step:first-child { padding-top: 0; }
+
+    .step-num {
+      width: 32px; height: 32px; background: var(--orange-lt);
+      border: 1px solid rgba(236,104,36,.35); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 1rem; color: var(--orange);
+      flex-shrink: 0; margin-top: 2px;
+    }
+
+    .step-body h5 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 1.05rem;
+      text-transform: uppercase; letter-spacing: .03em; margin-bottom: 5px;
+    }
+
+    .step-body p { font-size: .86rem; color: var(--muted2); line-height: 1.6; }
+
+    /* CTA Band */
+    .cta-band {
+      background: var(--orange); padding: 64px 0;
+      position: relative; overflow: hidden;
+    }
+
+    .cta-band::before {
+      content: ''; position: absolute; top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 32px;
+    }
+
+    .cta-band h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      text-transform: uppercase; letter-spacing: -.01em;
+      line-height: 1.1; color: #fff; margin-bottom: 8px;
+    }
+
+    .cta-band p {
+      font-size: .96rem; color: rgba(255,255,255,.82);
+      max-width: 640px;
+    }
+
+    .cta-btn {
+      display: flex; align-items: center; gap: 10px;
+      background: #fff; color: #090C12;
+      padding: 16px 26px; border-radius: 12px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 1rem;
+      text-transform: uppercase; letter-spacing: .04em;
+      white-space: nowrap; text-decoration: none;
+      transition: transform .15s, box-shadow .2s;
+    }
+
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+    .cta-btn svg { width: 18px; height: 18px; color: var(--green); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px; text-align: center;
+      color: var(--muted); font-size: .8rem;
+    }
+
+    footer strong { color: var(--muted2); }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      nav { padding: 16px 24px; }
+      .hero { padding: 60px 0 70px; }
+      .hero-grid, .two-col { grid-template-columns: 1fr; }
+      .hero-grid { gap: 40px; }
+      .gain-grid { grid-template-columns: 1fr 1fr; }
+      .cta-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .nav-cta span { display: none; }
+      .hero { padding: 48px 0 60px; }
+      .container { padding: 0 20px; }
+      .gain-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 26px 22px; }
+      .row-2 { grid-template-columns: 1fr; }
+      .cta-btn { width: 100%; justify-content: center; }
+      .section { padding: 60px 0; }
+    }
+  </style>
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Oryxon Systems",
+    "description": "Suporte de TI em Suzano e Alto Tietê. Gestão de TI proativa, backup, segurança e monitoramento 24x7 para empresas.",
+    "url": "https://www.oryxonsystems.com.br/ti-suzano/",
+    "telephone": "+5511934932992",
+    "email": "contato@oryxonsystems.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Suzano",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["Suzano", "Alto Tietê", "Mogi das Cruzes", "Itaquaquecetuba", "Poá"],
+    "sameAs": ["https://www.linkedin.com/company/oryxon-systems"]
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+        </svg>
+      </div>
+      <div>
+        <span class="brand-name">Oryxon Systems</span>
+        <span class="brand-sub">Gestão Estratégica de TI</span>
+      </div>
+    </div>
+    <a href="#form" class="nav-cta" onclick="scrollToForm(event)">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.117 1.532 5.847L.057 23.082a.75.75 0 0 0 .92.92l5.235-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.943-1.35l-.354-.21-3.668 1.033 1.033-3.668-.21-.354A9.71 9.71 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+      <span>Diagnóstico Gratuito</span>
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="glow-hero"></div>
+    <div class="glow-blue"></div>
+    <div class="container">
+      <div class="hero-grid">
+
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Atendimento ativo na região do Alto Tietê · 100% sem custo
+          </div>
+
+          <h1>Suporte de TI em<br><em>Suzano</em><br>para empresas que não podem parar</h1>
+
+          <p class="lead">
+            Atendemos empresas em Suzano com gestão estratégica de TI, focada em segurança, continuidade e redução de falhas.
+          </p>
+
+          <div class="risk-box">
+            <div class="risk-box-title">📍 Empresas em Suzano enfrentam</div>
+            <ul class="risk-list">
+              <li><span class="x">✕</span> Falhas recorrentes sem suporte rápido</li>
+              <li><span class="x">✕</span> Infraestrutura desatualizada e vulnerável</li>
+              <li><span class="x">✕</span> Acessos sem controle ou auditoria</li>
+              <li><span class="x">✕</span> Rede sem segmentação ou monitoramento</li>
+            </ul>
+          </div>
+
+          <ul class="benefit-list">
+            <li><span class="ck">✔</span> Identificação de riscos antes do problema acontecer</li>
+            <li><span class="ck">✔</span> Avaliação real de segurança e estabilidade da operação</li>
+            <li><span class="ck">✔</span> Diagnóstico rápido da sua infraestrutura atual</li>
+            <li><span class="ck">✔</span> Plano de ação prático, claro e sem enrolação</li>
+          </ul>
+
+          <div class="hero-footer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Suporte de TI em Suzano e Alto Tietê e toda a região do Alto Tietê
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div id="form">
+          <div class="form-card">
+            <div class="form-title">Solicite seu<br>diagnóstico gratuito</div>
+            <div class="form-sub">Preencha os dados e fale diretamente com nossa equipe pelo WhatsApp para agendar.</div>
+
+            <form id="lead-form" novalidate onsubmit="sendToWhatsApp(event)">
+              <div class="field">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" placeholder="João Silva" required />
+              </div>
+
+              <div class="row-2">
+                <div class="field">
+                  <label for="empresa">Empresa</label>
+                  <input type="text" id="empresa" placeholder="Nome da empresa" required />
+                </div>
+                <div class="field">
+                  <label for="porte">Porte</label>
+                  <select id="porte" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1 a 5 funcionários">1–5 funcionários</option>
+                    <option value="6 a 20 funcionários">6–20 funcionários</option>
+                    <option value="21 a 50 funcionários">21–50 funcionários</option>
+                    <option value="mais de 50 funcionários">+50 funcionários</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="whatsapp">WhatsApp para contato</label>
+                <input type="tel" id="whatsapp" placeholder="(11) 99999-9999" required />
+              </div>
+
+              <div class="field">
+                <label for="mensagem">Maior desafio de TI hoje?</label>
+                <textarea id="mensagem" placeholder="Ex.: lentidão, falhas recorrentes, falta de backup, preocupação com segurança..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-wa">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.117 1.532 5.847L.057 23.082a.75.75 0 0 0 .92.92l5.235-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.943-1.35l-.354-.21-3.668 1.033 1.033-3.668-.21-.354A9.71 9.71 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+                </svg>
+                Agendar pelo WhatsApp
+              </button>
+
+              <div class="form-note">
+                Ao clicar, você será redirecionado ao WhatsApp com seus dados preenchidos.
+              </div>
+
+              <div class="trust-strip">
+                <div class="trust-item">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Sem compromisso
+                </div>
+                <div class="trust-item">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  100% gratuito
+                </div>
+                <div class="trust-item">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Resposta em até 2h
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GAINS -->
+  <section class="section strip">
+    <div class="container">
+      <div class="section-tag reveal">O que você recebe</div>
+      <h2 class="section-title reveal">O que esse diagnóstico<br>entrega para sua empresa</h2>
+      <p class="section-sub reveal">Uma visão clara dos riscos, fragilidades e prioridades da sua operação de TI — para empresas em Suzano, Mogi das Cruzes e toda a região do Alto Tietê.</p>
+
+      <div class="gain-grid">
+        <div class="gain-card reveal">
+          <div class="gain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h4>Mapeamento de Riscos</h4>
+          <p>Identificamos vulnerabilidades reais na sua rede, servidores, acessos e dispositivos antes que causem dano.</p>
+        </div>
+        <div class="gain-card reveal">
+          <div class="gain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h4>Análise de Performance</h4>
+          <p>Gargalos de rede, lentidão e pontos de falha que comprometem a produtividade da equipe no dia a dia.</p>
+        </div>
+        <div class="gain-card reveal">
+          <div class="gain-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="9" y1="13" x2="15" y2="13"/>
+              <line x1="9" y1="17" x2="15" y2="17"/>
+            </svg>
+          </div>
+          <h4>Plano de Ação Prático</h4>
+          <p>Recomendações priorizadas e objetivas para corrigir os pontos críticos encontrados sem jargão técnico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO + HOW -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <div class="section-tag reveal">Para quem é</div>
+        <h2 class="section-title reveal">Gestão de TI Alto Tietê<br>para quem não pode improvisar</h2>
+        <p class="section-sub reveal">Empresas em Mogi das Cruzes, Suzano e região que dependem de tecnologia no dia a dia e precisam de controle, segurança e previsibilidade.</p>
+        <ul class="audience-list">
+          <li class="reveal">Empresas com falhas recorrentes de TI</li>
+          <li class="reveal">Operações sem monitoramento contínuo</li>
+          <li class="reveal">Ambientes com risco de indisponibilidade</li>
+          <li class="reveal">Negócios preocupados com segurança digital</li>
+          <li class="reveal">Empresas em crescimento com infraestrutura defasada</li>
+          <li class="reveal">Gestores que querem previsibilidade e controle</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="section-tag reveal">Como funciona</div>
+        <div class="steps-panel reveal">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h5>Você preenche o formulário</h5>
+              <p>Dados básicos sobre sua empresa e o cenário atual de TI.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h5>Abrimos o WhatsApp direto</h5>
+              <p>Você é redirecionado ao WhatsApp com as informações preenchidas. Basta enviar.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h5>Você recebe os direcionamentos</h5>
+              <p>Visão clara dos principais riscos, prioridades e próximos passos — sem enrolação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h3>Empresa de TI em Suzano e Mogi das Cruzes<br>com atendimento ativo na região.</h3>
+          <p>Não espere a falha acontecer. Agende agora o diagnóstico sem custo e entenda onde estão os pontos críticos da sua operação de TI.</p>
+        </div>
+        <a href="#form" class="cta-btn" onclick="scrollToForm(event)">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.117 1.532 5.847L.057 23.082a.75.75 0 0 0 .92.92l5.235-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.943-1.35l-.354-.21-3.668 1.033 1.033-3.668-.21-.354A9.71 9.71 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          Quero meu diagnóstico
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>Oryxon Systems</strong> · Suporte de TI em Mogi das Cruzes | Empresa de TI em Suzano | Gestão de TI Alto Tietê<br>
+    Mogi das Cruzes · Suzano · Itaquaquecetuba · Guararema · Poá · Ferraz de Vasconcelos
+  </footer>
+
+  <script>
+    // ── Máscara de telefone ──
+    document.getElementById('whatsapp').addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length >= 7)      v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+      else if (v.length >= 3) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+      else if (v.length)      v = '(' + v;
+      e.target.value = v;
+    });
+
+    // ── Scroll suave ──
+    function scrollToForm(e) {
+      e.preventDefault();
+      document.getElementById('form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ── Validação básica ──
+    function validarCampos() {
+      const campos = ['nome', 'empresa', 'whatsapp'];
+      for (const id of campos) {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) { el.focus(); return false; }
+      }
+      const porte = document.getElementById('porte');
+      if (!porte.value) { porte.focus(); return false; }
+      return true;
+    }
+
+    // ── Envio para WhatsApp ──
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      if (!validarCampos()) return;
+
+      const nome     = document.getElementById('nome').value.trim();
+      const empresa  = document.getElementById('empresa').value.trim();
+      const porte    = document.getElementById('porte').value;
+      const whatsapp = document.getElementById('whatsapp').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const origem   = new URLSearchParams(window.location.search).get('origem') || 'site';
+
+      // ⚠ const NUMERO = '5511934932992'; // Oryxon Systems
+      // const NUMERO = '5511934932992';
+
+      const texto = [
+        '👋 Olá! Quero agendar um *Diagnóstico de TI Gratuito*.',
+        '',
+        '📋 *Meus dados:*',
+        `• Nome: ${nome}`,
+        `• Empresa: ${empresa}`,
+        `• Porte: ${porte}`,
+        `• WhatsApp: ${whatsapp}`,
+        `• Desafio principal: ${mensagem || 'Não informado'}`,
+        `• Origem: ${origem}`,
+      ].join('\n');
+
+      window.open(`https://wa.me/${NUMERO}?text=${encodeURIComponent(texto)}`, '_blank');
+    }
+
+    // ── Scroll reveal ──
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
