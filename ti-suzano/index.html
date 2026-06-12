@@ -1,863 +1,300 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suporte de TI em Suzano | Empresa de TI Alto Tietê | Oryxon Systems</title>
+  <meta name="description" content="Empresa de TI em Suzano. Gestão proativa, backup, segurança e monitoramento 24x7 para empresas. Atendimento presencial em Suzano e região. Diagnóstico gratuito."/>
+  <meta name="keywords" content="suporte de TI em Suzano, empresa de TI em Suzano, gestão de TI Alto Tietê, suporte técnico Suzano, infraestrutura TI Suzano, segurança da informação Suzano"/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/ti-suzano/"/>
+  <meta property="og:title" content="Suporte de TI em Suzano | Oryxon Systems"/>
+  <meta property="og:description" content="Empresa de TI em Suzano. Gestão proativa, backup, segurança e monitoramento 24x7. Diagnóstico gratuito."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/ti-suzano/"/>
+  <meta property="og:type" content="website"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FXFSLJDCNW');
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suporte de TI em Suzano | Gestão de TI Alto Tietê | Oryxon Systems</title>
-  <meta name="description" content="Suporte de TI em Suzano e região do Alto Tietê. Empresa de TI em Suzano com foco em segurança, continuidade e redução de falhas. Diagnóstico gratuito para empresas." />
-  <meta name="keywords" content="suporte de TI em Suzano, empresa de TI em Suzano, gestão de TI Alto Tietê, suporte técnico empresarial, infraestrutura de TI, segurança de redes" />
-  <meta property="og:title" content="Suporte de TI em Suzano | Oryxon Systems" />
-  <meta property="og:description" content="Empresa de TI em Suzano com gestão proativa, backup, segurança e monitoramento 24x7. Diagnóstico gratuito para empresas do Alto Tietê." />
-  <meta property="og:url" content="https://www.oryxonsystems.com.br/ti-suzano/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="pt_BR" />
-  <link rel="canonical" href="https://www.oryxonsystems.com.br/ti-suzano/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:          #090C12;
-      --surface:     #0F1420;
-      --surface2:    #141927;
-      --border:      #1D2535;
-      --border2:     #252E42;
-      --orange:      #EC6824;
-      --orange-lt:   rgba(236,104,36,.14);
-      --orange-glow: rgba(236,104,36,.22);
-      --blue-lt:     rgba(59,130,246,.09);
-      --text:        #EDF0F7;
-      --muted:       #7A869E;
-      --muted2:      #A8B3C7;
-      --white:       #FFFFFF;
-      --danger:      #FF4C4C;
-      --green:       #22C55E;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Barlow', sans-serif;
-      font-weight: 400;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image:
-        linear-gradient(rgba(59,130,246,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,.035) 1px, transparent 1px);
-      background-size: 56px 56px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .glow-hero {
-      position: absolute; top: -180px; right: -200px;
-      width: 680px; height: 680px;
-      background: radial-gradient(circle, rgba(236,104,36,.12) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .glow-blue {
-      position: absolute; bottom: -120px; left: -160px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(59,130,246,.08) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    /* NAV */
-    nav {
-      position: sticky; top: 0; z-index: 200;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 40px;
-      background: rgba(9,12,18,.90);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .brand { display: flex; align-items: center; gap: 12px; }
-
-    .brand-mark {
-      width: 36px; height: 36px;
-      background: var(--orange-lt);
-      border: 1.5px solid rgba(236,104,36,.4);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    .brand-mark svg { width: 18px; height: 18px; color: var(--orange); }
-
-    .brand-name {
-      display: block;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800; font-size: 1.05rem;
-      letter-spacing: .06em; text-transform: uppercase; color: var(--white);
-    }
-
-    .brand-sub {
-      display: block;
-      font-size: .7rem; color: var(--muted);
-      letter-spacing: .06em; text-transform: uppercase;
-    }
-
-    .nav-cta {
-      display: flex; align-items: center; gap: 8px;
-      background: var(--orange); color: var(--white);
-      font-family: 'Barlow', sans-serif; font-weight: 700;
-      font-size: .8rem; letter-spacing: .04em; text-transform: uppercase;
-      padding: 10px 20px; border-radius: 8px; text-decoration: none;
-      transition: background .2s, transform .15s, box-shadow .2s;
-    }
-
-    .nav-cta:hover { background: #d65b1c; transform: translateY(-1px); box-shadow: 0 6px 24px var(--orange-glow); }
-    .nav-cta svg { width: 15px; height: 15px; }
-
-    /* HERO */
-    .hero {
-      position: relative; overflow: hidden;
-      padding: 80px 0 90px;
-    }
-
-    .container {
-      max-width: 1160px; margin: 0 auto; padding: 0 32px;
-      position: relative; z-index: 1;
-    }
-
-    .hero-grid {
-      display: grid; grid-template-columns: 1fr 420px;
-      gap: 56px; align-items: start;
-    }
-
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 9px;
-      background: var(--orange-lt);
-      border: 1px solid rgba(236,104,36,.3);
-      color: #FFBF9A;
-      font-size: .72rem; font-weight: 600;
-      letter-spacing: .12em; text-transform: uppercase;
-      padding: 6px 14px; border-radius: 100px;
-      margin-bottom: 24px;
-      animation: fadeUp .5s ease both;
-    }
-
-    .eyebrow-dot {
-      width: 6px; height: 6px; background: var(--orange);
-      border-radius: 50%; animation: blink 2s infinite;
-    }
-
-    @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:.3; } }
-
-    h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: clamp(2.6rem, 5.5vw, 4rem);
-      line-height: 1.05; letter-spacing: -.01em; text-transform: uppercase;
-      margin-bottom: 20px;
-      animation: fadeUp .5s .08s ease both;
-    }
-
-    h1 em { font-style: normal; color: var(--orange); }
-
-    .lead {
-      font-size: 1.08rem; color: var(--muted2); font-weight: 300;
-      max-width: 540px; margin-bottom: 36px;
-      animation: fadeUp .5s .16s ease both;
-    }
-
-    .risk-box {
-      background: var(--surface);
-      border: 1px solid var(--border); border-left: 3px solid var(--danger);
-      border-radius: 14px; padding: 22px 24px; margin-bottom: 28px;
-      animation: fadeUp .5s .24s ease both;
-    }
-
-    .risk-box-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700; font-size: 1.1rem;
-      text-transform: uppercase; letter-spacing: .03em; margin-bottom: 12px;
-    }
-
-    .risk-list { list-style: none; display: grid; gap: 8px; }
-
-    .risk-list li {
-      display: flex; align-items: center; gap: 10px;
-      font-size: .9rem; color: var(--muted2);
-      padding: 9px 14px;
-      background: rgba(255,76,76,.05);
-      border: 1px solid rgba(255,76,76,.12);
-      border-radius: 8px;
-    }
-
-    .risk-list li .x { color: var(--danger); font-size: 1rem; flex-shrink: 0; }
-
-    .benefit-list {
-      list-style: none; display: grid; gap: 10px;
-      animation: fadeUp .5s .32s ease both;
-    }
-
-    .benefit-list li {
-      display: flex; align-items: flex-start; gap: 12px;
-      font-size: .92rem; color: var(--muted2);
-      padding: 11px 16px;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 10px; transition: border-color .2s;
-    }
-
-    .benefit-list li:hover { border-color: rgba(236,104,36,.3); }
-    .benefit-list li .ck { color: var(--orange); font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
-
-    .hero-footer {
-      margin-top: 20px; color: var(--muted); font-size: .8rem;
-      display: flex; align-items: center; gap: 6px;
-      animation: fadeUp .5s .4s ease both;
-    }
-
-    .hero-footer svg { color: var(--orange); }
-
-    /* FORM CARD */
-    .form-card {
-      background: var(--white); color: #0F172A;
-      border-radius: 20px; padding: 36px 32px;
-      box-shadow: 0 24px 64px rgba(0,0,0,.36), 0 0 0 1px rgba(0,0,0,.06);
-      position: relative; overflow: hidden;
-      animation: fadeUp .5s .1s ease both;
-    }
-
-    .form-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 4px; background: linear-gradient(90deg, var(--orange), #f89050);
-    }
-
-    .form-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800; font-size: 1.65rem;
-      text-transform: uppercase; letter-spacing: .01em;
-      color: #090C12; line-height: 1.15; margin-bottom: 6px;
-    }
-
-    .form-sub {
-      font-size: .85rem; color: #64748B; margin-bottom: 22px; line-height: 1.5;
-    }
-
-    .field { margin-bottom: 14px; }
-
-    .field label {
-      display: block; font-size: .72rem; font-weight: 700;
-      letter-spacing: .08em; text-transform: uppercase;
-      color: #334155; margin-bottom: 6px;
-    }
-
-    .field input, .field textarea, .field select {
-      width: 100%; background: #F8FAFC;
-      border: 1.5px solid #CBD5E1; border-radius: 10px;
-      padding: 12px 14px; font-size: .92rem;
-      font-family: 'Barlow', sans-serif; color: #0F172A;
-      outline: none;
-      transition: border-color .2s, box-shadow .2s, background .2s;
-      -webkit-appearance: none;
-    }
-
-    .field input::placeholder, .field textarea::placeholder { color: #94A3B8; }
-
-    .field input:focus, .field textarea:focus, .field select:focus {
-      border-color: var(--orange); background: #fff;
-      box-shadow: 0 0 0 4px rgba(236,104,36,.11);
-    }
-
-    .field textarea { resize: none; height: 80px; }
-
-    .field select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-      background-repeat: no-repeat; background-position: right 14px center;
-      padding-right: 38px; cursor: pointer;
-    }
-
-    .field select option { background: #fff; color: #0F172A; }
-
-    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-    .btn-wa {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      width: 100%; background: var(--green); color: #fff;
-      border: none; border-radius: 12px; padding: 15px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700; font-size: 1.05rem;
-      letter-spacing: .04em; text-transform: uppercase;
-      cursor: pointer; margin-top: 6px;
-      transition: background .2s, transform .15s, box-shadow .2s;
-    }
-
-    .btn-wa:hover {
-      background: #16a34a; transform: translateY(-1px);
-      box-shadow: 0 8px 28px rgba(34,197,94,.28);
-    }
-
-    .btn-wa:active { transform: translateY(0); }
-    .btn-wa svg { width: 20px; height: 20px; flex-shrink: 0; }
-
-    .form-note {
-      margin-top: 10px; text-align: center;
-      font-size: .73rem; color: #94A3B8; line-height: 1.5;
-    }
-
-    .trust-strip {
-      margin-top: 14px; padding-top: 14px;
-      border-top: 1px solid #E2E8F0;
-      display: flex; justify-content: center; gap: 18px; flex-wrap: wrap;
-    }
-
-    .trust-item {
-      display: flex; align-items: center; gap: 5px;
-      font-size: .73rem; color: #475569; font-weight: 600;
-    }
-
-    .trust-item svg { color: var(--green); }
-
-    /* SECTIONS */
-    section { position: relative; z-index: 1; }
-    .section { padding: 80px 0; }
-
-    .section-tag {
-      font-size: .7rem; font-weight: 700;
-      letter-spacing: .14em; text-transform: uppercase;
-      color: var(--orange); margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      text-transform: uppercase; letter-spacing: -.01em;
-      line-height: 1.1; margin-bottom: 14px;
-    }
-
-    .section-sub {
-      font-size: 1rem; color: var(--muted2); font-weight: 300;
-      max-width: 760px; margin-bottom: 40px;
-    }
-
-    .strip {
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    /* Gain cards */
-    .gain-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-    }
-
-    .gain-card {
-      background: var(--surface2); border: 1px solid var(--border);
-      border-radius: 16px; padding: 26px 24px 30px;
-      transition: border-color .2s, transform .2s;
-    }
-
-    .gain-card:hover { border-color: rgba(236,104,36,.35); transform: translateY(-3px); }
-
-    .gain-icon {
-      width: 44px; height: 44px; background: var(--orange-lt);
-      border-radius: 10px; display: flex; align-items: center; justify-content: center;
-      color: var(--orange); margin-bottom: 16px;
-    }
-
-    .gain-icon svg { width: 20px; height: 20px; }
-
-    .gain-card h4 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700; font-size: 1.15rem;
-      text-transform: uppercase; letter-spacing: .02em; margin-bottom: 8px;
-    }
-
-    .gain-card p { font-size: .88rem; color: var(--muted2); line-height: 1.65; }
-
-    /* Two col */
-    .two-col {
-      display: grid; grid-template-columns: 1.1fr .9fr;
-      gap: 48px; align-items: start;
-    }
-
-    .audience-list { list-style: none; display: grid; gap: 10px; }
-
-    .audience-list li {
-      display: flex; align-items: center; gap: 12px;
-      padding: 12px 16px;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 10px; font-size: .9rem; color: var(--muted2);
-      transition: border-color .2s;
-    }
-
-    .audience-list li:hover { border-color: rgba(236,104,36,.3); }
-
-    .audience-list li::before {
-      content: ''; width: 6px; height: 6px;
-      background: var(--orange); border-radius: 50%; flex-shrink: 0;
-    }
-
-    /* Steps */
-    .steps-panel {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 18px; padding: 28px;
-    }
-
-    .step { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); }
-    .step:last-child { border-bottom: none; padding-bottom: 0; }
-    .step:first-child { padding-top: 0; }
-
-    .step-num {
-      width: 32px; height: 32px; background: var(--orange-lt);
-      border: 1px solid rgba(236,104,36,.35); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800; font-size: 1rem; color: var(--orange);
-      flex-shrink: 0; margin-top: 2px;
-    }
-
-    .step-body h5 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700; font-size: 1.05rem;
-      text-transform: uppercase; letter-spacing: .03em; margin-bottom: 5px;
-    }
-
-    .step-body p { font-size: .86rem; color: var(--muted2); line-height: 1.6; }
-
-    /* CTA Band */
-    .cta-band {
-      background: var(--orange); padding: 64px 0;
-      position: relative; overflow: hidden;
-    }
-
-    .cta-band::before {
-      content: ''; position: absolute; top: -80px; right: -80px;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(255,255,255,.12) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .cta-inner {
-      display: flex; align-items: center;
-      justify-content: space-between; gap: 32px;
-    }
-
-    .cta-band h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800;
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-      text-transform: uppercase; letter-spacing: -.01em;
-      line-height: 1.1; color: #fff; margin-bottom: 8px;
-    }
-
-    .cta-band p {
-      font-size: .96rem; color: rgba(255,255,255,.82);
-      max-width: 640px;
-    }
-
-    .cta-btn {
-      display: flex; align-items: center; gap: 10px;
-      background: #fff; color: #090C12;
-      padding: 16px 26px; border-radius: 12px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 800; font-size: 1rem;
-      text-transform: uppercase; letter-spacing: .04em;
-      white-space: nowrap; text-decoration: none;
-      transition: transform .15s, box-shadow .2s;
-    }
-
-    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.2); }
-    .cta-btn svg { width: 18px; height: 18px; color: var(--green); }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px; text-align: center;
-      color: var(--muted); font-size: .8rem;
-    }
-
-    footer strong { color: var(--muted2); }
-
-    /* Animations */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(22px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .reveal {
-      opacity: 0; transform: translateY(20px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* Responsive */
-    @media (max-width: 960px) {
-      nav { padding: 16px 24px; }
-      .hero { padding: 60px 0 70px; }
-      .hero-grid, .two-col { grid-template-columns: 1fr; }
-      .hero-grid { gap: 40px; }
-      .gain-grid { grid-template-columns: 1fr 1fr; }
-      .cta-inner { flex-direction: column; align-items: flex-start; }
-    }
-
-    @media (max-width: 640px) {
-      nav { padding: 14px 20px; }
-      .nav-cta span { display: none; }
-      .hero { padding: 48px 0 60px; }
-      .container { padding: 0 20px; }
-      .gain-grid { grid-template-columns: 1fr; }
-      .form-card { padding: 26px 22px; }
-      .row-2 { grid-template-columns: 1fr; }
-      .cta-btn { width: 100%; justify-content: center; }
-      .section { padding: 60px 0; }
-    }
-  </style>
-  <!-- Schema.org LocalBusiness -->
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Oryxon Systems",
-    "description": "Suporte de TI em Suzano e Alto Tietê. Gestão de TI proativa, backup, segurança e monitoramento 24x7 para empresas.",
-    "url": "https://www.oryxonsystems.com.br/ti-suzano/",
-    "telephone": "+5511934932992",
-    "email": "contato@oryxonsystems.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Suzano",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
-    },
-    "areaServed": ["Suzano", "Alto Tietê", "Mogi das Cruzes", "Itaquaquecetuba", "Poá"],
-    "sameAs": ["https://www.linkedin.com/company/oryxon-systems"]
-  }
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Oryxon Systems","description":"Suporte de TI em Suzano. Gestão de TI proativa, backup, segurança e monitoramento 24x7.","url":"https://www.oryxonsystems.com.br/ti-suzano/","telephone":"+5511934932992","email":"contato@oryxonsystems.com.br","address":{"@type":"PostalAddress","addressLocality":"Suzano","addressRegion":"SP","addressCountry":"BR"},"areaServed":["Suzano", "Mogi das Cruzes", "Itaquaquecetuba", "Poá", "Ferraz de Vasconcelos", "Guararema", "Santa Isabel"],"sameAs":["https://www.linkedin.com/company/oryxon-systems"]}
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#020713;--panel:rgba(8,21,43,.78);--border:rgba(93,176,255,.22);--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--shadow:0 30px 100px rgba(0,104,255,.18);--radius:28px;--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.22),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.20),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    /* NAV */
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;text-decoration:none}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-right{display:flex;align-items:center;gap:12px}
+    .btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 20px;border-radius:999px;border:1px solid transparent;font-family:inherit;font-weight:850;letter-spacing:-.02em;cursor:pointer;transition:.2s ease;text-decoration:none;white-space:nowrap;font-size:.88rem}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{color:#001224;background:linear-gradient(135deg,#67e8ff 0%,#00b7ff 35%,#1478ff 100%);box-shadow:0 16px 50px rgba(0,183,255,.28)}
+    .btn-ghost{color:#fff;background:rgba(255,255,255,.045);border-color:rgba(103,232,255,.28)}
+    .back-link{color:var(--muted);font-size:.84rem;font-weight:700;transition:.2s}
+    .back-link:hover{color:#fff}
+    /* HERO */
+    .hero{padding:72px 0 60px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .hero-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+    .city-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid rgba(55,245,161,.3);background:rgba(55,245,161,.06);color:#a0f5d4;font-size:.76rem;font-weight:900;letter-spacing:.05em;margin-bottom:18px}
+    .live-dot{width:7px;height:7px;border-radius:50%;background:#37f5a1;box-shadow:0 0 12px rgba(55,245,161,.8);flex-shrink:0}
+    .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:10px}
+    h1{font-size:clamp(2.4rem,6vw,4rem);line-height:.96;letter-spacing:-.07em;margin-bottom:18px}
+    .grad{background:linear-gradient(135deg,#fff 12%,#9df7ff 40%,#00b7ff 62%,#1478ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .hero p{color:var(--muted);font-size:1.05rem;max-width:560px;line-height:1.7;margin-bottom:26px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+    .trust-pills{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.045);border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:750;color:var(--muted)}
+    .hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:260px}
+    .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(8,21,43,.72);border-radius:18px;padding:16px;text-align:center}
+    .stat-box strong{display:block;font-size:1.8rem;letter-spacing:-.06em;color:#dff9ff;text-shadow:0 0 20px rgba(0,183,255,.4)}
+    .stat-box span{color:var(--muted);font-size:.78rem;font-weight:700}
+    /* SECTIONS */
+    section{padding:72px 0}
+    h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.04;letter-spacing:-.055em;margin-bottom:14px}
+    .section-head{max-width:700px;margin-bottom:36px}
+    .section-head p{color:var(--muted);font-size:1rem}
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .svc-card{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028));border-radius:var(--radius);padding:26px;transition:.22s}
+    .svc-card:hover{transform:translateY(-4px);border-color:rgba(103,232,255,.4);box-shadow:0 20px 60px rgba(0,183,255,.10)}
+    .svc-icon{font-size:1.8rem;margin-bottom:14px}
+    .svc-card h3{font-size:1.05rem;letter-spacing:-.03em;margin-bottom:8px}
+    .svc-card p{color:var(--muted);font-size:.9rem;line-height:1.65}
+    /* WHY LOCAL */
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .why-list{display:grid;gap:14px}
+    .why-item{display:flex;align-items:flex-start;gap:12px;color:#c8d7e9;font-size:.95rem}
+    .check{color:var(--success);font-weight:900;flex-shrink:0;font-size:1rem}
+    .why-panel{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:28px;padding:28px}
+    .why-panel h3{font-size:1.1rem;margin-bottom:16px;color:#dff9ff}
+    .why-panel p{color:var(--muted);font-size:.9rem;line-height:1.65;margin-bottom:12px}
+    /* COVERAGE */
+    .coverage-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .city-card{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:16px;padding:16px;text-align:center;transition:.2s}
+    .city-card.active{border-color:rgba(103,232,255,.4);background:rgba(0,183,255,.08)}
+    .city-card .icon{font-size:1.4rem;margin-bottom:8px}
+    .city-card h4{font-size:.88rem;font-weight:800;margin-bottom:3px}
+    .city-card span{color:var(--muted);font-size:.76rem}
+    /* CTA */
+    .cta-band{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 16rem),rgba(8,21,43,.62);border-radius:34px;padding:clamp(28px,5vw,48px);text-align:center}
+    .cta-band p{color:var(--muted);font-size:1rem;margin-bottom:26px;max-width:540px;margin-inline:auto}
+    .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    /* FORM */
+    .form-wrap{border:1px solid rgba(103,232,255,.2);background:rgba(8,21,43,.72);border-radius:28px;padding:clamp(22px,4vw,36px)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+    .field{min-height:50px;width:100%;border:1px solid rgba(103,232,255,.18);background:rgba(2,7,19,.62);color:#fff;border-radius:12px;padding:0 14px;outline:none;font-family:inherit;font-size:.92rem;transition:.2s}
+    .field:focus{border-color:rgba(103,232,255,.55);box-shadow:0 0 0 3px rgba(0,183,255,.10)}
+    .field.full{grid-column:1/-1}
+    textarea.field{min-height:90px;padding-top:13px;resize:vertical}
+    /* FOOTER */
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:24px 0;color:var(--muted2);font-size:.84rem}
+    .page-footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-stats{display:none}.services-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr}.coverage-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.services-grid,.coverage-grid,.form-grid{grid-template-columns:1fr}section{padding:52px 0}.btn{width:100%}}
+  </style>
 </head>
 <body>
-
-  <nav>
-    <div class="brand">
-      <div class="brand-mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
-        </svg>
-      </div>
-      <div>
-        <span class="brand-name">Oryxon Systems</span>
-        <span class="brand-sub">Gestão Estratégica de TI</span>
+  <header class="nav-shell">
+    <div class="container nav">
+      <a href="/" class="brand"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <div class="nav-right">
+        <a href="/" class="back-link">← Site principal</a>
+        <a href="#contato" class="btn btn-primary">Diagnóstico gratuito</a>
       </div>
     </div>
-    <a href="#form" class="nav-cta" onclick="scrollToForm(event)">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.117 1.532 5.847L.057 23.082a.75.75 0 0 0 .92.92l5.235-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.943-1.35l-.354-.21-3.668 1.033 1.033-3.668-.21-.354A9.71 9.71 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-      <span>Diagnóstico Gratuito</span>
-    </a>
-  </nav>
+  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="glow-hero"></div>
-    <div class="glow-blue"></div>
-    <div class="container">
-      <div class="hero-grid">
-
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
         <div>
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            Atendimento ativo na região do Alto Tietê · 100% sem custo
+          <div class="city-badge"><span class="live-dot"></span> Atendimento presencial em Suzano</div>
+          <div class="kicker">Empresa de TI em Suzano</div>
+          <h1>Suporte de TI em<br><span class="grad">Suzano</span><br>para empresas.</h1>
+          <p>Gestão de TI proativa para empresas em Suzano e região do Alto Tietê. Monitoramento 24x7, backup gerenciado, segurança da informação e suporte com primeiro atendimento em até 15 minutos.</p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+            <a href="https://wa.me/5511934932992?text=Olá%2C%20quero%20suporte%20de%20TI%20para%20minha%20empresa%20em%20Suzano." target="_blank" rel="noopener" class="btn btn-ghost">Falar no WhatsApp</a>
           </div>
-
-          <h1>Suporte de TI em<br><em>Suzano</em><br>para empresas que não podem parar</h1>
-
-          <p class="lead">
-            Atendemos empresas em Suzano com gestão estratégica de TI, focada em segurança, continuidade e redução de falhas.
-          </p>
-
-          <div class="risk-box">
-            <div class="risk-box-title">📍 Empresas em Suzano enfrentam</div>
-            <ul class="risk-list">
-              <li><span class="x">✕</span> Falhas recorrentes sem suporte rápido</li>
-              <li><span class="x">✕</span> Infraestrutura desatualizada e vulnerável</li>
-              <li><span class="x">✕</span> Acessos sem controle ou auditoria</li>
-              <li><span class="x">✕</span> Rede sem segmentação ou monitoramento</li>
-            </ul>
-          </div>
-
-          <ul class="benefit-list">
-            <li><span class="ck">✔</span> Identificação de riscos antes do problema acontecer</li>
-            <li><span class="ck">✔</span> Avaliação real de segurança e estabilidade da operação</li>
-            <li><span class="ck">✔</span> Diagnóstico rápido da sua infraestrutura atual</li>
-            <li><span class="ck">✔</span> Plano de ação prático, claro e sem enrolação</li>
-          </ul>
-
-          <div class="hero-footer">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Suporte de TI em Suzano e Alto Tietê e toda a região do Alto Tietê
+          <div class="trust-pills">
+            <span class="pill">⚡ SLA &lt;15min</span>
+            <span class="pill">📍 Presencial em Suzano</span>
+            <span class="pill">🔒 Backup 24x7</span>
+            <span class="pill">✅ Parceiro Help Digital</span>
           </div>
         </div>
+        <div class="hero-stats">
+          <div class="stat-box"><strong>40+</strong><span>Endpoints gerenciados</span></div>
+          <div class="stat-box"><strong>&lt;15min</strong><span>1º atendimento</span></div>
+          <div class="stat-box"><strong>7</strong><span>Clientes ativos</span></div>
+          <div class="stat-box"><strong>24x7</strong><span>Monitoramento</span></div>
+        </div>
+      </div>
+    </section>
 
-        <!-- FORM -->
-        <div id="form">
-          <div class="form-card">
-            <div class="form-title">Solicite seu<br>diagnóstico gratuito</div>
-            <div class="form-sub">Preencha os dados e fale diretamente com nossa equipe pelo WhatsApp para agendar.</div>
+    <!-- SERVIÇOS -->
+    <section style="border-top:1px solid rgba(103,232,255,.08)">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">O que oferecemos em Suzano</div>
+          <h2>Serviços de TI para empresas de Suzano.</h2>
+          <p>Soluções completas para empresas com 5 ou mais computadores em Suzano e região.</p>
+        </div>
+        <div class="services-grid">
+          <div class="svc-card"><div class="svc-icon">📡</div><h3>Monitoramento 24x7</h3><p>Supervisão contínua de endpoints, servidores e redes em Suzano. Problemas identificados antes de impactar sua operação.</p></div>
+          <div class="svc-card"><div class="svc-icon">💾</div><h3>Backup Gerenciado</h3><p>Estratégia de backup com validação periódica e plano de recuperação. Seus dados protegidos mesmo contra ransomware.</p></div>
+          <div class="svc-card"><div class="svc-icon">🛡️</div><h3>Segurança da Informação</h3><p>Antivírus Bitdefender, firewall, hardening e vulnerability assessment para proteger o ambiente da sua empresa em Suzano.</p></div>
+          <div class="svc-card"><div class="svc-icon">⚙️</div><h3>Automação de TI</h3><p>Scripts e rotinas automatizadas com Ansible e Python para padronizar e escalar sua infraestrutura.</p></div>
+          <div class="svc-card"><div class="svc-icon">🌐</div><h3>Redes Corporativas</h3><p>Projeto, implantação e gestão de redes Wi-Fi e cabeadas com equipamentos enterprise (Ubiquiti, Cisco).</p></div>
+          <div class="svc-card"><div class="svc-icon">🏢</div><h3>Outsourcing de TI</h3><p>Terceirize a TI da sua empresa em Suzano com custo fixo mensal previsível. Sem contratar equipe interna.</p></div>
+        </div>
+      </div>
+    </section>
 
-            <form id="lead-form" novalidate onsubmit="sendToWhatsApp(event)">
-              <div class="field">
-                <label for="nome">Nome completo</label>
-                <input type="text" id="nome" placeholder="João Silva" required />
-              </div>
+    <!-- POR QUE LOCAL -->
+    <section style="border-top:1px solid rgba(103,232,255,.08)">
+      <div class="container why-grid">
+        <div>
+          <div class="kicker">Por que a Oryxon em Suzano?</div>
+          <h2>TI local que conhece a realidade do Alto Tietê.</h2>
+          <div class="why-list" style="margin-top:20px">
+            <div class="why-item"><span class="check">✓</span> Atendimento presencial em Suzano — técnico na sua empresa quando precisar</div>
+            <div class="why-item"><span class="check">✓</span> Conhecemos os provedores de internet e fornecedores locais da região</div>
+            <div class="why-item"><span class="check">✓</span> Primeiro atendimento remoto em até 15 minutos</div>
+            <div class="why-item"><span class="check">✓</span> Parceiro oficial Help Digital — acesso a ferramentas enterprise</div>
+            <div class="why-item"><span class="check">✓</span> Gestão proativa — resolvemos antes de você perceber o problema</div>
+            <div class="why-item"><span class="check">✓</span> Contrato sem burocracia e com SLA documentado</div>
+          </div>
+        </div>
+        <div class="why-panel">
+          <h3>🏢 Empresas de Suzano que confiam na Oryxon</h3>
+          <p>Atendemos empresas de comércio, serviços, saúde, indústria e turismo em Suzano e toda a região do Alto Tietê — com o mesmo padrão de gestão de TI das grandes corporações, no tamanho certo para a sua empresa.</p>
+          <p>Diagnóstico gratuito disponível para empresas de Suzano com 5 ou mais computadores. Sem compromisso.</p>
+          <a href="#contato" class="btn btn-primary" style="margin-top:8px;width:100%">Solicitar diagnóstico em Suzano →</a>
+        </div>
+      </div>
+    </section>
 
-              <div class="row-2">
-                <div class="field">
-                  <label for="empresa">Empresa</label>
-                  <input type="text" id="empresa" placeholder="Nome da empresa" required />
-                </div>
-                <div class="field">
-                  <label for="porte">Porte</label>
-                  <select id="porte" required>
-                    <option value="" disabled selected>Selecione</option>
-                    <option value="1 a 5 funcionários">1–5 funcionários</option>
-                    <option value="6 a 20 funcionários">6–20 funcionários</option>
-                    <option value="21 a 50 funcionários">21–50 funcionários</option>
-                    <option value="mais de 50 funcionários">+50 funcionários</option>
-                  </select>
-                </div>
-              </div>
+    <!-- ÁREA DE COBERTURA -->
+    <section style="border-top:1px solid rgba(103,232,255,.08)">
+      <div class="container">
+        <div class="section-head" style="text-align:center;max-width:700px;margin-inline:auto">
+          <div class="kicker">Área de atendimento</div>
+          <h2>Cobrimos toda a região do Alto Tietê.</h2>
+          <p>Além de Suzano, atendemos presencialmente todas as cidades da região.</p>
+        </div>
+        <div class="coverage-grid">
+          <div class="city-card active"><div class="icon">📍</div><h4>Suzano</h4><span>Sede principal</span></div>
+          <div class="city-card "><div class="icon">📍</div><h4>Mogi das Cruzes</h4><span>Atendimento ativo</span></div>
+          <div class="city-card "><div class="icon">📍</div><h4>Itaquaquecetuba</h4><span>Atendimento ativo</span></div>
+          <div class="city-card "><div class="icon">📍</div><h4>Poá</h4><span>Atendimento ativo</span></div>
+          <div class="city-card "><div class="icon">📍</div><h4>Ferraz de Vasconcelos</h4><span>Atendimento ativo</span></div>
+          <div class="city-card "><div class="icon">📍</div><h4>Guararema</h4><span>Atendimento ativo</span></div>
+          <div class="city-card "><div class="icon">📍</div><h4>Santa Isabel</h4><span>Atendimento ativo</span></div>
+          <div class="city-card"><div class="icon">🌐</div><h4>Remoto SP</h4><span>Todo o estado</span></div>
+        </div>
+      </div>
+    </section>
 
-              <div class="field">
-                <label for="whatsapp">WhatsApp para contato</label>
-                <input type="tel" id="whatsapp" placeholder="(11) 99999-9999" required />
-              </div>
-
-              <div class="field">
-                <label for="mensagem">Maior desafio de TI hoje?</label>
-                <textarea id="mensagem" placeholder="Ex.: lentidão, falhas recorrentes, falta de backup, preocupação com segurança..."></textarea>
-              </div>
-
-              <button type="submit" class="btn-wa">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.117 1.532 5.847L.057 23.082a.75.75 0 0 0 .92.92l5.235-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.943-1.35l-.354-.21-3.668 1.033 1.033-3.668-.21-.354A9.71 9.71 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
-                </svg>
-                Agendar pelo WhatsApp
-              </button>
-
-              <div class="form-note">
-                Ao clicar, você será redirecionado ao WhatsApp com seus dados preenchidos.
-              </div>
-
-              <div class="trust-strip">
-                <div class="trust-item">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  Sem compromisso
-                </div>
-                <div class="trust-item">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  100% gratuito
-                </div>
-                <div class="trust-item">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  Resposta em até 2h
-                </div>
-              </div>
+    <!-- FORMULÁRIO -->
+    <section id="contato" style="border-top:1px solid rgba(103,232,255,.08)">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start">
+          <div>
+            <div class="kicker">Diagnóstico gratuito em Suzano</div>
+            <h2>Descubra os riscos da TI da sua empresa.</h2>
+            <p style="color:var(--muted);margin:14px 0 20px;line-height:1.7">Análise completa da infraestrutura, identificação de vulnerabilidades e plano de ação para empresas de Suzano com 5 ou mais computadores.</p>
+            <div class="why-list">
+              <div class="why-item"><span class="check">✓</span> Análise da infraestrutura atual</div>
+              <div class="why-item"><span class="check">✓</span> Identificação de riscos e vulnerabilidades</div>
+              <div class="why-item"><span class="check">✓</span> Plano de ação faseado e objetivo</div>
+              <div class="why-item"><span class="check">✓</span> Sem compromisso de contratação</div>
+            </div>
+          </div>
+          <div class="form-wrap">
+            <div class="kicker">Preencha e entraremos em contato</div>
+            <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:4px">Diagnóstico gratuito em Suzano</h3>
+            <p style="color:var(--muted);font-size:.88rem">O formulário abre uma conversa no WhatsApp com os dados preenchidos.</p>
+            <form class="form-grid" onsubmit="sendLead(event)">
+              <input class="field" id="nome" type="text" placeholder="Seu nome *" required>
+              <input class="field" id="empresa" type="text" placeholder="Empresa *" required>
+              <input class="field" id="telefone" type="tel" placeholder="WhatsApp *" required>
+              <input class="field" id="email" type="email" placeholder="E-mail">
+              <select class="field" id="computadores" required>
+                <option value="">Nº de computadores *</option>
+                <option>5 a 10</option><option>11 a 25</option>
+                <option>26 a 50</option><option>Mais de 50</option>
+              </select>
+              <select class="field" id="segmento">
+                <option value="">Segmento (opcional)</option>
+                <option>Comércio</option><option>Saúde</option>
+                <option>Indústria</option><option>Serviços</option>
+                <option>Educação</option><option>Outro</option>
+              </select>
+              <textarea class="field full" id="mensagem" placeholder="Principal problema ou preocupação de TI hoje?"></textarea>
+              <button class="btn btn-primary full" type="submit" style="min-height:52px;font-size:1rem">Solicitar diagnóstico gratuito →</button>
             </form>
+            <p style="color:var(--muted2);font-size:.8rem;margin-top:10px;text-align:center">🔒 Seus dados estão seguros. Sem spam.</p>
           </div>
         </div>
+      </div>
+    </section>
 
+    <!-- PARCEIRO -->
+    <section style="border-top:1px solid rgba(103,232,255,.08);padding:40px 0">
+      <div class="container" style="text-align:center">
+        <p style="color:var(--muted2);font-size:.76rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px">Parceiro oficial</p>
+        <div style="display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:14px">
+          <img src="data:image/png;base64,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" alt="Help Digital TI" style="height:28px;width:auto;opacity:.9">
+          <span style="color:var(--muted);font-size:.84rem;font-weight:700;border-left:1px solid rgba(103,232,255,.18);padding-left:14px">Parceiro oficial SP — Suzano</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="container inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20 — Suzano, SP</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="/">Site principal</a>
+        <a href="/privacidade.html">Privacidade</a>
+        <a href="/termos.html">Termos</a>
+        <a href="https://wa.me/5511934932992" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
-  </section>
-
-  <!-- GAINS -->
-  <section class="section strip">
-    <div class="container">
-      <div class="section-tag reveal">O que você recebe</div>
-      <h2 class="section-title reveal">O que esse diagnóstico<br>entrega para sua empresa</h2>
-      <p class="section-sub reveal">Uma visão clara dos riscos, fragilidades e prioridades da sua operação de TI — para empresas em Suzano, Mogi das Cruzes e toda a região do Alto Tietê.</p>
-
-      <div class="gain-grid">
-        <div class="gain-card reveal">
-          <div class="gain-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h4>Mapeamento de Riscos</h4>
-          <p>Identificamos vulnerabilidades reais na sua rede, servidores, acessos e dispositivos antes que causem dano.</p>
-        </div>
-        <div class="gain-card reveal">
-          <div class="gain-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-            </svg>
-          </div>
-          <h4>Análise de Performance</h4>
-          <p>Gargalos de rede, lentidão e pontos de falha que comprometem a produtividade da equipe no dia a dia.</p>
-        </div>
-        <div class="gain-card reveal">
-          <div class="gain-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="9" y1="13" x2="15" y2="13"/>
-              <line x1="9" y1="17" x2="15" y2="17"/>
-            </svg>
-          </div>
-          <h4>Plano de Ação Prático</h4>
-          <p>Recomendações priorizadas e objetivas para corrigir os pontos críticos encontrados sem jargão técnico.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO + HOW -->
-  <section class="section">
-    <div class="container two-col">
-      <div>
-        <div class="section-tag reveal">Para quem é</div>
-        <h2 class="section-title reveal">Gestão de TI Alto Tietê<br>para quem não pode improvisar</h2>
-        <p class="section-sub reveal">Empresas em Mogi das Cruzes, Suzano e região que dependem de tecnologia no dia a dia e precisam de controle, segurança e previsibilidade.</p>
-        <ul class="audience-list">
-          <li class="reveal">Empresas com falhas recorrentes de TI</li>
-          <li class="reveal">Operações sem monitoramento contínuo</li>
-          <li class="reveal">Ambientes com risco de indisponibilidade</li>
-          <li class="reveal">Negócios preocupados com segurança digital</li>
-          <li class="reveal">Empresas em crescimento com infraestrutura defasada</li>
-          <li class="reveal">Gestores que querem previsibilidade e controle</li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="section-tag reveal">Como funciona</div>
-        <div class="steps-panel reveal">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <h5>Você preenche o formulário</h5>
-              <p>Dados básicos sobre sua empresa e o cenário atual de TI.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <h5>Abrimos o WhatsApp direto</h5>
-              <p>Você é redirecionado ao WhatsApp com as informações preenchidas. Basta enviar.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <h5>Você recebe os direcionamentos</h5>
-              <p>Visão clara dos principais riscos, prioridades e próximos passos — sem enrolação.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BAND -->
-  <section class="cta-band">
-    <div class="container">
-      <div class="cta-inner">
-        <div>
-          <h3>Empresa de TI em Suzano e Mogi das Cruzes<br>com atendimento ativo na região.</h3>
-          <p>Não espere a falha acontecer. Agende agora o diagnóstico sem custo e entenda onde estão os pontos críticos da sua operação de TI.</p>
-        </div>
-        <a href="#form" class="cta-btn" onclick="scrollToForm(event)">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.557 4.117 1.532 5.847L.057 23.082a.75.75 0 0 0 .92.92l5.235-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.71 9.71 0 0 1-4.943-1.35l-.354-.21-3.668 1.033 1.033-3.668-.21-.354A9.71 9.71 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-          Quero meu diagnóstico
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <strong>Oryxon Systems</strong> · Suporte de TI em Mogi das Cruzes | Empresa de TI em Suzano | Gestão de TI Alto Tietê<br>
-    Mogi das Cruzes · Suzano · Itaquaquecetuba · Guararema · Poá · Ferraz de Vasconcelos
   </footer>
 
   <script>
-    // ── Máscara de telefone ──
-    document.getElementById('whatsapp').addEventListener('input', function(e) {
-      let v = e.target.value.replace(/\D/g, '').slice(0, 11);
-      if (v.length >= 7)      v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
-      else if (v.length >= 3) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
-      else if (v.length)      v = '(' + v;
-      e.target.value = v;
-    });
-
-    // ── Scroll suave ──
-    function scrollToForm(e) {
+    function sendLead(e) {
       e.preventDefault();
-      document.getElementById('form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const n = document.getElementById('nome').value.trim();
+      const emp = document.getElementById('empresa').value.trim();
+      const tel = document.getElementById('telefone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const comp = document.getElementById('computadores').value;
+      const seg = document.getElementById('segmento').value;
+      const msg = document.getElementById('mensagem').value.trim();
+      if(!n||!emp||!tel||!comp){alert('Preencha nome, empresa, WhatsApp e número de computadores.');return;}
+      const texto = `Olá, quero um Diagnóstico Gratuito de TI em Suzano.\n\nNome: ${n}\nEmpresa: ${emp}\nWhatsApp: ${tel}\nE-mail: ${email||'Não informado'}\nComputadores: ${comp}\nSegmento: ${seg||'Não informado'}\nPreocupação: ${msg||'Não informado'}`;
+      window.open('https://wa.me/5511934932992?text='+encodeURIComponent(texto),'_blank','noopener');
     }
 
-    // ── Validação básica ──
-    function validarCampos() {
-      const campos = ['nome', 'empresa', 'whatsapp'];
-      for (const id of campos) {
-        const el = document.getElementById(id);
-        if (!el.value.trim()) { el.focus(); return false; }
-      }
-      const porte = document.getElementById('porte');
-      if (!porte.value) { porte.focus(); return false; }
-      return true;
-    }
-
-    // ── Envio para WhatsApp ──
-    function sendToWhatsApp(e) {
-      e.preventDefault();
-      if (!validarCampos()) return;
-
-      const nome     = document.getElementById('nome').value.trim();
-      const empresa  = document.getElementById('empresa').value.trim();
-      const porte    = document.getElementById('porte').value;
-      const whatsapp = document.getElementById('whatsapp').value.trim();
-      const mensagem = document.getElementById('mensagem').value.trim();
-      const origem   = new URLSearchParams(window.location.search).get('origem') || 'site';
-
-      // ⚠ const NUMERO = '5511934932992'; // Oryxon Systems
-      // const NUMERO = '5511934932992';
-
-      const texto = [
-        '👋 Olá! Quero agendar um *Diagnóstico de TI Gratuito*.',
-        '',
-        '📋 *Meus dados:*',
-        `• Nome: ${nome}`,
-        `• Empresa: ${empresa}`,
-        `• Porte: ${porte}`,
-        `• WhatsApp: ${whatsapp}`,
-        `• Desafio principal: ${mensagem || 'Não informado'}`,
-        `• Origem: ${origem}`,
-      ].join('\n');
-
-      window.open(`https://wa.me/${NUMERO}?text=${encodeURIComponent(texto)}`, '_blank');
-    }
-
-    // ── Scroll reveal ──
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Reveal animation
+    const obs = new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.style.opacity='1',x.target.style.transform='none';}),{threshold:.08});
+    document.querySelectorAll('.svc-card,.city-card,.why-item,.stat-box').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity .6s ease,transform .6s ease';obs.observe(el);});
   </script>
 </body>
 </html>
