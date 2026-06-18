@@ -171,6 +171,19 @@
         <span class="pill">🔒 Backup • Segurança • Monitoramento</span>
         <span class="pill">✅ Parceiro Help Digital</span><span class="pill">⚡ PageSpeed 98-100/100</span>
       </div>
+
+      <!-- MINI-FORM HERO -->
+      <div class="reveal" style="margin-top:24px;border:1px solid rgba(103,232,255,.28);background:rgba(8,21,43,.72);border-radius:20px;padding:18px 20px">
+        <p style="font-size:.8rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--blue2);margin-bottom:12px">Diagnóstico gratuito — sem compromisso</p>
+        <form onsubmit="sendHeroLead(event)" style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <input id="h-nome" type="text" placeholder="Seu nome *" required style="min-height:44px;border:1px solid rgba(103,232,255,.22);background:rgba(2,7,19,.7);color:#fff;border-radius:10px;padding:0 12px;font-family:inherit;font-size:.88rem;outline:none;transition:.2s" onfocus="this.style.borderColor='rgba(103,232,255,.6)'" onblur="this.style.borderColor='rgba(103,232,255,.22)'">
+          <input id="h-empresa" type="text" placeholder="Empresa *" required style="min-height:44px;border:1px solid rgba(103,232,255,.22);background:rgba(2,7,19,.7);color:#fff;border-radius:10px;padding:0 12px;font-family:inherit;font-size:.88rem;outline:none;transition:.2s" onfocus="this.style.borderColor='rgba(103,232,255,.6)'" onblur="this.style.borderColor='rgba(103,232,255,.22)'">
+          <input id="h-tel" type="tel" placeholder="WhatsApp *" required style="min-height:44px;border:1px solid rgba(103,232,255,.22);background:rgba(2,7,19,.7);color:#fff;border-radius:10px;padding:0 12px;font-family:inherit;font-size:.88rem;outline:none;transition:.2s;grid-column:1/-1" onfocus="this.style.borderColor='rgba(103,232,255,.6)'" onblur="this.style.borderColor='rgba(103,232,255,.22)'">
+          <button type="submit" style="grid-column:1/-1;min-height:48px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;border:none;border-radius:10px;font-family:inherit;font-weight:850;font-size:.95rem;cursor:pointer;transition:.2s" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">Solicitar diagnóstico gratuito →</button>
+        </form>
+        <p style="font-size:.74rem;color:var(--muted2);margin-top:8px;text-align:center">🔒 Sem spam. Resposta em até 2h no horário comercial.</p>
+      </div>
+
     </div><div class="hero-visual reveal"><div class="orb-large"></div><div class="dash"><div class="dash-top"><strong>Oryxon Command Center</strong><span class="status"><span class="live-dot"></span> Proteção ativa</span></div><div class="dash-row"><div class="dash-card"><strong>&lt;15min</strong><span>1º atendimento</span></div><div class="dash-card"><strong>24x7</strong><span>Monitoramento</span></div><div class="dash-card"><strong>99,9%</strong><span>Disponibilidade</span></div></div><div class="dash-card"><strong style="font-size:1rem;letter-spacing:-.02em;">Riscos monitorados</strong><span> Vulnerabilidades, backup, endpoints, rede, performance e continuidade operacional.</span></div></div></div></div>
 
     <!-- Clientes strip abaixo do hero -->
@@ -189,6 +202,15 @@
           🧮 Calcule o prejuízo da sua empresa →
         </a>
         <p style="color:var(--muted2);font-size:.78rem;margin-top:10px">Ferramenta gratuita — resultado em menos de 1 minuto</p>
+
+        <!-- CTA inline pós-riscos -->
+        <div style="margin-top:20px;padding:18px 22px;border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+          <div>
+            <p style="margin:0 0 3px;font-weight:900;font-size:.95rem;color:#a0f5d4">Quer proteger sua empresa contra esses riscos?</p>
+            <p style="margin:0;color:var(--muted);font-size:.84rem">Diagnóstico gratuito — identificamos os riscos reais da sua operação em 30 minutos.</p>
+          </div>
+          <a href="#diagnostico" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#37f5a1,#1478ff);color:#001224;font-weight:850;font-size:.88rem;padding:11px 20px;border-radius:999px;text-decoration:none;white-space:nowrap;flex-shrink:0">Solicitar diagnóstico →</a>
+        </div>
       </div>
     </div></div></div></section>
     <section id="solucoes"><div class="container"><div class="section-head center reveal"><div class="kicker">Modelo MSP</div><h2>Transformamos sua TI em um ativo estratégico.</h2><p>Menos suporte reativo. Mais controle, automação, segurança e continuidade.</p></div><div class="solution-grid">
@@ -656,6 +678,55 @@
       window.open(url, "_blank", "noopener,noreferrer");
     }
 
+    // Sticky CTA — aparece após rolar 400px, some no form
+    (function() {
+      var cta = document.getElementById('stickyCta');
+      var form = document.getElementById('diagnostico');
+      if (!cta || !form) return;
+      window.addEventListener('scroll', function() {
+        var scrolled = window.scrollY > 400;
+        var nearForm = window.scrollY + window.innerHeight > form.offsetTop - 100;
+        if (scrolled && !nearForm) {
+          cta.style.opacity = '1';
+          cta.style.transform = 'translateY(0)';
+          cta.style.pointerEvents = 'auto';
+        } else {
+          cta.style.opacity = '0';
+          cta.style.transform = 'translateY(20px)';
+          cta.style.pointerEvents = 'none';
+        }
+      }, {passive: true});
+    })();
+
+    // Hero mini-form → WhatsApp
+    function sendHeroLead(e) {
+      e.preventDefault();
+      var nome = document.getElementById('h-nome').value.trim();
+      var empresa = document.getElementById('h-empresa').value.trim();
+      var tel = document.getElementById('h-tel').value.trim();
+      if (!nome || !empresa || !tel) return;
+      var texto = '👋 Olá! Quero um *Diagnóstico de TI Gratuito*.\n\n' +
+        '📋 *Meus dados:*\n' +
+        '• Nome: ' + nome + '\n' +
+        '• Empresa: ' + empresa + '\n' +
+        '• WhatsApp: ' + tel + '\n' +
+        '• Origem: hero-form';
+      window.open('https://wa.me/5511934932992?text=' + encodeURIComponent(texto), '_blank', 'noopener');
+    }
+
+    // Máscara WhatsApp no mini-form hero
+    (function() {
+      var tel = document.getElementById('h-tel');
+      if (!tel) return;
+      tel.addEventListener('input', function(e) {
+        var v = e.target.value.replace(/\D/g,'').slice(0,11);
+        if (v.length >= 7) v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+        else if (v.length >= 3) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+        else if (v.length) v = '(' + v;
+        e.target.value = v;
+      });
+    })();
+
     // Texto rotativo no hero
     (function() {
       const terms = [
@@ -748,6 +819,13 @@
     const metricsWrap = document.querySelector(".metrics-wrap");
     if (metricsWrap) counterObserver.observe(metricsWrap);
   </script>
+
+<!-- STICKY CTA -->
+<div id="stickyCta" style="position:fixed;bottom:84px;right:24px;z-index:90;opacity:0;transform:translateY(20px);transition:opacity .4s ease,transform .4s ease;pointer-events:none">
+  <a href="#diagnostico" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.86rem;padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:0 12px 40px rgba(0,183,255,.35);white-space:nowrap">
+    📋 Diagnóstico gratuito →
+  </a>
+</div>
 
 <!-- COOKIE BANNER LGPD -->
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(2,7,19,.96);border-top:1px solid rgba(103,232,255,.18);backdrop-filter:blur(16px);padding:16px 24px">
