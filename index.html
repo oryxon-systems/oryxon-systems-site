@@ -273,10 +273,10 @@
           <a href="https://pagespeed.web.dev/analysis/https-www-oryxonsystems-com-br/8gc55rakvn?form_factor=desktop" target="_blank" rel="noopener" style="font-size:.76rem;font-weight:800;color:var(--blue2);text-decoration:none;white-space:nowrap">Ver análise →</a>
         </div>
       </div><div class="metrics-wrap reveal"><div class="metrics">
-      <div class="metric"><strong class="counter" data-target="40" data-suffix="+">0</strong><span>Endpoints gerenciados</span></div>
-      <div class="metric"><strong class="counter" data-target="15" data-prefix="&lt;" data-suffix="min">0</strong><span>Meta de primeira resposta</span></div>
-      <div class="metric"><strong class="counter" data-target="7">0</strong><span>Clientes ativos</span></div>
-      <div class="metric"><strong class="counter" data-target="24" data-suffix="x7">0</strong><span>Visibilidade contínua</span></div>
+      <div class="metric"><strong class="counter" data-target="40" data-suffix="+">40+</strong><span>Endpoints gerenciados</span></div>
+      <div class="metric"><strong class="counter" data-target="15" data-prefix="&lt;" data-suffix="min">&lt;15min</strong><span>Meta de primeira resposta</span></div>
+      <div class="metric"><strong class="counter" data-target="7">7+</strong><span>Clientes ativos</span></div>
+      <div class="metric"><strong class="counter" data-target="24" data-suffix="x7">24x7</strong><span>Visibilidade contínua</span></div>
     </div></div></div></section>
 
     <section id="processo"><div class="container"><div class="section-head center reveal"><div class="kicker">Como funciona</div><h2>Da análise ao controle contínuo.</h2><p>Um caminho simples para sair do modo bombeiro e entrar no modo gestão.</p></div><div class="process"><article class="card step reveal"><h3>Diagnóstico</h3><p>Analisamos infraestrutura, riscos, backup, endpoints, rede e oportunidades de melhoria.</p></article><article class="card step reveal"><h3>Implementação</h3><p>Aplicamos correções, padronizações, políticas, automações e ferramentas de controle.</p></article><article class="card step reveal"><h3>Monitoramento contínuo</h3><p>Monitoramos, otimizamos e evoluímos sua TI para manter segurança e performance.</p></article></div></div></section>
@@ -784,7 +784,7 @@
       const duration = 1800;
       const steps = 60;
       const increment = target / steps;
-      let current = 0;
+      let current = Math.floor(target * 0.82);
       let step = 0;
 
       // Easing: ease-out
