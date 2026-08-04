@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suporte Remoto | Área do Cliente | Oryxon Systems</title>
+  <meta name="description" content="Área de suporte remoto para clientes Oryxon Systems. Baixe o agente de acesso remoto autorizado ou acesse via AnyDesk e TeamViewer."/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/suporte/"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:900px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 60% 10%,rgba(0,183,255,.14),transparent 22rem),linear-gradient(180deg,#01040d 0%,#061226 50%,#020713 100%);color:#f7fbff;min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.05rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.5rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .back-link{color:var(--muted);font-size:.84rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:6px;transition:.2s}
+    .back-link:hover{color:#fff}
+    .hero{padding:52px 0 40px;border-bottom:1px solid rgba(103,232,255,.08)}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(55,245,161,.3);background:rgba(55,245,161,.06);color:#a0f5d4;font-size:.76rem;font-weight:900;margin-bottom:14px}
+    .live-dot{width:6px;height:6px;border-radius:50%;background:#37f5a1;box-shadow:0 0 10px rgba(55,245,161,.8)}
+    h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.08;letter-spacing:-.055em;margin-bottom:10px}
+    .hero p{color:var(--muted);font-size:.96rem;line-height:1.7;max-width:580px}
+    .notice{border:1px solid rgba(255,165,0,.22);background:rgba(255,140,0,.05);border-radius:14px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;margin:28px 0}
+    .notice i{color:#ffcc77;font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .notice p{color:#ffd8a0;font-size:.88rem;line-height:1.65;margin:0}
+    .notice strong{color:#ffe5b0}
+    section{padding:48px 0;border-top:1px solid rgba(103,232,255,.08)}
+    h2{font-size:1.3rem;font-weight:800;letter-spacing:-.04em;color:#dff9ff;margin-bottom:6px}
+    .section-sub{color:var(--muted);font-size:.88rem;margin-bottom:24px;line-height:1.6}
+    .os-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .os-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.6);border-radius:18px;padding:22px 20px;display:flex;flex-direction:column;gap:12px;transition:.2s}
+    .os-card:hover{border-color:rgba(103,232,255,.38);transform:translateY(-2px)}
+    .os-header{display:flex;align-items:center;gap:12px}
+    .os-icon{width:40px;height:40px;border-radius:12px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.2);display:grid;place-items:center;flex-shrink:0}
+    .os-icon i{font-size:1.3rem;color:var(--cyan)}
+    .os-name{font-size:.96rem;font-weight:800;color:#dff9ff}
+    .os-meta{font-size:.8rem;color:var(--muted)}
+    .btn-download{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.88rem;padding:11px 16px;border-radius:10px;text-decoration:none;transition:.2s}
+    .btn-download:hover{opacity:.9;transform:translateY(-1px)}
+    .tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .tool-card{border:1px solid rgba(103,232,255,.14);background:rgba(8,21,43,.4);border-radius:16px;padding:20px;display:flex;gap:14px;align-items:flex-start}
+    .tool-icon{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(103,232,255,.14);display:grid;place-items:center;flex-shrink:0}
+    .tool-icon i{font-size:1.2rem;color:var(--muted)}
+    .tool-name{font-size:.92rem;font-weight:800;color:#dff9ff;margin-bottom:4px}
+    .tool-desc{font-size:.82rem;color:var(--muted);line-height:1.55;margin-bottom:10px}
+    .tool-link{font-size:.82rem;font-weight:700;color:var(--blue2);text-decoration:none;display:flex;align-items:center;gap:4px}
+    .tool-link:hover{text-decoration:underline}
+    .steps{display:grid;gap:12px}
+    .step{display:flex;align-items:flex-start;gap:14px;padding:16px;border:1px solid rgba(103,232,255,.12);background:rgba(8,21,43,.4);border-radius:14px}
+    .step-num{width:28px;height:28px;border-radius:50%;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-weight:900;font-size:.82rem;color:var(--cyan);flex-shrink:0}
+    .step h4{font-size:.92rem;font-weight:800;color:#dff9ff;margin-bottom:3px}
+    .step p{font-size:.84rem;color:var(--muted);line-height:1.6;margin:0}
+    .urgent-box{border:1px solid rgba(55,245,161,.22);background:rgba(55,245,161,.05);border-radius:20px;padding:26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .urgent-box h3{font-size:1.05rem;font-weight:800;color:#37f5a1;margin-bottom:5px}
+    .urgent-box p{color:var(--muted);font-size:.88rem;margin:0}
+    .btn-wa{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:850;font-size:.9rem;padding:12px 20px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:.2s}
+    .btn-wa:hover{opacity:.9;transform:translateY(-1px)}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem;margin-top:20px}
+    .page-footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2);text-decoration:none}.page-footer a:hover{color:#fff}
+    @media(max-width:640px){.os-grid,.tools-grid{grid-template-columns:1fr}.urgent-box{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="container nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <a href="/" class="back-link"><i class="ti ti-arrow-left" aria-hidden="true"></i> Voltar ao site</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="border-top:none">
+      <div class="container">
+        <div class="hero-badge"><span class="live-dot"></span> Área exclusiva para clientes</div>
+        <h1>Central de Suporte Remoto</h1>
+        <p>Acesse aqui as ferramentas de suporte remoto autorizadas pela Oryxon Systems. Se você recebeu uma solicitação de acesso da nossa equipe, baixe o agente correspondente ao seu sistema operacional.</p>
+        <div class="notice">
+          <i class="ti ti-alert-triangle" aria-hidden="true"></i>
+          <p><strong>Atenção:</strong> A Oryxon Systems <strong>jamais solicitará acesso remoto sem chamado aberto previamente</strong>. Se você receber uma mensagem pedindo acesso remoto sem ter solicitado suporte antes, não baixe nenhum arquivo e entre em contato pelo WhatsApp <strong>(11) 93493-2992</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2><i class="ti ti-shield-check" aria-hidden="true" style="font-size:1.2rem;vertical-align:-3px;margin-right:6px;color:var(--success)"></i>Agente Action1 — Acesso Gerenciado</h2>
+        <p class="section-sub">Ferramenta principal da Oryxon Systems para suporte e gestão remota. Use quando solicitado pela nossa equipe técnica.</p>
+        <div class="os-grid">
+          <div class="os-card">
+            <div class="os-header">
+              <div class="os-icon"><i class="ti ti-brand-windows" aria-hidden="true"></i></div>
+              <div><div class="os-name">Windows</div><div class="os-meta">Windows 10 / 11 · 64-bit</div></div>
+            </div>
+            <a href="https://app.action1.com/agent/1d28c030-23c7-11f1-834e-ab9e215970de/Windows/agent(Oryxon_Systems).msi" class="btn-download" target="_blank" rel="noopener">
+              <i class="ti ti-download" aria-hidden="true"></i> Baixar para Windows (.msi)
+            </a>
+          </div>
+          <div class="os-card">
+            <div class="os-header">
+              <div class="os-icon"><i class="ti ti-brand-apple" aria-hidden="true"></i></div>
+              <div><div class="os-name">macOS</div><div class="os-meta">macOS 12 Monterey ou superior</div></div>
+            </div>
+            <a href="https://app.action1.com/agent/1d28c030-23c7-11f1-834e-ab9e215970de/Mac/agent(Oryxon_Systems).pkg" class="btn-download" target="_blank" rel="noopener">
+              <i class="ti ti-download" aria-hidden="true"></i> Baixar para macOS (.pkg)
+            </a>
+          </div>
+          <div class="os-card">
+            <div class="os-header">
+              <div class="os-icon"><i class="ti ti-brand-debian" aria-hidden="true"></i></div>
+              <div><div class="os-name">Linux DEB</div><div class="os-meta">Ubuntu, Debian, Linux Mint</div></div>
+            </div>
+            <a href="https://app.action1.com/agent/1d28c030-23c7-11f1-834e-ab9e215970de/Linux/agent(Oryxon_Systems).deb" class="btn-download" target="_blank" rel="noopener">
+              <i class="ti ti-download" aria-hidden="true"></i> Baixar para Linux (.deb)
+            </a>
+          </div>
+          <div class="os-card">
+            <div class="os-header">
+              <div class="os-icon"><i class="ti ti-brand-linux" aria-hidden="true"></i></div>
+              <div><div class="os-name">Linux RPM</div><div class="os-meta">CentOS, Fedora, RHEL</div></div>
+            </div>
+            <a href="https://app.action1.com/agent/1d28c030-23c7-11f1-834e-ab9e215970de/Linux/agent(Oryxon_Systems).rpm" class="btn-download" target="_blank" rel="noopener">
+              <i class="ti ti-download" aria-hidden="true"></i> Baixar para Linux (.rpm)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2><i class="ti ti-device-desktop" aria-hidden="true" style="font-size:1.2rem;vertical-align:-3px;margin-right:6px;color:var(--blue2)"></i>Ferramentas alternativas de acesso pontual</h2>
+        <p class="section-sub">Usadas para sessões de suporte avulsas quando solicitado pela equipe. Não requerem instalação permanente.</p>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div class="tool-icon"><i class="ti ti-device-desktop" aria-hidden="true"></i></div>
+            <div>
+              <div class="tool-name">AnyDesk</div>
+              <div class="tool-desc">Acesso remoto para sessões pontuais. Baixe, compartilhe o código de 9 dígitos com a equipe e autorize o acesso.</div>
+              <a href="https://anydesk.com/pt/downloads" target="_blank" rel="noopener" class="tool-link">
+                <i class="ti ti-external-link" aria-hidden="true" style="font-size:12px"></i> Baixar AnyDesk
+              </a>
+            </div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-icon"><i class="ti ti-device-laptop" aria-hidden="true"></i></div>
+            <div>
+              <div class="tool-name">TeamViewer</div>
+              <div class="tool-desc">Alternativa para sessões de suporte. Baixe o QuickSupport, informe o ID e senha exibidos à equipe técnica.</div>
+              <a href="https://www.teamviewer.com/pt-br/download/windows/" target="_blank" rel="noopener" class="tool-link">
+                <i class="ti ti-external-link" aria-hidden="true" style="font-size:12px"></i> Baixar TeamViewer QuickSupport
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2><i class="ti ti-list-numbers" aria-hidden="true" style="font-size:1.2rem;vertical-align:-3px;margin-right:6px;color:var(--cyan)"></i>Como funciona o suporte remoto</h2>
+        <p class="section-sub">Processo padrão de atendimento da Oryxon Systems.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div><h4>Você abre um chamado</h4><p>Pelo WhatsApp (11) 93493-2992, por e-mail contato@oryxonsystems.com.br ou pelo formulário do site. Sem chamado aberto, não há sessão de suporte.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div><h4>Nossa equipe entra em contato</h4><p>Em até 15 minutos para chamados críticos. O técnico confirma o problema antes de solicitar qualquer acesso remoto.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div><h4>Você autoriza o acesso</h4><p>O acesso ocorre somente com sua permissão explícita. Você vê a tela sendo acessada em tempo real e pode encerrar a sessão a qualquer momento.</p></div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div><h4>Atendimento documentado</h4><p>Toda sessão de acesso remoto é registrada — data, horário, técnico responsável e ações realizadas. Disponível para auditoria a qualquer momento.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="urgent-box">
+          <div>
+            <h3><i class="ti ti-headset" aria-hidden="true" style="font-size:1.1rem;vertical-align:-2px;margin-right:6px"></i>Precisa de suporte agora?</h3>
+            <p>Atendimento humano: Seg–Sex 8h–18h | Sáb 8h–12h · Monitoramento automatizado 24x7</p>
+          </div>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20preciso%20de%20suporte%20t%C3%A9cnico." target="_blank" rel="noopener" class="btn-wa">
+            <i class="ti ti-brand-whatsapp" aria-hidden="true" style="font-size:18px"></i> Abrir chamado no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container inner">
+      <span>© 2026 Oryxon Systems — R. Mirambava, 46, Suzano - SP</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <a href="/">Site principal</a>
+        <a href="/codigo-de-conduta-oryxon.pdf" target="_blank" rel="noopener">Código de Conduta</a>
+        <a href="/privacidade.html">Privacidade</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
