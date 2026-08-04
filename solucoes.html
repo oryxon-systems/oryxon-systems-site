@@ -81,6 +81,18 @@
     /* PARCEIRO STRIP */
     .parceiro-strip{display:flex;align-items:center;justify-content:center;gap:16px;padding:22px 28px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:18px;max-width:480px;margin:0 auto}
 
+    /* ENTERPRISE STACK BAR (destaque no topo) */
+    .enterprise-bar{border-top:1px solid rgba(103,232,255,.10);border-bottom:1px solid rgba(103,232,255,.10);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.09),transparent 22rem),rgba(8,21,43,.4);padding:44px 0 48px}
+    .enterprise-head{text-align:center;max-width:640px;margin:0 auto 30px}
+    .enterprise-head p{color:var(--muted);font-size:.98rem}
+    .enterprise-logos{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:14px}
+    .ent-badge{display:flex;align-items:center;gap:10px;padding:16px 22px;border-radius:18px;background:rgba(255,255,255,.035);transition:.22s ease;min-width:190px}
+    .ent-badge:hover{transform:translateY(-3px)}
+    .ent-badge svg{flex-shrink:0}
+    .ent-badge-name{font-size:1rem;font-weight:900;letter-spacing:-.01em;line-height:1.15}
+    .ent-badge-tag{font-size:.68rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;opacity:.75;margin-top:2px}
+    .enterprise-foot{text-align:center;color:var(--muted2);font-size:.82rem;font-weight:700;margin-top:26px;letter-spacing:.02em}
+
     /* CTA */
     .cta-band{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 16rem),rgba(8,21,43,.62);border-radius:34px;padding:clamp(32px,5vw,52px);text-align:center}
     .cta-band p{color:var(--muted);font-size:1.05rem;margin-bottom:28px;max-width:560px;margin-inline:auto}
@@ -92,7 +104,7 @@
     .page-footer a:hover{color:#fff}
 
     @media(max-width:900px){.solutions-grid{grid-template-columns:repeat(2,1fr)}.stack-grid{grid-template-columns:1fr}}
-    @media(max-width:600px){.solutions-grid{grid-template-columns:1fr}section{padding:56px 0}.btn{width:100%}}
+    @media(max-width:600px){.solutions-grid{grid-template-columns:1fr}section{padding:56px 0}.btn{width:100%}.ent-badge{min-width:0;width:100%}.enterprise-logos{flex-direction:column}}
   </style>
 </head>
 <body>
@@ -116,6 +128,53 @@
           <a href="/#diagnostico" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
           <a href="/managed-services.html" class="btn btn-ghost">Ver planos MSP</a>
         </div>
+      </div>
+    </section>
+
+    <!-- STACK ENTERPRISE — DESTAQUE NO TOPO -->
+    <section class="enterprise-bar">
+      <div class="container">
+        <div class="enterprise-head reveal">
+          <div class="kicker">Infraestrutura de nível enterprise</div>
+          <h2 style="font-size:clamp(1.5rem,2.8vw,2.1rem)">As mesmas plataformas usadas por grandes empresas — aplicadas na sua.</h2>
+          <p>Nenhuma ferramenta amadora. O stack da Oryxon é composto por líderes globais de mercado em monitoramento, backup, segurança e infraestrutura de rede.</p>
+        </div>
+
+        <div class="enterprise-logos reveal">
+
+          <!-- NinjaOne -->
+          <div class="ent-badge" style="border:1px solid rgba(0,122,255,.32);background:rgba(0,122,255,.07)">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#007AFF" opacity=".18"/><path d="M8 16V8l8 8V8" stroke="#007AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><div class="ent-badge-name" style="color:#4da6ff">NinjaOne</div><div class="ent-badge-tag" style="color:#4da6ff">RMM #1 do mercado</div></div>
+          </div>
+
+          <!-- Acronis -->
+          <div class="ent-badge" style="border:1px solid rgba(255,80,0,.32);background:rgba(255,80,0,.07)">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3L20 8V16L12 21L4 16V8L12 3Z" fill="#FF5000" opacity=".22"/><path d="M12 3L20 8V16L12 21L4 16V8L12 3Z" stroke="#FF5000" stroke-width="1.5"/></svg>
+            <div><div class="ent-badge-name" style="color:#ff7a40">Acronis</div><div class="ent-badge-tag" style="color:#ff7a40">Backup & recovery</div></div>
+          </div>
+
+          <!-- Bitdefender -->
+          <div class="ent-badge" style="border:1px solid rgba(237,28,36,.32);background:rgba(237,28,36,.07)">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3L21 7.5V13C21 17.5 17 21.5 12 22.5C7 21.5 3 17.5 3 13V7.5L12 3Z" fill="#ED1C24" opacity=".18"/><path d="M12 3L21 7.5V13C21 17.5 17 21.5 12 22.5C7 21.5 3 17.5 3 13V7.5L12 3Z" stroke="#ED1C24" stroke-width="1.5"/></svg>
+            <div><div class="ent-badge-name" style="color:#ff5c5c">Bitdefender</div><div class="ent-badge-tag" style="color:#ff5c5c">Segurança de endpoint</div></div>
+          </div>
+
+          <!-- Microsoft 365 -->
+          <div class="ent-badge" style="border:1px solid rgba(0,114,239,.32);background:rgba(0,114,239,.07)">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8.5" height="8.5" rx="1" fill="#F25022"/><rect x="12.5" y="3" width="8.5" height="8.5" rx="1" fill="#7FBA00"/><rect x="3" y="12.5" width="8.5" height="8.5" rx="1" fill="#00A4EF"/><rect x="12.5" y="12.5" width="8.5" height="8.5" rx="1" fill="#FFB900"/></svg>
+            <div><div class="ent-badge-name" style="color:#7ab4ff">Microsoft 365</div><div class="ent-badge-tag" style="color:#7ab4ff">Cloud & produtividade</div></div>
+          </div>
+
+          <!-- HPE Aruba -->
+          <div class="ent-badge" style="border:1px solid rgba(1,169,130,.32);background:rgba(1,169,130,.07)">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 17L8 7L13 14L16 10L21 17H3Z" fill="#01A982" opacity=".22"/><path d="M3 17L8 7L13 14L16 10L21 17H3Z" stroke="#01A982" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            <div><div class="ent-badge-name" style="color:#22cc99">HPE Aruba</div><div class="ent-badge-tag" style="color:#22cc99">Rede corporativa</div></div>
+          </div>
+
+        </div>
+
+        <p class="enterprise-foot reveal">Acesso garantido via parceiro oficial Help Digital — uma das maiores redes MSP do Brasil.</p>
       </div>
     </section>
 
