@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A chave de API esquecida que pode gerar vazamento de dados e uma fatura de nuvem inesperada | Oryxon Systems</title>
+  <meta name="description" content="Google Cloud reportou atacantes buscando chaves de API e tokens vazados para explorar workloads de IA. Veja como automações em n8n, Make e Power Automate expõem sua empresa e um checklist de verificação."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/chave-de-api-esquecida-vazamento-dados.html"/>
+  <meta property="og:title" content="A chave de API esquecida que pode gerar vazamento de dados e uma fatura de nuvem inesperada"/>
+  <meta property="og:description" content="Atacantes estão caçando chaves de API e tokens vazados para abusar de recursos de IA. Veja como um script antigo ou um .env esquecido pode custar caro para sua empresa."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/chave-de-api-esquecida-vazamento-dados.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"A chave de API esquecida que pode gerar vazamento de dados e uma fatura de nuvem inesperada","description":"Google Cloud reportou atacantes buscando chaves de API e tokens vazados para explorar workloads de IA.","datePublished":"2026-08-10","dateModified":"2026-08-10","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"R. Mirambava, 46 - Centro","addressLocality":"Suzano","addressRegion":"SP","postalCode":"08674-130","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/chave-de-api-esquecida-vazamento-dados.html"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:#67e8ff}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:#dff9ff;font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
+    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .risk-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
+    .risk-box{border:1px solid rgba(255,100,100,.22);background:rgba(255,50,50,.05);border-radius:14px;padding:16px;display:flex;gap:12px;align-items:flex-start}
+    .risk-box i{color:#ff9999;font-size:1.3rem;flex-shrink:0;margin-top:2px}
+    .risk-box strong{display:block;color:#fff;font-size:.9rem;margin-bottom:3px}
+    .risk-box span{color:var(--muted);font-size:.82rem;line-height:1.5}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i{color:#ffb432}
+    .callout-warn p{color:#ffd8a0}
+    .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
+    .callout-success i{color:#37f5a1}
+    .callout-success p{color:#a0f5d4}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
+    .cta-mid a{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#37f5a1,#1478ff);color:#001224;font-weight:850;font-size:.86rem;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:24px;padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:#dff9ff;justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .cta-article a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;padding:12px 24px;border-radius:999px;font-size:.92rem;text-decoration:none}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:14px;padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00b7ff,#1478ff);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:#dff9ff}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:#dff9ff;margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:18px;padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:#dff9ff}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .btn-s{display:inline-flex;align-items:center;gap:6px;font-size:.81rem;font-weight:800;color:#001224;background:linear-gradient(135deg,#67e8ff,#1478ff);padding:8px 14px;border-radius:999px;text-decoration:none}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}.risk-row{grid-template-columns:1fr}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid a{width:100%;justify-content:center}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn-nav">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança · Automação</span>
+            <span class="article-date"><i class="ti ti-calendar"></i>10 de agosto de 2026</span>
+            <span class="article-read"><i class="ti ti-clock"></i>6 min de leitura</span>
+          </div>
+          <h1>A chave de API esquecida que pode gerar vazamento de dados e uma fatura de nuvem inesperada</h1>
+          <p class="article-lead">Em 7 de agosto de 2026, o Google Cloud publicou um relatório mostrando que atacantes estão ativamente buscando chaves de API e tokens vazados para explorar workloads de IA — abusando de recursos computacionais, revendendo tokens de acesso, comprometendo contas e aproveitando segredos publicados acidentalmente em repositórios de código. Se sua empresa usa n8n, Make, Power Automate ou qualquer integração feita por terceiros, essa é a hora de perguntar: onde estão salvas as chaves que fazem tudo isso funcionar?</p>
+        </header>
+        <div class="prose">
+
+          <h2 id="o-que-o-google-viu"><i class="ti ti-eye-search"></i>O que o Google Cloud identificou</h2>
+          <p>Segundo o relatório do Google Cloud, o padrão de ataque observado é direto: criminosos buscam ativamente por chaves de API e tokens de acesso expostos publicamente — em repositórios de código, configurações mal protegidas ou vazamentos acidentais — para depois usá-los em workloads de inteligência artificial. Os usos identificados incluem abuso de recursos computacionais (rodar processamento pesado às custas da vítima), revenda de acesso a esses tokens no mercado clandestino, comprometimento de contas inteiras e exploração de segredos publicados sem querer em repositórios.</p>
+          <p>O ponto central do relatório não é uma vulnerabilidade de software — é um problema de higiene operacional. A chave de API em si não é o defeito. O defeito é ela ficar exposta, esquecida, sem rotação e sem monitoramento.</p>
+
+          <h2 id="cenario"><i class="ti ti-file-alert"></i>Onde as chaves ficam esquecidas na prática</h2>
+          <p>Empresas que usam n8n, Make, Power Automate ou integrações desenvolvidas por terceiros raramente têm um inventário de onde as credenciais de API estão armazenadas. Os cenários mais comuns são simples de reconhecer:</p>
+          <ul>
+            <li><strong>Script antigo</strong> criado por um freelancer ou ex-funcionário, com a chave de API escrita diretamente no código, ainda rodando em produção sem ninguém lembrar que existe.</li>
+            <li><strong>Planilha compartilhada</strong> — muitas vezes no Google Drive ou OneDrive com link "qualquer pessoa pode ver" — guardando senhas e tokens "para não perder".</li>
+            <li><strong>Arquivo <code>.env</code> esquecido</strong> em um repositório de código, público ou privado, mas sem controle de quem tem acesso ou revisão de segurança.</li>
+          </ul>
+
+          <div class="callout">
+            <i class="ti ti-info-circle"></i>
+            <p>Automações como n8n, Make e Power Automate são ferramentas legítimas e valiosas — o risco não está na ferramenta, está em como e onde as credenciais que ela usa são armazenadas e quem tem acesso a elas.</p>
+          </div>
+
+          <h2 id="consequencias"><i class="ti ti-alert-triangle"></i>O que pode acontecer quando uma chave vaza</h2>
+          <div class="risk-row">
+            <div class="risk-box"><i class="ti ti-receipt-2"></i><div><strong>Fatura de nuvem inesperada</strong><span>Consumo indevido de recursos computacionais rodando sob a conta da sua empresa, sem que ninguém tenha autorizado.</span></div></div>
+            <div class="risk-box"><i class="ti ti-database-x"></i><div><strong>Acesso a dados corporativos</strong><span>Chaves de API costumam abrir portas para sistemas conectados — CRM, planilhas, e-mail, documentos de clientes.</span></div></div>
+            <div class="risk-box"><i class="ti ti-robot-off"></i><div><strong>Uso indevido de automações</strong><span>Um atacante com a chave pode executar as mesmas ações que a automação legítima faz — só que para os próprios fins.</span></div></div>
+            <div class="risk-box"><i class="ti ti-plug-off"></i><div><strong>Indisponibilidade</strong><span>Limites de uso estourados ou revogação emergencial da chave podem derrubar processos que a empresa depende no dia a dia.</span></div></div>
+          </div>
+
+          <div class="cta-mid">
+            <p>Sua empresa sabe onde estão todas as chaves de API em uso hoje?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Gest%C3%A3o%20de%20Segredos%20e%20Credenciais%20de%20Automa%C3%A7%C3%A3o%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="checklist"><i class="ti ti-checklist"></i>Checklist de verificação de segredos e credenciais</h2>
+          <ul class="checklist">
+            <li><i class="ti ti-square-rounded-check"></i>Existe um inventário atualizado de todas as chaves de API e tokens usados nas automações da empresa?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Nenhuma chave está escrita diretamente em código-fonte, script ou planilha compartilhada?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Repositórios de código (mesmo privados) foram verificados quanto a arquivos <code>.env</code> ou credenciais versionadas por engano?</li>
+            <li><i class="ti ti-square-rounded-check"></i>As chaves têm data de expiração ou passam por rotação periódica?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Cada chave tem o escopo mínimo necessário — não acesso total à conta quando só precisa de uma função específica?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Existe alerta configurado para consumo anormal de recursos ou uso fora do padrão da chave?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Quando um freelancer, agência ou colaborador que configurou uma automação deixa de atender a empresa, as credenciais que ele criou são revogadas?</li>
+          </ul>
+
+          <div class="callout callout-success">
+            <i class="ti ti-shield-check"></i>
+            <p>Boa notícia: nenhum item dessa lista exige investimento pesado. É trabalho de organização e processo — inventariar, revisar escopos, rotacionar chaves antigas e documentar quem é dono de cada automação.</p>
+          </div>
+
+        </div>
+        <div class="cta-article">
+          <h2>Sua empresa já mapeou onde ficam as credenciais de automação?</h2>
+          <p>Dentro do diagnóstico de segurança da Oryxon, a frente de Gestão de Segredos e Credenciais de Automação identifica chaves de API expostas, sem rotação ou com escopo excessivo — antes que um atacante as encontre primeiro.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20seguran%C3%A7a%20com%20foco%20em%20Gest%C3%A3o%20de%20Segredos%20e%20Credenciais." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI — Oryxon Systems | Parceiro Help Digital</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fontes</h3>
+          <ul>
+            <li>Google Cloud Blog (07/ago/2026) — <a href="https://cloud.google.com/blog/products/identity-security/how-google-cloud-detects-contains-and-protects-against-emerging-threats/" target="_blank" rel="noopener">How Google Cloud detects, contains and protects against emerging threats</a></li>
+            <li>AWS What's New (06/ago/2026) — <a href="https://aws.amazon.com/about-aws/whats-new/2026/08/aws-waf-salt-security-managed-rules/" target="_blank" rel="noopener">AWS WAF adds Salt Security managed rules for APIs and AI agents</a></li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"><i class="ti ti-user-shield"></i><div><strong>Seu agente de IA virou um usuário privilegiado</strong><span>Cibersegurança · IA</span></div></a>
+          <a href="/blog/ia-gestao-ti-pme.html"><i class="ti ti-robot"></i><div><strong>IA na gestão de TI para PMEs em 2026</strong><span>Tecnologia · IA</span></div></a>
+          <a href="/lgpd.html"><i class="ti ti-scale"></i><div><strong>LGPD para empresas do Alto Tietê</strong><span>Conformidade · Checklist</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#o-que-o-google-viu">O que o Google Cloud identificou</a></li>
+            <li><a href="#cenario">Onde as chaves ficam esquecidas</a></li>
+            <li><a href="#consequencias">O que pode acontecer</a></li>
+            <li><a href="#checklist">Checklist de verificação</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Gestão de Segredos e Credenciais</h3>
+          <p>Mapeamos chaves de API, tokens e credenciais expostas nas automações da sua empresa.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20Gest%C3%A3o%20de%20Segredos%20e%20Credenciais." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn-s">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atualizar computadores não basta: roteadores e switches também precisam de gestão de vulnerabilidades | Oryxon Systems</title>
+  <meta name="description" content="Cisco publicou atualização crítica para IOS XE com falha de CVSS 9,8 e sem workaround disponível. Veja por que o firmware de rede é o ponto cego de segurança da maioria das PMEs."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/atualizar-computador-nao-basta-rede-tambem-precisa.html"/>
+  <meta property="og:title" content="Atualizar computadores não basta: roteadores e switches também precisam de gestão de vulnerabilidades"/>
+  <meta property="og:description" content="A Cisco publicou correção crítica para IOS XE — CVSS 9,8, sem workaround. Veja por que switches e roteadores ficam anos sem atualização em PMEs e como corrigir isso."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/atualizar-computador-nao-basta-rede-tambem-precisa.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Atualizar computadores não basta: roteadores e switches também precisam de gestão de vulnerabilidades","description":"Cisco publicou atualização crítica para IOS XE com falha de CVSS 9,8 e sem workaround disponível.","datePublished":"2026-08-10","dateModified":"2026-08-10","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"R. Mirambava, 46 - Centro","addressLocality":"Suzano","addressRegion":"SP","postalCode":"08674-130","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/atualizar-computador-nao-basta-rede-tambem-precisa.html"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(255,50,50,.10),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:rgba(255,77,77,.10);border:1px solid rgba(255,100,100,.25);color:#ff9999}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:#dff9ff;font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
+    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .stat-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
+    .stat-box{border:1px solid rgba(255,100,100,.22);background:rgba(255,50,50,.05);border-radius:14px;padding:16px;text-align:center}
+    .stat-val{font-size:1.9rem;font-weight:900;letter-spacing:-.06em;color:#ff9999;line-height:1;margin-bottom:5px}
+    .stat-lbl{color:var(--muted);font-size:.8rem;line-height:1.5}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i{color:#ffb432}
+    .callout-warn p{color:#ffd8a0}
+    .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
+    .callout-success i{color:#37f5a1}
+    .callout-success p{color:#a0f5d4}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
+    .cta-mid a{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#37f5a1,#1478ff);color:#001224;font-weight:850;font-size:.86rem;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:24px;padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:#dff9ff;justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .cta-article a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;padding:12px 24px;border-radius:999px;font-size:.92rem;text-decoration:none}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:14px;padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00b7ff,#1478ff);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:#dff9ff}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:#dff9ff;margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:18px;padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:#dff9ff}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .btn-s{display:inline-flex;align-items:center;gap:6px;font-size:.81rem;font-weight:800;color:#001224;background:linear-gradient(135deg,#67e8ff,#1478ff);padding:8px 14px;border-radius:999px;text-decoration:none}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.stat-row{grid-template-columns:1fr}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid a{width:100%;justify-content:center}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn-nav">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança · Infraestrutura</span>
+            <span class="article-date"><i class="ti ti-calendar"></i>10 de agosto de 2026</span>
+            <span class="article-read"><i class="ti ti-clock"></i>7 min de leitura</span>
+          </div>
+          <h1>Atualizar computadores não basta: roteadores e switches também precisam de gestão de vulnerabilidades</h1>
+          <p class="article-lead">Em 5 de agosto de 2026, a Cisco publicou uma atualização de segurança crítica para o IOS XE, o sistema operacional que roda em boa parte dos roteadores e switches corporativos do mercado. Uma das vulnerabilidades corrigidas recebeu nota CVSS 9,8 — próxima do máximo — e não tem workaround disponível: a única mitigação é atualizar para a versão corrigida. A Cisco não indicou exploração ativa nesse comunicado. Mas o ponto não é pânico — é gravidade técnica ignorada há anos na maioria das PMEs.</p>
+        </header>
+        <div class="prose">
+
+          <h2 id="o-que-a-cisco-publicou"><i class="ti ti-router"></i>O que a Cisco publicou</h2>
+          <p>Segundo o comunicado oficial de segurança da Cisco (Cisco Security Advisory), a atualização de 5 de agosto de 2026 corrige múltiplas vulnerabilidades no IOS XE — sistema operacional presente em roteadores, switches e outros equipamentos de rede da marca amplamente usados em ambientes corporativos, inclusive por PMEs através de provedores de TI e integradores. Uma das falhas recebeu pontuação CVSS 9,8, classificada como crítica, e a Cisco informou que não existe workaround: a mitigação exige atualizar o equipamento para a versão de firmware corrigida.</p>
+          <p>É importante ser preciso aqui: a Cisco não indicou, nesse comunicado, que a vulnerabilidade está sendo explorada ativamente. O alerta não é sobre um ataque em curso — é sobre uma porta com fechadura quebrada que segue destrancada até alguém trocar a fechadura.</p>
+
+          <div class="stat-row">
+            <div class="stat-box"><div class="stat-val">9,8</div><div class="stat-lbl">nota CVSS da vulnerabilidade crítica no IOS XE — escala vai até 10</div></div>
+            <div class="stat-box"><div class="stat-val">0</div><div class="stat-lbl">workarounds disponíveis — a única mitigação é atualizar o firmware</div></div>
+          </div>
+
+          <h2 id="ponto-cego"><i class="ti ti-eye-off"></i>Por que isso é ponto cego na maioria das PMEs</h2>
+          <p>PMEs que investem em gestão de TI normalmente já têm RMM cuidando de notebooks e servidores Windows — atualizações automáticas, patches de segurança, inventário de hardware. O problema é que esse mesmo cuidado raramente chega ao equipamento que sustenta a rede inteira: roteadores, switches e access points.</p>
+          <p>O motivo é estrutural, não de negligência. Inventário de TI, quando existe, costuma listar "computadores" e "notebooks" — não firmware de rede. Atualizar um roteador ou switch geralmente exige janela de manutenção, conhecimento técnico específico e, muitas vezes, é visto como "já está funcionando, não mexe". O resultado: equipamentos de rede que ficam anos rodando a mesma versão de firmware com a qual saíram de fábrica, acumulando vulnerabilidades conhecidas e já corrigidas — só que nunca aplicadas.</p>
+
+          <div class="callout callout-warn">
+            <i class="ti ti-alert-triangle"></i>
+            <p><strong>O detalhe que importa:</strong> um roteador ou switch comprometido não é "só mais um dispositivo" — é o ponto por onde passa todo o tráfego da empresa. Um equipamento de borda de rede vulnerável pode servir de porta de entrada para tudo que está atrás dele, mesmo que os computadores estejam 100% atualizados.</p>
+          </div>
+
+          <div class="cta-mid">
+            <p>Você sabe qual a versão de firmware do seu roteador e switches?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20levantamento%20de%20parque%20de%20rede%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="checklist"><i class="ti ti-checklist"></i>Checklist: Inventário e Hardening de Infraestrutura de Rede</h2>
+          <ul class="checklist">
+            <li><i class="ti ti-square-rounded-check"></i>Existe inventário atualizado com marca, modelo e versão de firmware de todos os roteadores, switches e access points da empresa?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Alguém é responsável por acompanhar avisos de segurança dos fabricantes (Cisco, e outros) usados na rede?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Existe processo e janela de manutenção definida para aplicar atualizações críticas de firmware?</li>
+            <li><i class="ti ti-square-rounded-check"></i>As senhas padrão de fábrica dos equipamentos de rede foram trocadas?</li>
+            <li><i class="ti ti-square-rounded-check"></i>A interface de gerenciamento dos equipamentos (web ou SSH) está protegida e não é acessível pela internet sem controle?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Existe segmentação de rede — ou tudo (servidores, estações, convidados) está na mesma rede plana?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Equipamentos de rede fora de linha ou sem suporte do fabricante já foram identificados para substituição?</li>
+          </ul>
+
+          <h2 id="o-que-fazer"><i class="ti ti-tool"></i>O que fazer agora, sem alarmismo</h2>
+          <p>Não é preciso tratar esse comunicado como uma emergência de invasão iminente — a Cisco não relatou exploração ativa dessa vulnerabilidade. O ponto é usar esse tipo de anúncio como gatilho para uma pergunta simples, que a maioria das PMEs nunca fez: <strong>quando foi a última vez que o firmware dos equipamentos de rede foi atualizado?</strong> Se a resposta é "não sei" ou "nunca", existe uma lacuna de gestão que precisa ser fechada — independentemente de haver ataque ativo ou não.</p>
+          <p>Gestão de vulnerabilidades de rede não é evento único, é processo contínuo: inventariar os equipamentos, acompanhar avisos de segurança dos fabricantes, aplicar atualizações em janelas planejadas e revisar configurações de acesso regularmente. É a mesma lógica já aplicada a notebooks e servidores — só que estendida para os equipamentos que ficam esquecidos no rack ou atrás do balcão.</p>
+
+        </div>
+        <div class="cta-article">
+          <h2>Sua empresa sabe o estado real dos equipamentos de rede?</h2>
+          <p>Como parte do diagnóstico gratuito da Oryxon, fazemos o levantamento do parque de rede da sua empresa — roteadores, switches e access points — identificando firmware desatualizado, configurações de risco e equipamentos fora de suporte.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20levantamento%20do%20parque%20de%20rede%20da%20minha%20empresa." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI — Oryxon Systems | Parceiro Help Digital</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fonte</h3>
+          <ul>
+            <li>Cisco Security Advisory (05/ago/2026) — <a href="https://www.cisco.com/c/en/us/support/docs/csa/cisco-sa-hardening-iosxe-V8NMuMZJ.html" target="_blank" rel="noopener">IOS XE Software Security Hardening Guidance</a></li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/blog/ransomware-brasil-2026.html"><i class="ti ti-alert-octagon"></i><div><strong>Ransomware no Brasil em 2026</strong><span>Cibersegurança</span></div></a>
+          <a href="/blog/chave-de-api-esquecida-vazamento-dados.html"><i class="ti ti-key"></i><div><strong>A chave de API esquecida que pode gerar vazamento de dados</strong><span>Cibersegurança · Automação</span></div></a>
+          <a href="/ciberseguranca.html"><i class="ti ti-shield-lock"></i><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#o-que-a-cisco-publicou">O que a Cisco publicou</a></li>
+            <li><a href="#ponto-cego">Por que é ponto cego nas PMEs</a></li>
+            <li><a href="#checklist">Checklist de rede</a></li>
+            <li><a href="#o-que-fazer">O que fazer agora</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Levantamento do parque de rede</h3>
+          <p>Mapeamos roteadores, switches e access points da sua empresa — firmware, configuração e risco.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20levantamento%20do%20parque%20de%20rede." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn-s">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>

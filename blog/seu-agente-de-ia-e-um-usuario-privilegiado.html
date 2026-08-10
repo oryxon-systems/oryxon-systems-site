@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele? | Oryxon Systems</title>
+  <meta name="description" content="Microsoft ampliou o Zero Trust para cobrir agentes de IA, com novo pilar de DevSecOps com 15 grupos de controle e 91 atividades. Veja o que isso significa para PMEs do Alto Tietê que já usam Copilot, Gemini ou automações."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"/>
+  <meta property="og:title" content="Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?"/>
+  <meta property="og:description" content="A Microsoft ampliou o Zero Trust Assessment com verificações específicas para agentes de IA. Veja os riscos concretos para PMEs e um checklist para autoavaliar agora."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?","description":"Microsoft ampliou o Zero Trust para cobrir agentes de IA, com novo pilar de DevSecOps com 15 grupos de controle e 91 atividades.","datePublished":"2026-08-10","dateModified":"2026-08-10","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"R. Mirambava, 46 - Centro","addressLocality":"Suzano","addressRegion":"SP","postalCode":"08674-130","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:#67e8ff}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.7rem,4vw,2.7rem);line-height:1.12;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:#dff9ff;font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
+    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i{color:#ffb432}
+    .callout-warn p{color:#ffd8a0}
+    .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
+    .callout-success i{color:#37f5a1}
+    .callout-success p{color:#a0f5d4}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
+    .cta-mid a{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#37f5a1,#1478ff);color:#001224;font-weight:850;font-size:.86rem;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:24px;padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:#dff9ff;justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .cta-article a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;padding:12px 24px;border-radius:999px;font-size:.92rem;text-decoration:none}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:14px;padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00b7ff,#1478ff);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:#dff9ff}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:#dff9ff;margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:18px;padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:#dff9ff}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .btn-s{display:inline-flex;align-items:center;gap:6px;font-size:.81rem;font-weight:800;color:#001224;background:linear-gradient(135deg,#67e8ff,#1478ff);padding:8px 14px;border-radius:999px;text-decoration:none}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid a{width:100%;justify-content:center}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn-nav">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança · IA</span>
+            <span class="article-date"><i class="ti ti-calendar"></i>10 de agosto de 2026</span>
+            <span class="article-read"><i class="ti ti-clock"></i>7 min de leitura</span>
+          </div>
+          <h1>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</h1>
+          <p class="article-lead">Em 4 de agosto de 2026, a Microsoft anunciou uma ampliação do Zero Trust Assessment com verificações específicas para agentes de IA, SecOps e infraestrutura — incluindo um novo pilar de DevSecOps com 15 grupos de controle e 91 atividades, cobrindo memória de agentes, código, dependências, pipelines e permissões. A mensagem por trás do anúncio é simples: um agente de IA que age em nome da sua empresa é, na prática, um usuário — só que a maioria das PMEs nunca tratou ele como tal.</p>
+        </header>
+        <div class="prose">
+
+          <h2 id="o-que-mudou"><i class="ti ti-refresh"></i>O que a Microsoft mudou no Zero Trust</h2>
+          <p>Segundo o blog oficial de segurança da Microsoft, o Zero Trust Assessment passou a incluir verificações voltadas especificamente para agentes de IA, operações de segurança (SecOps) e infraestrutura. Ao mesmo tempo, o Zero Trust Workshop ganhou controles novos para memória de agentes, código-fonte, dependências, pipelines de deploy e permissões de acesso.</p>
+          <p>O destaque é o novo pilar de DevSecOps, estruturado em 15 grupos de controle e 91 atividades. Na prática, isso reconhece algo que grande parte do mercado de TI corporativo ainda trata como secundário: agentes de IA não são só "recursos de produtividade" — eles executam ações, leem dados, escrevem em sistemas e tomam decisões com um nível de acesso que, até pouco tempo atrás, só era dado a funcionários.</p>
+
+          <div class="callout">
+            <i class="ti ti-info-circle"></i>
+            <p><strong>Por que isso importa para PME:</strong> Zero Trust é o modelo de segurança que parte do princípio "nunca confie, sempre verifique" — nenhum usuário, dispositivo ou, agora, agente de IA, tem acesso automático só porque já está "dentro" da rede. Cada ação é validada.</p>
+          </div>
+
+          <h2 id="risco-real"><i class="ti ti-alert-triangle"></i>O risco concreto para PMEs do Alto Tietê</h2>
+          <p>Empresas de Suzano, Mogi das Cruzes, Itaquaquecetuba, Poá e Ferraz de Vasconcelos já usam Copilot, Gemini ou automações conectadas a WhatsApp e CRM no dia a dia — muitas vezes configuradas por um colaborador entusiasmado, sem passar por TI. O problema não é a ferramenta. É a ausência de três respostas básicas:</p>
+          <ul>
+            <li><strong>Quem criou o agente</strong> e com qual conta ele está autenticado.</li>
+            <li><strong>O que ele pode acessar</strong> — e-mail corporativo, planilha financeira, CRM, documentos de clientes, sistema de faturamento.</li>
+            <li><strong>Como revogar esse acesso</strong> quando o colaborador sai da empresa, o projeto termina, ou o agente é substituído por outro.</li>
+          </ul>
+          <p>Um agente de IA com acesso a e-mail pode ler e responder mensagens com dados de clientes. Um agente conectado a uma planilha financeira pode expor números de faturamento a qualquer pessoa que descubra o link ou a integração. Um bot de WhatsApp conectado ao CRM sem controle de escopo pode vazar dados de contato de toda a base de clientes se a credencial usada for comprometida. Nenhum desses cenários exige um ataque sofisticado — exige apenas ausência de governança.</p>
+
+          <div class="cta-mid">
+            <p>Sua empresa sabe quais agentes de IA têm acesso a quê?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="agente-privilegiado"><i class="ti ti-user-shield"></i>Por que tratar o agente como um usuário privilegiado</h2>
+          <p>A lógica do Zero Trust para pessoas já é conhecida: acesso mínimo necessário, revisão periódica de permissões, autenticação forte, trilha de auditoria. O anúncio da Microsoft estende essa mesma lógica para agentes de IA — porque, do ponto de vista de segurança, um agente que lê e-mails, escreve em planilhas e interage com clientes não é diferente de um funcionário com login e senha. A diferença é que agentes não tiram férias, não avisam quando saem e, na maioria das PMEs, ninguém revisa o que eles têm permissão de fazer.</p>
+          <p>Isso vira ponto cego justamente porque IA foi adotada como ferramenta de produtividade, não como identidade a ser gerenciada. Sem inventário de agentes, sem dono definido por agente e sem processo de revogação, a superfície de risco cresce silenciosamente a cada nova automação criada.</p>
+
+          <h2 id="checklist"><i class="ti ti-checklist"></i>Checklist: sua empresa controla os agentes de IA que usa?</h2>
+          <p>Responda com sinceridade aos itens abaixo. Cada "não" é um ponto de exposição que vale investigar.</p>
+          <ul class="checklist">
+            <li><i class="ti ti-square-rounded-check"></i>Existe uma lista atualizada de todos os agentes/bots de IA em uso na empresa (Copilot, Gemini, automações de WhatsApp, CRM, planilhas)?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Cada agente tem um responsável identificado — não uma conta genérica compartilhada?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Você sabe exatamente quais sistemas e dados cada agente pode acessar?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Existe um processo para revogar o acesso de um agente quando ele deixa de ser usado?</li>
+            <li><i class="ti ti-square-rounded-check"></i>As credenciais usadas pelos agentes são exclusivas — não a senha pessoal de um colaborador?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Alguém revisa periodicamente o que os agentes de IA estão fazendo, e não só se estão "funcionando"?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Quando um colaborador que criou automações sai da empresa, existe checklist de desligamento que cobre os agentes que ele configurou?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Documentos e planilhas sensíveis conectados a IA têm controle de acesso separado do restante da empresa?</li>
+          </ul>
+
+          <div class="callout callout-warn">
+            <i class="ti ti-alert-triangle"></i>
+            <p><strong>Sinal de alerta:</strong> se a resposta para mais de duas perguntas acima foi "não sei", sua empresa provavelmente tem agentes de IA operando sem dono, sem escopo definido e sem trilha de revogação — exatamente o cenário que o novo Zero Trust para IA da Microsoft foi criado para corrigir.</p>
+          </div>
+
+          <h2 id="proximo-passo"><i class="ti ti-shield-check"></i>O próximo passo não é parar de usar IA</h2>
+          <p>O objetivo não é desligar Copilot, Gemini ou automações — essas ferramentas trazem ganho real de produtividade para PMEs. O objetivo é tratar cada agente com o mesmo rigor que se trata um funcionário com acesso a sistemas críticos: inventário, dono, escopo de acesso definido e processo de revogação. É exatamente esse o tipo de controle que grandes empresas de tecnologia estão formalizando agora — e que PMEs do Alto Tietê podem aplicar em escala menor, sem complexidade desnecessária.</p>
+
+        </div>
+        <div class="cta-article">
+          <h2>Sua empresa sabe quais agentes de IA têm acesso a quais dados?</h2>
+          <p>No Diagnóstico de Exposição Digital e IA da Oryxon, mapeamos os agentes, automações e integrações de IA em uso na sua empresa — e mostramos exatamente onde estão os acessos sem controle.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA%20para%20minha%20empresa." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI — Oryxon Systems | Parceiro Help Digital</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fonte</h3>
+          <ul>
+            <li>Microsoft Security Blog (04/ago/2026) — <a href="https://www.microsoft.com/en-us/security/blog/2026/08/04/advance-zero-trust-for-ai-new-tools-and-guidance-to-secure-ai-agents-and-devsecops/" target="_blank" rel="noopener">Advance Zero Trust for AI: New tools and guidance to secure AI agents and DevSecOps</a></li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/blog/chave-de-api-esquecida-vazamento-dados.html"><i class="ti ti-key"></i><div><strong>A chave de API esquecida que pode gerar vazamento de dados</strong><span>Cibersegurança · 6 min</span></div></a>
+          <a href="/blog/ia-gestao-ti-pme.html"><i class="ti ti-robot"></i><div><strong>IA na gestão de TI para PMEs em 2026</strong><span>Tecnologia · IA</span></div></a>
+          <a href="/ciberseguranca.html"><i class="ti ti-shield-lock"></i><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#o-que-mudou">O que a Microsoft mudou no Zero Trust</a></li>
+            <li><a href="#risco-real">O risco concreto para PMEs</a></li>
+            <li><a href="#agente-privilegiado">Agente como usuário privilegiado</a></li>
+            <li><a href="#checklist">Checklist de autoavaliação</a></li>
+            <li><a href="#proximo-passo">O próximo passo</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico de Exposição Digital e IA</h3>
+          <p>Mapeamos os agentes, automações e integrações de IA da sua empresa — sem custo e sem compromisso.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn-s">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>
