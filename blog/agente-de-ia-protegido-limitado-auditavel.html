@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seu agente de IA está protegido, limitado e auditável — ou apenas conectado? | Oryxon Systems</title>
+  <meta name="description" content="Identidades de máquina já superam humanas em ordem de grandeza nas empresas, segundo Palo Alto Networks. Três perguntas para saber se seu agente de IA está de fato sob controle."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/agente-de-ia-protegido-limitado-auditavel.html"/>
+  <meta property="og:title" content="Seu agente de IA está protegido, limitado e auditável — ou apenas conectado?"/>
+  <meta property="og:description" content="Governança de identidade não-humana em números: privilégio mínimo, auditoria e inventário de agentes de IA. Dados de Palo Alto Networks, Okta, CSA, BigID e OWASP."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/agente-de-ia-protegido-limitado-auditavel.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Seu agente de IA está protegido, limitado e auditável — ou apenas conectado?","description":"Identidades de máquina já superam humanas em ordem de grandeza nas empresas, segundo Palo Alto Networks. Três perguntas para saber se seu agente de IA está de fato sob controle.","datePublished":"2026-09-02","dateModified":"2026-09-02","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena","addressLocality":"Poá","addressRegion":"SP","postalCode":"08553-520","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/agente-de-ia-protegido-limitado-auditavel.html"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:#67e8ff}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:#dff9ff;font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
+    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+    .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:14px;padding:16px;text-align:center}
+    .stat-box .num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,#67e8ff,#1478ff);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
+    .stat-box span{color:var(--muted);font-size:.78rem;line-height:1.4;display:block}
+    .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:16px;padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
+    .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#67e8ff,#1478ff);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
+    .qbox .qbody h4{font-size:1rem;color:#dff9ff;margin-bottom:6px}
+    .qbox .qbody p{margin:0;font-size:.92rem}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i{color:#ffb432}
+    .callout-warn p{color:#ffd8a0}
+    .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
+    .callout-success i{color:#37f5a1}
+    .callout-success p{color:#a0f5d4}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
+    .cta-mid a{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#37f5a1,#1478ff);color:#001224;font-weight:850;font-size:.86rem;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:24px;padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:#dff9ff;justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .cta-article a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;padding:12px 24px;border-radius:999px;font-size:.92rem;text-decoration:none}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:14px;padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00b7ff,#1478ff);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:#dff9ff}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:#dff9ff;margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:18px;padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:#dff9ff}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .btn-s{display:inline-flex;align-items:center;gap:6px;font-size:.81rem;font-weight:800;color:#001224;background:linear-gradient(135deg,#67e8ff,#1478ff);padding:8px 14px;border-radius:999px;text-decoration:none}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}.stat-row{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid a{width:100%;justify-content:center}.stat-row{grid-template-columns:1fr}.qbox{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn-nav">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança · IA</span>
+            <span class="article-date"><i class="ti ti-calendar"></i>2 de setembro de 2026</span>
+            <span class="article-read"><i class="ti ti-clock"></i>8 min de leitura</span>
+          </div>
+          <h1>Seu agente de IA está protegido, limitado e auditável — ou apenas conectado?</h1>
+          <p class="article-lead">Toda empresa que já colocou um agente de IA para atender WhatsApp, ler e-mail ou mexer em planilha tem essa automação "funcionando". Poucas conseguem responder se ela está protegida. A diferença entre as duas coisas é o assunto deste artigo.</p>
+        </header>
+        <div class="prose">
+
+          <h2 id="escala-invisivel"><i class="ti ti-hierarchy-3"></i>A escala que ninguém enxerga</h2>
+          <p>O relatório Identity Security Landscape 2026, da Palo Alto Networks, encontrou uma média de <strong>109 identidades de máquina para cada identidade humana</strong> dentro das empresas — contando serviços, integrações, contas de API e, cada vez mais, agentes de IA. Os próprios respondentes da pesquisa esperam que o número de agentes de IA cresça <strong>85% nos próximos 12 meses</strong>.</p>
+          <p>Vale registrar que esse número varia entre pesquisas: a GitGuardian e a KPMG citam uma proporção de 80 identidades de máquina para cada humana, enquanto a Rubrik Zero Labs cita 82:1. Os relatórios não batem no número exato, mas concordam na direção — identidade não-humana já é maioria absoluta dentro do ambiente de TI de qualquer empresa, numa ordem de grandeza que a maioria dos gestores não tem ideia que existe.</p>
+          <p>Isso importa porque cada automação, cada integração de n8n ou Make, cada bot conectado a CRM ou WhatsApp é mais uma dessas identidades. E identidade que ninguém contou é identidade que ninguém está protegendo.</p>
+
+          <h2 id="pergunta-1"><i class="ti ti-lock-access"></i>Pergunta 1: o agente tem só o acesso que precisa?</h2>
+          <div class="qbox">
+            <div class="qnum">1</div>
+            <div class="qbody">
+              <h4>Privilégio mínimo ou acesso "por via das dúvidas"?</h4>
+              <p>Mais da metade dos participantes de uma pesquisa da Palo Alto Networks (2026) admitiu não conseguir aplicar de forma consistente o princípio de privilégio mínimo em contas de serviço entre nuvem, SaaS e ambiente local. Na prática, isso significa dar ao agente acesso de administrador ou escopo amplo, "porque é mais fácil configurar assim", em vez de restringir ao mínimo necessário para a tarefa específica.</p>
+            </div>
+          </div>
+          <p>A metodologia OWASP para IA agêntica formaliza essa ideia com o conceito de <strong>"princípio da menor agência"</strong> (least agency, 2026): dar ao agente a autonomia mínima necessária para a tarefa que ele executa naquele momento — não o máximo de credencial que ele possa algum dia precisar. É a mesma lógica de privilégio mínimo aplicada a pessoas, só que a maioria das empresas nunca parou para aplicá-la a um agente.</p>
+
+          <div class="stat-row">
+            <div class="stat-box"><div class="num">97%</div><span>das identidades não-humanas carregam privilégios excessivos — BigID, 2026</span></div>
+            <div class="stat-box"><div class="num">5,7%</div><span>das organizações têm visibilidade completa sobre suas contas de serviço — BigID, 2026</span></div>
+            <div class="stat-box"><div class="num">4,5x</div><span>mais incidentes em sistemas de IA com acesso excessivo vs. privilégio mínimo — CSA, 2026</span></div>
+          </div>
+          <p>Esse último dado merece destaque: um estudo citado pela Cloud Security Alliance mostrou que sistemas de IA configurados sob privilégio mínimo tiveram taxa de incidente de 17%, contra 76% em sistemas com acesso excessivo. A diferença não é sutil — é 4,5 vezes mais chance de algo dar errado quando o agente tem mais acesso do que precisa.</p>
+
+          <div class="cta-mid">
+            <p>Você sabe qual acesso cada automação da sua empresa realmente usa?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20de%20seguran%C3%A7a%20para%20agentes%20de%20IA%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="pergunta-2"><i class="ti ti-file-search"></i>Pergunta 2: existe log de tudo que o agente fez?</h2>
+          <div class="qbox">
+            <div class="qnum">2</div>
+            <div class="qbody">
+              <h4>Auditoria e trilha de ações, não só "está funcionando"</h4>
+              <p>Segundo a Okta (2026), 88% das organizações já relataram incidentes de segurança relacionados a agentes de IA — mas apenas 22% tratam agente de IA como identidade de primeira classe dentro do programa de gestão de identidade e acesso (IAM). Ou seja: a maioria trata o agente como ferramenta de produtividade, não como algo que precisa ser monitorado como um usuário com credencial.</p>
+            </div>
+          </div>
+          <p>Um dado consolidado por relatórios de identidade de 2026 (citando a Cloud Security Alliance) aponta que mais de dois terços das organizações não conseguem distinguir, em logs e monitoramento, se uma ação foi feita por um humano ou por um agente de IA. Sem essa distinção, investigar um incidente vira adivinhação: ninguém sabe se foi um colaborador que errou ou um agente que agiu fora do esperado.</p>
+
+          <h2 id="pergunta-3"><i class="ti ti-list-search"></i>Pergunta 3: alguém sabe quantos agentes existem rodando agora?</h2>
+          <div class="qbox">
+            <div class="qnum">3</div>
+            <div class="qbody">
+              <h4>Inventário — o ponto de partida que costuma faltar</h4>
+              <p>A Cloud Security Alliance encontrou, em análise de 2026 sobre proliferação de tokens de IA, que mais de 16% das organizações não rastreiam a criação de identidades relacionadas a IA. Sem esse controle, cada colaborador que cria uma automação nova — em n8n, Make, Power Automate ou direto num script — adiciona mais uma identidade ao ambiente sem que ninguém registre isso em lugar nenhum.</p>
+            </div>
+          </div>
+          <p>Não é possível proteger, limitar ou auditar o que não está inventariado. Esse é o motivo pelo qual "inventário de agentes" costuma ser o primeiro item de qualquer programa sério de governança de identidade não-humana — antes até de discutir política de acesso.</p>
+
+          <div class="callout callout-warn">
+            <i class="ti ti-alert-triangle"></i>
+            <p><strong>A ressalva que precisa ficar clara:</strong> privilégio mínimo e auditoria reduzem o estrago possível, mas não impedem sozinhos que um agente autorizado seja manipulado — por exemplo, por uma instrução maliciosa injetada no conteúdo que ele processa — a fazer mau uso do acesso que já tem legitimamente. Restringir escopo diminui o dano; não é, por si só, proteção completa. Por isso privilégio mínimo precisa andar junto com log de auditoria: um limita até onde o agente pode chegar, o outro mostra o que ele efetivamente fez.</p>
+          </div>
+
+          <h2 id="checklist"><i class="ti ti-checklist"></i>Checklist: seu agente de IA está sob controle?</h2>
+          <ul class="checklist">
+            <li><i class="ti ti-square-rounded-check"></i>Existe uma lista atualizada de todos os agentes/automações de IA em uso na empresa — não uma estimativa de memória?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Cada agente tem o acesso mínimo necessário para a tarefa específica, revisado periodicamente — não acesso amplo "para não travar nada"?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Existe log de auditoria que registra as ações do agente e permite distinguir o que foi feito por ele do que foi feito por uma pessoa?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Cada agente tem um responsável identificado, não uma credencial genérica compartilhada entre vários colaboradores?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Existe processo definido para revogar o acesso de um agente quando a automação para de ser usada?</li>
+            <li><i class="ti ti-square-rounded-check"></i>Alguém revisa periodicamente os logs do agente, e não só verifica se a automação "ainda está rodando"?</li>
+          </ul>
+
+          <div class="callout">
+            <i class="ti ti-info-circle"></i>
+            <p>Este artigo complementa outro já publicado aqui sobre <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html">como a Microsoft ampliou o Zero Trust para cobrir agentes de IA</a>. Lá o foco é o modelo Zero Trust; aqui, o foco são os três controles práticos — acesso mínimo, auditoria e inventário — que qualquer empresa pode aplicar independente de fornecedor.</p>
+          </div>
+
+        </div>
+        <div class="cta-article">
+          <h2>Sua empresa sabe se os agentes de IA em uso estão protegidos ou só conectados?</h2>
+          <p>A Oryxon avalia o acesso, o inventário e a trilha de auditoria dos agentes e automações de IA em uso na sua empresa, e mostra exatamente onde estão os pontos sem controle.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20seguran%C3%A7a%20para%20agentes%20de%20IA%20da%20minha%20empresa." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI — Oryxon Systems | Parceiro Help Digital</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fontes</h3>
+          <ul>
+            <li>Palo Alto Networks — Identity Security Landscape 2026 (também citado por Help Net Security, mai/2026)</li>
+            <li>GitGuardian e KPMG — dados 2026 sobre proporção de identidades de máquina por humana</li>
+            <li>Rubrik Zero Labs — dados 2026 sobre proliferação de identidades não-humanas</li>
+            <li>Cloud Security Alliance (CSA) — análise 2026 sobre proliferação de tokens de IA e taxa de incidentes por nível de privilégio</li>
+            <li>BigID — "Ultimate Guide to NHIs", 2026</li>
+            <li>Okta — dados 2026 sobre incidentes e maturidade de IAM para agentes de IA</li>
+            <li>OWASP — Agentic AI guidance, 2026 (princípio da menor agência)</li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"><i class="ti ti-user-shield"></i><div><strong>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</strong><span>Cibersegurança · IA</span></div></a>
+          <a href="/blog/chave-de-api-esquecida-vazamento-dados.html"><i class="ti ti-key"></i><div><strong>A chave de API esquecida que pode gerar vazamento de dados</strong><span>Cibersegurança · 6 min</span></div></a>
+          <a href="/ciberseguranca.html"><i class="ti ti-shield-lock"></i><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#escala-invisivel">A escala que ninguém enxerga</a></li>
+            <li><a href="#pergunta-1">Privilégio mínimo</a></li>
+            <li><a href="#pergunta-2">Auditoria e log</a></li>
+            <li><a href="#pergunta-3">Inventário de agentes</a></li>
+            <li><a href="#checklist">Checklist de autoavaliação</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico de Exposição Digital e IA</h3>
+          <p>Mapeamos os agentes, automações e integrações de IA da sua empresa — sem custo e sem compromisso.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn-s">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>
