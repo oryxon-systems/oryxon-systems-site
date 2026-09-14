@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A ameaça agora opera em velocidade de máquina: qual é o tempo real de reação da sua PME? | Oryxon Systems</title>
+  <meta name="description" content="O tempo médio de breakout caiu para 29 minutos em 2025, segundo a CrowdStrike — 65% mais rápido que em 2024. Veja por que a maioria dos processos de segurança de PME ainda reage em horas, não minutos."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/velocidade-de-maquina-tempo-de-reacao-pme.html"/>
+  <meta property="og:title" content="A ameaça agora opera em velocidade de máquina: qual é o tempo real de reação da sua PME?"/>
+  <meta property="og:description" content="Breakout time caiu para 29 minutos em 2025, segundo a CrowdStrike. Veja o descompasso entre a velocidade do ataque e o tempo de resposta da PME."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/velocidade-de-maquina-tempo-de-reacao-pme.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"A ameaça agora opera em velocidade de máquina: qual é o tempo real de reação da sua PME?","description":"O tempo médio de breakout caiu para 29 minutos em 2025, segundo a CrowdStrike — 65% mais rápido que em 2024. Veja o descompasso entre a velocidade do ataque e o tempo de resposta da PME.","datePublished":"2026-09-14","dateModified":"2026-09-14","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena","addressLocality":"Poá","addressRegion":"SP","postalCode":"08553-520","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/velocidade-de-maquina-tempo-de-reacao-pme.html"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:#67e8ff}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:#dff9ff;font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
+    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+    .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:14px;padding:16px;text-align:center}
+    .stat-box .num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,#67e8ff,#1478ff);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
+    .stat-box span{color:var(--muted);font-size:.78rem;line-height:1.4;display:block}
+    .split-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .split-box{border-radius:14px;padding:18px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.02)}
+    .split-box h4{display:flex;align-items:center;gap:8px;font-size:.95rem;color:#dff9ff;margin-bottom:10px}
+    .split-box h4 i{color:#67e8ff}
+    .split-box.cloud h4 i{color:#37f5a1}
+    .split-box ul{padding-left:18px;color:var(--muted);font-size:.88rem;display:grid;gap:5px;margin:0}
+    .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:16px;padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
+    .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#67e8ff,#1478ff);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
+    .qbox .qbody h4{font-size:1rem;color:#dff9ff;margin-bottom:6px}
+    .qbox .qbody p{margin:0;font-size:.92rem}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i{color:#ffb432}
+    .callout-warn p{color:#ffd8a0}
+    .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
+    .callout-success i{color:#37f5a1}
+    .callout-success p{color:#a0f5d4}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
+    .cta-mid a{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#37f5a1,#1478ff);color:#001224;font-weight:850;font-size:.86rem;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:24px;padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:#dff9ff;justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .cta-article a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;padding:12px 24px;border-radius:999px;font-size:.92rem;text-decoration:none}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:14px;padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00b7ff,#1478ff);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:#dff9ff}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:#dff9ff;margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:18px;padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:#dff9ff}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .btn-s{display:inline-flex;align-items:center;gap:6px;font-size:.81rem;font-weight:800;color:#001224;background:linear-gradient(135deg,#67e8ff,#1478ff);padding:8px 14px;border-radius:999px;text-decoration:none}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}.stat-row{grid-template-columns:1fr 1fr}.split-row{grid-template-columns:1fr}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid a{width:100%;justify-content:center}.stat-row{grid-template-columns:1fr}.qbox{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn-nav">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança · Ameaças</span>
+            <span class="article-date"><i class="ti ti-calendar"></i>14 de setembro de 2026</span>
+            <span class="article-read"><i class="ti ti-clock"></i>7 min de leitura</span>
+          </div>
+          <h1>A ameaça agora opera em velocidade de máquina: qual é o tempo real de reação da sua PME?</h1>
+          <p class="article-lead">29 minutos é o tempo médio, em 2025, entre um invasor conseguir o primeiro acesso a uma rede e começar a se espalhar dentro dela. A pergunta que importa não é se sua empresa tem ferramenta de segurança. É: quanto tempo leva, hoje, para alguém na sua empresa perceber que algo está errado e agir?</p>
+        </header>
+        <div class="prose">
+
+          <h2 id="29-minutos"><i class="ti ti-stopwatch"></i>O número: 29 minutos</h2>
+          <p>Segundo o Global Threat Report 2026 da CrowdStrike, o tempo médio de <strong>"breakout"</strong> caiu para <strong>29 minutos em 2025</strong> — uma queda de 65% em relação aos 48 minutos medidos em 2024, e muito abaixo dos 98 minutos medidos em 2021. O breakout mais rápido já registrado pela CrowdStrike foi de <strong>27 segundos</strong>. Em um dos casos analisados, a exfiltração de dados começou apenas 4 minutos após o acesso inicial.</p>
+          <p>Para efeito de comparação histórica: em uma edição anterior do relatório, referente a 2024, a CrowdStrike já havia registrado um breakout recorde de 2 minutos e 7 segundos, com média então em torno de 62 minutos. Ou seja: o que era um caso extremo e raríssimo há pouco tempo hoje está próximo de virar rotina — mesmo o "recorde" de velocidade de uma edição anterior seria, hoje, só ligeiramente mais rápido que a média atual.</p>
+
+          <h2 id="o-que-e-breakout"><i class="ti ti-route"></i>O que é "breakout time" e por que ele decide o tamanho do estrago</h2>
+          <p>Breakout time é o intervalo entre o momento em que um invasor consegue o primeiro acesso a uma máquina e o momento em que ele começa o movimento lateral — ou seja, deixa de estar limitado a um único computador e passa a se espalhar pela rede, buscando outros sistemas, outras credenciais, outros dados.</p>
+          <p>É esse intervalo que decide se um incidente fica contido a uma máquina isolada ou vira um problema em toda a empresa. Quanto menor o breakout time do atacante, menor a janela que a equipe de TI tem para perceber o problema e isolar o que já foi comprometido antes que o estrago se espalhe.</p>
+
+          <div class="stat-row">
+            <div class="stat-box"><div class="num">29 min</div><span>breakout time médio em 2025 — CrowdStrike Global Threat Report 2026</span></div>
+            <div class="stat-box"><div class="num">27 seg</div><span>breakout mais rápido já registrado pela CrowdStrike</span></div>
+            <div class="stat-box"><div class="num">89%</div><span>aumento em ataques com uso de IA por parte do atacante — CrowdStrike</span></div>
+          </div>
+
+          <h2 id="por-que-ficou-mais-rapido"><i class="ti ti-robot"></i>Por que ficou tão mais rápido</h2>
+          <p>A CrowdStrike atribui essa aceleração a três fatores combinados: uso de <strong>credenciais legítimas e ferramentas já confiáveis</strong> pelo invasor, o que dificulta a detecção porque o comportamento parece normal; <strong>automação de pós-exploração com scripts gerados por IA</strong>, que reduz o tempo que o atacante gasta em cada etapa manual do ataque; e ataques direcionados às <strong>lacunas entre diferentes ferramentas de segurança</strong> que não conversam entre si.</p>
+          <p><strong>82% das detecções em 2025 não envolveram malware tradicional</strong> — ou seja, a maioria dos ataques não usa um "vírus" que um antivírus reconheceria. Usa comportamento que parece legítimo: login com credencial válida, ferramenta administrativa que já existe no sistema, ação que um funcionário normalmente faria. Isso explica por que ataques com uso de IA por parte do atacante aumentaram 89%, segundo a mesma CrowdStrike: a automação acelera exatamente as etapas que antes exigiam tempo manual do invasor.</p>
+
+          <div class="cta-mid">
+            <p>Sua empresa sabe quanto tempo levaria para perceber um movimento lateral na rede?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20monitoramento%20cont%C3%ADnuo%20de%20seguran%C3%A7a%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="descompasso"><i class="ti ti-hourglass-low"></i>O descompasso: ataque em minutos, resposta em horas</h2>
+          <p>Benchmarks de mercado — SANS, Mandiant, citados em cobertura de 2026 — apontam que a maioria dos centros de operação de segurança (SOC) ainda mede o próprio tempo de detecção em <strong>horas</strong>, não minutos. Isso já é um descompasso direto num cenário enterprise com equipe dedicada. Numa PME, onde o processo de segurança costuma depender de alguém notar algo estranho, ligar para o suporte de TI e esperar retorno, esse descompasso é ainda maior.</p>
+          <div class="callout callout-warn">
+            <i class="ti ti-alert-triangle"></i>
+            <p><strong>Ressalva importante:</strong> os números de breakout time acima (29 minutos, 27 segundos) são benchmarks de ataques monitorados pela CrowdStrike em nível global e majoritariamente enterprise — não são uma medição específica de PME brasileira ou do Alto Tietê. Servem como referência de tendência e de velocidade do problema, não como número exato aplicável a qualquer empresa da região.</p>
+          </div>
+
+          <h2 id="o-que-reduz"><i class="ti ti-shield-check"></i>O que reduz esse descompasso na prática</h2>
+          <p>Não é sobre comprar mais ferramenta. É sobre ter processo e monitoramento que reagem em minutos, não em dias:</p>
+          <ul class="checklist">
+            <li><i class="ti ti-square-rounded-check"></i><strong>Monitoramento contínuo</strong> — alguém (ou algum sistema) observando a rede o tempo todo, não só reagindo quando um usuário reporta um problema.</li>
+            <li><i class="ti ti-square-rounded-check"></i><strong>Segmentação de rede</strong> — limitar até onde um movimento lateral consegue chegar, mesmo que ele comece em algum ponto da rede.</li>
+            <li><i class="ti ti-square-rounded-check"></i><strong>Plano de resposta pré-definido</strong> — saber, antes de qualquer incidente, quem faz o quê nos primeiros minutos, sem precisar decidir isso no meio do pânico.</li>
+          </ul>
+
+        </div>
+        <div class="cta-article">
+          <h2>Sua empresa está preparada para reagir em minutos, não em dias?</h2>
+          <p>A Oryxon assume o monitoramento contínuo da infraestrutura da sua empresa, com processo de resposta definido antes que o incidente aconteça — não depois.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20monitoramento%20e%20resposta%20a%20incidentes%20para%20minha%20empresa." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI — Oryxon Systems | Parceiro Help Digital</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fontes</h3>
+          <ul>
+            <li>CrowdStrike — Global Threat Report 2026 (breakout time, uso de credenciais legítimas, detecções sem malware tradicional, aumento de ataques com IA)</li>
+            <li>Benchmarks de mercado sobre tempo de detecção de SOC — SANS, Mandiant, citados em cobertura 2026</li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/blog/ransomware-brasil-2026.html"><i class="ti ti-alert-octagon"></i><div><strong>Ransomware no Brasil em 2026</strong><span>Cibersegurança</span></div></a>
+          <a href="/blog/farsa-firewall-mfa-ataque-aitm.html"><i class="ti ti-mask"></i><div><strong>A farsa do "Temos Firewall e MFA"</strong><span>Cibersegurança · Ameaças</span></div></a>
+          <a href="/ciberseguranca.html"><i class="ti ti-shield-lock"></i><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#29-minutos">O número: 29 minutos</a></li>
+            <li><a href="#o-que-e-breakout">O que é breakout time</a></li>
+            <li><a href="#por-que-ficou-mais-rapido">Por que ficou mais rápido</a></li>
+            <li><a href="#descompasso">O descompasso ataque x resposta</a></li>
+            <li><a href="#o-que-reduz">O que reduz esse descompasso</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico de Exposição Digital e IA</h3>
+          <p>Mapeamos os agentes, automações e integrações de IA da sua empresa — sem custo e sem compromisso.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn-s">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>
