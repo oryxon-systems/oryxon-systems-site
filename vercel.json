@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/diagnostico", "destination": "/#diagnostico", "permanent": true },
+    { "source": "/diagnostico/", "destination": "/#diagnostico", "permanent": true }
+  ]
+}
