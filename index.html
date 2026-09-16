@@ -720,14 +720,23 @@
       let current = 0;
       const el = document.getElementById('rotating-text');
       if (!el) return;
-      setInterval(() => {
-        el.style.opacity = '0';
-        setTimeout(() => {
-          current = (current + 1) % terms.length;
-          el.innerHTML = terms[current];
-          el.style.opacity = '1';
-        }, 300);
-      }, 2500);
+
+      function startRotation() {
+        setInterval(() => {
+          el.style.opacity = '0';
+          setTimeout(() => {
+            current = (current + 1) % terms.length;
+            el.innerHTML = terms[current];
+            el.style.opacity = '1';
+          }, 300);
+        }, 2500);
+      }
+
+      // Atrasa o início do ciclo pra depois do load, dando tempo do LCP
+      // se estabilizar no texto estático do HTML antes de qualquer repaint via JS.
+      window.addEventListener('load', function() {
+        setTimeout(startRotation, 2500);
+      });
     })();
 
     // Toggle segmento
