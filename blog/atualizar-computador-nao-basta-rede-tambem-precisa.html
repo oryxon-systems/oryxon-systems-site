@@ -18,7 +18,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -42,7 +41,7 @@
     h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
     .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
     .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
-    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h2 i,h2 svg{color:#67e8ff;font-size:1.1rem}
     .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
     .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
     .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
@@ -50,19 +49,19 @@
     .prose strong{color:#dff9ff;font-weight:700}
     .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
     .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
-    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .checklist i,.checklist svg{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
     .stat-row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}
     .stat-box{border:1px solid rgba(255,100,100,.22);background:rgba(255,50,50,.05);border-radius:14px;padding:16px;text-align:center}
     .stat-val{font-size:1.9rem;font-weight:900;letter-spacing:-.06em;color:#ff9999;line-height:1;margin-bottom:5px}
     .stat-lbl{color:var(--muted);font-size:.8rem;line-height:1.5}
     .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
-    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout i,.callout svg{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
     .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
     .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
-    .callout-warn i{color:#ffb432}
+    .callout-warn i,.callout-warn svg{color:#ffb432}
     .callout-warn p{color:#ffd8a0}
     .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
-    .callout-success i{color:#37f5a1}
+    .callout-success i,.callout-success svg{color:#37f5a1}
     .callout-success p{color:#a0f5d4}
     .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
     .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
@@ -83,7 +82,7 @@
     .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
     .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
     .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
-    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
     .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
     .related a span{font-size:.82rem}
     .sidebar{position:sticky;top:90px;display:grid;gap:16px}
@@ -116,15 +115,15 @@
         <header class="article-header">
           <div class="article-meta">
             <span class="article-cat">Cibersegurança · Infraestrutura</span>
-            <span class="article-date"><i class="ti ti-calendar"></i>10 de agosto de 2026</span>
-            <span class="article-read"><i class="ti ti-clock"></i>7 min de leitura</span>
+            <span class="article-date"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M11 15h1"/><path d="M12 15v3"/></svg>10 de agosto de 2026</span>
+            <span class="article-read"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>7 min de leitura</span>
           </div>
           <h1>Atualizar computadores não basta: roteadores e switches também precisam de gestão de vulnerabilidades</h1>
           <p class="article-lead">Em 5 de agosto de 2026, a Cisco publicou uma atualização de segurança crítica para o IOS XE, o sistema operacional que roda em boa parte dos roteadores e switches corporativos do mercado. Uma das vulnerabilidades corrigidas recebeu nota CVSS 9,8 — próxima do máximo — e não tem workaround disponível: a única mitigação é atualizar para a versão corrigida. A Cisco não indicou exploração ativa nesse comunicado. Mas o ponto não é pânico — é gravidade técnica ignorada há anos na maioria das PMEs.</p>
         </header>
         <div class="prose">
 
-          <h2 id="o-que-a-cisco-publicou"><i class="ti ti-router"></i>O que a Cisco publicou</h2>
+          <h2 id="o-que-a-cisco-publicou"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 13m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"/><path d="M17 17l0 .01"/><path d="M13 17l0 .01"/><path d="M15 13l0 -2"/><path d="M11.75 8.75a4 4 0 0 1 6.5 0"/><path d="M8.5 6.5a8 8 0 0 1 13 0"/></svg>O que a Cisco publicou</h2>
           <p>Segundo o comunicado oficial de segurança da Cisco (Cisco Security Advisory), a atualização de 5 de agosto de 2026 corrige múltiplas vulnerabilidades no IOS XE — sistema operacional presente em roteadores, switches e outros equipamentos de rede da marca amplamente usados em ambientes corporativos, inclusive por PMEs através de provedores de TI e integradores. Uma das falhas recebeu pontuação CVSS 9,8, classificada como crítica, e a Cisco informou que não existe workaround: a mitigação exige atualizar o equipamento para a versão de firmware corrigida.</p>
           <p>É importante ser preciso aqui: a Cisco não indicou, nesse comunicado, que a vulnerabilidade está sendo explorada ativamente. O alerta não é sobre um ataque em curso — é sobre uma porta com fechadura quebrada que segue destrancada até alguém trocar a fechadura.</p>
 
@@ -133,32 +132,32 @@
             <div class="stat-box"><div class="stat-val">0</div><div class="stat-lbl">workarounds disponíveis — a única mitigação é atualizar o firmware</div></div>
           </div>
 
-          <h2 id="ponto-cego"><i class="ti ti-eye-off"></i>Por que isso é ponto cego na maioria das PMEs</h2>
+          <h2 id="ponto-cego"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M10.585 10.587a2 2 0 0 0 2.829 2.828"/><path d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"/><path d="M3 3l18 18"/></svg>Por que isso é ponto cego na maioria das PMEs</h2>
           <p>PMEs que investem em gestão de TI normalmente já têm RMM cuidando de notebooks e servidores Windows — atualizações automáticas, patches de segurança, inventário de hardware. O problema é que esse mesmo cuidado raramente chega ao equipamento que sustenta a rede inteira: roteadores, switches e access points.</p>
           <p>O motivo é estrutural, não de negligência. Inventário de TI, quando existe, costuma listar "computadores" e "notebooks" — não firmware de rede. Atualizar um roteador ou switch geralmente exige janela de manutenção, conhecimento técnico específico e, muitas vezes, é visto como "já está funcionando, não mexe". O resultado: equipamentos de rede que ficam anos rodando a mesma versão de firmware com a qual saíram de fábrica, acumulando vulnerabilidades conhecidas e já corrigidas — só que nunca aplicadas.</p>
 
           <div class="callout callout-warn">
-            <i class="ti ti-alert-triangle"></i>
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"/><path d="M12 16h.01"/></svg>
             <p><strong>O detalhe que importa:</strong> um roteador ou switch comprometido não é "só mais um dispositivo" — é o ponto por onde passa todo o tráfego da empresa. Um equipamento de borda de rede vulnerável pode servir de porta de entrada para tudo que está atrás dele, mesmo que os computadores estejam 100% atualizados.</p>
           </div>
 
           <div class="cta-mid">
             <p>Você sabe qual a versão de firmware do seu roteador e switches?</p>
-            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20levantamento%20de%20parque%20de%20rede%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20levantamento%20de%20parque%20de%20rede%20da%20Oryxon." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Falar no WhatsApp</a>
           </div>
 
-          <h2 id="checklist"><i class="ti ti-checklist"></i>Checklist: Inventário e Hardening de Infraestrutura de Rede</h2>
+          <h2 id="checklist"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8"/><path d="M14 19l2 2l4 -4"/><path d="M9 8h4"/><path d="M9 12h2"/></svg>Checklist: Inventário e Hardening de Infraestrutura de Rede</h2>
           <ul class="checklist">
-            <li><i class="ti ti-square-rounded-check"></i>Existe inventário atualizado com marca, modelo e versão de firmware de todos os roteadores, switches e access points da empresa?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Alguém é responsável por acompanhar avisos de segurança dos fabricantes (Cisco, e outros) usados na rede?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Existe processo e janela de manutenção definida para aplicar atualizações críticas de firmware?</li>
-            <li><i class="ti ti-square-rounded-check"></i>As senhas padrão de fábrica dos equipamentos de rede foram trocadas?</li>
-            <li><i class="ti ti-square-rounded-check"></i>A interface de gerenciamento dos equipamentos (web ou SSH) está protegida e não é acessível pela internet sem controle?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Existe segmentação de rede — ou tudo (servidores, estações, convidados) está na mesma rede plana?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Equipamentos de rede fora de linha ou sem suporte do fabricante já foram identificados para substituição?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe inventário atualizado com marca, modelo e versão de firmware de todos os roteadores, switches e access points da empresa?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Alguém é responsável por acompanhar avisos de segurança dos fabricantes (Cisco, e outros) usados na rede?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe processo e janela de manutenção definida para aplicar atualizações críticas de firmware?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>As senhas padrão de fábrica dos equipamentos de rede foram trocadas?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>A interface de gerenciamento dos equipamentos (web ou SSH) está protegida e não é acessível pela internet sem controle?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe segmentação de rede — ou tudo (servidores, estações, convidados) está na mesma rede plana?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Equipamentos de rede fora de linha ou sem suporte do fabricante já foram identificados para substituição?</li>
           </ul>
 
-          <h2 id="o-que-fazer"><i class="ti ti-tool"></i>O que fazer agora, sem alarmismo</h2>
+          <h2 id="o-que-fazer"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M7 10h3v-3l-3.5 -3.5a6 6 0 0 1 8 8l6 6a2 2 0 0 1 -3 3l-6 -6a6 6 0 0 1 -8 -8l3.5 3.5"/></svg>O que fazer agora, sem alarmismo</h2>
           <p>Não é preciso tratar esse comunicado como uma emergência de invasão iminente — a Cisco não relatou exploração ativa dessa vulnerabilidade. O ponto é usar esse tipo de anúncio como gatilho para uma pergunta simples, que a maioria das PMEs nunca fez: <strong>quando foi a última vez que o firmware dos equipamentos de rede foi atualizado?</strong> Se a resposta é "não sei" ou "nunca", existe uma lacuna de gestão que precisa ser fechada — independentemente de haver ataque ativo ou não.</p>
           <p>Gestão de vulnerabilidades de rede não é evento único, é processo contínuo: inventariar os equipamentos, acompanhar avisos de segurança dos fabricantes, aplicar atualizações em janelas planejadas e revisar configurações de acesso regularmente. É a mesma lógica já aplicada a notebooks e servidores — só que estendida para os equipamentos que ficam esquecidos no rack ou atrás do balcão.</p>
 
@@ -166,7 +165,7 @@
         <div class="cta-article">
           <h2>Sua empresa sabe o estado real dos equipamentos de rede?</h2>
           <p>Como parte do diagnóstico gratuito da Oryxon, fazemos o levantamento do parque de rede da sua empresa — roteadores, switches e access points — identificando firmware desatualizado, configurações de risco e equipamentos fora de suporte.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20levantamento%20do%20parque%20de%20rede%20da%20minha%20empresa." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20levantamento%20do%20parque%20de%20rede%20da%20minha%20empresa." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar diagnóstico gratuito</a>
         </div>
         <div class="author-box">
           <div class="author-avatar">U</div>
@@ -180,9 +179,9 @@
         </div>
         <div class="related">
           <h3>Leia também</h3>
-          <a href="/blog/ransomware-brasil-2026.html"><i class="ti ti-alert-octagon"></i><div><strong>Ransomware no Brasil em 2026</strong><span>Cibersegurança</span></div></a>
-          <a href="/blog/chave-de-api-esquecida-vazamento-dados.html"><i class="ti ti-key"></i><div><strong>A chave de API esquecida que pode gerar vazamento de dados</strong><span>Cibersegurança · Automação</span></div></a>
-          <a href="/ciberseguranca.html"><i class="ti ti-shield-lock"></i><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
+          <a href="/blog/ransomware-brasil-2026.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg><div><strong>Ransomware no Brasil em 2026</strong><span>Cibersegurança</span></div></a>
+          <a href="/blog/chave-de-api-esquecida-vazamento-dados.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z"/><path d="M15 9h.01"/></svg><div><strong>A chave de API esquecida que pode gerar vazamento de dados</strong><span>Cibersegurança · Automação</span></div></a>
+          <a href="/ciberseguranca.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M12 11m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 12l0 2.5"/></svg><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
         </div>
       </article>
       <aside class="sidebar">
@@ -198,7 +197,7 @@
         <div class="sidebar-card">
           <h3>Levantamento do parque de rede</h3>
           <p>Mapeamos roteadores, switches e access points da sua empresa — firmware, configuração e risco.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20levantamento%20do%20parque%20de%20rede." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20levantamento%20do%20parque%20de%20rede." target="_blank" rel="noopener" class="btn-s"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar agora</a>
         </div>
         <div class="sidebar-card">
           <h3>Ver planos MSP</h3>

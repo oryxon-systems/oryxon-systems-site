@@ -18,7 +18,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -42,7 +41,7 @@
     h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
     .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
     .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
-    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h2 i,h2 svg{color:#67e8ff;font-size:1.1rem}
     .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
     .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
     .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
@@ -50,7 +49,7 @@
     .prose strong{color:#dff9ff;font-weight:700}
     .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
     .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
-    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .checklist i,.checklist svg{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
     .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
     .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:14px;padding:16px;text-align:center}
     .stat-box .num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,#67e8ff,#1478ff);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
@@ -60,13 +59,13 @@
     .qbox .qbody h4{font-size:1rem;color:#dff9ff;margin-bottom:6px}
     .qbox .qbody p{margin:0;font-size:.92rem}
     .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
-    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout i,.callout svg{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
     .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
     .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
-    .callout-warn i{color:#ffb432}
+    .callout-warn i,.callout-warn svg{color:#ffb432}
     .callout-warn p{color:#ffd8a0}
     .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
-    .callout-success i{color:#37f5a1}
+    .callout-success i,.callout-success svg{color:#37f5a1}
     .callout-success p{color:#a0f5d4}
     .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
     .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
@@ -87,7 +86,7 @@
     .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
     .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
     .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
-    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
     .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
     .related a span{font-size:.82rem}
     .sidebar{position:sticky;top:90px;display:grid;gap:16px}
@@ -120,20 +119,20 @@
         <header class="article-header">
           <div class="article-meta">
             <span class="article-cat">Cibersegurança · IA</span>
-            <span class="article-date"><i class="ti ti-calendar"></i>2 de setembro de 2026</span>
-            <span class="article-read"><i class="ti ti-clock"></i>8 min de leitura</span>
+            <span class="article-date"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M11 15h1"/><path d="M12 15v3"/></svg>2 de setembro de 2026</span>
+            <span class="article-read"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>8 min de leitura</span>
           </div>
           <h1>Seu agente de IA está protegido, limitado e auditável — ou apenas conectado?</h1>
           <p class="article-lead">Toda empresa que já colocou um agente de IA para atender WhatsApp, ler e-mail ou mexer em planilha tem essa automação "funcionando". Poucas conseguem responder se ela está protegida. A diferença entre as duas coisas é o assunto deste artigo.</p>
         </header>
         <div class="prose">
 
-          <h2 id="escala-invisivel"><i class="ti ti-hierarchy-3"></i>A escala que ninguém enxerga</h2>
+          <h2 id="escala-invisivel"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 5m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M12 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M20 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M16 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17l2 -3"/><path d="M9 10l2 -3"/><path d="M13 7l2 3"/><path d="M17 14l2 3"/><path d="M15 14l-2 3"/><path d="M9 14l2 3"/></svg>A escala que ninguém enxerga</h2>
           <p>O relatório Identity Security Landscape 2026, da Palo Alto Networks, encontrou uma média de <strong>109 identidades de máquina para cada identidade humana</strong> dentro das empresas — contando serviços, integrações, contas de API e, cada vez mais, agentes de IA. Os próprios respondentes da pesquisa esperam que o número de agentes de IA cresça <strong>85% nos próximos 12 meses</strong>.</p>
           <p>Vale registrar que esse número varia entre pesquisas: a GitGuardian e a KPMG citam uma proporção de 80 identidades de máquina para cada humana, enquanto a Rubrik Zero Labs cita 82:1. Os relatórios não batem no número exato, mas concordam na direção — identidade não-humana já é maioria absoluta dentro do ambiente de TI de qualquer empresa, numa ordem de grandeza que a maioria dos gestores não tem ideia que existe.</p>
           <p>Isso importa porque cada automação, cada integração de n8n ou Make, cada bot conectado a CRM ou WhatsApp é mais uma dessas identidades. E identidade que ninguém contou é identidade que ninguém está protegendo.</p>
 
-          <h2 id="pergunta-1"><i class="ti ti-lock-access"></i>Pergunta 1: o agente tem só o acesso que precisa?</h2>
+          <h2 id="pergunta-1"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 8v-2a2 2 0 0 1 2 -2h2"/><path d="M4 16v2a2 2 0 0 0 2 2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M16 20h2a2 2 0 0 0 2 -2v-2"/><path d="M8 11m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"/><path d="M10 11v-2a2 2 0 1 1 4 0v2"/></svg>Pergunta 1: o agente tem só o acesso que precisa?</h2>
           <div class="qbox">
             <div class="qnum">1</div>
             <div class="qbody">
@@ -152,10 +151,10 @@
 
           <div class="cta-mid">
             <p>Você sabe qual acesso cada automação da sua empresa realmente usa?</p>
-            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20de%20seguran%C3%A7a%20para%20agentes%20de%20IA%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20de%20seguran%C3%A7a%20para%20agentes%20de%20IA%20da%20Oryxon." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Falar no WhatsApp</a>
           </div>
 
-          <h2 id="pergunta-2"><i class="ti ti-file-search"></i>Pergunta 2: existe log de tudo que o agente fez?</h2>
+          <h2 id="pergunta-2"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M12 21h-5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v4.5"/><path d="M16.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0"/><path d="M18.5 19.5l2.5 2.5"/></svg>Pergunta 2: existe log de tudo que o agente fez?</h2>
           <div class="qbox">
             <div class="qnum">2</div>
             <div class="qbody">
@@ -165,7 +164,7 @@
           </div>
           <p>Um dado consolidado por relatórios de identidade de 2026 (citando a Cloud Security Alliance) aponta que mais de dois terços das organizações não conseguem distinguir, em logs e monitoramento, se uma ação foi feita por um humano ou por um agente de IA. Sem essa distinção, investigar um incidente vira adivinhação: ninguém sabe se foi um colaborador que errou ou um agente que agiu fora do esperado.</p>
 
-          <h2 id="pergunta-3"><i class="ti ti-list-search"></i>Pergunta 3: alguém sabe quantos agentes existem rodando agora?</h2>
+          <h2 id="pergunta-3"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M15 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M18.5 18.5l2.5 2.5"/><path d="M4 6h16"/><path d="M4 12h4"/><path d="M4 18h4"/></svg>Pergunta 3: alguém sabe quantos agentes existem rodando agora?</h2>
           <div class="qbox">
             <div class="qnum">3</div>
             <div class="qbody">
@@ -176,22 +175,22 @@
           <p>Não é possível proteger, limitar ou auditar o que não está inventariado. Esse é o motivo pelo qual "inventário de agentes" costuma ser o primeiro item de qualquer programa sério de governança de identidade não-humana — antes até de discutir política de acesso.</p>
 
           <div class="callout callout-warn">
-            <i class="ti ti-alert-triangle"></i>
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"/><path d="M12 16h.01"/></svg>
             <p><strong>A ressalva que precisa ficar clara:</strong> privilégio mínimo e auditoria reduzem o estrago possível, mas não impedem sozinhos que um agente autorizado seja manipulado — por exemplo, por uma instrução maliciosa injetada no conteúdo que ele processa — a fazer mau uso do acesso que já tem legitimamente. Restringir escopo diminui o dano; não é, por si só, proteção completa. Por isso privilégio mínimo precisa andar junto com log de auditoria: um limita até onde o agente pode chegar, o outro mostra o que ele efetivamente fez.</p>
           </div>
 
-          <h2 id="checklist"><i class="ti ti-checklist"></i>Checklist: seu agente de IA está sob controle?</h2>
+          <h2 id="checklist"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8"/><path d="M14 19l2 2l4 -4"/><path d="M9 8h4"/><path d="M9 12h2"/></svg>Checklist: seu agente de IA está sob controle?</h2>
           <ul class="checklist">
-            <li><i class="ti ti-square-rounded-check"></i>Existe uma lista atualizada de todos os agentes/automações de IA em uso na empresa — não uma estimativa de memória?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Cada agente tem o acesso mínimo necessário para a tarefa específica, revisado periodicamente — não acesso amplo "para não travar nada"?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Existe log de auditoria que registra as ações do agente e permite distinguir o que foi feito por ele do que foi feito por uma pessoa?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Cada agente tem um responsável identificado, não uma credencial genérica compartilhada entre vários colaboradores?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Existe processo definido para revogar o acesso de um agente quando a automação para de ser usada?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Alguém revisa periodicamente os logs do agente, e não só verifica se a automação "ainda está rodando"?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe uma lista atualizada de todos os agentes/automações de IA em uso na empresa — não uma estimativa de memória?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Cada agente tem o acesso mínimo necessário para a tarefa específica, revisado periodicamente — não acesso amplo "para não travar nada"?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe log de auditoria que registra as ações do agente e permite distinguir o que foi feito por ele do que foi feito por uma pessoa?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Cada agente tem um responsável identificado, não uma credencial genérica compartilhada entre vários colaboradores?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe processo definido para revogar o acesso de um agente quando a automação para de ser usada?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Alguém revisa periodicamente os logs do agente, e não só verifica se a automação "ainda está rodando"?</li>
           </ul>
 
           <div class="callout">
-            <i class="ti ti-info-circle"></i>
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 9h.01"/><path d="M11 12h1v4h1"/></svg>
             <p>Este artigo complementa outro já publicado aqui sobre <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html">como a Microsoft ampliou o Zero Trust para cobrir agentes de IA</a>. Lá o foco é o modelo Zero Trust; aqui, o foco são os três controles práticos — acesso mínimo, auditoria e inventário — que qualquer empresa pode aplicar independente de fornecedor.</p>
           </div>
 
@@ -199,7 +198,7 @@
         <div class="cta-article">
           <h2>Sua empresa sabe se os agentes de IA em uso estão protegidos ou só conectados?</h2>
           <p>A Oryxon avalia o acesso, o inventário e a trilha de auditoria dos agentes e automações de IA em uso na sua empresa, e mostra exatamente onde estão os pontos sem controle.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20seguran%C3%A7a%20para%20agentes%20de%20IA%20da%20minha%20empresa." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20seguran%C3%A7a%20para%20agentes%20de%20IA%20da%20minha%20empresa." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar diagnóstico gratuito</a>
         </div>
         <div class="author-box">
           <div class="author-avatar">U</div>
@@ -219,9 +218,9 @@
         </div>
         <div class="related">
           <h3>Leia também</h3>
-          <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"><i class="ti ti-user-shield"></i><div><strong>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</strong><span>Cibersegurança · IA</span></div></a>
-          <a href="/blog/chave-de-api-esquecida-vazamento-dados.html"><i class="ti ti-key"></i><div><strong>A chave de API esquecida que pode gerar vazamento de dados</strong><span>Cibersegurança · 6 min</span></div></a>
-          <a href="/ciberseguranca.html"><i class="ti ti-shield-lock"></i><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
+          <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M6 21v-2a4 4 0 0 1 4 -4h2"/><path d="M22 16c0 4 -2.5 6 -3.5 6s-3.5 -2 -3.5 -6c1 0 2.5 -.5 3.5 -1.5c1 1 2.5 1.5 3.5 1.5z"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"/></svg><div><strong>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</strong><span>Cibersegurança · IA</span></div></a>
+          <a href="/blog/chave-de-api-esquecida-vazamento-dados.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z"/><path d="M15 9h.01"/></svg><div><strong>A chave de API esquecida que pode gerar vazamento de dados</strong><span>Cibersegurança · 6 min</span></div></a>
+          <a href="/ciberseguranca.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M12 11m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 12l0 2.5"/></svg><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
         </div>
       </article>
       <aside class="sidebar">
@@ -238,7 +237,7 @@
         <div class="sidebar-card">
           <h3>Diagnóstico de Exposição Digital e IA</h3>
           <p>Mapeamos os agentes, automações e integrações de IA da sua empresa — sem custo e sem compromisso.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA." target="_blank" rel="noopener" class="btn-s"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar agora</a>
         </div>
         <div class="sidebar-card">
           <h3>Ver planos MSP</h3>

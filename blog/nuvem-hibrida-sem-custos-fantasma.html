@@ -18,7 +18,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -42,7 +41,7 @@
     h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
     .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
     .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
-    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h2 i,h2 svg{color:#67e8ff;font-size:1.1rem}
     .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
     .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
     .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
@@ -50,7 +49,7 @@
     .prose strong{color:#dff9ff;font-weight:700}
     .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
     .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
-    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .checklist i,.checklist svg{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
     .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
     .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:14px;padding:16px;text-align:center}
     .stat-box .num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,#67e8ff,#1478ff);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
@@ -58,17 +57,17 @@
     .split-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
     .split-box{border-radius:14px;padding:18px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.02)}
     .split-box h4{display:flex;align-items:center;gap:8px;font-size:.95rem;color:#dff9ff;margin-bottom:10px}
-    .split-box h4 i{color:#67e8ff}
-    .split-box.cloud h4 i{color:#37f5a1}
+    .split-box h4 i,h4 svg{color:#67e8ff}
+    .split-box.cloud h4 i,h4 svg{color:#37f5a1}
     .split-box ul{padding-left:18px;color:var(--muted);font-size:.88rem;display:grid;gap:5px;margin:0}
     .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
-    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout i,.callout svg{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
     .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
     .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
-    .callout-warn i{color:#ffb432}
+    .callout-warn i,.callout-warn svg{color:#ffb432}
     .callout-warn p{color:#ffd8a0}
     .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
-    .callout-success i{color:#37f5a1}
+    .callout-success i,.callout-success svg{color:#37f5a1}
     .callout-success p{color:#a0f5d4}
     .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
     .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
@@ -89,7 +88,7 @@
     .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
     .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
     .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
-    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
     .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
     .related a span{font-size:.82rem}
     .sidebar{position:sticky;top:90px;display:grid;gap:16px}
@@ -122,19 +121,19 @@
         <header class="article-header">
           <div class="article-meta">
             <span class="article-cat">Infraestrutura · Cloud</span>
-            <span class="article-date"><i class="ti ti-calendar"></i>27 de agosto de 2026</span>
-            <span class="article-read"><i class="ti ti-clock"></i>8 min de leitura</span>
+            <span class="article-date"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M11 15h1"/><path d="M12 15v3"/></svg>27 de agosto de 2026</span>
+            <span class="article-read"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>8 min de leitura</span>
           </div>
           <h1>Nuvem híbrida sem custos fantasma: como estruturar a TI da sua indústria entre servidor local e cloud com controle total de custos</h1>
           <p class="article-lead">Nuvem 100% não é a norma — a maioria das empresas roda em modelo híbrido, com servidor local e algum tipo de nuvem convivendo lado a lado. E é exatamente nesse meio-termo que o custo escapa do controle, porque quase ninguém olha os dois lados — infraestrutura local e fatura de nuvem — juntos, no mesmo lugar.</p>
         </header>
         <div class="prose">
 
-          <h2 id="hibrido-e-a-norma"><i class="ti ti-server-2"></i>Híbrido é a norma, não a exceção</h2>
+          <h2 id="hibrido-e-a-norma"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/><path d="M11 8h6"/><path d="M11 16h6"/></svg>Híbrido é a norma, não a exceção</h2>
           <p>Segundo a pesquisa Flexera State of the Cloud 2026, 73% das organizações hoje operam em modelo híbrido — nuvem combinada com infraestrutura local. Para indústrias e empresas de médio porte do Alto Tietê, isso costuma significar servidor local rodando sistemas de produção, ERP ou aplicações internas, enquanto e-mail corporativo, backup e algum sistema SaaS já vivem na nuvem — muitas vezes contratados em momentos diferentes, por pessoas diferentes, sem uma visão unificada de custo.</p>
           <p>O problema é que essa divisão raramente vem acompanhada de visibilidade de custo combinado. A fatura de nuvem cresce mês a mês e só é notada quando já virou um problema no fechamento do mês — porque ninguém está olhando o gasto local e o gasto em nuvem lado a lado, como uma única conta de TI.</p>
 
-          <h2 id="por-que-custo-fantasma-acontece"><i class="ti ti-ghost-2"></i>Por que o "custo fantasma" acontece</h2>
+          <h2 id="por-que-custo-fantasma-acontece"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M10 9h.01"/><path d="M14 9h.01"/><path d="M12 3a7 7 0 0 1 7 7v1l1 0a2 2 0 1 1 0 4l-1 0v3l2 3h-10a6 6 0 0 1 -6 -5.775l0 -.226l-1 0a2 2 0 0 1 0 -4l1 0v-1a7 7 0 0 1 7 -7z"/><path d="M11 14h2a1 1 0 0 0 -2 0z"/></svg>Por que o "custo fantasma" acontece</h2>
           <p>"Custo fantasma" em nuvem não é fraude nem cobrança indevida — é gasto real, mas invisível até chegar a fatura. Ele nasce de três hábitos comuns:</p>
           <ul>
             <li><strong>Recurso provisionado para pico de demanda</strong> e nunca redimensionado depois que o pico passou — a empresa continua pagando pela capacidade máxima mesmo em uso normal.</li>
@@ -149,20 +148,20 @@
           </div>
 
           <div class="callout callout-warn">
-            <i class="ti ti-alert-triangle"></i>
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"/><path d="M12 16h.01"/></svg>
             <p>Esses números são de pesquisas internacionais de mercado — não uma projeção exata para o porte de uma empresa do Alto Tietê. Servem como referência de tendência: o desperdício em nuvem é real, cresce quando ninguém tem dono definido para o custo, e a maior parte dele vem de computação ociosa e instâncias superdimensionadas.</p>
           </div>
 
           <div class="cta-mid">
             <p>Sua empresa sabe quanto está pagando por recurso ocioso na nuvem?</p>
-            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20estrutura%C3%A7%C3%A3o%20de%20nuvem%20h%C3%ADbrida%20com%20controle%20de%20custos%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20estrutura%C3%A7%C3%A3o%20de%20nuvem%20h%C3%ADbrida%20com%20controle%20de%20custos%20da%20Oryxon." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Falar no WhatsApp</a>
           </div>
 
-          <h2 id="o-que-fica-onde"><i class="ti ti-topology-star"></i>O que faz sentido manter local e o que faz sentido levar para nuvem</h2>
+          <h2 id="o-que-fica-onde"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M8 18a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M20 6a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M8 6a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M20 18a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M14 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M7.5 7.5l3 3"/><path d="M7.5 16.5l3 -3"/><path d="M13.5 13.5l3 3"/><path d="M16.5 7.5l-3 3"/></svg>O que faz sentido manter local e o que faz sentido levar para nuvem</h2>
           <p>Não existe uma resposta única — depende do sistema, do volume de dados e de como a equipe usa cada recurso no dia a dia. Mas, para uma indústria típica, essa divisão costuma fazer sentido:</p>
           <div class="split-row">
             <div class="split-box">
-              <h4><i class="ti ti-server"></i>Costuma fazer sentido manter local</h4>
+              <h4><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/></svg>Costuma fazer sentido manter local</h4>
               <ul>
                 <li>Sistemas de produção com exigência de baixa latência</li>
                 <li>Aplicações que dependem de integração direta com máquinas/chão de fábrica</li>
@@ -170,7 +169,7 @@
               </ul>
             </div>
             <div class="split-box cloud">
-              <h4><i class="ti ti-cloud"></i>Costuma fazer sentido levar para nuvem</h4>
+              <h4><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878"/></svg>Costuma fazer sentido levar para nuvem</h4>
               <ul>
                 <li>Backup com cópia geograficamente distribuída, como proteção contra desastre local</li>
                 <li>E-mail corporativo e ferramentas de produtividade</li>
@@ -179,18 +178,18 @@
             </div>
           </div>
 
-          <h2 id="checklist"><i class="ti ti-checklist"></i>Checklist de controle de custo em nuvem híbrida</h2>
+          <h2 id="checklist"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8"/><path d="M14 19l2 2l4 -4"/><path d="M9 8h4"/><path d="M9 12h2"/></svg>Checklist de controle de custo em nuvem híbrida</h2>
           <ul class="checklist">
-            <li><i class="ti ti-square-rounded-check"></i>Existe revisão mensal do gasto combinado — infraestrutura local + nuvem — em um único lugar, não em relatórios separados?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Cada centro de custo ou sistema em nuvem tem um dono definido, responsável por justificar o gasto?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Existem alertas configurados para consumo acima do esperado, em vez de descobrir só na fatura?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Recursos provisionados para pico de demanda são revisados e redimensionados depois que o pico passa?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Antes de contratar um novo serviço em nuvem, alguém entende e documenta o modelo de cobrança completo — incluindo custo de transferência de dados?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Existe verificação periódica de backup ou armazenamento duplicado entre local e nuvem sem necessidade real?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe revisão mensal do gasto combinado — infraestrutura local + nuvem — em um único lugar, não em relatórios separados?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Cada centro de custo ou sistema em nuvem tem um dono definido, responsável por justificar o gasto?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existem alertas configurados para consumo acima do esperado, em vez de descobrir só na fatura?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Recursos provisionados para pico de demanda são revisados e redimensionados depois que o pico passa?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Antes de contratar um novo serviço em nuvem, alguém entende e documenta o modelo de cobrança completo — incluindo custo de transferência de dados?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe verificação periódica de backup ou armazenamento duplicado entre local e nuvem sem necessidade real?</li>
           </ul>
 
           <div class="callout callout-success">
-            <i class="ti ti-shield-check"></i>
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06"/><path d="M15 19l2 2l4 -4"/></svg>
             <p>Times de FinOps maduros conseguem economia real de 20% a 30% do gasto em nuvem apenas com disciplina de acompanhamento — sem trocar de provedor nem redesenhar arquitetura, segundo estimativas citadas pela McKinsey em cobertura de FinOps de 2026. O ganho está em olhar com regularidade, não em uma reforma completa.</p>
           </div>
 
@@ -198,7 +197,7 @@
         <div class="cta-article">
           <h2>Sua indústria tem controle real do custo entre servidor local e nuvem?</h2>
           <p>A Oryxon ajuda empresas do Alto Tietê a desenhar a estrutura híbrida de TI — o que fica local, o que vai para nuvem, e como acompanhar o custo combinado desde o início, sem surpresas na fatura.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20estrutura%20h%C3%ADbrida%20de%20TI%20com%20controle%20de%20custos." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20estrutura%20h%C3%ADbrida%20de%20TI%20com%20controle%20de%20custos." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar diagnóstico gratuito</a>
         </div>
         <div class="author-box">
           <div class="author-avatar">U</div>
@@ -216,9 +215,9 @@
         </div>
         <div class="related">
           <h3>Leia também</h3>
-          <a href="/blog/backup-nuvem-vs-local.html"><i class="ti ti-cloud-lock"></i><div><strong>Backup em nuvem vs. local: o que faz sentido para sua empresa</strong><span>Infraestrutura · Backup</span></div></a>
-          <a href="/blog/gestao-de-ti-e-estrategia.html"><i class="ti ti-chart-bar"></i><div><strong>Gestão de TI como estratégia, não custo</strong><span>Gestão de TI</span></div></a>
-          <a href="/managed-services.html"><i class="ti ti-server-2"></i><div><strong>Planos de Managed Services — Oryxon Systems</strong><span>Basic · Standard · Professional</span></div></a>
+          <a href="/blog/backup-nuvem-vs-local.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M19 18a3.5 3.5 0 0 0 0 -7h-1c.397 -1.768 -.285 -3.593 -1.788 -4.787c-1.503 -1.193 -3.6 -1.575 -5.5 -1s-3.315 2.019 -3.712 3.787c-2.199 -.088 -4.155 1.326 -4.666 3.373c-.512 2.047 .564 4.154 2.566 5.027"/><path d="M8 15m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"/><path d="M10 15v-2a2 2 0 1 1 4 0v2"/></svg><div><strong>Backup em nuvem vs. local: o que faz sentido para sua empresa</strong><span>Infraestrutura · Backup</span></div></a>
+          <a href="/blog/gestao-de-ti-e-estrategia.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M4 20h14"/></svg><div><strong>Gestão de TI como estratégia, não custo</strong><span>Gestão de TI</span></div></a>
+          <a href="/managed-services.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/><path d="M11 8h6"/><path d="M11 16h6"/></svg><div><strong>Planos de Managed Services — Oryxon Systems</strong><span>Basic · Standard · Professional</span></div></a>
         </div>
       </article>
       <aside class="sidebar">
@@ -234,7 +233,7 @@
         <div class="sidebar-card">
           <h3>Estrutura Híbrida com Controle de Custos</h3>
           <p>Desenhamos a divisão entre servidor local e nuvem da sua empresa, com visibilidade de custo desde o início.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20estrutura%20h%C3%ADbrida%20de%20TI." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20estrutura%20h%C3%ADbrida%20de%20TI." target="_blank" rel="noopener" class="btn-s"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar agora</a>
         </div>
         <div class="sidebar-card">
           <h3>Ver planos MSP</h3>

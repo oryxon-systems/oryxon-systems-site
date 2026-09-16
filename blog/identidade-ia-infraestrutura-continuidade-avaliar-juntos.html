@@ -18,7 +18,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -42,7 +41,7 @@
     h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
     .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
     .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
-    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h2 i,h2 svg{color:#67e8ff;font-size:1.1rem}
     .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
     .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
     .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
@@ -50,7 +49,7 @@
     .prose strong{color:#dff9ff;font-weight:700}
     .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
     .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
-    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .checklist i,.checklist svg{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
     .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
     .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:14px;padding:16px;text-align:center}
     .stat-box .num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,#67e8ff,#1478ff);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
@@ -60,13 +59,13 @@
     .qbox .qbody h4{font-size:1rem;color:#dff9ff;margin-bottom:6px}
     .qbox .qbody p{margin:0;font-size:.92rem}
     .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
-    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout i,.callout svg{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
     .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
     .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
-    .callout-warn i{color:#ffb432}
+    .callout-warn i,.callout-warn svg{color:#ffb432}
     .callout-warn p{color:#ffd8a0}
     .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
-    .callout-success i{color:#37f5a1}
+    .callout-success i,.callout-success svg{color:#37f5a1}
     .callout-success p{color:#a0f5d4}
     .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
     .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
@@ -87,7 +86,7 @@
     .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
     .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
     .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
-    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
     .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
     .related a span{font-size:.82rem}
     .sidebar{position:sticky;top:90px;display:grid;gap:16px}
@@ -120,34 +119,34 @@
         <header class="article-header">
           <div class="article-meta">
             <span class="article-cat">Gestão de TI · Segurança</span>
-            <span class="article-date"><i class="ti ti-calendar"></i>14 de setembro de 2026</span>
-            <span class="article-read"><i class="ti ti-clock"></i>8 min de leitura</span>
+            <span class="article-date"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M11 15h1"/><path d="M12 15v3"/></svg>14 de setembro de 2026</span>
+            <span class="article-read"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>8 min de leitura</span>
           </div>
           <h1>Identidade, IA, infraestrutura e continuidade: por que sua empresa precisa olhar os quatro juntos — não um de cada vez</h1>
           <p class="article-lead">Uma empresa que roda antivírus, faz backup "há um tempo", usa alguma automação no atendimento e ativou MFA em algumas contas costuma se considerar protegida. O problema é que essas quatro coisas quase nunca foram avaliadas juntas — e é exatamente na conexão entre elas que o risco real costuma morar.</p>
         </header>
         <div class="prose">
 
-          <h2 id="cenario"><i class="ti ti-puzzle"></i>Um cenário comum, não um caso isolado</h2>
+          <h2 id="cenario"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"/></svg>Um cenário comum, não um caso isolado</h2>
           <p>Imagine uma indústria de médio porte no Alto Tietê. Tem antivírus instalado em todas as máquinas. Fez backup "há um tempo" — ninguém lembra exatamente quando foi a última verificação. Usa uma automação de WhatsApp para atendimento e uma planilha conectada a um script para gerar relatório. MFA está ativo em algumas contas, principalmente as de e-mail da diretoria.</p>
           <p>Do ponto de vista de quem administra essa empresa, ela está "protegida" — tem ferramenta em cada frente. O que falta não é ferramenta: é a pergunta que ninguém fez. Se uma dessas quatro peças falhar, o que acontece com as outras três? Ninguém testou. E é justamente essa pergunta que separa uma empresa que está protegida de uma que só parece estar.</p>
 
-          <h2 id="tendencia-consolidacao"><i class="ti ti-stack-2"></i>Até quem tem equipe dedicada chegou à mesma conclusão</h2>
+          <h2 id="tendencia-consolidacao"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 4l-8 4l8 4l8 -4l-8 -4"/><path d="M4 12l8 4l8 -4"/><path d="M4 16l8 4l8 -4"/></svg>Até quem tem equipe dedicada chegou à mesma conclusão</h2>
           <p>Segundo o Gartner, cerca de <strong>75% das organizações já buscam ativamente consolidar fornecedores de segurança</strong>, em vez de manter dezenas de ferramentas isoladas — o objetivo é reduzir complexidade operacional e melhorar o compartilhamento de dados entre sistemas. Uma pesquisa separada, na mesma cobertura, encontrou que <strong>40% das organizações já começaram esse processo</strong>, com outros <strong>21% planejando começar</strong>.</p>
           <p>O motivo apontado é direto: categorias de ferramenta que antes eram compradas separadamente — gestão de identidade, observabilidade, resposta a incidente — estão se fundindo em plataformas únicas, porque tratar cada peça isolada aumenta a chance de uma não enxergar o que a outra está vendo. Isso é uma tendência documentada principalmente em nível de mercado corporativo grande, com orçamento e equipe de segurança dedicada — não é uma medição direta do mercado de PME do Alto Tietê. Mas o raciocínio por trás dela vale, por analogia, para qualquer empresa: quem compra suporte de TI, antivírus e backup de fornecedores diferentes e desconectados enfrenta o mesmo problema de fragmentação que motivou grandes empresas a consolidar — só que sem a equipe dedicada para compensar essa fragmentação.</p>
 
           <div class="cta-mid">
             <p>Sua empresa avalia identidade, IA, infraestrutura e continuidade juntas — ou em compartimentos separados?</p>
-            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20para%20IA%20Segura%20e%20Opera%C3%A7%C3%A3o%20H%C3%ADbrida%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20para%20IA%20Segura%20e%20Opera%C3%A7%C3%A3o%20H%C3%ADbrida%20da%20Oryxon." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Falar no WhatsApp</a>
           </div>
 
-          <h2 id="quatro-blocos"><i class="ti ti-link"></i>O mesmo risco, visto de quatro ângulos</h2>
+          <h2 id="quatro-blocos"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 15l6 -6"/><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"/><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"/></svg>O mesmo risco, visto de quatro ângulos</h2>
           <p>O ponto central é simples de enunciar e fácil de ignorar na prática: identidade, uso de IA, infraestrutura técnica e plano de continuidade não são quatro riscos diferentes. São o mesmo risco visto de ângulos diferentes.</p>
           <p>Começa em identidade — quem tem acesso a quê, com que credencial, com que nível de privilégio. Uma credencial comprometida, sozinha, já é um problema. Mas o tamanho do problema depende do que essa credencial consegue alcançar — e é aí que entra a automação e a IA. <em>Quais agentes, automações ou integrações hoje conseguem acessar documentos, e-mails, CRM, ERP ou dados de clientes da empresa?</em> Se a resposta é "não sei ao certo", a credencial comprometida deixou de ser um problema pontual e virou uma porta aberta para tudo que essas automações também alcançam.</p>
           <p>Essa porta aberta só chega a algum lugar se a infraestrutura por trás permitir — um servidor exposto, um firewall mal configurado, um sistema sem patch. É aqui que a segunda pergunta importa: <em>se uma credencial fosse comprometida agora, alguém conseguiria perceber o uso anômalo e agir?</em> Sem visibilidade sobre a infraestrutura, a resposta costuma ser não — e o incidente só é percebido quando o estrago já está feito.</p>
           <p>E o estrago só é medido de verdade na hora em que a empresa tenta voltar a operar. É aí que entra continuidade: <em>quais sistemas precisam continuar funcionando se a internet, o servidor local ou o provedor de nuvem ficarem indisponíveis?</em> Uma empresa pode ter identidade bem gerida, IA sob controle e infraestrutura protegida — e ainda assim descobrir, num incidente real, que não sabia responder essa terceira pergunta. É nesse ponto que o risco avaliado em silos se revela: cada peça parecia resolvida, mas ninguém tinha visto o quadro completo.</p>
 
-          <h2 id="diagnostico"><i class="ti ti-clipboard-check"></i>Como a Oryxon olha os quatro blocos juntos</h2>
+          <h2 id="diagnostico"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"/><path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z"/><path d="M9 14l2 2l4 -4"/></svg>Como a Oryxon olha os quatro blocos juntos</h2>
           <p>É exatamente para resolver essa avaliação fragmentada que existe o <strong>Diagnóstico de Prontidão para IA Segura e Operação Híbrida</strong> da Oryxon — voltado a PMEs com mais de cinco computadores. Em vez de avaliar cada frente isoladamente, o diagnóstico percorre as quatro juntas, na mesma avaliação:</p>
           <div class="qbox">
             <div class="qnum">1</div>
@@ -167,15 +166,15 @@
           </div>
           <p>Ao final, a empresa recebe:</p>
           <ul class="checklist">
-            <li><i class="ti ti-square-rounded-check"></i>Matriz de risco.</li>
-            <li><i class="ti ti-square-rounded-check"></i>Cinco prioridades.</li>
-            <li><i class="ti ti-square-rounded-check"></i>Plano de 30 dias.</li>
-            <li><i class="ti ti-square-rounded-check"></i>Recomendação de projeto ou contrato mensal — Gestão de TI, segurança, backup ou automação, conforme o que o diagnóstico apontar como prioridade.</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Matriz de risco.</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Cinco prioridades.</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Plano de 30 dias.</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Recomendação de projeto ou contrato mensal — Gestão de TI, segurança, backup ou automação, conforme o que o diagnóstico apontar como prioridade.</li>
           </ul>
           <p>O diagnóstico não é uma promessa de monitoramento ativo nem de bloqueio automático de uso anômalo — é a avaliação que mostra se sua empresa já tem essa capacidade, onde ela falta, e o que fazer primeiro.</p>
 
           <div class="callout">
-            <i class="ti ti-info-circle"></i>
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 9h.01"/><path d="M11 12h1v4h1"/></svg>
             <p>Já tratamos aqui, separadamente, <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html">identidade de agentes de IA</a>, <a href="/blog/agente-de-ia-acesso-just-in-time.html">controle de acesso just-in-time</a> e <a href="/blog/nuvem-hibrida-governanca-recuperacao.html">continuidade e recuperação em nuvem híbrida</a>. Este artigo é o ponto em que essas três frentes — e a infraestrutura que sustenta todas elas — se encontram numa única avaliação.</p>
           </div>
 
@@ -183,7 +182,7 @@
         <div class="cta-article">
           <h2>Sua empresa já avaliou identidade, IA, infraestrutura e continuidade juntas?</h2>
           <p>O Diagnóstico de Prontidão para IA Segura e Operação Híbrida da Oryxon avalia as quatro frentes numa única análise, com matriz de risco, cinco prioridades e plano de 30 dias.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20para%20IA%20Segura%20e%20Opera%C3%A7%C3%A3o%20H%C3%ADbrida%20para%20minha%20empresa." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20para%20IA%20Segura%20e%20Opera%C3%A7%C3%A3o%20H%C3%ADbrida%20para%20minha%20empresa." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar diagnóstico</a>
         </div>
         <div class="author-box">
           <div class="author-avatar">U</div>
@@ -197,9 +196,9 @@
         </div>
         <div class="related">
           <h3>Leia também</h3>
-          <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"><i class="ti ti-user-shield"></i><div><strong>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</strong><span>Cibersegurança · IA</span></div></a>
-          <a href="/blog/agente-de-ia-acesso-just-in-time.html"><i class="ti ti-key"></i><div><strong>Agente de IA é uma identidade privilegiada: como limitar acessos sem bloquear a produtividade</strong><span>Cibersegurança · IA</span></div></a>
-          <a href="/blog/nuvem-hibrida-governanca-recuperacao.html"><i class="ti ti-database"></i><div><strong>Nuvem híbrida com governança: local, nuvem e como recuperar</strong><span>Infraestrutura · Cloud</span></div></a>
+          <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M6 21v-2a4 4 0 0 1 4 -4h2"/><path d="M22 16c0 4 -2.5 6 -3.5 6s-3.5 -2 -3.5 -6c1 0 2.5 -.5 3.5 -1.5c1 1 2.5 1.5 3.5 1.5z"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"/></svg><div><strong>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</strong><span>Cibersegurança · IA</span></div></a>
+          <a href="/blog/agente-de-ia-acesso-just-in-time.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z"/><path d="M15 9h.01"/></svg><div><strong>Agente de IA é uma identidade privilegiada: como limitar acessos sem bloquear a produtividade</strong><span>Cibersegurança · IA</span></div></a>
+          <a href="/blog/nuvem-hibrida-governanca-recuperacao.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0"/><path d="M4 6v6a8 3 0 0 0 16 0v-6"/><path d="M4 12v6a8 3 0 0 0 16 0v-6"/></svg><div><strong>Nuvem híbrida com governança: local, nuvem e como recuperar</strong><span>Infraestrutura · Cloud</span></div></a>
         </div>
       </article>
       <aside class="sidebar">
@@ -215,7 +214,7 @@
         <div class="sidebar-card">
           <h3>Diagnóstico de Prontidão para IA Segura e Operação Híbrida</h3>
           <p>Avaliamos identidade, IA, infraestrutura e continuidade da sua empresa numa única análise — sem custo e sem compromisso.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20para%20IA%20Segura%20e%20Opera%C3%A7%C3%A3o%20H%C3%ADbrida." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Prontid%C3%A3o%20para%20IA%20Segura%20e%20Opera%C3%A7%C3%A3o%20H%C3%ADbrida." target="_blank" rel="noopener" class="btn-s"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar agora</a>
         </div>
         <div class="sidebar-card">
           <h3>Ver planos MSP</h3>

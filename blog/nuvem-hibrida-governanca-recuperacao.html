@@ -18,7 +18,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"/>
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
@@ -42,7 +41,7 @@
     h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
     .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
     .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
-    .prose h2 i{color:#67e8ff;font-size:1.1rem}
+    .prose h2 i,h2 svg{color:#67e8ff;font-size:1.1rem}
     .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
     .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
     .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
@@ -50,7 +49,7 @@
     .prose strong{color:#dff9ff;font-weight:700}
     .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
     .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
-    .checklist i{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .checklist i,.checklist svg{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
     .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
     .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:14px;padding:16px;text-align:center}
     .stat-box .num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,#67e8ff,#1478ff);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
@@ -58,21 +57,21 @@
     .split-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
     .split-box{border-radius:14px;padding:18px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.02)}
     .split-box h4{display:flex;align-items:center;gap:8px;font-size:.95rem;color:#dff9ff;margin-bottom:10px}
-    .split-box h4 i{color:#67e8ff}
-    .split-box.cloud h4 i{color:#37f5a1}
+    .split-box h4 i,h4 svg{color:#67e8ff}
+    .split-box.cloud h4 i,h4 svg{color:#37f5a1}
     .split-box ul{padding-left:18px;color:var(--muted);font-size:.88rem;display:grid;gap:5px;margin:0}
     .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:16px;padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
     .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#67e8ff,#1478ff);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
     .qbox .qbody h4{font-size:1rem;color:#dff9ff;margin-bottom:6px}
     .qbox .qbody p{margin:0;font-size:.92rem}
     .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
-    .callout i{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout i,.callout svg{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
     .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
     .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
-    .callout-warn i{color:#ffb432}
+    .callout-warn i,.callout-warn svg{color:#ffb432}
     .callout-warn p{color:#ffd8a0}
     .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
-    .callout-success i{color:#37f5a1}
+    .callout-success i,.callout-success svg{color:#37f5a1}
     .callout-success p{color:#a0f5d4}
     .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
     .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
@@ -93,7 +92,7 @@
     .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
     .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
     .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
-    .related a i{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
     .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
     .related a span{font-size:.82rem}
     .sidebar{position:sticky;top:90px;display:grid;gap:16px}
@@ -126,19 +125,19 @@
         <header class="article-header">
           <div class="article-meta">
             <span class="article-cat">Infraestrutura · Cloud</span>
-            <span class="article-date"><i class="ti ti-calendar"></i>14 de setembro de 2026</span>
-            <span class="article-read"><i class="ti ti-clock"></i>8 min de leitura</span>
+            <span class="article-date"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M11 15h1"/><path d="M12 15v3"/></svg>14 de setembro de 2026</span>
+            <span class="article-read"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>8 min de leitura</span>
           </div>
           <h1>Nuvem híbrida com governança: o que manter localmente, o que levar para a nuvem e como recuperar</h1>
           <p class="article-lead">"Nuvem híbrida" não é uma escolha de arquitetura que se faz uma vez e esquece. É uma decisão que precisa ser revisitada sistema por sistema — e o erro mais comum não é escolher errado uma vez, é nunca mais revisar a escolha depois de feita.</p>
         </header>
         <div class="prose">
 
-          <h2 id="decisao-por-sistema"><i class="ti ti-topology-star-3"></i>Uma decisão por sistema, não uma escolha única</h2>
+          <h2 id="decisao-por-sistema"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M10 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M18 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M10 5a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M6 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M18 19a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M14 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M22 12a2 2 0 1 0 -4 0a2 2 0 0 0 4 0z"/><path d="M6 12h4"/><path d="M14 12h4"/><path d="M15 7l-2 3"/><path d="M9 7l2 3"/><path d="M11 14l-2 3"/><path d="M13 14l2 3"/></svg>Uma decisão por sistema, não uma escolha única</h2>
           <p>Já tratamos aqui, em <a href="/blog/nuvem-hibrida-sem-custos-fantasma.html">outro artigo sobre nuvem híbrida</a>, o lado do custo — o desperdício de gasto em nuvem e como colocar isso sob controle. Este artigo trata de outra parte da mesma decisão: <strong>onde</strong> cada sistema deve viver e <strong>como</strong> garantir que, se algo der errado, a empresa consegue de fato recuperar os dados.</p>
           <p>A regra prática mais simples é olhar cada sistema pela criticidade dele — não pelo tipo de tecnologia. Um sistema de produção com dependência de equipamento físico e baixa tolerância a atraso tende a fazer mais sentido local. Um sistema de apoio, acessado remotamente, com tolerância maior a uma pausa, tende a fazer mais sentido em nuvem. Isso é uma diretriz geral, não regra fixa — cada indústria tem seu próprio perfil de dependência.</p>
 
-          <h2 id="rto-rpo"><i class="ti ti-clock-exclamation"></i>RTO e RPO: as duas perguntas que toda decisão de arquitetura devia responder</h2>
+          <h2 id="rto-rpo"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M20.986 12.502a9 9 0 1 0 -5.973 7.98"/><path d="M12 7v5l3 3"/><path d="M19 16v3"/><path d="M19 22v.01"/></svg>RTO e RPO: as duas perguntas que toda decisão de arquitetura devia responder</h2>
           <p>Antes de decidir onde colocar um sistema, existem duas perguntas mais importantes que "nuvem ou local":</p>
           <div class="qbox">
             <div class="qnum">1</div>
@@ -158,29 +157,29 @@
 
           <div class="cta-mid">
             <p>Sua empresa já definiu RTO e RPO para os sistemas críticos?</p>
-            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20planejamento%20de%20recupera%C3%A7%C3%A3o%20e%20backup%20da%20Oryxon." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Falar no WhatsApp</a>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20planejamento%20de%20recupera%C3%A7%C3%A3o%20e%20backup%20da%20Oryxon." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Falar no WhatsApp</a>
           </div>
 
-          <h2 id="regra-3-2-1-1-0"><i class="ti ti-copy-check"></i>A regra 3-2-1-1-0: o padrão de mercado para backup</h2>
+          <h2 id="regra-3-2-1-1-0"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path stroke="none" d="M0 0h24v24H0z"/><path d="M7 9.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"/><path d="M4.012 16.737a2 2 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"/><path d="M11 14l2 2l4 -4"/></svg>A regra 3-2-1-1-0: o padrão de mercado para backup</h2>
           <p>A regra de backup mais consolidada do mercado é o <strong>3-2-1</strong>: três cópias dos dados, em dois tipos de mídia ou armazenamento diferentes, com uma cópia fora do local físico da empresa. Para o cenário atual de ransomware, essa regra ganhou uma versão atualizada — o <strong>3-2-1-1-0</strong>: as mesmas três cópias e dois tipos de mídia, mais <strong>uma cópia imutável ou offline</strong> — que o ransomware não consegue criptografar porque não tem como alcançá-la pela rede — e <strong>zero restaurações não testadas</strong>.</p>
           <p>O ponto que mais faz diferença nessa regra atualizada é a cópia imutável ou offline. É ela que separa uma empresa que sobrevive a um ataque de ransomware de uma que perde tudo, incluindo o próprio backup — porque muitos ataques de ransomware modernos procuram e criptografam também as cópias de backup que estão acessíveis pela rede.</p>
 
           <div class="callout callout-warn">
-            <i class="ti ti-brand-office"></i>
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 18h9v-12l-5 2v5l-4 2v-8l9 -4l7 2v13l-7 3z"/></svg>
             <p><strong>Ponto frequentemente esquecido:</strong> o Microsoft 365 — e-mail, arquivos no OneDrive e SharePoint — não tem backup completo garantido pela própria Microsoft por padrão. Dado retido por política de retenção não é o mesmo que backup recuperável em caso de exclusão maliciosa ou ataque. Muita empresa assume que "já está na nuvem, então está seguro" — e essa suposição, segundo a AvePoint, é um dos pontos mais recorrentes de exposição em ambientes que já migraram para nuvem.</p>
           </div>
 
-          <h2 id="teste-de-restauracao"><i class="ti ti-refresh-alert"></i>O "zero" da regra: RTO só vale depois de testado</h2>
+          <h2 id="teste-de-restauracao"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"/><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"/><path d="M12 9l0 3"/><path d="M12 15l.01 0"/></svg>O "zero" da regra: RTO só vale depois de testado</h2>
           <p>Um ponto recorrente em análises de recuperação de ransomware de 2026 é direto: o RTO escrito no plano de continuidade só vale alguma coisa depois de testado de verdade. Sem teste de restauração real, o número no papel é uma suposição, não uma garantia — a empresa só descobre se o backup funciona mesmo na hora em que mais precisa dele, o que é tarde demais para corrigir qualquer falha no processo.</p>
           <ul class="checklist">
-            <li><i class="ti ti-square-rounded-check"></i>Existe pelo menos uma cópia de backup imutável ou offline, fora do alcance de um ataque de rede?</li>
-            <li><i class="ti ti-square-rounded-check"></i>RTO e RPO estão definidos por sistema, não como um número genérico para toda a empresa?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Dados do Microsoft 365 (e-mail, OneDrive, SharePoint) têm solução de backup própria, além da retenção padrão da Microsoft?</li>
-            <li><i class="ti ti-square-rounded-check"></i>Existe teste de restauração periódico — não só configuração de backup "feita e esquecida"?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe pelo menos uma cópia de backup imutável ou offline, fora do alcance de um ataque de rede?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>RTO e RPO estão definidos por sistema, não como um número genérico para toda a empresa?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Dados do Microsoft 365 (e-mail, OneDrive, SharePoint) têm solução de backup própria, além da retenção padrão da Microsoft?</li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg>Existe teste de restauração periódico — não só configuração de backup "feita e esquecida"?</li>
           </ul>
 
           <div class="callout">
-            <i class="ti ti-info-circle"></i>
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 9h.01"/><path d="M11 12h1v4h1"/></svg>
             <p>Este artigo trata da governança de onde colocar cada sistema e de como recuperar dados. Para a parte financeira dessa mesma decisão — como controlar o desperdício de gasto em nuvem híbrida — veja <a href="/blog/nuvem-hibrida-sem-custos-fantasma.html">o artigo complementar sobre custos fantasma em nuvem híbrida</a>.</p>
           </div>
 
@@ -188,7 +187,7 @@
         <div class="cta-article">
           <h2>Sua empresa tem backup testado de verdade, não só configurado?</h2>
           <p>A Oryxon ajuda empresas do Alto Tietê a desenhar a arquitetura entre servidor local e nuvem com RTO, RPO e backup 3-2-1-1-0 testados — não apenas configurados e esquecidos.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20backup%20e%20recupera%C3%A7%C3%A3o%20para%20minha%20empresa." target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i>Solicitar diagnóstico gratuito</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20backup%20e%20recupera%C3%A7%C3%A3o%20para%20minha%20empresa." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar diagnóstico gratuito</a>
         </div>
         <div class="author-box">
           <div class="author-avatar">U</div>
@@ -206,9 +205,9 @@
         </div>
         <div class="related">
           <h3>Leia também</h3>
-          <a href="/blog/nuvem-hibrida-sem-custos-fantasma.html"><i class="ti ti-cloud"></i><div><strong>Nuvem híbrida sem custos fantasma</strong><span>Infraestrutura · Cloud</span></div></a>
-          <a href="/blog/backup-nuvem-vs-local.html"><i class="ti ti-cloud-lock"></i><div><strong>Backup em nuvem vs. local: o que faz sentido para sua empresa</strong><span>Infraestrutura · Backup</span></div></a>
-          <a href="/blog/ransomware-brasil-2026.html"><i class="ti ti-alert-octagon"></i><div><strong>Ransomware no Brasil em 2026</strong><span>Cibersegurança</span></div></a>
+          <a href="/blog/nuvem-hibrida-sem-custos-fantasma.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878"/></svg><div><strong>Nuvem híbrida sem custos fantasma</strong><span>Infraestrutura · Cloud</span></div></a>
+          <a href="/blog/backup-nuvem-vs-local.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M19 18a3.5 3.5 0 0 0 0 -7h-1c.397 -1.768 -.285 -3.593 -1.788 -4.787c-1.503 -1.193 -3.6 -1.575 -5.5 -1s-3.315 2.019 -3.712 3.787c-2.199 -.088 -4.155 1.326 -4.666 3.373c-.512 2.047 .564 4.154 2.566 5.027"/><path d="M8 15m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"/><path d="M10 15v-2a2 2 0 1 1 4 0v2"/></svg><div><strong>Backup em nuvem vs. local: o que faz sentido para sua empresa</strong><span>Infraestrutura · Backup</span></div></a>
+          <a href="/blog/ransomware-brasil-2026.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg><div><strong>Ransomware no Brasil em 2026</strong><span>Cibersegurança</span></div></a>
         </div>
       </article>
       <aside class="sidebar">
@@ -224,7 +223,7 @@
         <div class="sidebar-card">
           <h3>Backup e Recuperação com Governança</h3>
           <p>Desenhamos a arquitetura entre servidor local e nuvem com RTO, RPO e backup testados de verdade.</p>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20backup%20e%20recupera%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn-s"><i class="ti ti-brand-whatsapp"></i>Solicitar agora</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20backup%20e%20recupera%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn-s"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar agora</a>
         </div>
         <div class="sidebar-card">
           <h3>Ver planos MSP</h3>
