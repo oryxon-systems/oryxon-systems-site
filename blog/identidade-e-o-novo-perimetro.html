@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Identidade é o novo perímetro: usuários, tokens, automações e agentes precisam do mesmo rigor | Oryxon Systems</title>
+  <meta name="description" content="No Verizon DBIR 2026, credencial aparece em 39% das violações, mesmo quando a entrada foi outra. Veja por que usuário, token, automação e agente de IA são a mesma superfície de risco."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/identidade-e-o-novo-perimetro.html"/>
+  <meta property="og:title" content="Identidade é o novo perímetro: usuários, tokens, automações e agentes precisam do mesmo rigor"/>
+  <meta property="og:description" content="No Verizon DBIR 2026, credencial aparece em 39% das violações, mesmo quando a entrada foi outra. Usuário, token, automação e agente de IA são a mesma superfície."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/identidade-e-o-novo-perimetro.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Identidade é o novo perímetro: usuários, tokens, automações e agentes precisam do mesmo rigor","description":"No Verizon DBIR 2026, credencial aparece em 39% das violações, mesmo quando a entrada foi outra. Usuário, token, automação e agente de IA são a mesma superfície.","datePublished":"2026-09-21","dateModified":"2026-09-21","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena","addressLocality":"Poá","addressRegion":"SP","postalCode":"08553-520","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/identidade-e-o-novo-perimetro.html"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:#67e8ff}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i,h2 svg{color:#67e8ff;font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:#dff9ff;font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
+    .checklist i,.checklist svg{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+    .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:14px;padding:16px;text-align:center}
+    .stat-box .num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,#67e8ff,#1478ff);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
+    .stat-box span{color:var(--muted);font-size:.78rem;line-height:1.4;display:block}
+    .split-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .split-box{border-radius:14px;padding:18px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.02)}
+    .split-box h4{display:flex;align-items:center;gap:8px;font-size:.95rem;color:#dff9ff;margin-bottom:10px}
+    .split-box h4 i,h4 svg{color:#67e8ff}
+    .split-box.cloud h4 i,h4 svg{color:#37f5a1}
+    .split-box ul{padding-left:18px;color:var(--muted);font-size:.88rem;display:grid;gap:5px;margin:0}
+    .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:16px;padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
+    .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#67e8ff,#1478ff);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
+    .qbox .qbody h4{font-size:1rem;color:#dff9ff;margin-bottom:6px}
+    .qbox .qbody p{margin:0;font-size:.92rem}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i,.callout svg{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i,.callout-warn svg{color:#ffb432}
+    .callout-warn p{color:#ffd8a0}
+    .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
+    .callout-success i,.callout-success svg{color:#37f5a1}
+    .callout-success p{color:#a0f5d4}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
+    .cta-mid a{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#37f5a1,#1478ff);color:#001224;font-weight:850;font-size:.86rem;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:24px;padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:#dff9ff;justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .cta-article a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;padding:12px 24px;border-radius:999px;font-size:.92rem;text-decoration:none}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:14px;padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00b7ff,#1478ff);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:#dff9ff}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:#dff9ff;margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:18px;padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:#dff9ff}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .btn-s{display:inline-flex;align-items:center;gap:6px;font-size:.81rem;font-weight:800;color:#001224;background:linear-gradient(135deg,#67e8ff,#1478ff);padding:8px 14px;border-radius:999px;text-decoration:none}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}.stat-row{grid-template-columns:1fr 1fr}.split-row{grid-template-columns:1fr}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid a{width:100%;justify-content:center}.stat-row{grid-template-columns:1fr}.qbox{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn-nav">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança</span>
+            <span class="article-date"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M11 15h1"/><path d="M12 15v3"/></svg>21 de setembro de 2026</span>
+            <span class="article-read"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>7 min de leitura</span>
+          </div>
+          <h1>Identidade é o novo perímetro: usuários, tokens, automações e agentes precisam do mesmo rigor</h1>
+          <p class="article-lead">"Segurança de usuário" e "segurança de API e automação" costumam ser tratadas como assuntos diferentes, com donos diferentes. Os dados do maior estudo forense de invasões do setor mostram que não são: na prática, a identidade é o fio condutor do ataque — não importa por onde o invasor entrou primeiro.</p>
+        </header>
+        <div class="prose">
+
+          <h2 id="duas-categorias"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0 -3 -3.85"/></svg>Duas categorias que, na prática, são uma só</h2>
+          <p>Na maioria das empresas, a "segurança de usuário" (senha, MFA de funcionário) e a "segurança de automação" (token, integração, agente de IA) vivem em pastas separadas — muitas vezes com responsáveis diferentes e prioridades diferentes. Faz sentido no organograma. Só que o invasor não lê o organograma.</p>
+          <p>Os dados do Verizon DBIR 2026 — o maior estudo anual de causas de invasão do setor, com mais de 22 mil violações confirmadas analisadas — mostram que, na prática, é a mesma superfície: <strong>identidade</strong>. Seja de uma pessoa, de um token de API, de uma conta de serviço ou de um agente de IA, ela é o fio condutor da maioria das invasões em algum ponto do ataque.</p>
+
+          <h2 id="31-vs-39"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M10 3.2a9 9 0 1 0 10.8 10.8a1 1 0 0 0 -1 -1h-3.8a4.1 4.1 0 1 1 -5 -5v-4a.9 .9 0 0 0 -1 -.8"/><path d="M15 3.5a9 9 0 0 1 5.5 5.5h-4.5a9 9 0 0 0 -1 -1v-4.5"/></svg>31% contra 39%: o dado que muda a leitura</h2>
+          <p>O DBIR 2026 mudou a forma de medir a entrada inicial do ataque. E, pela primeira vez em 19 anos de relatório, a exploração de vulnerabilidade técnica (31%) ultrapassou o uso de credencial roubada (13%) como <strong>primeiro ponto de entrada</strong>. Lido de forma isolada, o número sugere que a credencial perdeu importância.</p>
+          <p>Ele engana. Quando o DBIR conta o uso de credencial em <strong>qualquer ponto</strong> da invasão — não só na entrada, mas também depois, para se mover dentro da rede e escalar privilégio —, credencial aparece em <strong>39% de todas as violações</strong>, mais do que qualquer outro vetor isolado.</p>
+          <div class="stat-row">
+            <div class="stat-box"><div class="num">31%</div><span>das violações começaram por exploração de vulnerabilidade — a primeira vez na frente em 19 anos</span></div>
+            <div class="stat-box"><div class="num">13%</div><span>começaram por credencial roubada como primeiro ponto de entrada</span></div>
+            <div class="stat-box"><div class="num">39%</div><span>usaram credencial em algum momento da invasão — mais que qualquer outro vetor</span></div>
+          </div>
+          <p>Ou seja: o invasor pode até entrar por outra porta, mas quase 4 em cada 10 violações passam por uma identidade em algum momento. A identidade não é só a porta da frente — é o que permite circular pela casa depois que a janela foi forçada.</p>
+
+          <h2 id="terceiros"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 15l6 -6"/><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"/><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"/></svg>Cada integração estende a sua superfície de identidade</h2>
+          <p>O mesmo relatório mostra que as falhas envolvendo terceiros — fornecedor, parceiro, integração externa — cresceram 60% e já aparecem em <strong>48% das violações</strong>. A maioria delas remonta a três causas: MFA ausente, rotação de credencial malfeita ou falta de privilégio mínimo.</p>
+          <p>É aqui que "usuário" e "automação" se encontram. Toda vez que a empresa conecta uma ferramenta, um agente de IA ou um fornecedor externo, ela está estendendo a própria superfície de identidade — goste ou não. Cada conexão vem com uma credencial, e essa credencial precisa do mesmo rigor de uma conta de funcionário.</p>
+
+          <div class="cta-mid">
+            <p>Sua empresa sabe quantas identidades — de pessoas e de máquinas — têm acesso hoje?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20diagn%C3%B3stico%20de%20identidades%20e%20acessos%20da%20Oryxon." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="pme"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/><path d="M11 8h6"/><path d="M11 16h6"/></svg>Isso não acontece só com empresa grande</h2>
+          <p>Uma leitura comum é achar que vazamento de credencial é problema de grande corporação. Segundo o DBIR 2026 (em análise da SpyCloud), empresas pequenas registraram uma <strong>mediana de 7 eventos de vazamento de credencial por ano</strong>; as grandes, cerca de 20.</p>
+          <p>A diferença de número existe, mas o recado é outro: PMEs de Suzano, Mogi das Cruzes, Poá ou Itaquaquecetuba também sofrem vazamento de credencial com frequência real — só têm menos gente olhando para isso.</p>
+
+          <h2 id="reuso"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z"/><path d="M15 9h.01"/></svg>Ter senha não é ter identidade protegida</h2>
+          <p>Outro dado do DBIR 2026 mostra por que "ter senha" não basta: usuários têm <strong>4 vezes mais chance de reutilizar uma senha já comprometida</strong> do que de criar uma senha nova e fraca. O problema, então, não é só a senha fraca — é o reaproveitamento de uma credencial que já vazou em outro lugar e continua valendo aqui.</p>
+          <p>Para o invasor, é o cenário ideal: a credencial já está pronta, não exige quebrar nada. Para a empresa, significa que a proteção não pode depender de a pessoa "escolher uma boa senha".</p>
+
+          <h2 id="quatro-identidades"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M12 11m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 12l0 2.5"/></svg>Quatro tipos de identidade, o mesmo rigor</h2>
+          <p>Os controles que aparecem por trás dos casos de terceiros — MFA, rotação de credencial e privilégio mínimo — não deveriam ser exclusivos de quem tem crachá. Quatro tipos de identidade merecem o mesmo cuidado:</p>
+          <div class="qbox">
+            <div class="qnum">1</div>
+            <div class="qbody">
+              <h4>Usuário humano</h4>
+              <p>O funcionário, o gestor, o prestador. MFA, senha que não seja reaproveitada e acesso só ao que a função exige.</p>
+            </div>
+          </div>
+          <div class="qbox">
+            <div class="qnum">2</div>
+            <div class="qbody">
+              <h4>Token de API</h4>
+              <p>A chave que liga um sistema a outro. Precisa de prazo de rotação, escopo restrito e alguém responsável por saber que ela existe.</p>
+            </div>
+          </div>
+          <div class="qbox">
+            <div class="qnum">3</div>
+            <div class="qbody">
+              <h4>Conta de serviço ou automação</h4>
+              <p>A conta que roda rotinas sem ninguém logado. Costuma ser criada uma vez, ganhar permissão ampla e ser esquecida.</p>
+            </div>
+          </div>
+          <div class="qbox">
+            <div class="qnum">4</div>
+            <div class="qbody">
+              <h4>Agente de IA</h4>
+              <p>Uma identidade que age por conta própria, dentro das permissões que recebeu. Merece o mesmo privilégio mínimo de qualquer conta privilegiada.</p>
+            </div>
+          </div>
+          <div class="callout callout-warn">
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"/><path d="M12 16h.01"/></svg>
+            <p><strong>Por que tratar só uma categoria não basta:</strong> uma empresa que exige MFA de todo funcionário, mas deixa tokens sem rotação e contas de serviço com permissão ampla, protegeu uma porta e deixou as outras três abertas. Como o invasor só precisa de uma identidade em algum ponto do ataque, as quatro são o mesmo problema.</p>
+          </div>
+          <p>Vale registrar: a aplicação dos três controles (MFA, rotação e privilégio mínimo) às quatro categorias de identidade é uma leitura nossa dos dados do DBIR, não uma conclusão literal do relatório.</p>
+
+          <h2 id="aprofundar"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8"/><path d="M14 19l2 2l4 -4"/><path d="M9 8h4"/><path d="M9 12h2"/></svg>Para aprofundar em cada frente</h2>
+          <p>Este artigo olha a identidade a partir de dados forenses de invasão real. Os três textos abaixo tratam a identidade de IA e de máquina por outros ângulos, e cada um aprofunda uma frente específica:</p>
+          <ul class="checklist">
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg><span><a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html">Zero Trust:</a> por que a Microsoft passou a tratar o agente de IA como usuário privilegiado.</span></li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg><span><a href="/blog/agente-de-ia-protegido-limitado-auditavel.html">Governança de identidade não humana:</a> a proporção de identidades de máquina nas empresas e como auditá-las.</span></li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg><span><a href="/blog/agente-de-ia-acesso-just-in-time.html">Acesso just-in-time:</a> como limitar o acesso de agentes sem bloquear a produtividade.</span></li>
+          </ul>
+
+        </div>
+        <div class="cta-article">
+          <h2>Quer olhar as quatro frentes de identidade da sua empresa juntas?</h2>
+          <p>A Oryxon ajuda empresas do Alto Tietê a mapear usuários, tokens, contas de serviço e agentes de IA num único diagnóstico — para saber onde está o acesso amplo, a credencial sem prazo e a conexão que ninguém revisa.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20identidades%20e%20acessos%20%28usu%C3%A1rios%2C%20tokens%2C%20automa%C3%A7%C3%B5es%20e%20agentes%29%20para%20minha%20empresa." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI — Oryxon Systems | Parceiro Help Digital</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fontes</h3>
+          <ul>
+            <li>Verizon — Data Breach Investigations Report (DBIR) 2026: vetores de entrada inicial, uso de credencial, falhas de terceiros e reuso de senha</li>
+            <li>SpyCloud — análise dos dados do Verizon DBIR 2026 sobre vazamento de credenciais em empresas pequenas e grandes</li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M6 21v-2a4 4 0 0 1 4 -4h2"/><path d="M22 16c0 4 -2.5 6 -3.5 6s-3.5 -2 -3.5 -6c1 0 2.5 -.5 3.5 -1.5c1 1 2.5 1.5 3.5 1.5z"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"/></svg><div><strong>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</strong><span>Cibersegurança · IA</span></div></a>
+          <a href="/blog/agente-de-ia-protegido-limitado-auditavel.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M12 11m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 12l0 2.5"/></svg><div><strong>Seu agente de IA está protegido, limitado e auditável — ou apenas conectado?</strong><span>Cibersegurança · IA</span></div></a>
+          <a href="/blog/agente-de-ia-acesso-just-in-time.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M16.555 3.843l3.602 3.602a2.877 2.877 0 0 1 0 4.069l-2.643 2.643a2.877 2.877 0 0 1 -4.069 0l-.301 -.301l-6.558 6.558a2 2 0 0 1 -1.239 .578l-.175 .008h-1.172a1 1 0 0 1 -.993 -.883l-.007 -.117v-1.172a2 2 0 0 1 .467 -1.284l.119 -.13l.414 -.414h2v-2h2v-2l2.144 -2.144l-.301 -.301a2.877 2.877 0 0 1 0 -4.069l2.643 -2.643a2.877 2.877 0 0 1 4.069 0z"/><path d="M15 9h.01"/></svg><div><strong>Agente de IA é uma identidade privilegiada: como limitar acessos sem bloquear a produtividade</strong><span>Cibersegurança · IA</span></div></a>
+          <a href="/ciberseguranca.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M12 11m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 12l0 2.5"/></svg><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#duas-categorias">Duas categorias, uma superfície</a></li>
+            <li><a href="#31-vs-39">31% contra 39%</a></li>
+            <li><a href="#terceiros">Terceiros e integrações</a></li>
+            <li><a href="#pme">Não é só empresa grande</a></li>
+            <li><a href="#reuso">Reuso de senha comprometida</a></li>
+            <li><a href="#quatro-identidades">Quatro identidades, mesmo rigor</a></li>
+            <li><a href="#aprofundar">Para aprofundar</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico de Exposição Digital e IA</h3>
+          <p>Mapeamos usuários, tokens, automações e agentes de IA da sua empresa — sem custo e sem compromisso.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA." target="_blank" rel="noopener" class="btn-s"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn-s">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>

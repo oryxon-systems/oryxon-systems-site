@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CISA está mudando a forma de priorizar vulnerabilidades: por que a PME deve olhar exploração e exposição, não apenas CVSS | Oryxon Systems</title>
+  <meta name="description" content="Em 10 de junho de 2026, a CISA revogou a diretiva que exigia CVSS na priorização de correções. Entenda o SSVC, a ressalva sobre ser norma americana e um checklist para a PME."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html"/>
+  <meta property="og:title" content="CISA está mudando a forma de priorizar vulnerabilidades: por que a PME deve olhar exploração e exposição, não apenas CVSS"/>
+  <meta property="og:description" content="Em 10 de junho de 2026, a CISA publicou a BOD 26-04 e revogou a diretiva que exigia CVSS na priorização de correções. Veja o que é o SSVC e o que muda para a PME."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXFSLJDCNW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FXFSLJDCNW');</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"CISA está mudando a forma de priorizar vulnerabilidades: por que a PME deve olhar exploração e exposição, não apenas CVSS","description":"Em 10 de junho de 2026, a CISA publicou a BOD 26-04 e revogou a diretiva que exigia CVSS na priorização de correções. Veja o que é o SSVC e o que muda para a PME.","datePublished":"2026-09-21","dateModified":"2026-09-21","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena","addressLocality":"Poá","addressRegion":"SP","postalCode":"08553-520","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:#67e8ff}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i,h2 svg{color:#67e8ff;font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:#dff9ff;font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:12px;padding:11px 14px}
+    .checklist i,.checklist svg{color:#67e8ff;font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+    .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:14px;padding:16px;text-align:center}
+    .stat-box .num{font-size:1.7rem;font-weight:900;background:linear-gradient(135deg,#67e8ff,#1478ff);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
+    .stat-box span{color:var(--muted);font-size:.78rem;line-height:1.4;display:block}
+    .split-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .split-box{border-radius:14px;padding:18px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.02)}
+    .split-box h4{display:flex;align-items:center;gap:8px;font-size:.95rem;color:#dff9ff;margin-bottom:10px}
+    .split-box h4 i,h4 svg{color:#67e8ff}
+    .split-box.cloud h4 i,h4 svg{color:#37f5a1}
+    .split-box ul{padding-left:18px;color:var(--muted);font-size:.88rem;display:grid;gap:5px;margin:0}
+    .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:16px;padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
+    .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#67e8ff,#1478ff);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
+    .qbox .qbody h4{font-size:1rem;color:#dff9ff;margin-bottom:6px}
+    .qbox .qbody p{margin:0;font-size:.92rem}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i,.callout svg{color:#67e8ff;font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i,.callout-warn svg{color:#ffb432}
+    .callout-warn p{color:#ffd8a0}
+    .callout-success{border-color:rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
+    .callout-success i,.callout-success svg{color:#37f5a1}
+    .callout-success p{color:#a0f5d4}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:16px;padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
+    .cta-mid a{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(135deg,#37f5a1,#1478ff);color:#001224;font-weight:850;font-size:.86rem;padding:10px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:24px;padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:#dff9ff;justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .cta-article a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;padding:12px 24px;border-radius:999px;font-size:.92rem;text-decoration:none}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:14px;padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00b7ff,#1478ff);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:#dff9ff}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:#dff9ff;margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:13px;color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:#67e8ff}
+    .related a strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:18px;padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:#dff9ff}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .btn-s{display:inline-flex;align-items:center;gap:6px;font-size:.81rem;font-weight:800;color:#001224;background:linear-gradient(135deg,#67e8ff,#1478ff);padding:8px 14px;border-radius:999px;text-decoration:none}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:50%;background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}.stat-row{grid-template-columns:1fr 1fr}.split-row{grid-template-columns:1fr}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid a{width:100%;justify-content:center}.stat-row{grid-template-columns:1fr}.qbox{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn-nav">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança · Vulnerabilidades</span>
+            <span class="article-date"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M11 15h1"/><path d="M12 15v3"/></svg>21 de setembro de 2026</span>
+            <span class="article-read"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>7 min de leitura</span>
+          </div>
+          <h1>CISA está mudando a forma de priorizar vulnerabilidades: por que a PME deve olhar exploração e exposição, não apenas CVSS</h1>
+          <p class="article-lead">Durante cerca de duas décadas, a nota CVSS foi a régua dominante para decidir o que corrigir primeiro. Em junho de 2026, o governo dos EUA deixou de adotá-la como critério oficial de prioridade. Não porque a nota seja inútil, mas porque ela responde a apenas uma das perguntas que importam — e quem a usa sozinha acaba tratando tudo como urgente.</p>
+        </header>
+        <div class="prose">
+
+          <h2 id="o-que-mudou"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/><path d="M9 9l1 0"/><path d="M9 13l6 0"/><path d="M9 17l6 0"/></svg>O que mudou em 10 de junho de 2026</h2>
+          <p>Em 10 de junho de 2026, a CISA — a agência de cibersegurança dos Estados Unidos — publicou a Diretiva Operacional Vinculante <strong>BOD 26-04, "Prioritizing Security Updates Based on Risk"</strong> (em tradução livre, "Priorizando atualizações de segurança com base em risco"). O texto revogou a BOD 19-02, a diretiva anterior, que exigia o uso do CVSS como base para priorizar correções nas agências federais civis americanas.</p>
+          <p>Na prática, o governo dos EUA deixou de usar o CVSS como critério oficial de prioridade de correção. A mudança foi amplamente coberta por veículos de segurança, como Picus Security, Zafran e CyberSecurity Dive — e vale entender o que ela diz sobre o rumo do mercado, mesmo para uma empresa que nunca tratou com o governo americano.</p>
+
+          <h2 id="por-que-mudou"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 17l6 -6l4 4l8 -8"/><path d="M14 7l7 0l0 7"/></svg>Por que "crítico" deixou de ser critério suficiente</h2>
+          <p>O CVSS foi criado para dar a cada vulnerabilidade uma nota de severidade técnica, de 0 a 10. Serviu por muito tempo como linguagem comum: relatório, scanner e ferramenta de patch falavam a mesma nota. O problema é que a conta deixou de fechar. O número de CVEs publicadas por ano é muito maior do que a capacidade de correção de qualquer equipe — a de uma multinacional ou a de uma PME de Suzano.</p>
+          <p>Quando dezenas de itens chegam marcados como "crítico" ao mesmo tempo, a nota deixa de ajudar a escolher o primeiro. E ela não responde às perguntas que realmente decidem a ordem: alguém está explorando isso agora? O sistema afetado está aberto para a internet? O que ele faz pela operação da empresa?</p>
+
+          <h2 id="ssvc"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M11 16h10"/><path d="M11 16l4 4"/><path d="M11 16l4 -4"/><path d="M13 8h-10"/><path d="M13 8l-4 4"/><path d="M13 8l-4 -4"/></svg>O que entra no lugar: uma decisão, não um número</h2>
+          <p>A BOD 26-04 se baseia no <strong>SSVC (Stakeholder-Specific Vulnerability Categorization)</strong>, framework criado pela Carnegie Mellon University (CERT/CC) em conjunto com a CISA. Em vez de uma nota única, o SSVC usa uma árvore de decisão que combina fatores como <strong>exploração ativa confirmada</strong>, <strong>presença no catálogo CISA KEV</strong> (a lista de vulnerabilidades já exploradas na prática), <strong>exposição do ativo</strong> (acessível pela internet ou só pela rede interna?) e <strong>criticidade do sistema</strong> para a operação daquela organização.</p>
+          <p>O resultado deixa de ser um número de 0 a 10 e passa a ser uma recomendação de ação: <strong>Agir, Atender, Rastrear ou Rastrear com atenção</strong>. Fonte: guia oficial do SSVC da CISA, consolidado por Picus Security e riskbasedprioritization.github.io (2026).</p>
+          <div class="split-row">
+            <div class="split-box">
+              <h4><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 4m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M3 12m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z"/><path d="M7 8l0 .01"/><path d="M7 16l0 .01"/><path d="M11 8h6"/><path d="M11 16h6"/></svg>CVSS — o critério anterior</h4>
+              <ul>
+                <li>Um número de 0 a 10</li>
+                <li>Mede a severidade técnica da falha</li>
+                <li>A mesma nota vale para qualquer empresa</li>
+              </ul>
+            </div>
+            <div class="split-box cloud">
+              <h4><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 7a5 5 0 1 0 5 5"/><path d="M13 3.055a9 9 0 1 0 7.941 7.945"/><path d="M15 6v3h3l3 -3h-3v-3z"/><path d="M15 9l-3 3"/></svg>SSVC — o que entra no lugar</h4>
+              <ul>
+                <li>Uma ação: Agir, Atender, Rastrear ou Rastrear com atenção</li>
+                <li>Pesa exploração, exposição e criticidade</li>
+                <li>Leva em conta o contexto de cada organização</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 id="quatro-perguntas"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9.615 20h-2.615a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8"/><path d="M14 19l2 2l4 -4"/><path d="M9 8h4"/><path d="M9 12h2"/></svg>As quatro perguntas, traduzidas para o dia a dia</h2>
+          <p>Ninguém precisa decorar a árvore de decisão para aproveitar a lógica dela. Traduzido para o dono de uma PME, o raciocínio do SSVC vira quatro perguntas:</p>
+          <div class="qbox">
+            <div class="qnum">1</div>
+            <div class="qbody">
+              <h4>Está sendo explorada de verdade?</h4>
+              <p>Uma falha confirmada como explorada na prática — por exemplo, listada no catálogo CISA KEV — pesa mais do que uma falha que "poderia ser explorada".</p>
+            </div>
+          </div>
+          <div class="qbox">
+            <div class="qnum">2</div>
+            <div class="qbody">
+              <h4>Está acessível de fora da empresa?</h4>
+              <p>Um servidor exposto à internet e um equipamento que só existe na rede interna não têm a mesma urgência, mesmo com a mesma falha.</p>
+            </div>
+          </div>
+          <div class="qbox">
+            <div class="qnum">3</div>
+            <div class="qbody">
+              <h4>O sistema afetado é crítico para a operação?</h4>
+              <p>Uma falha no sistema que emite nota fiscal ou controla a produção pesa diferente de uma falha numa máquina de testes.</p>
+            </div>
+          </div>
+          <div class="qbox">
+            <div class="qnum">4</div>
+            <div class="qbody">
+              <h4>Já existe alguma mitigação em prática?</h4>
+              <p>Se há uma barreira compensatória — regra de firewall, isolamento de rede, serviço desativado —, a urgência muda. Mas a mitigação precisa estar verificada, não presumida.</p>
+            </div>
+          </div>
+          <div class="callout">
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 9h.01"/><path d="M11 12h1v4h1"/></svg>
+            <p>Essa tradução em quatro perguntas é uma simplificação nossa para o contexto de PME. O SSVC oficial tem árvore de decisão, pontos de decisão e nomenclatura próprios — para o detalhe completo, o guia da CISA é a referência.</p>
+          </div>
+
+          <h2 id="ressalva"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"/><path d="M12 16h.01"/></svg>Ressalva: é uma diretiva americana, não uma lei brasileira</h2>
+          <div class="callout callout-warn">
+            <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z"/><path d="M12 16h.01"/></svg>
+            <p><strong>Importante:</strong> a BOD 26-04 é uma diretiva federal dos EUA, válida para as agências federais civis americanas. Não é lei nem exigência formal para empresas brasileiras, e este artigo não a trata como obrigação.</p>
+          </div>
+          <p>O motivo de ela importar para uma PME de Suzano, Mogi das Cruzes ou Itaquaquecetuba é outro: é <strong>sinal de direção de mercado</strong>. Analistas do setor, citados pela Picus Security e por outros veículos em 2026, apontam que requisitos de seguro cibernético, auditorias de fornecedor e as próprias ferramentas de gestão de vulnerabilidades devem seguir a mesma lógica de priorização nos próximos anos.</p>
+          <p>Trate como tendência, não como certeza. Quem já organiza a fila de correção por exploração, exposição e criticidade chega mais preparado ao questionário da seguradora, à auditoria de um cliente grande — ou simplesmente gasta melhor as horas da equipe.</p>
+
+          <div class="cta-mid">
+            <p>Sua empresa sabe explicar por que corrigiu uma vulnerabilidade antes de outra?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20prioriza%C3%A7%C3%A3o%20de%20vulnerabilidades%20da%20Oryxon." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="complemento"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 15l6 -6"/><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"/><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"/></svg>Complemento: de CVSS vs. EPSS para um conjunto mais amplo de sinais</h2>
+          <p>Já publicamos aqui um artigo sobre <a href="/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html">por que vulnerabilidade crítica não é a mesma coisa que prioridade crítica</a>, que explica a diferença entre o CVSS (o estrago possível) e o EPSS (a probabilidade real de exploração). Este texto complementa aquele com uma notícia mais recente e amplia o argumento: a discussão já não é só "CVSS versus EPSS", é "CVSS versus um conjunto de sinais" — exploração, exposição do ativo e criticidade para o negócio.</p>
+          <p>A probabilidade de exploração continua sendo um sinal útil. Já a exposição e a criticidade são justamente o que nenhum relatório automático sabe por você: só a própria empresa sabe quais sistemas estão abertos para a internet e quais deles não podem parar.</p>
+
+          <h2 id="checklist"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3.5 5.5l1.5 1.5l2.5 -2.5"/><path d="M3.5 11.5l1.5 1.5l2.5 -2.5"/><path d="M3.5 17.5l1.5 1.5l2.5 -2.5"/><path d="M11 6l9 0"/><path d="M11 12l9 0"/><path d="M11 18l9 0"/></svg>Checklist: como aplicar sem ferramenta de SSVC automatizada</h2>
+          <p>Não é preciso uma plataforma de SSVC para começar. O ponto de partida é processo: organizar a fila de correção com cinco checagens.</p>
+          <ul class="checklist">
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg><span><strong>Separe o que está exposto à internet do que é só interno.</strong> Faça essa lista uma vez e mantenha atualizada — ela vale para todas as próximas rodadas de correção.</span></li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg><span><strong>Confira cada item crítico no catálogo CISA KEV.</strong> É uma lista pública de vulnerabilidades já exploradas na prática; estar nela move o item para o topo da fila.</span></li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg><span><strong>Classifique os sistemas por criticidade para a operação.</strong> Quem decide o que "não pode parar" é a gestão do negócio, não apenas a TI.</span></li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg><span><strong>Registre a decisão e o motivo</strong> — agir agora, corrigir na próxima janela ou acompanhar — e anote qualquer mitigação temporária que esteja em vigor.</span></li>
+            <li><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M9 12l2 2l4 -4"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z"/></svg><span><strong>Reveja a fila periodicamente.</strong> Exposição e exploração mudam: um item que era "acompanhar" pode virar "agir" quando entra no KEV ou quando o sistema passa a ficar acessível de fora.</span></li>
+          </ul>
+          <p>Vale registrar: essa adaptação para cinco checagens de processo é uma simplificação nossa para o contexto de PME e indústria de médio porte — não uma implementação oficial do SSVC.</p>
+
+        </div>
+        <div class="cta-article">
+          <h2>Sua empresa sabe o que corrigir primeiro — e por quê?</h2>
+          <p>A Oryxon ajuda empresas do Alto Tietê a interpretar relatórios de vulnerabilidade e a montar a ordem de correção combinando exploração confirmada, exposição do sistema e criticidade para a operação — com o Vulnerability Assessment e o diagnóstico gratuito como ponto de partida.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20prioriza%C3%A7%C3%A3o%20de%20vulnerabilidades%20para%20minha%20empresa." target="_blank" rel="noopener"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI — Oryxon Systems | Parceiro Help Digital</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fontes</h3>
+          <ul>
+            <li>CISA — Binding Operational Directive BOD 26-04, "Prioritizing Security Updates Based on Risk", 10/jun/2026 (revoga a BOD 19-02)</li>
+            <li>CISA e Carnegie Mellon University (CERT/CC) — guia oficial do SSVC (Stakeholder-Specific Vulnerability Categorization)</li>
+            <li>Picus Security, Zafran e CyberSecurity Dive — cobertura da BOD 26-04, 2026</li>
+            <li>riskbasedprioritization.github.io — consolidado sobre priorização baseada em risco, 2026</li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 7a5 5 0 1 0 5 5"/><path d="M13 3.055a9 9 0 1 0 7.941 7.945"/><path d="M15 6v3h3l3 -3h-3v-3z"/><path d="M15 9l-3 3"/></svg><div><strong>Vulnerabilidade crítica não é a mesma coisa que prioridade crítica</strong><span>Cibersegurança · Vulnerabilidades</span></div></a>
+          <a href="/blog/velocidade-de-maquina-tempo-de-reacao-pme.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M20.942 13.021a9 9 0 1 0 -9.407 7.967"/><path d="M12 7v5l3 3"/><path d="M15 19l2 2l4 -4"/></svg><div><strong>A ameaça agora opera em velocidade de máquina: qual é o tempo real de reação da sua PME?</strong><span>Cibersegurança · Ameaças</span></div></a>
+          <a href="/ciberseguranca.html"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3"/><path d="M12 11m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 12l0 2.5"/></svg><div><strong>Cibersegurança para empresas — Oryxon Systems</strong><span>FWaaS · EDR · Bitdefender · VA</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#o-que-mudou">O que mudou (BOD 26-04)</a></li>
+            <li><a href="#por-que-mudou">Por que "crítico" não basta</a></li>
+            <li><a href="#ssvc">O que entra no lugar: SSVC</a></li>
+            <li><a href="#quatro-perguntas">As quatro perguntas</a></li>
+            <li><a href="#ressalva">Diretiva americana, não lei</a></li>
+            <li><a href="#complemento">Complemento: CVSS vs. EPSS</a></li>
+            <li><a href="#checklist">Checklist prático</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico de Vulnerabilidades</h3>
+          <p>Ajudamos a priorizar o que corrigir primeiro com base em risco real — exploração, exposição e criticidade — e não só na nota do relatório.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20diagn%C3%B3stico%20de%20prioriza%C3%A7%C3%A3o%20de%20vulnerabilidades." target="_blank" rel="noopener" class="btn-s"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;display:inline-block"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn-s">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>

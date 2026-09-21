@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://www.oryxonsystems.com.br/blog.html</loc>
-    <lastmod>2026-08-10</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -261,6 +261,24 @@
   <url>
     <loc>https://www.oryxonsystems.com.br/blog/identidade-ia-infraestrutura-continuidade-avaliar-juntos.html</loc>
     <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/fraude-com-ia-imita-executivos-faturas-processo-financeiro.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/identidade-e-o-novo-perimetro.html</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
