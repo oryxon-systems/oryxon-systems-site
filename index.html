@@ -95,6 +95,15 @@
       .js .reveal{opacity:1;transform:none}
       .btn:hover,.card:hover{transform:none}
     }
+    @media (prefers-reduced-motion: no-preference){
+      @view-transition{navigation:auto}
+      .nav-shell{view-transition-name:site-nav}
+      .floating-whatsapp{view-transition-name:wa-cta}
+      ::view-transition-old(root){animation:vt-out .22s cubic-bezier(.2,.8,.2,1) both}
+      ::view-transition-new(root){animation:vt-in .32s cubic-bezier(.2,.8,.2,1) both}
+    }
+    @keyframes vt-out{to{opacity:0}}
+    @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
   </style>
 </head>
 <body>
