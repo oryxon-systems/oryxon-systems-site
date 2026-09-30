@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre Nós | Oryxon Systems</title>
@@ -9,7 +10,7 @@
   <link rel="stylesheet" href="/assets/fonts/inter.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--shadow:0 30px 100px rgba(0,104,255,.18);--max:1100px}
-    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
     body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.18),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.16),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
@@ -30,7 +31,7 @@
     .muted{color:var(--muted)}
     .card{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028));border-radius:28px;padding:28px;transition:.22s ease}
     .card:hover{transform:translateY(-4px);border-color:rgba(103,232,255,.4);box-shadow:0 20px 60px rgba(0,183,255,.10)}
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .72s ease,transform .72s ease}
+    .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .72s ease,transform .72s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
     section{padding:80px 0}
 
@@ -98,6 +99,11 @@
 
     @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-logo{display:none}.mvv-grid,.valores-grid{grid-template-columns:repeat(2,1fr)}.history-grid{grid-template-columns:1fr}.founder-wrap{grid-template-columns:1fr;text-align:center}.founder-photo{margin:0 auto}.founder-links{justify-content:center}}
     @media(max-width:600px){.mvv-grid,.valores-grid,.history-stats{grid-template-columns:1fr}section{padding:56px 0}}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+      .js .reveal{opacity:1;transform:none}
+      .btn:hover,.card:hover{transform:none}
+    }
   </style>
 </head>
 <body>
@@ -116,7 +122,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
-        <div class="reveal">
+        <div>
           <div class="hero-badge"><span class="live-dot"></span> Alto Tietê — São Paulo, SP</div>
           <h1>Somos a <span class="grad">Oryxon</span><br>Systems.</h1>
           <p>Uma empresa de gestão de TI, automação e segurança empresarial nascida para resolver um problema real: pequenas e médias empresas do Alto Tietê sem acesso a TI estratégica, proativa e confiável.</p>
@@ -469,10 +475,11 @@
   </footer>
 
   <script>
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
     }, { threshold: 0.1 });
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    document.querySelectorAll(".reveal").forEach(el => reduceMotion ? el.classList.add("visible") : observer.observe(el));
 
     // Carta de Valores — tab switching
     function showValor(idx) {

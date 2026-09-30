@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog | Oryxon Systems</title>
@@ -10,7 +11,7 @@
   <style>
     
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:1100px}
-    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
     body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.14),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
@@ -25,7 +26,7 @@
     .btn-nav{min-height:40px;display:inline-flex;align-items:center;padding:0 18px;border-radius:999px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-weight:850;font-size:.84rem;white-space:nowrap;text-decoration:none}
     .btn-nav:hover{opacity:.9;text-decoration:none}
     .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:10px}
-    .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+    .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
     .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:24px 0;color:var(--muted2);font-size:.84rem}
     .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -53,6 +54,11 @@
     .empty-card span{font-size:2rem;margin-bottom:12px;opacity:.4}
     @media(max-width:860px){.posts-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:560px){.posts-grid{grid-template-columns:1fr}}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+      .js .reveal{opacity:1;transform:none}
+      .btn:hover,.card:hover{transform:none}
+    }
   </style>
 </head>
 <body>
@@ -70,7 +76,7 @@
   </header>
   <main>
     <section class="hero-blog">
-      <div class="container reveal">
+      <div class="container">
         <div class="kicker">Conteúdo & Insights</div>
         <h1>Blog <span class="grad">Oryxon</span></h1>
         <p>Artigos práticos sobre gestão de TI, segurança, backup e tecnologia para empresas do Alto Tietê — sem enrolação, sem jargão desnecessário.</p>
@@ -507,8 +513,9 @@
     </div>
   </footer>
   <script>
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add("visible"); }), {threshold:.1});
-    document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+    document.querySelectorAll(".reveal").forEach(el => reduceMotion ? el.classList.add("visible") : obs.observe(el));
   </script>
 </body>
 </html>

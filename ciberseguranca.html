@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cibersegurança para Empresas | Oryxon Systems — Alto Tietê</title>
@@ -13,7 +14,7 @@
   <link rel="stylesheet" href="/assets/fonts/inter.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--red:#ff4d4d;--orange:#ff6b35;--shadow:0 30px 100px rgba(0,104,255,.18);--max:1100px}
-    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
     body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 75% 8%,rgba(255,50,50,.10),transparent 22rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.16),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
@@ -36,7 +37,7 @@
     .grad{background:linear-gradient(135deg,#fff 12%,#9df7ff 40%,#00b7ff 62%,#1478ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
     .grad-red{background:linear-gradient(135deg,#fff 12%,#ffaaaa 40%,#ff4d4d 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
     .muted{color:var(--muted)}
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .72s ease,transform .72s ease}
+    .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .72s ease,transform .72s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
     section{padding:80px 0}
     .btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 28px;border-radius:999px;border:1px solid transparent;font-family:inherit;font-weight:850;letter-spacing:-.02em;cursor:pointer;transition:.2s ease;text-decoration:none;white-space:nowrap}
@@ -114,6 +115,11 @@
 
     @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.services-grid{grid-template-columns:repeat(2,1fr)}.threats-grid,.process-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
     @media(max-width:600px){.services-grid,.threats-grid,.process-grid,.glossary-grid{grid-template-columns:1fr}section{padding:56px 0}}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+      .js .reveal{opacity:1;transform:none}
+      .btn:hover,.card:hover{transform:none}
+    }
   </style>
 </head>
 <body>
@@ -134,7 +140,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
-        <div class="reveal">
+        <div>
           <div class="kicker kicker-red">🛡️ Cibersegurança empresarial</div>
           <h1>Sua empresa está<br><span class="grad-red">protegida de verdade?</span></h1>
           <p>Ataques cibernéticos não escolhem tamanho de empresa. PMEs do Alto Tietê são alvos frequentes justamente por terem menos proteção. A Oryxon oferece um conjunto completo de serviços de cibersegurança para fechar as brechas antes que alguém as explore.</p>
@@ -466,8 +472,9 @@
   </footer>
 
   <script>
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add("visible"); }), {threshold:.08});
-    document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+    document.querySelectorAll(".reveal").forEach(el => reduceMotion ? el.classList.add("visible") : obs.observe(el));
   </script>
 </body>
 </html>
