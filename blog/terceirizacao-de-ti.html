@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/assets/fonts/inter.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--prose:720px}
-    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
     body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
@@ -89,6 +89,9 @@
     .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
 
     @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    }
   </style>
 </head>
 <body>

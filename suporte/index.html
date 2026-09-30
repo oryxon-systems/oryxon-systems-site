@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/assets/fonts/inter.css">
   <style>
     :root{--bg:#020713;--panel:rgba(8,21,43,.78);--border:rgba(93,176,255,.22);--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--shadow:0 30px 100px rgba(0,104,255,.18);--radius:28px;--max:1180px}
-    *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
     body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.20),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.18),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.5}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(circle at 50% 15%,black,transparent 75%);z-index:-1}
     a{color:inherit;text-decoration:none}
@@ -126,6 +126,10 @@
       .commercial-box{flex-direction:column;align-items:flex-start}
       .footer-grid{grid-template-columns:1fr}
       section{padding:40px 0}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+      .btn:hover{transform:none}
     }
   </style>
 </head>
