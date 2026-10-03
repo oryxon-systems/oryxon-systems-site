@@ -4,3 +4,5 @@ audit-output/
 RELATORIO-SEGURANCA*.md
 _incoming/
 _backup/
+.claude/
+CLAUDE.md
