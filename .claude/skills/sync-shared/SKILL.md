@@ -11,7 +11,7 @@ Argumentos: `$ARGUMENTS` = bloco (ex.: `nav-shell`, `footer`, `:root`) e opciona
 
 Siga estes passos nesta ordem. Não faça push nem deploy.
 
-1. **Pré-condição.** Rode `git status --porcelain`. Se houver qualquer saída, ABORTE e diga ao usuário para commitar ou stashar antes. Não escreva nada.
+1. **Pré-condição.** Rode `git status --porcelain`. Se houver qualquer saída, ABORTE sem escrever nada e responda exatamente: "Árvore suja: comite primeiro a mudança no arquivo de origem e rode de novo."
 2. **Arquivos afetados.** `grep -rl --include='*.html' "<marcador>" . --exclude-dir={.git,_backup,_incoming}` (marcador: `nav-shell` para o header, o equivalente para footer ou `:root`). Liste os arquivos e a contagem N, excluindo a origem. Se N = 0, pare.
 3. **Extrair o bloco** da origem (trecho exato do elemento, ou do bloco `:root { ... }`). Mostre-o ao usuário. Se o bloco da origem não for claramente delimitável, pare e pergunte.
 4. **Amostra.** Aplique a substituição em UM arquivo de amostra e mostre `git diff` desse arquivo. Atenção a diferenças legítimas por página (link ativo, caminhos relativos em `blog/`, `cases/`, `ti-*/`): preserve-as e sinalize.
