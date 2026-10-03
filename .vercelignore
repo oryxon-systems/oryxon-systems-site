@@ -6,3 +6,4 @@ _incoming/
 _backup/
 .claude/
 CLAUDE.md
+.mcp.json
