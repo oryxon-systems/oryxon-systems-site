@@ -9,6 +9,6 @@ blocks=()
 grep -q 'nav-shell' <<<"$txt" && blocks+=("nav-shell")
 grep -q ':root' <<<"$txt" && blocks+=(":root")
 [ ${#blocks[@]} -eq 0 ] && exit 0
-msg="Aviso: $f alterou bloco compartilhado (${blocks[*]}). Este bloco é copiado em outras páginas; use /sync-shared para propagar ou confirme que a mudança é só desta página."
+msg="Bloco compartilhado editado — rode .claude/skills/sync-shared/group.sh <bloco> para ver as páginas do mesmo grupo."
 jq -n --arg m "$msg" '{hookSpecificOutput:{hookEventName:"PostToolUse",additionalContext:$m}}'
 exit 0
