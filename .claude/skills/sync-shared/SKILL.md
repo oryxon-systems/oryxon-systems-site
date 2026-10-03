@@ -1,21 +1,20 @@
 ---
 name: sync-shared
-description: Propaga um bloco compartilhado (nav-shell, footer, :root) de uma página de origem para todas as outras páginas que o contêm. Use quando o usuário pedir /sync-shared.
+description: Propaga a mudança de um bloco compartilhado (header, footer, :root) da página de origem para as páginas do mesmo grupo (variante idêntica do bloco). Use quando o usuário pedir /sync-shared.
 disable-model-invocation: true
-argument-hint: <bloco> [arquivo-origem, padrão index.html]
+argument-hint: <header|footer|root> [arquivo-origem, padrão index.html] [base, padrão HEAD~1]
 ---
 
 # sync-shared
 
-Argumentos: `$ARGUMENTS` = bloco (ex.: `nav-shell`, `footer`, `:root`) e opcionalmente o arquivo de origem (padrão `index.html`).
+Argumentos: `$ARGUMENTS` = bloco (`header`, `footer` ou `root`), origem (padrão `index.html`) e base (commit anterior à edição da origem, padrão `HEAD~1`).
 
-Siga estes passos nesta ordem. Não faça push nem deploy.
+Os blocos NÃO são iguais em todas as páginas: o agrupamento é feito por `group.sh` (sha256 do bloco com whitespace normalizado), nunca por julgamento. A sync só toca páginas cujo bloco atual é idêntico, como string exata, ao bloco ANTIGO da origem. Não faça push nem deploy.
 
 1. **Pré-condição.** Rode `git status --porcelain`. Se houver qualquer saída, ABORTE sem escrever nada e responda exatamente: "Árvore suja: comite primeiro a mudança no arquivo de origem e rode de novo."
-2. **Arquivos afetados.** `grep -rl --include='*.html' "<marcador>" . --exclude-dir={.git,_backup,_incoming}` (marcador: `nav-shell` para o header, o equivalente para footer ou `:root`). Liste os arquivos e a contagem N, excluindo a origem. Se N = 0, pare.
-3. **Extrair o bloco** da origem (trecho exato do elemento, ou do bloco `:root { ... }`). Mostre-o ao usuário. Se o bloco da origem não for claramente delimitável, pare e pergunte.
-4. **Amostra.** Aplique a substituição em UM arquivo de amostra e mostre `git diff` desse arquivo. Atenção a diferenças legítimas por página (link ativo, caminhos relativos em `blog/`, `cases/`, `ti-*/`): preserve-as e sinalize.
-5. **Confirmação.** Pergunte (AskUserQuestion) se pode aplicar nos demais N-1 arquivos. Sem confirmação explícita, reverta a amostra com `git checkout -- <arquivo>` e pare.
-6. **Aplicar** nos demais. Confira com `git diff --stat` que só os arquivos listados mudaram.
-7. **Commit único:** `chore: sync <bloco> em N páginas`, com a linha Co-Authored-By padrão. Não faça push.
-8. Reporte N, arquivos pulados e qualquer divergência encontrada.
+2. **Grupo.** Rode `.claude/skills/sync-shared/group.sh <bloco> <base>` e mostre a tabela. A origem deve estar num grupo; os alvos são os outros arquivos desse grupo (lista = N). Se a origem não mudou entre base e HEAD, ou N = 0, pare.
+3. **Amostra.** Rode `.claude/skills/sync-shared/group.sh --apply <bloco> <origem> <base> <1 arquivo do grupo>` e mostre `git diff` desse arquivo. Pule no relatório qualquer arquivo reportado como sem match exato.
+4. **Confirmação.** Pergunte (AskUserQuestion) se pode aplicar nos demais alvos. Sem confirmação explícita, reverta com `git checkout -- .` e pare.
+5. **Aplicar.** Rode `group.sh --apply <bloco> <origem> <base>` sem lista de arquivos (a amostra já aplicada vira "sem match" e é ignorada). Confirme com `git diff --stat` que só os arquivos do grupo mudaram.
+6. **Commit único:** `chore: sync <bloco> em N páginas` (N = arquivos realmente alterados, incluindo a amostra), com a linha Co-Authored-By padrão. Não faça push.
+7. **Relatório:** N alterados, arquivos pulados por falta de match exato, e os outros grupos que NÃO foram tocados (outras variantes do bloco continuam como estavam).
