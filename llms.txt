@@ -3,7 +3,7 @@
 
 # Oryxon Systems é uma empresa de gestão de TI, automação e segurança empresarial
 # com atuação na região do Alto Tietê, São Paulo, Brasil.
-# Parceira oficial da Help Digital TI.
+# Parceira oficial da Help Digital.
 
 ## Empresa
 
@@ -55,7 +55,7 @@
 
 ## Parceiros
 
-- Help Digital TI: https://helpdigitalti.com.br
+- Help Digital: https://helpdigitalti.com.br
 - Unidade SP: https://helpdigitalti.com.br/unidades/sp-sao-paulo/
 
 ## Suporte
