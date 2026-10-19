@@ -114,6 +114,11 @@
     @media(max-width:400px){.hero-rotator{flex-wrap:wrap}}
     .nav-badge{display:inline-flex}
     @media(max-width:340px){.nav-badge{display:none}}
+    /* MOB-02 */
+    .cookie-inner{width:min(1180px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .cookie-text{color:#a9bad1;font-size:.86rem;margin:0;line-height:1.6;flex:1;min-width:240px}
+    .cookie-actions{display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap}
+    @media(max-width:600px){#cookieBanner{padding:16px}.cookie-inner{width:100%}.cookie-actions{flex-shrink:1;width:100%}.cookie-actions button{flex:1 1 140px}}
   </style>
 </head>
 <body>
@@ -790,9 +795,9 @@
 
 <!-- COOKIE BANNER LGPD -->
 <div id="cookieBanner">
-  <div style="width:min(1180px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-    <p style="color:#a9bad1;font-size:.86rem;margin:0;line-height:1.6;flex:1;min-width:240px">🍪 Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="/privacidade.html" style="color:#67e8ff;font-weight:700">Política de Privacidade</a> em conformidade com a <strong style="color:#dff9ff">LGPD</strong>.</p>
-    <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap">
+  <div class="cookie-inner">
+    <p class="cookie-text">🍪 Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="/privacidade.html" style="color:#67e8ff;font-weight:700">Política de Privacidade</a> em conformidade com a <strong style="color:#dff9ff">LGPD</strong>.</p>
+    <div class="cookie-actions">
       <button onclick="recusarCookies()" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.25);background:transparent;color:#a9bad1;font-size:.82rem;font-weight:700;cursor:pointer">Recusar não essenciais</button>
       <button onclick="aceitarCookies()" style="padding:9px 18px;border-radius:999px;border:none;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-size:.82rem;font-weight:850;cursor:pointer">Aceitar e continuar</button>
     </div>
