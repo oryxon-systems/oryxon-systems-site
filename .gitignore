@@ -5,3 +5,4 @@ RELATORIO-SEGURANCA*.md
 
 _incoming/
 _backup/
+.playwright-mcp/

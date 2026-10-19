@@ -10,7 +10,7 @@
 - Nome: Oryxon Systems
 - CNPJ: 66.498.962/0001-20
 - Fundação: 2025
-- Localização: Alto Tietê — Suzano, São Paulo, SP, Brasil
+- Sede: Poá, São Paulo, SP, Brasil (atendimento em todo o Alto Tietê)
 - Responsável: Uedson Azevedo (CEO & Head de Infraestrutura de TI)
 - Site: https://www.oryxonsystems.com.br
 - Contato: contato@oryxonsystems.com.br
@@ -44,10 +44,10 @@
 
 ## Área de atendimento
 
-- Suzano (sede)
+- Suzano
 - Mogi das Cruzes
 - Itaquaquecetuba
-- Poá
+- Poá (sede)
 - Ferraz de Vasconcelos
 - Guararema
 - Santa Isabel
