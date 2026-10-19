@@ -606,6 +606,7 @@
 
       const texto = `Olá, quero solicitar um Diagnóstico Gratuito de TI.\n\nNome: ${nome}\nEmpresa: ${empresa}\nWhatsApp: ${telefone}\nE-mail: ${email || "Não informado"}\nSegmento: ${segmento || "Não informado"}\nNúmero de computadores: ${computadores}\nPrincipal preocupação: ${mensagem || "Ainda não informado"}`;
       const url = `https://wa.me/5511934932992?text=${encodeURIComponent(texto)}`;
+      try { window.oryxonTrack && oryxonTrack('generate_lead', {lead_source: 'home-form', page_location: location.pathname}); } catch (_) {}
       window.open(url, "_blank", "noopener,noreferrer");
     }
 
@@ -659,6 +660,7 @@
         '• Empresa: ' + empresa + '\n' +
         '• WhatsApp: ' + tel + '\n' +
         '• Origem: hero-form';
+      try { window.oryxonTrack && oryxonTrack('generate_lead', {lead_source: 'hero-form', page_location: location.pathname}); } catch (_) {}
       window.open('https://wa.me/5511934932992?text=' + encodeURIComponent(texto), '_blank', 'noopener');
     }
 

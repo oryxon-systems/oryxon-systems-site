@@ -584,6 +584,7 @@
       const urg = document.getElementById('l-urgencia').value;
       if(!nome||!empresa||!seg||!tel) { alert('Preencha nome, empresa, segmento e WhatsApp.'); return; }
       const texto = `👋 Olá! Quero um *Diagnóstico LGPD Gratuito* para minha empresa.\n\n📋 *Dados:*\n• Nome: ${nome}\n• Empresa: ${empresa}\n• Segmento: ${seg}\n• WhatsApp: ${tel}\n• Situação: ${urg||'Não informado'}`;
+      try { window.oryxonTrack && oryxonTrack('generate_lead', {lead_source: 'lgpd-form', page_location: location.pathname}); } catch (_) {}
       window.open('https://wa.me/5511934932992?text='+encodeURIComponent(texto),'_blank','noopener');
     }
 

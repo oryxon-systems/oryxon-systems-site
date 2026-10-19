@@ -339,6 +339,7 @@
       const msg=document.getElementById('mensagem').value.trim();
       if(!n||!emp||!tel||!comp){alert('Preencha nome, empresa, WhatsApp e número de computadores.');return;}
       const texto=`Olá, quero um Diagnóstico Gratuito de TI em Itaquaquecetuba.\n\nNome: ${n}\nEmpresa: ${emp}\nWhatsApp: ${tel}\nE-mail: ${email||'Não informado'}\nComputadores: ${comp}\nSegmento: ${seg||'Não informado'}\nPreocupação: ${msg||'Não informado'}`;
+      try { window.oryxonTrack && oryxonTrack('generate_lead', {lead_source: 'ti-itaquaquecetuba-form', page_location: location.pathname}); } catch (_) {}
       window.open('https://wa.me/5511934932992?text='+encodeURIComponent(texto),'_blank','noopener');
     }
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
