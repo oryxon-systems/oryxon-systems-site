@@ -9,6 +9,41 @@
       "source": "/diagnostico/",
       "destination": "/#diagnostico",
       "permanent": true
+    },
+    {
+      "source": "/suporte",
+      "destination": "/suporte/",
+      "permanent": true
+    },
+    {
+      "source": "/ti-ferraz-de-vasconcelos",
+      "destination": "/ti-ferraz-de-vasconcelos/",
+      "permanent": true
+    },
+    {
+      "source": "/ti-guarulhos",
+      "destination": "/ti-guarulhos/",
+      "permanent": true
+    },
+    {
+      "source": "/ti-itaquaquecetuba",
+      "destination": "/ti-itaquaquecetuba/",
+      "permanent": true
+    },
+    {
+      "source": "/ti-mogi-das-cruzes",
+      "destination": "/ti-mogi-das-cruzes/",
+      "permanent": true
+    },
+    {
+      "source": "/ti-poa",
+      "destination": "/ti-poa/",
+      "permanent": true
+    },
+    {
+      "source": "/ti-suzano",
+      "destination": "/ti-suzano/",
+      "permanent": true
     }
   ],
   "headers": [
