@@ -28,44 +28,176 @@
   <meta name="twitter:title" content="Gestão de TI e Cibersegurança no Alto Tietê | Oryxon Systems">
   <meta name="twitter:description" content="Gestão de TI e cibersegurança para empresas do Alto Tietê: monitoramento 24x7, backup, proteção de endpoints e LGPD. Sede em Poá. Diagnóstico gratuito.">
   <meta name="twitter:image" content="https://www.oryxonsystems.com.br/og-image.jpg">
-  <!-- Schema.org LocalBusiness para SEO local -->
-  <!-- TODO: campo "geo" (GeoCoordinates) removido após mudança de endereço para Poá - SP. Confirmar lat/long no Google Maps e adicionar de volta ao JSON-LD abaixo. -->
+  <!-- Schema.org: entidade única (ProfessionalService) + WebSite + Person + WebPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Oryxon Systems",
-    "description": "Gestão de TI proativa, automação, segurança, backup e monitoramento 24x7 para empresas do Alto Tietê e São Paulo.",
-    "url": "https://www.oryxonsystems.com.br",
-    "telephone": "+5511934932992",
-    "email": "contato@oryxonsystems.com.br",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena",
-      "addressLocality": "Poá",
-      "addressRegion": "SP",
-      "postalCode": "08553-520",
-      "addressCountry": "BR"
-    },
-    "areaServed": ["Suzano", "Mogi das Cruzes", "Itaquaquecetuba", "Poá", "Ferraz de Vasconcelos", "Guararema", "Santa Isabel"],
-    "sameAs": [
-      "https://www.linkedin.com/company/oryxon-systems",
-      "https://share.google/MjPMX25cF8Ahsxwi1",
-      "https://www.facebook.com/share/1LKy7nh4Qu/",
-      "https://www.instagram.com/oryxon_systems"
-    ],
-    "openingHoursSpecification": [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/",
+        "description": "Gestão de TI e cibersegurança para empresas do Alto Tietê e de Guarulhos. Parceira oficial Help Digital São Paulo.",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://www.oryxonsystems.com.br/#logo",
+          "url": "https://www.oryxonsystems.com.br/assets/oryxon-logo.webp",
+          "width": 130,
+          "height": 130
+        },
+        "image": "https://www.oryxonsystems.com.br/og-image.jpg",
+        "email": "contato@oryxonsystems.com.br",
+        "telephone": "+5511934932992",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "telephone": "+5511934932992",
+            "email": "contato@oryxonsystems.com.br",
+            "areaServed": "BR",
+            "availableLanguage": "pt-BR"
+          }
+        ],
+        "founder": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/oryxon-systems",
+          "https://www.facebook.com/share/1LKy7nh4Qu/",
+          "https://www.instagram.com/oryxon_systems"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena",
+          "addressLocality": "Poá",
+          "addressRegion": "SP",
+          "postalCode": "08553-520",
+          "addressCountry": "BR"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "12:00"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Suzano",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "São Paulo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Mogi das Cruzes",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "São Paulo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Itaquaquecetuba",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "São Paulo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Poá",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "São Paulo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Ferraz de Vasconcelos",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "São Paulo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Guararema",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "São Paulo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Santa Isabel",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "São Paulo"
+            }
+          },
+          {
+            "@type": "City",
+            "name": "Guarulhos",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "São Paulo"
+            }
+          }
+        ]
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Saturday"],
-        "opens": "08:00",
-        "closes": "12:00"
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI",
+        "image": "https://www.oryxonsystems.com.br/assets/uedson-avatar.webp",
+        "worksFor": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/uedson-help-digital-sp/"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/#webpage",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Gestão de TI e Cibersegurança no Alto Tietê | Oryxon Systems",
+        "description": "Gestão de TI e cibersegurança para empresas do Alto Tietê: monitoramento 24x7, backup, proteção de endpoints e LGPD. Sede em Poá. Diagnóstico gratuito.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "about": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "inLanguage": "pt-BR"
       }
     ]
   }
