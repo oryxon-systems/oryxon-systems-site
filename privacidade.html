@@ -45,6 +45,9 @@
     .section p{color:var(--muted);margin-bottom:12px;font-size:.97rem}
     .section ul,.section ol{color:var(--muted);padding-left:20px;display:grid;gap:6px;margin-bottom:12px;font-size:.97rem}
     .section li{padding-left:4px}
+    .section code{background:rgba(255,255,255,.06);padding:1px 6px;border-radius:6px;font-size:.88em;color:#dff9ff}
+    .prefs-btn{min-height:44px;padding:9px 22px;border-radius:999px;border:1px solid rgba(103,232,255,.6);background:rgba(255,255,255,.06);color:#dff9ff;font:inherit;font-size:.9rem;font-weight:800;cursor:pointer}
+    .prefs-btn:focus-visible{outline:2px solid #67e8ff;outline-offset:2px}
     .highlight{border:1px solid rgba(103,232,255,.20);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:16px 0}
     .highlight p{margin:0;color:#c8e8ff}
     .contact-box{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:18px;padding:22px 26px;margin-top:16px}
@@ -86,7 +89,7 @@
       <div class="kicker">Transparência & LGPD</div>
       <h1>Política de Privacidade</h1>
       <p style="color:var(--muted);font-size:1rem;margin-top:10px">Esta política descreve como a <strong style="color:#dff9ff">Oryxon Systems</strong> coleta, usa, armazena e protege seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
-      <p class="last-update">Última atualização: maio de 2026</p>
+      <p class="last-update">Última atualização: outubro de 2026</p>
     </div>
 
     <!-- Índice -->
@@ -138,7 +141,7 @@
         <li>Endereço IP e localização aproximada</li>
         <li>Tipo de dispositivo, navegador e sistema operacional</li>
         <li>Páginas visitadas, tempo de permanência e origem do acesso</li>
-        <li>Dados de cookies e tecnologias similares</li>
+        <li>Dados de cookies e tecnologias similares (cookies de análise apenas mediante consentimento — ver seção 7)</li>
       </ul>
       <div class="highlight">
         <p>⚠️ Não coletamos dados sensíveis como informações de saúde, origem racial, convicções religiosas ou dados biométricos.</p>
@@ -200,13 +203,17 @@
 
     <!-- 7 -->
     <div class="section" id="cookies">
-      <h2>7. Cookies</h2>
-      <p>Nosso site pode utilizar cookies e tecnologias similares para melhorar sua experiência de navegação e analisar o desempenho do site. Os tipos de cookies utilizados incluem:</p>
-      <ul>
-        <li><strong style="color:#dff9ff">Cookies essenciais:</strong> necessários para o funcionamento básico do site</li>
-        <li><strong style="color:#dff9ff">Cookies analíticos:</strong> coletam dados de navegação de forma anônima para melhorar nosso site (ex: Google Analytics)</li>
-      </ul>
-      <p>Você pode configurar seu navegador para recusar cookies. No entanto, isso pode afetar algumas funcionalidades do site. Para mais informações, consulte as configurações de privacidade do seu navegador.</p>
+      <h2>7. Cookies e armazenamento local</h2>
+      <p>Usamos apenas o que é necessário para o site funcionar e, somente com a sua autorização, uma ferramenta de análise de audiência.</p>
+      <h3>Armazenamento essencial</h3>
+      <p>Guardamos no seu navegador (localStorage) a chave <code>oryxon_consent</code>, que registra a sua escolha sobre cookies, a versão do aviso e a data e hora em que a escolha foi feita. Essa informação fica apenas no seu dispositivo e não é enviada a terceiros. A chave anterior, <code>oryxon_cookies</code>, foi descontinuada e é removida do seu navegador.</p>
+      <h3>Cookies de análise (Google Analytics 4)</h3>
+      <p>Com a sua autorização, usamos o Google Analytics 4 (cookies <code>_ga</code> e <code>_ga_*</code>) para fins estatísticos: entender como o site é usado e melhorá-lo. O serviço é operado pelo Google, o que pode envolver transferência internacional de dados. A base legal desse tratamento é o seu consentimento (LGPD, art. 7º, I).</p>
+      <p>Antes do seu aceite, o Google Analytics não é carregado e nenhuma requisição é feita aos servidores do Google. Nas páginas desta Política e dos Termos de Uso, o Google Analytics nunca é carregado. No Google Analytics, os dados de eventos associados a cookies ou identificadores ficam retidos por 2 meses, e os dados no nível do usuário por 14 meses. O prazo do nível do usuário é renovado a cada nova visita ao site. Relatórios agregados, que não identificam visitantes, não estão sujeitos a esses prazos.</p>
+      <h3>Como alterar a sua escolha</h3>
+      <p>Você pode mudar de ideia a qualquer momento, em “Preferências de cookies”, no rodapé de qualquer página, ou pelo botão abaixo. Ao recusar, o Google Analytics deixa de ser carregado e os cookies de análise são apagados.</p>
+      <p><button type="button" class="prefs-btn" data-cookie-prefs>Alterar minhas preferências de cookies</button></p>
+      <p>Você também pode configurar o seu navegador para bloquear cookies; isso pode afetar algumas funcionalidades do site.</p>
     </div>
 
     <!-- 8 -->
