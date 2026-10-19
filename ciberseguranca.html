@@ -128,6 +128,9 @@
     }
     @keyframes vt-out{to{opacity:0}}
     @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    /* MOB-01 */
+    .split-grid{display:grid;grid-template-columns:1fr 1fr}
+    @media(max-width:900px){.split-grid{grid-template-columns:minmax(0,1fr)}}
   </style>
 </head>
 <body>
@@ -173,7 +176,7 @@
     <!-- SERVIÇOS DE CIBERSEGURANÇA -->
     <section style="border-top:1px solid rgba(103,232,255,.08);padding:52px 0">
       <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center" class="reveal">
+        <div class="split-grid reveal" style="gap:36px;align-items:center">
           <div>
             <div class="kicker" style="margin-bottom:10px">Filosofia de segurança</div>
             <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.05em;margin-bottom:14px">Segurança não é camada adicional.<br>É o centro de cada serviço.</h2>

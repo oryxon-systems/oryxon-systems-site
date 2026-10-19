@@ -127,6 +127,9 @@
     }
     @keyframes vt-out{to{opacity:0}}
     @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    /* MOB-01 */
+    .split-grid{display:grid;grid-template-columns:1fr 1fr}
+    @media(max-width:600px){.split-grid{grid-template-columns:minmax(0,1fr)}}
   </style>
 </head>
 <body>
@@ -419,7 +422,7 @@
           <h2>Parte do ecossistema empresarial do Alto Tietê.</h2>
           <p class="muted">A Oryxon Systems é membro ativo de associações locais — porque acreditamos que fazer parte da comunidade empresarial da região é parte do nosso compromisso com os clientes.</p>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px" class="reveal">
+        <div class="split-grid reveal" style="gap:18px;max-width:720px">
 
           <!-- ACE Suzano -->
           <a href="https://www.acesuzano.com.br/redededescontos:categoria=42" target="_blank" rel="noopener" style="border:1px solid rgba(0,140,70,.28);background:rgba(0,140,70,.05);border-radius:24px;padding:24px;text-decoration:none;transition:.22s;display:flex;flex-direction:column;gap:12px" onmouseover="this.style.borderColor='rgba(0,140,70,.55)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(0,140,70,.28)';this.style.transform=''">
