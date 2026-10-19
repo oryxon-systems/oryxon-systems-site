@@ -1,0 +1,18 @@
+/* consent.v1.css — banner de cookies e link "Preferências de cookies". Imutável (cache 1 ano): mudanças = consent.v2.css. */
+.oc-banner{position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(2,7,19,.96);border-top:1px solid rgba(103,232,255,.18);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);padding:16px 24px;transform:translateY(100%);opacity:0;transition:transform .4s ease,opacity .4s ease;font-family:Inter,system-ui,sans-serif}
+.oc-banner[hidden]{display:none}
+.oc-banner.oc-visible{transform:translateY(0);opacity:1}
+.oc-inner{width:min(1180px,calc(100% - 40px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.oc-text{flex:1;min-width:240px;color:#a9bad1;font-size:.86rem;line-height:1.6}
+.oc-text strong{display:block;color:#dff9ff;font-size:.92rem;margin-bottom:2px}
+.oc-text p{margin:0}
+.oc-text a{color:#67e8ff;font-weight:700}
+.oc-actions{display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap}
+.oc-btn{min-height:44px;min-width:120px;padding:9px 22px;border-radius:999px;border:1px solid rgba(103,232,255,.6);background:rgba(255,255,255,.06);color:#dff9ff;font:inherit;font-size:.86rem;font-weight:800;cursor:pointer}
+.oc-btn-primary{border-color:transparent;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224}
+.oc-btn:focus-visible,.oc-prefs-btn:focus-visible,.oc-text a:focus-visible{outline:2px solid #67e8ff;outline-offset:2px}
+.oc-prefs{margin:14px auto 0;text-align:center}
+.oc-prefs-btn{background:none;border:0;padding:6px 8px;color:#a9bad1;font:inherit;font-size:.8rem;text-decoration:underline;cursor:pointer}
+.oc-prefs-btn:hover{color:#fff}
+@media(max-width:600px){.oc-banner{padding:16px}.oc-inner{width:100%}.oc-actions{flex-shrink:1;width:100%}.oc-btn{flex:1 1 140px}}
+@media (prefers-reduced-motion: reduce){.oc-banner{transition:none}}
