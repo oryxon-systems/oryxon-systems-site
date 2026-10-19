@@ -12,6 +12,94 @@
   <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html"/>
   <meta property="og:type" content="article"/>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html#webpage",
+        "url": "https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html",
+        "name": "Tendências TI/MSP: o que está mudando em 2026 | Oryxon Systems",
+        "description": "As principais tendências em gestão de TI e MSP para 2026: IA aplicada à infraestrutura, segurança como prioridade número um, automação e o fim do suporte puramente reativo. Veja o que muda para PMEs do Alto Tietê.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html#article"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html#article",
+        "headline": "Tendências TI/MSP: o que está mudando",
+        "description": "As principais tendências em gestão de TI e MSP para 2026: IA aplicada à infraestrutura, segurança como prioridade número um, automação e o fim do suporte puramente reativo. Veja o que muda para PMEs do Alto Tietê.",
+        "inLanguage": "pt-BR",
+        "datePublished": "2026-06-14",
+        "dateModified": "2026-06-14",
+        "author": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html#webpage"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.oryxonsystems.com.br/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tendências TI/MSP",
+            "item": "https://www.oryxonsystems.com.br/blog/tendencias-ti-msp-2026.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--prose:720px}
@@ -103,6 +191,14 @@
     }
     @keyframes vt-out{to{opacity:0}}
     @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    /* SEO-03 */
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:#dff9ff}
+    .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .crumb-wrap+.article-wrap{padding-top:28px}
   </style>
 </head>
 <body>
@@ -119,6 +215,7 @@
     </div>
   </header>
   <main>
+    <div class="crumb-wrap"><nav class="breadcrumb" aria-label="breadcrumb"><ol><li><a href="/">Início</a></li><li><a href="/blog.html">Blog</a></li><li aria-current="page">Tendências TI/MSP</li></ol></nav></div>
     <div class="article-wrap">
 
       <article class="article-main">

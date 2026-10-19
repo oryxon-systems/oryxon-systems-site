@@ -12,7 +12,92 @@
   <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
   <script src="/assets/js/consent.v1.js" defer></script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"CISA está mudando a forma de priorizar vulnerabilidades: por que a PME deve olhar exploração e exposição, não apenas CVSS","description":"Em 10 de junho de 2026, a CISA publicou a BOD 26-04 e revogou a diretiva que exigia CVSS na priorização de correções. Veja o que é o SSVC e o que muda para a PME.","datePublished":"2026-09-21","dateModified":"2026-09-21","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena","addressLocality":"Poá","addressRegion":"SP","postalCode":"08553-520","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html#webpage",
+        "url": "https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html",
+        "name": "CISA está mudando a forma de priorizar vulnerabilidades: por que a PME deve olhar exploração e exposição, não apenas CVSS | Oryxon Systems",
+        "description": "Em 10 de junho de 2026, a CISA revogou a diretiva que exigia CVSS na priorização de correções. Entenda o SSVC, a ressalva sobre ser norma americana e um checklist para a PME.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html#article"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html#article",
+        "headline": "CISA está mudando a forma de priorizar vulnerabilidades: por que a PME deve olhar exploração e exposição, não apenas CVSS",
+        "description": "Em 10 de junho de 2026, a CISA revogou a diretiva que exigia CVSS na priorização de correções. Entenda o SSVC, a ressalva sobre ser norma americana e um checklist para a PME.",
+        "inLanguage": "pt-BR",
+        "datePublished": "2026-09-21",
+        "dateModified": "2026-09-21",
+        "author": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html#webpage"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.oryxonsystems.com.br/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "CISA e a priorização de vulnerabilidades",
+            "item": "https://www.oryxonsystems.com.br/blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html"
+          }
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
   <style>
@@ -117,6 +202,14 @@
     }
     @keyframes vt-out{to{opacity:0}}
     @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    /* SEO-03 */
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:#dff9ff}
+    .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .crumb-wrap+.article-wrap{padding-top:28px}
   </style>
 </head>
 <body>
@@ -128,6 +221,7 @@
     </div>
   </header>
   <main>
+    <div class="crumb-wrap"><nav class="breadcrumb" aria-label="breadcrumb"><ol><li><a href="/">Início</a></li><li><a href="/blog.html">Blog</a></li><li aria-current="page">CISA e a priorização de vulnerabilidades</li></ol></nav></div>
     <div class="article-wrap">
       <article class="article-main">
         <header class="article-header">

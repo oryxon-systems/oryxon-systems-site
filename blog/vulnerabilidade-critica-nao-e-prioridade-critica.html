@@ -12,7 +12,92 @@
   <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
   <script src="/assets/js/consent.v1.js" defer></script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Vulnerabilidade crítica não é a mesma coisa que prioridade crítica: o que uma PME deve corrigir primeiro","description":"Menos de 6% das CVEs chegam a ser exploradas na prática. Veja a diferença entre CVSS e EPSS, um exemplo real de agosto de 2026, e o que uma PME deve corrigir primeiro.","datePublished":"2026-09-02","dateModified":"2026-09-02","author":{"@type":"Person","name":"Uedson Azevedo","jobTitle":"CEO & Head de Infraestrutura de TI"},"publisher":{"@type":"Organization","name":"Oryxon Systems","address":{"@type":"PostalAddress","streetAddress":"Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena","addressLocality":"Poá","addressRegion":"SP","postalCode":"08553-520","addressCountry":"BR"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html#webpage",
+        "url": "https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html",
+        "name": "Vulnerabilidade crítica não é a mesma coisa que prioridade crítica | Oryxon Systems",
+        "description": "Menos de 6% das CVEs chegam a ser exploradas na prática. Veja a diferença entre CVSS e EPSS, um exemplo real de agosto de 2026, e o que uma PME deve corrigir primeiro.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html#article"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html#article",
+        "headline": "Vulnerabilidade crítica não é a mesma coisa que prioridade crítica: o que uma PME deve corrigir primeiro",
+        "description": "Menos de 6% das CVEs chegam a ser exploradas na prática. Veja a diferença entre CVSS e EPSS, um exemplo real de agosto de 2026, e o que uma PME deve corrigir primeiro.",
+        "inLanguage": "pt-BR",
+        "datePublished": "2026-09-02",
+        "dateModified": "2026-09-02",
+        "author": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html#webpage"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.oryxonsystems.com.br/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Vulnerabilidade crítica e prioridade",
+            "item": "https://www.oryxonsystems.com.br/blog/vulnerabilidade-critica-nao-e-prioridade-critica.html"
+          }
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
   <style>
@@ -117,6 +202,14 @@
     }
     @keyframes vt-out{to{opacity:0}}
     @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    /* SEO-03 */
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:#dff9ff}
+    .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .crumb-wrap+.article-wrap{padding-top:28px}
   </style>
 </head>
 <body>
@@ -128,6 +221,7 @@
     </div>
   </header>
   <main>
+    <div class="crumb-wrap"><nav class="breadcrumb" aria-label="breadcrumb"><ol><li><a href="/">Início</a></li><li><a href="/blog.html">Blog</a></li><li aria-current="page">Vulnerabilidade crítica e prioridade</li></ol></nav></div>
     <div class="article-wrap">
       <article class="article-main">
         <header class="article-header">

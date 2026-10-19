@@ -10,6 +10,94 @@
   <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html"/>
   <meta property="og:type" content="article"/>
   <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html#webpage",
+        "url": "https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html",
+        "name": "IA na Gestão de TI para PMEs em 2026: o que mudou e como começar | Oryxon Systems",
+        "description": "Mercado de TI brasileiro cresceu 18,5% em 2025. Só 7,9% das empresas usam IA de verdade. Veja o que a IA muda na gestão de TI e como PMEs do Alto Tietê podem começar agora.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html#article"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html#article",
+        "headline": "IA na gestão de TI para PMEs em 2026: o que mudou e como sua empresa pode começar agora",
+        "description": "Mercado de TI brasileiro cresceu 18,5% em 2025. Só 7,9% das empresas usam IA de verdade. Veja o que a IA muda na gestão de TI e como PMEs do Alto Tietê podem começar agora.",
+        "inLanguage": "pt-BR",
+        "datePublished": "2026-07-02",
+        "dateModified": "2026-07-02",
+        "author": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html#webpage"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.oryxonsystems.com.br/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IA na gestão de TI para PMEs",
+            "item": "https://www.oryxonsystems.com.br/blog/ia-gestao-ti-pme.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
   <style>
@@ -90,6 +178,14 @@
     }
     @keyframes vt-out{to{opacity:0}}
     @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    /* SEO-03 */
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:#dff9ff}
+    .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .crumb-wrap+.article-wrap{padding-top:28px}
   </style>
 </head>
 <body>
@@ -101,6 +197,7 @@
     </div>
   </header>
   <main>
+    <div class="crumb-wrap"><nav class="breadcrumb" aria-label="breadcrumb"><ol><li><a href="/">Início</a></li><li><a href="/blog.html">Blog</a></li><li aria-current="page">IA na gestão de TI para PMEs</li></ol></nav></div>
     <div class="article-wrap">
       <article class="article-main">
         <header class="article-header">
