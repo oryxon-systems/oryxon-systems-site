@@ -14,7 +14,81 @@
   <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
   <script src="/assets/js/consent.v1.js" data-track-leads="on" defer></script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Oryxon Systems","description":"Suporte de TI em Suzano. Gestão de TI proativa, backup, segurança e monitoramento 24x7.","url":"https://www.oryxonsystems.com.br/ti-suzano/","telephone":"+5511934932992","email":"contato@oryxonsystems.com.br","address":{"@type":"PostalAddress","streetAddress":"Rua Presidente Rodrigues Alves, 715 A - Jardim Santa Helena","addressLocality":"Poá","addressRegion":"SP","postalCode":"08553-520","addressCountry":"BR"},"areaServed":["Suzano", "Mogi das Cruzes", "Itaquaquecetuba", "Poá", "Ferraz de Vasconcelos", "Guararema", "Santa Isabel"],"sameAs":["https://www.linkedin.com/company/oryxon-systems"]}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/ti-suzano/#webpage",
+        "url": "https://www.oryxonsystems.com.br/ti-suzano/",
+        "name": "TI Gerenciada em Suzano | Suporte Local",
+        "description": "Empresas de Suzano com TI instável perdem produtividade todo dia. Atendimento local e gestão proativa.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "about": {
+          "@id": "https://www.oryxonsystems.com.br/ti-suzano/#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/ti-suzano/#breadcrumb"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.oryxonsystems.com.br/ti-suzano/#service",
+        "name": "TI gerenciada em Suzano",
+        "serviceType": "TI gerenciada",
+        "url": "https://www.oryxonsystems.com.br/ti-suzano/",
+        "description": "Gestão de TI proativa, backup, segurança e monitoramento 24x7 para empresas de Suzano.",
+        "provider": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Suzano",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "São Paulo"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/ti-suzano/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "TI em Suzano",
+            "item": "https://www.oryxonsystems.com.br/ti-suzano/"
+          }
+        ]
+      }
+    ]
+  }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
   <style>
@@ -115,6 +189,12 @@
     @media(max-width:900px){.why-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}}
     @media(max-width:600px){.form-grid{grid-template-columns:minmax(0,1fr)}.why-panel .btn{white-space:normal;text-align:center;height:auto;padding-top:10px;padding-bottom:10px}.nav .btn{width:auto;padding:0 12px;font-size:.78rem}.nav-right{gap:8px}}
     @media(max-width:360px){.back-link{display:none}}
+    /* SEO-03 */
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:#dff9ff}
   </style>
 </head>
 <body>
@@ -129,6 +209,7 @@
   </header>
 
   <main>
+    <div class="container"><nav class="breadcrumb" aria-label="breadcrumb"><ol><li><a href="/">Início</a></li><li aria-current="page">TI em Suzano</li></ol></nav></div>
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
