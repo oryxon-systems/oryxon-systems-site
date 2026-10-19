@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Agrupa páginas .html versionadas por variante exata de um bloco compartilhado.
-#   group.sh <header|footer|root> [rev]
+#   group.sh <header|footer|root|consent> [rev]
 #       tabela: grupo (sha256 do bloco com whitespace normalizado) -> nº de páginas -> arquivos.
 #       rev (opcional): lê os arquivos desse commit em vez da árvore de trabalho.
 #   group.sh --apply <bloco> <origem> <base> [arquivo...]
@@ -14,6 +14,7 @@ RX = {
   "header": r'<header class="nav-shell".*?</header>',
   "footer": r'<footer\b.*?</footer>',
   "root":   r':root\s*\{[^}]*\}',
+  "consent": r'<script src="/assets/js/consent\.v1\.js"[^>]*></script>',
 }
 def die(m): sys.exit(m)
 def read(f, rev=None):
@@ -34,7 +35,7 @@ def groups(b, rev=None):
 
 a = sys.argv[1:]
 if a and a[0] == "--apply":
-    if len(a) < 4 or a[1] not in RX: die("uso: group.sh --apply <header|footer|root> <origem> <base> [arquivo...]")
+    if len(a) < 4 or a[1] not in RX: die("uso: group.sh --apply <header|footer|root|consent> <origem> <base> [arquivo...]")
     b, src, base, targets = a[1], a[2], a[3], a[4:]
     old, new = block(read(src, base), b), block(read(src), b)
     if not old or not new: die(f"bloco {b} não encontrado em {src}")
@@ -52,7 +53,7 @@ if a and a[0] == "--apply":
     print(f"pulado (sem match exato) {len(skipped)}: " + " ".join(skipped))
     sys.exit(0)
 
-if not a or a[0] not in RX: die("uso: group.sh <header|footer|root> [rev]")
+if not a or a[0] not in RX: die("uso: group.sh <header|footer|root|consent> [rev]")
 g, none = groups(a[0], a[1] if len(a) > 1 else None)
 print(f"bloco: {a[0]}   variantes: {len(g)}   páginas sem o bloco: {len(none)}")
 print(f"{'GRUPO':<12}{'PÁGINAS':<9}ARQUIVOS")
