@@ -23,15 +23,35 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Oryxon Systems",
-    "url": "https://www.oryxonsystems.com.br",
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "technical support",
-      "email": "suporte@oryxonsystems.com.br",
-      "url": "https://suporte.oryxonsystems.com.br/"
-    }]
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/suporte/#webpage",
+        "url": "https://www.oryxonsystems.com.br/suporte/",
+        "name": "Central de Suporte | Abra um Chamado | Oryxon Systems",
+        "description": "Abra um chamado pelo Portal de Suporte ou por e-mail. Atendimento com registro, histórico e rastreabilidade para clientes Oryxon Systems.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR"
+      }
+    ]
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
