@@ -51,7 +51,8 @@
 - Ferraz de Vasconcelos
 - Guararema
 - Santa Isabel
-- Atendimento remoto em todo o estado de São Paulo
+- Guarulhos (fora do Alto Tietê)
+- Atendimento remoto para empresas fora dessas cidades
 
 ## Parceiros
 
