@@ -195,6 +195,9 @@
     .breadcrumb li+li:before{content:"›";margin-right:8px}
     .breadcrumb a{color:var(--muted)}
     .breadcrumb [aria-current]{color:#dff9ff}
+    /* SEO-02 */
+    a.city-card{display:block;color:inherit;text-decoration:none}
+    a.city-card:hover{border-color:rgba(103,232,255,.4);background:rgba(0,183,255,.08)}
   </style>
 </head>
 <body>
@@ -249,11 +252,12 @@
         <div class="services-grid">
           <div class="svc-card"><div class="svc-icon">📡</div><h3>Monitoramento 24x7</h3><p>Supervisão contínua de endpoints, servidores e redes em Suzano. Problemas identificados antes de impactar sua operação.</p></div>
           <div class="svc-card"><div class="svc-icon">💾</div><h3>Backup Gerenciado</h3><p>Estratégia de backup com validação periódica e plano de recuperação. Seus dados protegidos mesmo contra ransomware.</p></div>
-          <div class="svc-card"><div class="svc-icon">🛡️</div><h3>Segurança da Informação</h3><p>Antivírus Bitdefender, firewall, hardening e vulnerability assessment para proteger o ambiente da sua empresa em Suzano.</p></div>
+          <div class="svc-card"><div class="svc-icon">🛡️</div><h3>Segurança da Informação</h3><p>Antivírus Bitdefender, firewall, hardening e vulnerability assessment para proteger o ambiente da sua empresa em Suzano. Veja também <a href="/ciberseguranca.html" style="text-decoration:underline">cibersegurança para empresas do Alto Tietê</a>.</p></div>
           <div class="svc-card"><div class="svc-icon">⚙️</div><h3>Automação de TI</h3><p>Scripts e rotinas automatizadas com Ansible e Python para padronizar e escalar sua infraestrutura.</p></div>
           <div class="svc-card"><div class="svc-icon">🌐</div><h3>Redes Corporativas</h3><p>Projeto, implantação e gestão de redes Wi-Fi e cabeadas com equipamentos enterprise (Ubiquiti, Cisco).</p></div>
           <div class="svc-card"><div class="svc-icon">🏢</div><h3>Outsourcing de TI</h3><p>Terceirize a TI da sua empresa em Suzano com custo fixo mensal previsível. Sem contratar equipe interna.</p></div>
         </div>
+        <p style="color:var(--muted);font-size:.92rem;margin-top:22px">Leitura complementar: <a href="/blog/gestao-de-ti-suzano.html" style="text-decoration:underline">Gestão de TI para indústrias e comércio em Suzano</a>.</p>
       </div>
     </section>
 
@@ -291,10 +295,10 @@
         </div>
         <div class="coverage-grid">
           <div class="city-card active"><div class="icon">📍</div><h4>Suzano</h4><span>Atendimento ativo</span></div>
-          <div class="city-card "><div class="icon">📍</div><h4>Mogi das Cruzes</h4><span>Atendimento ativo</span></div>
-          <div class="city-card "><div class="icon">📍</div><h4>Itaquaquecetuba</h4><span>Atendimento ativo</span></div>
-          <div class="city-card "><div class="icon">📍</div><h4>Poá</h4><span>Sede</span></div>
-          <div class="city-card "><div class="icon">📍</div><h4>Ferraz de Vasconcelos</h4><span>Atendimento ativo</span></div>
+          <a class="city-card" href="/ti-mogi-das-cruzes/"><div class="icon">📍</div><h4>Mogi das Cruzes</h4><span>Atendimento ativo</span></a>
+          <a class="city-card" href="/ti-itaquaquecetuba/"><div class="icon">📍</div><h4>Itaquaquecetuba</h4><span>Atendimento ativo</span></a>
+          <a class="city-card" href="/ti-poa/"><div class="icon">📍</div><h4>Poá</h4><span>Sede</span></a>
+          <a class="city-card" href="/ti-ferraz-de-vasconcelos/"><div class="icon">📍</div><h4>Ferraz de Vasconcelos</h4><span>Atendimento ativo</span></a>
           <div class="city-card "><div class="icon">📍</div><h4>Guararema</h4><span>Atendimento ativo</span></div>
           <div class="city-card "><div class="icon">📍</div><h4>Santa Isabel</h4><span>Atendimento ativo</span></div>
           <div class="city-card"><div class="icon">🌐</div><h4>Remoto</h4><span>Atendimento remoto para empresas de outras cidades</span></div>
