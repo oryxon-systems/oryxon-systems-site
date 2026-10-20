@@ -8,7 +8,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 ## Em andamento
 
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
-- [ ] 2026-10-20 — Fase 1 tokens (`tokens.v2.css`): `index.html` e as 8 páginas da raiz migradas e commitadas; lote `ti-*/` (6) migrado em 2026-10-20, aguardando revisão. Lote `blog/` (30 posts) migrado em 2026-10-20, aguardando revisão. Lote final (`cases/`, `suporte/`, `auditoria-apps-ia/`) migrado em 2026-10-20, aguardando revisão. **Fase 1 completa: todas as páginas em `tokens.v2.css`.** Pendentes — `assets/css/tokens.v2.css`
+- [x] 2026-10-20 — **Fase 1 encerrada** (`tokens.v2.css` em todas as páginas; `.cta-band` e `.cta-article` com parágrafo à esquerda; contraste WhatsApp conferido), aguardando revisão/commit. Medição antes/depois: adendo em `/media/uedson/storage/Projetos/oryxon-auditorias/vibe-coding-audit-2026-10-20.md` (fora do repo) — `assets/css/tokens.v2.css`
+- [ ] 2026-10-20 — Próximas fases, em ordem: (1) Fase 0 — Command Center / 99,9% / `.orb-*` / `.dash-*`; (2) Fase 1b — cores e inline; (3) Fase 2 — emojis; (4) `.valor-tab` — `index.html`, `sobre.html`
 - [ ] 2026-10-20 — Fase 2 (emojis): os ~354 emojis de UI AINDA estão no site (29 arquivos); a exceção `.post-thumb` é a regra-alvo, não o estado atual. Depende de fechar o ADR-004 — vários
 
 ## Backlog
@@ -43,7 +44,6 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — Prompt pedia Tabler Icons (`ti ti-*`); a página não usa ícones (o repositório não tem Tabler, ver ADR-004) — `auditoria-apps-ia/index.html`
 - [ ] 2026-10-20 — `ti-*/`: o `.city-card` local (grade de cobertura) difere do `.city-card` da home; unificar exige decisão (tokens.v3). Box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
 - [ ] 2026-10-20 — `blog/`: links "Leia também" em alguns posts são `<a style="">` inline (cards, não botões), sem hover; padronizar exige classe `.related a` (Fase 1b). Card laranja da calculadora em `terceirizacao-de-ti.html` (`#ff6b35`, `rgba(255,80,0,.06)`) segue fora da paleta — decidir se vira callout padrão — `blog/*.html`
-- [ ] 2026-10-20 — Fase 3: `.cta-article` (parágrafo à esquerda, `max-width:60ch`) feito em `blog/`; falta `.cta-band` (ti-*, raiz) — `ti-*/index.html`
 - [ ] 2026-10-20 — `suporte/index.html`: `.btn-wa` mudou de gradiente verde (`#3ee08a→#17b866`) para sólido `#25D366` (cor do WhatsApp já documentada); confirmar — `suporte/index.html`
 
 ## Concluído
