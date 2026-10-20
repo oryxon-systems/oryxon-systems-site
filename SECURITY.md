@@ -9,7 +9,7 @@ Aplicados a todas as rotas: `X-Content-Type-Options: nosniff`; `X-Frame-Options:
 
 ## CSP
 
-**Status: Report-Only** (introduzida no commit `f0195e4`). Ativação em modo enforce pendente de validação de console e GA4 (TASK.md). Política atual: `default-src 'self'`; scripts `'self'`, `'unsafe-inline'` e `googletagmanager.com`; estilos `'self'` e `'unsafe-inline'`; fontes `'self'`; imagens e conexões `'self'` + domínios Google Analytics/Tag Manager; `frame-ancestors 'none'`; `object-src 'none'`; `base-uri 'self'`; `form-action 'self'`; `upgrade-insecure-requests`. Valor exato em `vercel.json`.
+**Status: enforce** (header `Content-Security-Policy`; nasceu em Report-Only no commit `f0195e4`). Diretivas: `default-src 'self'`; `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com`; `style-src 'self' 'unsafe-inline'`; `font-src 'self'`; `img-src 'self' data:` + domínios Google Analytics/Tag Manager; `connect-src 'self'` + domínios Google Analytics/Tag Manager; `frame-ancestors 'none'`; `object-src 'none'`; `base-uri 'self'`; `form-action 'self'`; `upgrade-insecure-requests`. O `'unsafe-inline'` é temporário (ADR-011): sem proteção contra XSS inline até ser removido. Valor exato em `vercel.json`.
 
 ## Recursos de terceiros
 
@@ -30,7 +30,7 @@ Aplicados a todas as rotas: `X-Content-Type-Options: nosniff`; `X-Frame-Options:
 - [ ] Nenhum segredo, token, ID de projeto ou relatório de auditoria no diff.
 - [ ] `.gitignore`/`.vercelignore` cobrem `.env*`, `.vercel`, `audit-output/`, `RELATORIO-SEGURANCA*.md`.
 - [ ] Nenhum script de terceiro novo fora do `consent.v1.js`.
-- [ ] Console sem erros e sem violações de CSP relevantes (Report-Only).
+- [ ] Console sem erros e sem violações de CSP (enforce).
 - [ ] `generate_lead` só dispara após aceite.
 - [ ] Links externos com `rel="noopener"`.
 - [ ] `sitemap.xml` e `llms.txt` coerentes com as mudanças.

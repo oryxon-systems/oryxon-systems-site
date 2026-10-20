@@ -11,7 +11,6 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Backlog
 
-- [ ] 2026-10-19 — Ativar CSP em modo enforce após validar console e GA4 — `vercel.json`
 - [ ] 2026-10-19 — Ferramenta de autoavaliação de risco em `/avaliacao-de-risco/` (lead magnet → WhatsApp); a pasta não existe — nova página, `sitemap.xml`
 - [ ] 2026-10-19 — Depoimentos com nome/cargo/empresa — `index.html`
 - [ ] 2026-10-19 — Barra de logos de parceiros formalizada — `index.html`
@@ -32,9 +31,13 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-19 — Schema.org usa `contato@oryxonsystems.com.br` além de `suporte@`; confirmar que ambos são válidos — `index.html`
 - [ ] 2026-10-19 — Métricas de sucesso e prazo de resposta a reporte de vulnerabilidade não definidos — `PRD.md`, `SECURITY.md`
 - [ ] 2026-10-19 — Datas dos ADR-002, 003, 007 não localizáveis no git
+- [ ] 2026-10-19 — Cache imutável (1 ano) em arquivos SEM versão no nome: `assets/fonts/inter.css`, `assets/fonts/inter-var.woff2`, `og-image.jpg`, `assets/*.webp` (logos, avatar). Trocar o conteúdo não chega a quem já tem cache — regex de cache em `vercel.json` (`/(.*)\.(js|css|webp|woff2|jpg|jpeg|png|svg)`); recomendação: renomear com versão (`inter.v1.css` etc.) ou limitar a regra a `*.v[0-9]*.*`
+- [ ] 2026-10-19 — Remover `'unsafe-inline'` da CSP (etapa 3): `'unsafe-inline'` em `script-src` e `style-src` é obrigatório hoje (index.html: 190 `style=""`, 10 handlers `onsubmit=`/`onclick=`, JS inline na linha 688 e `<style>` inline). Nada é bloqueado com a política atual, mas ela não protege contra XSS; remover `'unsafe-inline'` exigiria mover tudo para arquivos e usar listeners — `vercel.json`, `index.html`
 
 ## Concluído
 
+- [x] 2026-10-19 — CSP ativada em enforce com `'unsafe-inline'` temporário (ADR-011); validar pós-deploy — `vercel.json`, `SECURITY.md`, `DECISIONS.md`
+- [x] 2026-10-19 — Verificação de cache e de CSS injetado pelo `consent.v1.js`: CSS externo via `<link>` (linhas 121-124), sem `style=`/`<style>`/eval/handlers inline no arquivo; nada bloqueado pela CSP atual em enforce — `assets/js/consent.v1.js`, `vercel.json`
 - [x] 2026-10-19 — CLAUDE.md: corrigidas afirmações desatualizadas (assets compartilhados, sede em Poá, `diagnostico/`, handlers de lead, Schema, Guarulhos) — `CLAUDE.md`, `ARCHITECTURE.md`
 - [x] 2026-10-19 — Docs de projeto da raiz adicionados ao `.vercelignore` (ADR-010) — `.vercelignore`, `ARCHITECTURE.md`, `DECISIONS.md`
 - [x] 2026-10-19 — SEO-02: links do pilar, ti-*, home e posts (lotes A, B, C) — `4fc3d81`, `214ae64`, `7b0003d`

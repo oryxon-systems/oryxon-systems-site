@@ -56,3 +56,8 @@ Consequências: persistem sublabels "Categoria · X" em alguns posts (TASK.md).
 Contexto: o repositório tem docs de projeto na raiz (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS) que, sem exclusão, seriam servidos pela Vercel (ex.: `/TASK.md`).
 Decisão: docs de projeto fora do deploy; entradas `/PRD.md`, `/ARCHITECTURE.md`, `/RULES.md`, `/DESIGN.md`, `/TASK.md`, `/SECURITY.md`, `/DECISIONS.md`, `/CLAUDE.md` e `/README.md` no `.vercelignore`. Alternativa descartada: publicar os docs.
 Consequências: documentos ficam só no repositório; todo novo doc de projeto na raiz precisa entrar no `.vercelignore`.
+
+**ADR-011 | 2026-10-19 | Aceito**
+Contexto: a CSP estava em Report-Only desde `f0195e4`; o site não carrega recurso externo além do GA4 (via `consent.v1.js`) e nenhum `<form>` tem `action`.
+Decisão: CSP em enforce (`Content-Security-Policy`) mantendo `'unsafe-inline'` em `script-src` e `style-src` por ora. Alternativa descartada: aguardar a remoção do `'unsafe-inline'` (exige mover todo CSS/JS inline para arquivos).
+Consequências: proteção de origem (scripts, estilos, fontes, imagens, frames, `object`, `base`, `form-action`) ativa agora, mas sem proteção contra XSS inline até a etapa 3 (TASK.md).
