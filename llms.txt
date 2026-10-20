@@ -70,6 +70,7 @@
 - Sobre nós: https://www.oryxonsystems.com.br/sobre.html
 - Managed Services: https://www.oryxonsystems.com.br/managed-services.html
 - Soluções: https://www.oryxonsystems.com.br/solucoes.html
+- Auditoria de Apps Criados com IA: https://www.oryxonsystems.com.br/auditoria-apps-ia/
 - Blog: https://www.oryxonsystems.com.br/blog.html
 - Diagnóstico gratuito: https://www.oryxonsystems.com.br/#diagnostico
 - Política de Privacidade: https://www.oryxonsystems.com.br/privacidade.html

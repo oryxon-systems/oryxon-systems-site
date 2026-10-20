@@ -16,6 +16,11 @@
       "permanent": true
     },
     {
+      "source": "/auditoria-apps-ia",
+      "destination": "/auditoria-apps-ia/",
+      "permanent": true
+    },
+    {
       "source": "/ti-ferraz-de-vasconcelos",
       "destination": "/ti-ferraz-de-vasconcelos/",
       "permanent": true

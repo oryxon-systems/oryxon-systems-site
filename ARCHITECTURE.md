@@ -7,7 +7,7 @@ Propósito: descrever a stack, a estrutura de arquivos, as integrações e o flu
 
 HTML/CSS/JS estáticos, sem build e sem gerenciador de pacotes. CSS e JS de cada página ficam inline (`<style>` no `<head>`, `<script>` no fim do `<body>`); não há templating nem includes. Hospedagem na Vercel com Git Integration na branch `main`. Repositório: `oryxon-systems/oryxon-systems-site` (público).
 
-Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA4; 47 páginas; injeta `css/consent.v1.css` sozinho), `js/hero-network.v1.js` (rede animada do hero; só `index.html`), `fonts/inter.css` + `inter-var.woff2` (Inter; 47 páginas). Arquivos `*.v1.*` são imutáveis (cache de 1 ano); mudança = novo `v2` e troca em todas as páginas que o carregam (ver RULES.md).
+Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA4; 48 páginas; injeta `css/consent.v1.css` sozinho), `js/hero-network.v1.js` (rede animada do hero; só `index.html`), `fonts/inter.css` + `inter-var.woff2` (Inter; 48 páginas). Arquivos `*.v1.*` são imutáveis (cache de 1 ano); mudança = novo `v2` e troca em todas as páginas que o carregam (ver RULES.md).
 
 ## Árvore de diretórios (versionada)
 
@@ -17,6 +17,7 @@ Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA
 blog/                  30 posts
 cases/gregtur.html     case
 suporte/index.html     central de suporte
+auditoria-apps-ia/     serviço Auditoria de Apps Criados com IA (index.html)
 ti-<cidade>/index.html suzano, mogi-das-cruzes, guarulhos, itaquaquecetuba, poa,
                        ferraz-de-vasconcelos
 assets/                css/, js/, fonts/, logos .webp, avatar .webp
@@ -30,7 +31,7 @@ Excluídos do deploy (`.vercelignore`): os mesmos mais `.claude/`, `CLAUDE.md`, 
 
 ## Mapa de páginas
 
-O sitemap lista 47 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 30 posts, 6 cidades, case, suporte. `/diagnostico` e `/diagnostico/` redirecionam (301/308) para `/#diagnostico` (não há pasta `diagnostico/`). Pastas `ti-*` e `suporte` sem barra final redirecionam para a versão com barra.
+O sitemap lista 48 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 30 posts, 6 cidades, case, suporte, `auditoria-apps-ia/` (serviço, programa piloto). `/diagnostico` e `/diagnostico/` redirecionam (301/308) para `/#diagnostico` (não há pasta `diagnostico/`). Pastas `ti-*` e `suporte` sem barra final redirecionam para a versão com barra.
 
 ## Assets
 

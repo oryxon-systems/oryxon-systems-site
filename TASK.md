@@ -33,9 +33,15 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-19 — Datas dos ADR-002, 003, 007 não localizáveis no git
 - [ ] 2026-10-19 — Cache imutável (1 ano) em arquivos SEM versão no nome: `assets/fonts/inter.css`, `assets/fonts/inter-var.woff2`, `og-image.jpg`, `assets/*.webp` (logos, avatar). Trocar o conteúdo não chega a quem já tem cache — regex de cache em `vercel.json` (`/(.*)\.(js|css|webp|woff2|jpg|jpeg|png|svg)`); recomendação: renomear com versão (`inter.v1.css` etc.) ou limitar a regra a `*.v[0-9]*.*`
 - [ ] 2026-10-19 — Remover `'unsafe-inline'` da CSP (etapa 3): `'unsafe-inline'` em `script-src` e `style-src` é obrigatório hoje (index.html: 190 `style=""`, 10 handlers `onsubmit=`/`onclick=`, JS inline na linha 688 e `<style>` inline). Nada é bloqueado com a política atual, mas ela não protege contra XSS; remover `'unsafe-inline'` exigiria mover tudo para arquivos e usar listeners — `vercel.json`, `index.html`
+- [ ] 2026-10-20 — Definir os preços de Raio-X, Auditoria de Aplicação e Revalidação (a página diz "valor definido após triagem de escopo"; sem marcadores no HTML) — `auditoria-apps-ia/index.html`
+- [ ] 2026-10-20 — Auditoria de apps IA: validar com o Uedson o escopo comercial (programa piloto, prazos, revisão de código mediante acesso ao repositório) antes de publicar — `auditoria-apps-ia/index.html`
+- [ ] 2026-10-20 — Título da nova página sem "Alto Tietê" (limite de 60 caracteres: com a região daria 61); região está no H1, meta description e Schema — `auditoria-apps-ia/index.html`
+- [ ] 2026-10-20 — Prompt pedia Tabler Icons (`ti ti-*`); a página não usa ícones (o repositório não tem Tabler, ver ADR-004) — `auditoria-apps-ia/index.html`
 
 ## Concluído
 
+- [x] 2026-10-20 — Ajustes da página de auditoria: redirect sem barra, `llms.txt`, mapa de 48 URLs, comentário do `consent.v1.js` (47→48, só comentário), Arujá removida do Schema (decisão pendente do Uedson: incluir no território?) — `vercel.json`, `llms.txt`, `ARCHITECTURE.md`, `assets/js/consent.v1.js`, `auditoria-apps-ia/index.html`
+- [x] 2026-10-20 — Página /auditoria-apps-ia/ criada (Service + FAQPage, formulário → WhatsApp, `generate_lead` com `service: auditoria_apps_ia`), card em soluções e URL no sitemap; fontes conferidas (Veracode, Tecnoblog, NVD CVE-2025-48757) — `auditoria-apps-ia/index.html`, `solucoes.html`, `sitemap.xml`
 - [x] 2026-10-19 — CSP ativada em enforce com `'unsafe-inline'` temporário (ADR-011); validar pós-deploy — `vercel.json`, `SECURITY.md`, `DECISIONS.md`
 - [x] 2026-10-19 — Verificação de cache e de CSS injetado pelo `consent.v1.js`: CSS externo via `<link>` (linhas 121-124), sem `style=`/`<style>`/eval/handlers inline no arquivo; nada bloqueado pela CSP atual em enforce — `assets/js/consent.v1.js`, `vercel.json`
 - [x] 2026-10-19 — CLAUDE.md: corrigidas afirmações desatualizadas (assets compartilhados, sede em Poá, `diagnostico/`, handlers de lead, Schema, Guarulhos) — `CLAUDE.md`, `ARCHITECTURE.md`
