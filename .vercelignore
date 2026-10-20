@@ -7,3 +7,12 @@ _backup/
 .claude/
 CLAUDE.md
 .mcp.json
+/PRD.md
+/ARCHITECTURE.md
+/RULES.md
+/DESIGN.md
+/TASK.md
+/SECURITY.md
+/DECISIONS.md
+/CLAUDE.md
+/README.md

@@ -39,3 +39,25 @@ python3 -m http.server 8000
 - **Cookie consent (LGPD):** `assets/js/consent.v1.js` (+ `assets/css/consent.v1.css`) owns the banner, the consent choice and the conditional load of GA4. The choice lives in `localStorage['oryxon_consent']` as JSON `{"v":1,"choice":"accepted"|"declined","ts":"<ISO 8601>"}` (missing, invalid or `v != 1` = no choice → banner, nothing from Google); the legacy `oryxon_cookies` key is deleted on init without migrating it. It is **immutable** (`vercel.json` caches `/assets/**.js|css` for 1 year): any change needs a new versioned file (`consent.v2.js`/`.css`) and swapping the `<script>` on all 47 pages — never edit `v1` in place. Pages must not load gtag directly. The `generate_lead` event is off by default and enabled per page only with `data-track-leads="on"` on the consent `<script>` (single source; no flag inside the file). `data-ga="off"` keeps the banner but never loads GA (privacy/terms pages).
 
 **Business context** (useful when writing/editing copy): Oryxon Systems is an MSP partnered with Help Digital, serving Suzano, Mogi das Cruzes, Itaquaquecetuba, Poá, Ferraz de Vasconcelos, Guararema, and Santa Isabel (Alto Tietê region, SP). Core stack referenced in marketing copy: NinjaOne (RMM), Action1 (patch management), Acronis Cyber Protect (backup), Bitdefender (security), PWS Cloud, Help Mail, Ansible/Python (automation). Primary CTA across the site is WhatsApp contact (+55 11 93493-2992) and the "diagnóstico gratuito" (free diagnostic) lead form.
+
+## Documentação do projeto e manutenção
+
+Documentos-base na raiz: `PRD.md`, `ARCHITECTURE.md`, `RULES.md`, `DESIGN.md`, `TASK.md`, `SECURITY.md`, `DECISIONS.md`.
+
+**Início de toda sessão:** ler `RULES.md` e `TASK.md`.
+
+**Ao final de toda tarefa que altere o projeto**, atualizar os documentos afetados e a data "Última atualização":
+
+| Mudança | Documento |
+|---|---|
+| página, rota, estrutura de diretórios ou dependência | `ARCHITECTURE.md` |
+| cor, fonte, componente, breakpoint, animação | `DESIGN.md` |
+| header, CSP, script de terceiro, coleta de dados | `SECURITY.md` |
+| escolha técnica ou editorial com alternativa descartada | novo ADR em `DECISIONS.md` |
+| nova regra ou restrição definida pelo Uedson | `RULES.md` |
+| mudança de escopo, público ou objetivo | `PRD.md` |
+| toda tarefa | `TASK.md` (mover para Concluído com data; registrar pendências geradas) |
+
+Listar no resumo final quais documentos foram atualizados.
+
+**Nunca** executar `git add`, `git commit`, `git push`, `vercel` ou `vercel --prod`. Commit, push e deploy são exclusivos do Uedson.
