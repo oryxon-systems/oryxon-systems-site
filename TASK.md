@@ -12,6 +12,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Backlog
 
+- [ ] 2026-10-20 — `.valor-tab` (`sobre.html`): trocar o estilo inline reescrito por `showValor()` por toggle de classe `.is-active` + `aria-selected` — `sobre.html`
+
 - [ ] 2026-10-19 — Ferramenta de autoavaliação de risco em `/avaliacao-de-risco/` (lead magnet → WhatsApp); a pasta não existe — nova página, `sitemap.xml`
 - [ ] 2026-10-19 — Depoimentos com nome/cargo/empresa — `index.html`
 - [ ] 2026-10-19 — Barra de logos de parceiros formalizada — `index.html`
@@ -63,6 +65,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [x] 2026-05-10 — Commit inicial do site
 
 ## Fase 1b — tokens de cor (executar depois dos 3 lotes da Fase 1)
+
+Inclui: centralizar `--red`/`--danger`/`--orange`/`--warn` (hoje definidos no `:root` de `ciberseguranca.html` e `lgpd.html`) em `tokens.v1.css`.
 
 Inventário de hex literais fora de `:root` (medido em 2026-10-20, antes dos lotes; refazer ao iniciar). Escopo: criar tokens para #c8d7e9, #dff9ff, #001224, #bff6ff, #67e8ff etc. e trocar.
 
