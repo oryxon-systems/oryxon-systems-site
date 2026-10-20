@@ -20,6 +20,7 @@ Propósito: registrar os tokens e padrões visuais reais do site (fonte: `index.
 | `--shadow-sm/md/lg` | sombras neutras, blur ≤16px (hover de card = borda ciano .35 + fundo mais claro, não sombra) |
 | `--focus-ring` | `2px solid var(--cyan)`, `outline-offset:2px` |
 | `--gradient-brand` | `linear-gradient(135deg,#67e8ff,#1478ff)` (único gradiente; fundos radiais de página mantidos) |
+| Exceções de marca de parceiro | `--brand-helpdigital:#ec6824` (+ `-bg`, `-border`, `-border-hover`, `tokens.v1.css`) no selo Help Digital, e `#25D366` no CTA flutuante do WhatsApp. Cores de terceiros, fora da paleta Oryxon. |
 | Botões | `.btn` + `.btn-primary` / `.btn-secondary` / `.btn-ghost`, tamanho `.btn-sm` (min 44px) |
 
 Fundo: gradientes radiais azul/ciano sobre degradê escuro, mais grade sutil em `body:before`. Tema único escuro. Os valores `#0A4A8F` e `#00D9FF` do contexto **não** existem no CSS (ver TASK.md). Tokens são redefinidos por página; copiar de `index.html`.

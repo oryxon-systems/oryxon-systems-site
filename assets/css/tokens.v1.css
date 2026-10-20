@@ -5,6 +5,10 @@
   --shadow-md:0 4px 12px rgba(0,0,0,.35);
   --shadow-lg:0 8px 16px rgba(0,0,0,.4);
   --focus-ring:2px solid var(--cyan);
+  --brand-helpdigital:#ec6824;
+  --brand-helpdigital-bg:rgba(236,104,36,.06);
+  --brand-helpdigital-border:rgba(236,104,36,.3);
+  --brand-helpdigital-border-hover:rgba(236,104,36,.6);
   --gradient-brand:linear-gradient(135deg,#67e8ff,#1478ff);
 }
 .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 20px;border-radius:var(--radius-pill);border:1px solid transparent;font-family:inherit;font-size:1rem;font-weight:850;letter-spacing:-.02em;line-height:1.2;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background-color .2s,border-color .2s,filter .2s,transform .2s}
@@ -19,3 +23,7 @@
 .btn-sm{min-height:44px;padding:6px 16px;gap:8px;font-size:.88rem;line-height:1.25;white-space:normal;text-align:center}
 @media(max-width:680px){.btn:not(.btn-sm){width:100%}}
 @media (prefers-reduced-motion:reduce){.btn,.btn:hover{transform:none;transition-duration:.01ms}}
+
+.partner-hd{border:1px solid var(--brand-helpdigital-border);background:var(--brand-helpdigital-bg);transition:border-color .2s}
+.partner-hd:hover{border-color:var(--brand-helpdigital-border-hover)}
+.partner-hd-tag{color:var(--brand-helpdigital);border:1px solid var(--brand-helpdigital-border);border-radius:var(--radius-sm)}

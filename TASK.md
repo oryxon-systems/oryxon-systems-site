@@ -61,3 +61,58 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [x] 2026-09-27 — Inter auto-hospedada e headers de segurança, CSP Report-Only — `f0195e4`
 - [x] 2026-09-21 — Taxonomia do blog em 5 categorias — `8905fdd`
 - [x] 2026-05-10 — Commit inicial do site
+
+## Fase 1b — tokens de cor (executar depois dos 3 lotes da Fase 1)
+
+Inventário de hex literais fora de `:root` (medido em 2026-10-20, antes dos lotes; refazer ao iniciar). Escopo: criar tokens para #c8d7e9, #dff9ff, #001224, #bff6ff, #67e8ff etc. e trocar.
+
+| Arquivo | Hex soltos | Mais frequentes |
+|---|---|---|
+| `auditoria-apps-ia/index.html` | 21 | #fff×6, #00b7ff×3, #9df7ff×2, #1478ff×2 |
+| `blog.html` | 17 | #fff×4, #9df7ff×2, #00b7ff×2, #67e8ff×2 |
+| `blog/agente-de-ia-acesso-just-in-time.html` | 56 | #67e8ff×12, #dff9ff×11, #1478ff×7, #001224×6 |
+| `blog/agente-de-ia-protegido-limitado-auditavel.html` | 53 | #67e8ff×11, #dff9ff×10, #1478ff×7, #001224×6 |
+| `blog/atualizar-computador-nao-basta-rede-tambem-precisa.html` | 48 | #dff9ff×9, #67e8ff×8, #1478ff×5, #001224×5 |
+| `blog/backup-continuidade-ferraz-de-vasconcelos.html` | 42 | #dff9ff×11, #fff×5, #1478ff×5, #001224×5 |
+| `blog/backup-nuvem-vs-local.html` | 44 | #dff9ff×11, #fff×5, #67e8ff×5, #1478ff×4 |
+| `blog/chave-de-api-esquecida-vazamento-dados.html` | 49 | #67e8ff×9, #dff9ff×9, #fff×5, #1478ff×5 |
+| `blog/ciberseguranca-itaquaquecetuba.html` | 42 | #dff9ff×11, #fff×5, #1478ff×5, #001224×5 |
+| `blog/cisa-muda-priorizacao-vulnerabilidades-ssvc.html` | 56 | #67e8ff×12, #dff9ff×11, #1478ff×7, #001224×6 |
+| `blog/custo-automacao-ia-nuvem-fora-de-controle.html` | 52 | #67e8ff×11, #dff9ff×10, #1478ff×6, #001224×5 |
+| `blog/farsa-firewall-mfa-ataque-aitm.html` | 49 | #67e8ff×9, #dff9ff×9, #fff×5, #1478ff×5 |
+| `blog/fraude-com-ia-imita-executivos-faturas-processo-financeiro.html` | 56 | #67e8ff×12, #dff9ff×11, #1478ff×7, #001224×6 |
+| `blog/gestao-de-ti-e-estrategia.html` | 43 | #dff9ff×10, #fff×5, #67e8ff×4, #1478ff×4 |
+| `blog/gestao-de-ti-guararema.html` | 42 | #dff9ff×11, #fff×5, #1478ff×5, #001224×5 |
+| `blog/gestao-de-ti-suzano.html` | 42 | #dff9ff×11, #fff×5, #67e8ff×5, #1478ff×5 |
+| `blog/ia-gestao-ti-pme.html` | 47 | #dff9ff×10, #67e8ff×9, #1478ff×5, #001224×5 |
+| `blog/identidade-e-o-novo-perimetro.html` | 56 | #67e8ff×12, #dff9ff×11, #1478ff×7, #001224×6 |
+| `blog/identidade-ia-infraestrutura-continuidade-avaliar-juntos.html` | 53 | #67e8ff×11, #dff9ff×10, #1478ff×7, #001224×6 |
+| `blog/infraestrutura-de-ti-santa-isabel.html` | 42 | #dff9ff×11, #fff×5, #67e8ff×5, #1478ff×5 |
+| `blog/nuvem-hibrida-governanca-recuperacao.html` | 56 | #67e8ff×12, #dff9ff×11, #1478ff×7, #001224×6 |
+| `blog/nuvem-hibrida-sem-custos-fantasma.html` | 52 | #67e8ff×11, #dff9ff×10, #1478ff×6, #001224×5 |
+| `blog/o-que-pmes-deveriam-exigir-do-provedor-de-ti.html` | 43 | #dff9ff×10, #fff×5, #67e8ff×4, #1478ff×4 |
+| `blog/perguntas-cliente-grande-antes-renovar-contrato.html` | 52 | #67e8ff×10, #dff9ff×10, #1478ff×6, #001224×6 |
+| `blog/ransomware-brasil-2026.html` | 44 | #dff9ff×10, #67e8ff×5, #1478ff×5, #001224×5 |
+| `blog/seu-agente-de-ia-e-um-usuario-privilegiado.html` | 47 | #67e8ff×9, #dff9ff×9, #1478ff×5, #001224×5 |
+| `blog/suporte-de-ti-poa-reativo-vs-gerenciado.html` | 42 | #dff9ff×11, #fff×5, #1478ff×5, #001224×5 |
+| `blog/tendencias-ti-msp-2026.html` | 43 | #dff9ff×10, #fff×5, #67e8ff×5, #1478ff×4 |
+| `blog/terceirizacao-de-ti-mogi-das-cruzes.html` | 42 | #dff9ff×11, #fff×5, #1478ff×5, #001224×5 |
+| `blog/terceirizacao-de-ti.html` | 45 | #dff9ff×10, #fff×6, #67e8ff×6, #1478ff×4 |
+| `blog/velocidade-de-maquina-tempo-de-reacao-pme.html` | 56 | #67e8ff×12, #dff9ff×11, #1478ff×7, #001224×6 |
+| `blog/vulnerabilidade-critica-nao-e-prioridade-critica.html` | 56 | #67e8ff×12, #dff9ff×11, #1478ff×7, #001224×6 |
+| `cases/gregtur.html` | 37 | #fff×4, #37f5a1×4, #dff9ff×4, #00b7ff×3 |
+| `ciberseguranca.html` | 47 | #fff×7, #dff9ff×7, #67e8ff×5, #1478ff×5 |
+| `index.html` | 101 | #fff×10, #c8d7e9×10, #dff9ff×8, #bff6ff×5 |
+| `lgpd.html` | 55 | #dff9ff×9, #fff×7, #ff8888×7, #c8d7e9×5 |
+| `managed-services.html` | 37 | #fff×9, #67e8ff×5, #1478ff×4, #00b7ff×3 |
+| `privacidade.html` | 40 | #dff9ff×28, #fff×4, #01040d×1, #061226×1 |
+| `sobre.html` | 99 | #37f5a1×32, #c8d7e9×30, #fff×6, #00b7ff×6 |
+| `solucoes.html` | 50 | #fff×7, #9df7ff×3, #00b7ff×3, #67e8ff×3 |
+| `suporte/index.html` | 27 | #fff×7, #001224×3, #00b7ff×2, #67e8ff×2 |
+| `termos.html` | 33 | #dff9ff×20, #fff×4, #061226×2, #01040d×1 |
+| `ti-ferraz-de-vasconcelos/index.html` | 29 | #dff9ff×8, #fff×6, #00b7ff×3, #9df7ff×2 |
+| `ti-guarulhos/index.html` | 29 | #dff9ff×8, #fff×6, #00b7ff×3, #9df7ff×2 |
+| `ti-itaquaquecetuba/index.html` | 29 | #dff9ff×8, #fff×6, #00b7ff×3, #9df7ff×2 |
+| `ti-mogi-das-cruzes/index.html` | 29 | #dff9ff×8, #fff×6, #00b7ff×3, #9df7ff×2 |
+| `ti-poa/index.html` | 29 | #dff9ff×8, #fff×6, #00b7ff×3, #9df7ff×2 |
+| `ti-suzano/index.html` | 29 | #dff9ff×8, #fff×6, #00b7ff×3, #9df7ff×2 |
