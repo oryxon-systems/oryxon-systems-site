@@ -41,7 +41,8 @@ SVG inline (stroke `currentColor`) nas páginas. Tabler Icons não está em uso.
 - **Mini-form do hero** `.hero-mini-form` (`sendHeroLead`): nome, empresa, telefone → WhatsApp.
 - **Cards**: `.card`, grids de serviço/risco/cidade (1 coluna em mobile).
 - **Contadores** `.counter[data-target]` com `data-prefix`/`data-suffix`.
-- **Texto rotativo** no hero (`.hero-rotator`), **rede animada** `hero-network.v1.js` (canvas, pausa fora da viewport).
+- **Texto rotativo** no hero (`.hero-rotator`).
+- **Painel "Prazos de atendimento"** (`.hero-visual`, `.sla-row`): único card com os 3 prazos de SLA (RULES.md). Sem dado ao vivo, sem animação.
 - **Banner de cookies**: `consent.v1.css`.
 - **Reveal** `.js .reveal` / `.visible`.
 

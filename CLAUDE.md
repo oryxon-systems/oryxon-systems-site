@@ -20,7 +20,6 @@ python3 -m http.server 8000
 
 - **Shared assets (`assets/`)** — before adding inline CSS/JS, check whether the behavior already exists here:
   - `js/consent.v1.js` — cookie banner, consent choice, conditional GA4; loaded by all 47 pages. It injects `css/consent.v1.css` itself (pages do not link it).
-  - `js/hero-network.v1.js` — animated canvas network in the hero; loaded only by `index.html`.
   - `fonts/inter.css` + `inter-var.woff2` — self-hosted Inter; linked by all 47 pages.
 - **Versioning:** `*.v1.*` files are immutable (`vercel.json` caches assets for 1 year). To change one, create `*.v2.*` and swap the reference on every page that loads it; never edit in place.
 

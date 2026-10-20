@@ -9,7 +9,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
 - [x] 2026-10-20 — **Fase 1 encerrada** (`tokens.v2.css` em todas as páginas; `.cta-band` e `.cta-article` com parágrafo à esquerda; contraste WhatsApp conferido), aguardando revisão/commit. Medição antes/depois: adendo em `/media/uedson/storage/Projetos/oryxon-auditorias/vibe-coding-audit-2026-10-20.md` (fora do repo) — `assets/css/tokens.v2.css`
-- [ ] 2026-10-20 — Próximas fases, em ordem: (1) Fase 0 — Command Center / 99,9% / `.orb-*` / `.dash-*`; (2) Fase 1b — cores e inline; (3) Fase 2 — emojis; (4) `.valor-tab` — `index.html`, `sobre.html`
+- [ ] 2026-10-20 — Próximas fases, em ordem: (1) Fase 1b — cores e inline; (3) Fase 2 — emojis; (4) `.valor-tab` — `index.html`, `sobre.html`
 - [ ] 2026-10-20 — Fase 2 (emojis): os ~354 emojis de UI AINDA estão no site (29 arquivos); a exceção `.post-thumb` é a regra-alvo, não o estado atual. Depende de fechar o ADR-004 — vários
 
 ## Backlog
@@ -45,8 +45,12 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — `ti-*/`: o `.city-card` local (grade de cobertura) difere do `.city-card` da home; unificar exige decisão (tokens.v3). Box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
 - [ ] 2026-10-20 — `blog/`: links "Leia também" em alguns posts são `<a style="">` inline (cards, não botões), sem hover; padronizar exige classe `.related a` (Fase 1b). Card laranja da calculadora em `terceirizacao-de-ti.html` (`#ff6b35`, `rgba(255,80,0,.06)`) segue fora da paleta — decidir se vira callout padrão — `blog/*.html`
 - [ ] 2026-10-20 — `suporte/index.html`: `.btn-wa` mudou de gradiente verde (`#3ee08a→#17b866`) para sólido `#25D366` (cor do WhatsApp já documentada); confirmar — `suporte/index.html`
+- [ ] 2026-10-20 — **ALTA PRIORIDADE:** decidir cláusula de uptime — verificar se contratos reais têm meta de disponibilidade medível (`termos.html:204`, "meta de 99,9% de uptime")
+- [ ] 2026-10-20 — Confirmar se "24x7" se refere a monitoramento automatizado (RMM); se sim, ajustar rótulo para "Monitoramento automatizado 24x7" (`index.html` métricas, `llms.txt`, `sobre`, `ti-*`, `managed-services`); avaliar também a redundância do "<15min" no `.metrics` com o painel novo
 
 ## Concluído
+
+- [x] 2026-10-20 — Fase 0: painel Command Center, `.orb-*` e canvas removidos; card "Prazos de atendimento" com SLA real; `hero-network.v1.js` apagado (ADR-014) — `index.html`
 
 - [x] 2026-10-20 — Ajustes da página de auditoria: redirect sem barra, `llms.txt`, mapa de 48 URLs, comentário do `consent.v1.js` (47→48, só comentário), Arujá removida do Schema (decisão pendente do Uedson: incluir no território?) — `vercel.json`, `llms.txt`, `ARCHITECTURE.md`, `assets/js/consent.v1.js`, `auditoria-apps-ia/index.html`
 - [x] 2026-10-20 — Página /auditoria-apps-ia/ criada (Service + FAQPage, formulário → WhatsApp, `generate_lead` com `service: auditoria_apps_ia`), card em soluções e URL no sitemap; fontes conferidas (Veracode, Tecnoblog, NVD CVE-2025-48757) — `auditoria-apps-ia/index.html`, `solucoes.html`, `sitemap.xml`

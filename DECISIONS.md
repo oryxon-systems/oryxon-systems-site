@@ -74,3 +74,9 @@ Consequências: demais 47 páginas migram em lotes por diretório após aprovaç
 
 **ADR-013, adendo | 2026-10-20 | Versionamento**
 `tokens.v1.css` foi alterado após o primeiro deploy (`94704ba`, `666529c`), e o cache imutável de 1 ano (`vercel.json`) pode manter a cópia antiga em clientes. Regra: arquivo publicado nunca é alterado; toda mudança = nova versão. `tokens.v2.css` = v1 + `.partner-card--row`, `.partner-link*`; as 9 páginas migradas apontam para ele. `tokens.v1.css` permanece no repositório, congelado, para HTML antigo em cache. Os componentes `.city-card` e `.stack-badge` ficam no `<style>` de `index.html` (uso único).
+
+**ADR-014 | 2026-10-20 | Aceito**
+Contexto: a auditoria (item 7) apontou o painel "Oryxon Command Center" (99,9% de disponibilidade, "Proteção ativa" com ponto pulsante), a esfera `.orb-large`/`.orb-glow` e o canvas de rede animada como visuais sem função e com dados sem fonte.
+Decisão: o `.hero-visual` vira um único card "Prazos de atendimento" com os 3 prazos de SLA do RULES.md (confirmação automática em até 15 min; contato humano em até 2 h; plantão para incidentes críticos fora do horário), sem gráficos, percentuais ou animação. Removidos `.orb-*`, `@keyframes orb-*`, `.hero-net`, `.dash-*`, `.status`, o `<script>` do canvas e `assets/js/hero-network.v1.js` (apagado; nada o referenciava).
+Alternativas descartadas: manter o canvas como textura (custo de rAF contínuo sem informação); manter o painel com dados reais de outra fonte (não há métrica medida de disponibilidade).
+Consequências: menos JS e CSS no hero; `termos.html` mantém a meta de 99,9% de uptime (cláusula contratual, pendência de decisão no TASK.md).
