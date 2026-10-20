@@ -43,6 +43,7 @@
   </script>
   <script src="/assets/js/consent.v1.js" data-ga="off" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v1.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:820px}
     *{margin:0;padding:0;box-sizing:border-box}
@@ -68,7 +69,7 @@
     .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:12px}
     h1{font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.1;letter-spacing:-.05em;margin-bottom:14px}
     .last-update{color:var(--muted2);font-size:.85rem;margin-top:8px}
-    .toc{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:18px;padding:22px 26px;margin-bottom:42px}
+    .toc{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:22px 26px;margin-bottom:42px}
     .toc h2{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted2);margin-bottom:12px;font-weight:800}
     .toc ol{padding-left:18px;display:grid;gap:6px}
     .toc li a{color:var(--muted);font-size:.9rem;font-weight:600;transition:.2s}
@@ -79,12 +80,12 @@
     .section p{color:var(--muted);margin-bottom:12px;font-size:.97rem}
     .section ul,.section ol{color:var(--muted);padding-left:20px;display:grid;gap:6px;margin-bottom:12px;font-size:.97rem}
     .section li{padding-left:4px}
-    .section code{background:rgba(255,255,255,.06);padding:1px 6px;border-radius:6px;font-size:.88em;color:#dff9ff}
-    .prefs-btn{min-height:44px;padding:9px 22px;border-radius:999px;border:1px solid rgba(103,232,255,.6);background:rgba(255,255,255,.06);color:#dff9ff;font:inherit;font-size:.9rem;font-weight:800;cursor:pointer}
-    .prefs-btn:focus-visible{outline:2px solid #67e8ff;outline-offset:2px}
-    .highlight{border:1px solid rgba(103,232,255,.20);background:rgba(0,183,255,.06);border-radius:14px;padding:16px 20px;margin:16px 0}
+    .section code{background:rgba(255,255,255,.06);padding:1px 6px;border-radius:var(--radius-sm);font-size:.88em;color:#dff9ff}
+
+
+    .highlight{border:1px solid rgba(103,232,255,.20);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:16px 0}
     .highlight p{margin:0;color:#c8e8ff}
-    .contact-box{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:18px;padding:22px 26px;margin-top:16px}
+    .contact-box{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:22px 26px;margin-top:16px}
     .contact-box p{margin:0 0 6px;color:var(--muted);font-size:.95rem}
     .contact-box a{color:var(--blue2);font-weight:700}
 
@@ -246,7 +247,7 @@
       <p>Antes do seu aceite, o Google Analytics não é carregado e nenhuma requisição é feita aos servidores do Google. Nas páginas desta Política e dos Termos de Uso, o Google Analytics nunca é carregado. No Google Analytics, os dados de eventos associados a cookies ou identificadores ficam retidos por 2 meses, e os dados no nível do usuário por 14 meses. O prazo do nível do usuário é renovado a cada nova visita ao site. Relatórios agregados, que não identificam visitantes, não estão sujeitos a esses prazos.</p>
       <h3>Como alterar a sua escolha</h3>
       <p>Você pode mudar de ideia a qualquer momento, em “Preferências de cookies”, no rodapé de qualquer página, ou pelo botão abaixo. Ao recusar, o Google Analytics deixa de ser carregado e os cookies de análise são apagados.</p>
-      <p><button type="button" class="prefs-btn" data-cookie-prefs>Alterar minhas preferências de cookies</button></p>
+      <p><button type="button" class="btn btn-secondary btn-sm" data-cookie-prefs>Alterar minhas preferências de cookies</button></p>
       <p>Você também pode configurar o seu navegador para bloquear cookies; isso pode afetar algumas funcionalidades do site.</p>
     </div>
 

@@ -61,8 +61,9 @@
   </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v1.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--shadow:0 30px 100px rgba(0,104,255,.18);--max:1100px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
     body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.18),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.16),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
@@ -80,10 +81,10 @@
     h1{font-size:clamp(2.2rem,6vw,4rem);line-height:.96;letter-spacing:-.07em;margin-bottom:20px}
     h2{font-size:clamp(1.6rem,3.5vw,2.6rem);line-height:1.05;letter-spacing:-.05em;margin-bottom:16px}
     h3{font-size:1.15rem;letter-spacing:-.03em;margin-bottom:10px}
-    .grad{background:linear-gradient(135deg,#fff 12%,#9df7ff 40%,#00b7ff 62%,#1478ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .grad{background:var(--gradient-brand);background-clip:text;-webkit-background-clip:text;color:transparent}
     .muted{color:var(--muted)}
-    .card{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028));border-radius:28px;padding:28px;transition:.22s ease}
-    .card:hover{transform:translateY(-4px);border-color:rgba(103,232,255,.4);box-shadow:0 20px 60px rgba(0,183,255,.10)}
+    .card{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028));border-radius:var(--radius-lg);padding:28px;transition:.22s ease}
+    .card:hover{border-color:rgba(103,232,255,.35);background-color:rgba(255,255,255,.04);transform:translateY(-4px);}
     .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .72s ease,transform .72s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
     section{padding:80px 0}
@@ -91,27 +92,27 @@
     /* HERO */
     .hero{padding:72px 0 60px;border-bottom:1px solid rgba(103,232,255,.10)}
     .hero-inner{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);color:#bff6ff;font-size:.78rem;font-weight:900;letter-spacing:.04em;margin-bottom:22px}
-    .live-dot{width:7px;height:7px;border-radius:50%;background:#37f5a1;box-shadow:0 0 14px rgba(55,245,161,.8)}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);color:#bff6ff;font-size:.78rem;font-weight:900;letter-spacing:.04em;margin-bottom:22px}
+    .live-dot{width:7px;height:7px;border-radius:var(--radius-full);background:#37f5a1}
     .hero p{color:var(--muted);font-size:1.08rem;max-width:580px;line-height:1.7}
-    .hero-logo{width:130px;height:130px;object-fit:contain;filter:drop-shadow(0 0 30px rgba(0,183,255,.5))}
+    .hero-logo{width:130px;height:130px;object-fit:contain}
 
     /* MISSÃO VISÃO VALORES */
     .mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .mvv-card{position:relative;overflow:hidden}
     .mvv-icon{font-size:2rem;margin-bottom:14px}
     .mvv-card p{color:var(--muted);font-size:.95rem;line-height:1.65}
-    .mvv-accent{position:absolute;top:0;left:0;right:0;height:3px;border-radius:3px 3px 0 0}
-    .acc-blue{background:linear-gradient(90deg,#1478ff,#00b7ff)}
-    .acc-cyan{background:linear-gradient(90deg,#00b7ff,#67e8ff)}
-    .acc-green{background:linear-gradient(90deg,#37f5a1,#00b7ff)}
+    .mvv-accent{position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--radius-sm) var(--radius-sm) 0 0}
+    .acc-blue{background:var(--gradient-brand)}
+    .acc-cyan{background:var(--cyan)}
+    .acc-green{background:var(--success)}
 
     /* HISTÓRIA */
     .history-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
     .history-text p{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:14px}
     .history-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .stat-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:20px;padding:22px;text-align:center}
-    .stat-card strong{display:block;font-size:2rem;letter-spacing:-.06em;color:#dff9ff;text-shadow:0 0 24px rgba(0,183,255,.4)}
+    .stat-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:22px;text-align:center}
+    .stat-card strong{display:block;font-size:2rem;letter-spacing:-.06em;color:#dff9ff}
     .stat-card span{color:var(--muted);font-size:.82rem;font-weight:700}
 
     /* VALORES */
@@ -121,27 +122,27 @@
     .valor-card p{color:var(--muted);font-size:.9rem;line-height:1.6}
 
     /* FUNDADOR */
-    .founder-wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:34px;padding:clamp(28px,4vw,44px)}
-    .founder-photo{width:160px;height:160px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid rgba(103,232,255,.35);box-shadow:0 0 40px rgba(0,183,255,.25);flex-shrink:0}
+    .founder-wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
+    .founder-photo{width:160px;height:160px;border-radius:var(--radius-full);object-fit:cover;object-position:top;border:3px solid rgba(103,232,255,.35);flex-shrink:0}
     .founder-info h3{font-size:1.5rem;letter-spacing:-.04em;margin-bottom:4px}
     .founder-role{color:var(--blue2);font-size:.9rem;font-weight:800;margin-bottom:16px}
     .founder-bio{color:var(--muted);font-size:.97rem;line-height:1.72;margin-bottom:20px}
     .founder-links{display:flex;gap:12px;flex-wrap:wrap}
-    .founder-links a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);border-radius:10px;padding:8px 14px;color:#bff6ff;font-size:.82rem;font-weight:800;transition:.2s}
+    .founder-links a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);border-radius:var(--radius-md);padding:8px 14px;color:#bff6ff;font-size:.82rem;font-weight:800;transition:.2s}
     .founder-links a:hover{border-color:rgba(103,232,255,.6);text-decoration:none}
 
     /* PARCEIROS */
     .parceiros-wrap{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
-    .parceiro-tag{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:16px;padding:16px 28px;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.88rem;font-weight:700;transition:.2s}
+    .parceiro-tag{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:16px 28px;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.88rem;font-weight:700;transition:.2s}
     .parceiro-tag:hover{border-color:rgba(103,232,255,.4);color:#fff;text-decoration:none}
 
     /* CTA */
-    .cta-band{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 16rem),rgba(8,21,43,.62);border-radius:34px;padding:clamp(32px,5vw,52px);text-align:center}
+    .cta-band{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 16rem),rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:clamp(32px,5vw,52px);text-align:center}
     .cta-band p{color:var(--muted);font-size:1.05rem;margin-bottom:28px;max-width:560px;margin-inline:auto}
-    .btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 28px;border-radius:999px;border:1px solid transparent;font-family:inherit;font-weight:850;letter-spacing:-.02em;cursor:pointer;transition:.2s ease;text-decoration:none}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{color:#001224;background:linear-gradient(135deg,#67e8ff 0%,#00b7ff 35%,#1478ff 100%);box-shadow:0 22px 70px rgba(0,183,255,.28)}
-    .btn-ghost{color:#fff;background:rgba(255,255,255,.045);border-color:rgba(103,232,255,.28)}
+
+
+
+
     .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
     /* FOOTER */
@@ -155,7 +156,7 @@
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
       .js .reveal{opacity:1;transform:none}
-      .btn:hover,.card:hover{transform:none}
+      .card:hover{transform:none}
     }
     @media (prefers-reduced-motion: no-preference){
       @view-transition{navigation:auto}
@@ -269,21 +270,21 @@
         <div class="reveal" style="max-width:960px;margin:0 auto">
           <!-- Tab buttons -->
           <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;justify-content:center" id="valor-tabs">
-            <button onclick="showValor(0)" class="valor-tab active" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.35);background:rgba(0,183,255,.10);color:#67e8ff;font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">01 · Responsabilidade</button>
-            <button onclick="showValor(1)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">02 · Transparência</button>
-            <button onclick="showValor(2)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">03 · Proatividade</button>
-            <button onclick="showValor(3)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">04 · Comprometimento</button>
-            <button onclick="showValor(4)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">05 · Melhoria Contínua</button>
-            <button onclick="showValor(5)" class="valor-tab" style="padding:9px 18px;border-radius:999px;border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">06 · Foco no Cliente</button>
+            <button onclick="showValor(0)" class="valor-tab active" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.35);background:rgba(0,183,255,.10);color:#67e8ff;font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">01 · Responsabilidade</button>
+            <button onclick="showValor(1)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">02 · Transparência</button>
+            <button onclick="showValor(2)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">03 · Proatividade</button>
+            <button onclick="showValor(3)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">04 · Comprometimento</button>
+            <button onclick="showValor(4)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">05 · Melhoria Contínua</button>
+            <button onclick="showValor(5)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">06 · Foco no Cliente</button>
           </div>
 
           <!-- Tab panels -->
           <div id="valor-panels">
 
             <!-- 01 Responsabilidade técnica -->
-            <div class="valor-panel" style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+            <div class="valor-panel" style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
-                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🛠️</div>
+                <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🛠️</div>
                 <div>
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 01</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Responsabilidade técnica</h3>
@@ -300,9 +301,9 @@
             </div>
 
             <!-- 02 Transparência -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
-                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🔍</div>
+                <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🔍</div>
                 <div>
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 02</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Transparência</h3>
@@ -319,9 +320,9 @@
             </div>
 
             <!-- 03 Proatividade -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
-                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">📡</div>
+                <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">📡</div>
                 <div>
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 03</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Proatividade</h3>
@@ -338,9 +339,9 @@
             </div>
 
             <!-- 04 Comprometimento -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
-                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🤝</div>
+                <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🤝</div>
                 <div>
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 04</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Comprometimento</h3>
@@ -357,9 +358,9 @@
             </div>
 
             <!-- 05 Melhoria Contínua -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
-                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🔄</div>
+                <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🔄</div>
                 <div>
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 05</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Melhoria Contínua</h3>
@@ -376,9 +377,9 @@
             </div>
 
             <!-- 06 Foco no Cliente -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:28px;padding:32px">
+            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
-                <div style="width:56px;height:56px;border-radius:18px;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🎯</div>
+                <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0">🎯</div>
                 <div>
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 06</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Foco no Cliente</h3>
@@ -416,10 +417,10 @@
               <a href="https://www.linkedin.com/in/uedson-help-digital-sp/" target="_blank" rel="noopener">🔗 LinkedIn pessoal</a>
               <a href="https://www.linkedin.com/company/oryxon-systems" target="_blank" rel="noopener">🏢 Oryxon no LinkedIn</a>
               <a href="https://wa.me/5511934932992" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Presidente+Rodrigues+Alves%2C+715+A%2C+Jardim+Santa+Helena%2C+Po%C3%A1+SP" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.03);color:var(--muted);font-size:.84rem;font-weight:700;padding:10px 16px;border-radius:12px;text-decoration:none">
+            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Presidente+Rodrigues+Alves%2C+715+A%2C+Jardim+Santa+Helena%2C+Po%C3%A1+SP" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
               📍 Rua Presidente Rodrigues Alves, 715 A — Jardim Santa Helena, Poá<br><span style="font-size:.76rem;color:var(--muted2)">Laboratório · Análise e manutenção de hardware</span>
             </a>
-            <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.03);border-radius:10px;font-size:.8rem;color:var(--muted)">
+            <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.03);border-radius:var(--radius-md);font-size:.8rem;color:var(--muted)">
               🕐 <span><strong style="color:#dff9ff">Seg–Sex, 8h–18h | Sáb, 8h–12h</strong><br><span style="font-size:.72rem">Monitoramento automatizado 24x7</span></span>
             </div><a href="https://share.google/MjPMX25cF8Ahsxwi1" target="_blank" rel="noopener">⭐ Google Meu Negócio</a>
             </div>
@@ -438,16 +439,16 @@
         <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);letter-spacing:-.05em;margin-bottom:12px">Código de Conduta e Ética</h2>
         <p style="color:var(--muted);font-size:.95rem;max-width:580px;margin:0 auto 24px;line-height:1.65">Como empresa que acessa infraestruturas críticas e dados sensíveis dos nossos clientes, formalizamos nossos princípios éticos em um documento público. Leia e saiba exatamente o que você pode esperar da Oryxon Systems.</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px;text-align:left">
-          <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:14px;padding:16px 18px">
+          <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:16px 18px">
             <strong style="display:block;color:#dff9ff;font-size:.9rem;margin-bottom:5px">🏅 Padrão ISO 27001</strong>
             <span style="color:var(--muted);font-size:.84rem;line-height:1.55">Implementamos os controles técnicos previstos na norma ISO 27001 em todos os ambientes gerenciados.</span>
           </div>
-          <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:14px;padding:16px 18px">
+          <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:16px 18px">
             <strong style="display:block;color:#dff9ff;font-size:.9rem;margin-bottom:5px">🔍 Direito de auditoria</strong>
             <span style="color:var(--muted);font-size:.84rem;line-height:1.55">Clientes podem auditar nossos acessos e processos a qualquer momento. Total transparência operacional.</span>
           </div>
         </div>
-        <a href="/codigo-de-conduta-oryxon.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);color:#bff6ff;font-weight:850;font-size:.95rem;padding:14px 28px;border-radius:999px;text-decoration:none;transition:.2s" onmouseover="this.style.borderColor='rgba(103,232,255,.6)'" onmouseout="this.style.borderColor='rgba(103,232,255,.28)'">
+        <a href="/codigo-de-conduta-oryxon.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
           📄 Baixar Código de Conduta e Ética (PDF)
         </a>
       </div>
@@ -463,9 +464,9 @@
         <div class="split-grid reveal" style="gap:18px;max-width:720px">
 
           <!-- ACE Suzano -->
-          <a href="https://www.acesuzano.com.br/redededescontos:categoria=42" target="_blank" rel="noopener" style="border:1px solid rgba(0,140,70,.28);background:rgba(0,140,70,.05);border-radius:24px;padding:24px;text-decoration:none;transition:.22s;display:flex;flex-direction:column;gap:12px" onmouseover="this.style.borderColor='rgba(0,140,70,.55)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(0,140,70,.28)';this.style.transform=''">
+          <a href="https://www.acesuzano.com.br/redededescontos:categoria=42" target="_blank" rel="noopener" style="border:1px solid rgba(0,140,70,.28);background:rgba(0,140,70,.05);border-radius:var(--radius-lg);padding:24px;text-decoration:none;transition:.22s;display:flex;flex-direction:column;gap:12px" onmouseover="this.style.borderColor='rgba(0,140,70,.55)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(0,140,70,.28)';this.style.transform=''">
             <div style="display:flex;align-items:center;gap:10px">
-              <div style="width:44px;height:44px;border-radius:14px;background:rgba(0,140,70,.12);border:1px solid rgba(0,140,70,.25);display:grid;place-items:center;font-size:1.3rem;flex-shrink:0">🏢</div>
+              <div style="width:44px;height:44px;border-radius:var(--radius-lg);background:rgba(0,140,70,.12);border:1px solid rgba(0,140,70,.25);display:grid;place-items:center;font-size:1.3rem;flex-shrink:0">🏢</div>
               <div>
                 <strong style="display:block;font-size:1rem;color:#44cc88">ACE Suzano</strong>
                 <span style="font-size:.76rem;color:var(--muted2)">Associação Comercial e Empresarial de Suzano</span>
@@ -476,9 +477,9 @@
           </a>
 
           <!-- BNI -->
-          <a href="https://bnialtotiete.com.br/pt-BR/memberdetails?encryptedMemberId=hEDJSVoioi4uw508Wlo5PQ%3D%3D&name=Uedson+Jose+da+Silva+Azevedo" target="_blank" rel="noopener" style="border:1px solid rgba(220,30,30,.28);background:rgba(220,30,30,.05);border-radius:24px;padding:24px;transition:.22s;display:flex;flex-direction:column;gap:12px;text-decoration:none" onmouseover="this.style.borderColor='rgba(220,30,30,.55)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(220,30,30,.28)';this.style.transform=''">
+          <a href="https://bnialtotiete.com.br/pt-BR/memberdetails?encryptedMemberId=hEDJSVoioi4uw508Wlo5PQ%3D%3D&name=Uedson+Jose+da+Silva+Azevedo" target="_blank" rel="noopener" style="border:1px solid rgba(220,30,30,.28);background:rgba(220,30,30,.05);border-radius:var(--radius-lg);padding:24px;transition:.22s;display:flex;flex-direction:column;gap:12px;text-decoration:none" onmouseover="this.style.borderColor='rgba(220,30,30,.55)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(220,30,30,.28)';this.style.transform=''">
             <div style="display:flex;align-items:center;gap:10px">
-              <div style="width:44px;height:44px;border-radius:14px;background:rgba(220,30,30,.12);border:1px solid rgba(220,30,30,.25);display:grid;place-items:center;font-size:1.3rem;flex-shrink:0">🤝</div>
+              <div style="width:44px;height:44px;border-radius:var(--radius-lg);background:rgba(220,30,30,.12);border:1px solid rgba(220,30,30,.25);display:grid;place-items:center;font-size:1.3rem;flex-shrink:0">🤝</div>
               <div>
                 <strong style="display:block;font-size:1rem;color:#ff6666">BNI AT Vínculo</strong>
                 <span style="font-size:.76rem;color:var(--muted2)">Business Network International — Poá, SP</span>
@@ -518,7 +519,7 @@
           <p>Solicite um diagnóstico gratuito e descubra o nível de risco da sua infraestrutura. Sem compromisso, sem enrolação.</p>
           <div class="btn-row">
             <a href="/#diagnostico" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
-            <a href="https://wa.me/5511934932992" target="_blank" rel="noopener" class="btn btn-ghost">Falar no WhatsApp</a>
+            <a href="https://wa.me/5511934932992" target="_blank" rel="noopener" class="btn btn-secondary">Falar no WhatsApp</a>
           </div>
         </div>
       </div>
