@@ -55,8 +55,9 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v2.css">
   <style>
-    :root{--bg:#020713;--panel:rgba(8,21,43,.78);--border:rgba(93,176,255,.22);--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--shadow:0 30px 100px rgba(0,104,255,.18);--radius:28px;--max:1180px}
+    :root{--bg:#020713;--panel:rgba(8,21,43,.78);--border:rgba(93,176,255,.22);--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1180px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
     body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.20),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.18),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.5}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(circle at 50% 15%,black,transparent 75%);z-index:-1}
@@ -71,15 +72,11 @@
     .brand-wordmark small{font-size:.5rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
     .menu{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:.9rem;font-weight:700}
     .menu a:hover{color:#fff}
-    .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 20px;border-radius:999px;border:1px solid transparent;font-family:inherit;font-weight:850;font-size:.94rem;letter-spacing:-.01em;cursor:pointer;transition:.2s ease;white-space:nowrap}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{color:#001224;background:linear-gradient(135deg,#67e8ff 0%,#00b7ff 35%,#1478ff 100%);box-shadow:0 22px 70px rgba(0,183,255,.28)}
-    .btn-ghost{color:#fff;background:rgba(255,255,255,.05);border-color:rgba(103,232,255,.30)}
-    .btn-wa{color:#001224;background:linear-gradient(135deg,#3ee08a,#17b866)}
-    .mobile-toggle{display:none;background:rgba(255,255,255,.05);border:1px solid var(--border);color:#fff;border-radius:14px;padding:10px 12px;font-weight:850}
+    .btn-wa{color:#001224;background:#25D366}
+    .mobile-toggle{display:none;background:rgba(255,255,255,.05);border:1px solid var(--border);color:#fff;border-radius:var(--radius-lg);padding:10px 12px;font-weight:850}
     main{display:block}
     .hero{padding:56px 0 40px}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:999px;border:1px solid rgba(103,232,255,.30);background:rgba(0,183,255,.08);color:#bff6ff;font-size:.78rem;font-weight:900;letter-spacing:.02em;margin-bottom:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.30);background:rgba(0,183,255,.08);color:#bff6ff;font-size:.78rem;font-weight:900;letter-spacing:.02em;margin-bottom:18px}
     h1{font-size:clamp(2rem,5vw,3rem);line-height:1.05;letter-spacing:-.05em;margin-bottom:14px}
     .hero p.lead{color:var(--muted);font-size:1.02rem;line-height:1.65;max-width:640px;margin-bottom:26px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -89,42 +86,42 @@
     .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:950;margin-bottom:10px}
     h2{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.04em;margin-bottom:10px}
     .section-head p{color:var(--muted);font-size:.96rem}
-    .icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;border:1px solid rgba(103,232,255,.26);background:rgba(0,183,255,.08);color:var(--cyan);flex-shrink:0}
+    .icon{width:42px;height:42px;border-radius:var(--radius-lg);display:grid;place-items:center;border:1px solid rgba(103,232,255,.26);background:rgba(0,183,255,.08);color:var(--cyan);flex-shrink:0}
     .icon svg{font-size:1.2rem}
     .channel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .channel-card{position:relative;border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:14px}
-    .channel-card.featured{border-color:rgba(103,232,255,.5);box-shadow:0 20px 70px rgba(0,183,255,.14)}
+    .channel-card{position:relative;border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border-radius:var(--radius-lg);padding:24px;display:flex;flex-direction:column;gap:14px}
+    .channel-card.featured{border-color:rgba(103,232,255,.5)}
     .channel-head{display:flex;align-items:center;gap:12px}
     .channel-card h3{font-size:1.05rem;letter-spacing:-.03em}
-    .badge-recommended{position:absolute;top:-11px;right:20px;background:linear-gradient(135deg,#67e8ff,#1478ff);color:#001224;font-size:.7rem;font-weight:950;letter-spacing:.03em;padding:4px 12px;border-radius:999px}
+    .badge-recommended{position:absolute;top:-11px;right:20px;background:var(--gradient-brand);color:#001224;font-size:.7rem;font-weight:950;letter-spacing:.03em;padding:4px 12px;border-radius:var(--radius-pill)}
     .channel-card p{color:var(--muted);font-size:.9rem;line-height:1.6}
     .channel-card .note{font-size:.82rem;color:#8aaac8}
     .channel-card .btn{width:100%;margin-top:auto}
     .tool-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
-    .tool-link{border:1px solid rgba(103,232,255,.22);background:rgba(255,255,255,.04);border-radius:10px;padding:8px 12px;font-size:.8rem;font-weight:700;color:#cfe8ff;display:inline-flex;align-items:center;gap:6px}
+    .tool-link{border:1px solid rgba(103,232,255,.22);background:rgba(255,255,255,.04);border-radius:var(--radius-md);padding:8px 12px;font-size:.8rem;font-weight:700;color:#cfe8ff;display:inline-flex;align-items:center;gap:6px}
     .tool-link:hover{border-color:rgba(103,232,255,.5);color:#fff}
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .step{border:1px solid rgba(103,232,255,.14);background:rgba(8,21,43,.4);border-radius:18px;padding:18px}
-    .step-num{width:30px;height:30px;border-radius:50%;background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.28);display:grid;place-items:center;font-weight:900;font-size:.84rem;color:var(--cyan);margin-bottom:10px}
+    .step{border:1px solid rgba(103,232,255,.14);background:rgba(8,21,43,.4);border-radius:var(--radius-lg);padding:18px}
+    .step-num{width:30px;height:30px;border-radius:var(--radius-full);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.28);display:grid;place-items:center;font-weight:900;font-size:.84rem;color:var(--cyan);margin-bottom:10px}
     .step h4{font-size:.94rem;font-weight:800;margin-bottom:5px}
     .step p{font-size:.84rem;color:var(--muted);line-height:1.6}
     .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:820px}
     .checklist li{list-style:none;display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:#d6e6f8;font-weight:600}
     .checklist .check{color:var(--success);font-weight:950;flex-shrink:0}
     .checklist-note{margin-top:16px;color:var(--muted);font-size:.86rem}
-    .security-panel{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.5);border-radius:var(--radius);padding:26px;display:flex;gap:16px;align-items:flex-start}
+    .security-panel{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:26px;display:flex;gap:16px;align-items:flex-start}
     .security-panel .icon{width:48px;height:48px}
     .security-panel h3{font-size:1.05rem;margin-bottom:8px}
     .security-panel p{color:var(--muted);font-size:.92rem;line-height:1.7;margin-bottom:8px}
     .security-panel p:last-child{margin-bottom:0}
     .faq{display:grid;gap:12px;max-width:900px}
-    .faq details{border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.035);border-radius:16px;padding:16px 18px}
+    .faq details{border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.035);border-radius:var(--radius-lg);padding:16px 18px}
     .faq summary{cursor:pointer;font-weight:800;font-size:.94rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
     .faq summary::-webkit-details-marker{display:none}
     .faq summary .plus{color:var(--blue2);font-size:1.2rem;font-weight:400;flex-shrink:0}
     .faq details[open] .plus{transform:rotate(45deg)}
     .faq details p{color:var(--muted);margin-top:10px;font-size:.88rem;line-height:1.65}
-    .commercial-box{border:1px solid rgba(55,245,161,.22);background:rgba(55,245,161,.05);border-radius:var(--radius);padding:26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .commercial-box{border:1px solid rgba(55,245,161,.22);background:rgba(55,245,161,.05);border-radius:var(--radius-lg);padding:26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
     .commercial-box h3{font-size:1rem;font-weight:800;color:#37f5a1;margin-bottom:4px}
     .commercial-box p{color:var(--muted);font-size:.88rem}
     footer{padding:40px 0 26px;background:rgba(1,4,13,.76);border-top:1px solid rgba(103,232,255,.12)}
@@ -133,11 +130,11 @@
     footer a{display:block;color:var(--muted);margin:8px 0;font-size:.9rem}
     footer a:hover{color:#fff}
     .copy{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted2);font-size:.84rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-    a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:var(--radius-sm)}
     @media(max-width:980px){
       .channel-grid,.checklist{grid-template-columns:1fr}
       .steps{grid-template-columns:repeat(2,1fr)}
-      .menu{display:none;position:absolute;top:72px;left:20px;right:20px;padding:16px;flex-direction:column;align-items:stretch;background:rgba(2,7,19,.97);border:1px solid var(--border);border-radius:18px}
+      .menu{display:none;position:absolute;top:72px;left:20px;right:20px;padding:16px;flex-direction:column;align-items:stretch;background:rgba(2,7,19,.97);border:1px solid var(--border);border-radius:var(--radius-lg)}
       .menu.open{display:flex}
       .mobile-toggle{display:inline-flex}
       .nav>.btn{display:none}
@@ -145,7 +142,6 @@
     }
     @media(max-width:640px){
       .steps{grid-template-columns:1fr}
-      .btn{width:100%}
       .hero-actions{flex-direction:column}
       .security-panel{flex-direction:column}
       .commercial-box{flex-direction:column;align-items:flex-start}
@@ -154,7 +150,6 @@
     }
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-      .btn:hover{transform:none}
     }
     @media (prefers-reduced-motion: no-preference){
       @view-transition{navigation:auto}
@@ -177,7 +172,7 @@
         <a href="/solucoes.html">Soluções</a>
         <a href="/ciberseguranca.html">Segurança</a>
       </nav>
-      <a class="btn btn-ghost" href="/#diagnostico">Diagnóstico gratuito</a>
+      <a class="btn btn-secondary btn-sm" href="/#diagnostico">Diagnóstico gratuito</a>
       <button class="mobile-toggle" id="mobileToggle">Menu</button>
     </div>
   </header>
@@ -192,7 +187,7 @@
           <a href="https://suporte.oryxonsystems.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Acessar Portal de Chamados (abre em nova aba)" onclick="gtag('event','support_portal_click',{'link_location':'hero'})">
             <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;display:inline-block"><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg> Acessar Portal de Chamados
           </a>
-          <a href="mailto:suporte@oryxonsystems.com.br" class="btn btn-ghost" aria-label="Abrir chamado por e-mail para suporte@oryxonsystems.com.br" onclick="gtag('event','support_email_click',{'link_location':'hero'})">
+          <a href="mailto:suporte@oryxonsystems.com.br" class="btn btn-secondary" aria-label="Abrir chamado por e-mail para suporte@oryxonsystems.com.br" onclick="gtag('event','support_email_click',{'link_location':'hero'})">
             <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:1em;height:1em;display:inline-block"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg> Abrir chamado por e-mail
           </a>
         </div>
@@ -214,7 +209,7 @@
             <div class="channel-head"><div class="icon"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg></div><h3>E-mail</h3></div>
             <p>Todo e-mail enviado para <strong>suporte@oryxonsystems.com.br</strong> gera automaticamente um chamado no Portal, com o mesmo registro e rastreabilidade.</p>
             <p class="note">Indicado para quem ainda não tem acesso ao portal, ou prefere abrir a solicitação pelo próprio cliente de e-mail. Anexos enviados na mensagem entram no chamado. <!-- TODO: confirmar notificações GLPI ao requerente --></p>
-            <a href="mailto:suporte@oryxonsystems.com.br" class="btn btn-ghost" aria-label="Abrir chamado por e-mail para suporte@oryxonsystems.com.br" onclick="gtag('event','support_email_click',{'link_location':'card'})">Enviar e-mail</a>
+            <a href="mailto:suporte@oryxonsystems.com.br" class="btn btn-secondary" aria-label="Abrir chamado por e-mail para suporte@oryxonsystems.com.br" onclick="gtag('event','support_email_click',{'link_location':'card'})">Enviar e-mail</a>
           </div>
           <div class="channel-card">
             <div class="channel-head"><div class="icon"><svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z"/><path d="M7 20h10"/><path d="M9 16v4"/><path d="M15 16v4"/></svg></div><h3>Acesso Remoto</h3></div>

@@ -70,6 +70,7 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v2.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
@@ -83,22 +84,19 @@
     .brand-wordmark{display:flex;flex-direction:column;gap:1px}
     .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
     .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
-    .btn{min-height:44px;display:inline-flex;align-items:center;gap:8px;padding:0 22px;border-radius:999px;font-family:inherit;font-weight:850;cursor:pointer;transition:.2s;text-decoration:none;white-space:nowrap;font-size:.9rem;border:none}
-    .btn-primary{color:#001224;background:linear-gradient(135deg,#67e8ff,#1478ff);box-shadow:0 12px 40px rgba(0,183,255,.25)}
-    .btn:hover{transform:translateY(-2px)}
     .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:12px}
-    .grad{background:linear-gradient(135deg,#fff 12%,#9df7ff 40%,#00b7ff 62%,#1478ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .grad{background:var(--gradient-brand);background-clip:text;-webkit-background-clip:text;color:transparent}
     .js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
 
     /* HERO */
     .case-hero{padding:64px 0;border-bottom:1px solid rgba(103,232,255,.10)}
     .case-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-    .case-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(55,245,161,.28);background:rgba(55,245,161,.06);color:#a0f5d4;font-size:.76rem;font-weight:900;margin-bottom:16px}
-    .case-badge-dot{width:6px;height:6px;border-radius:50%;background:#37f5a1;box-shadow:0 0 10px rgba(55,245,161,.8)}
+    .case-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:var(--radius-pill);border:1px solid rgba(55,245,161,.28);background:rgba(55,245,161,.06);color:#a0f5d4;font-size:.76rem;font-weight:900;margin-bottom:16px}
+    .case-badge-dot{width:6px;height:6px;border-radius:var(--radius-full);background:#37f5a1}
     h1{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.04;letter-spacing:-.06em;margin-bottom:18px}
     .case-lead{color:var(--muted);font-size:1.02rem;line-height:1.72;margin-bottom:22px}
-    .client-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.72);border-radius:22px;padding:24px}
+    .client-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:24px}
     .client-card h3{font-size:.8rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:var(--muted2);margin-bottom:16px}
     .client-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(103,232,255,.08);font-size:.9rem}
     .client-row:last-child{border-bottom:0;padding-bottom:0}
@@ -107,7 +105,7 @@
 
     /* RESULTADOS */
     .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0}
-    .result-card{border-radius:22px;padding:24px;text-align:center}
+    .result-card{border-radius:var(--radius-lg);padding:24px;text-align:center}
     .result-card.green{border:1px solid rgba(55,245,161,.28);background:rgba(55,245,161,.06)}
     .result-card.blue{border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.06)}
     .result-card.orange{border:1px solid rgba(255,165,0,.28);background:rgba(255,140,0,.06)}
@@ -125,13 +123,13 @@
     .section-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
 
     /* PROBLEMA */
-    .prob-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid rgba(255,77,77,.18);background:rgba(255,50,50,.04);border-radius:14px;margin-bottom:10px}
+    .prob-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid rgba(255,77,77,.18);background:rgba(255,50,50,.04);border-radius:var(--radius-lg);margin-bottom:10px}
     .prob-icon{font-size:1.1rem;flex-shrink:0}
     .prob-item h4{font-size:.94rem;font-weight:800;color:#ff9999;margin-bottom:4px}
     .prob-item p{margin:0;font-size:.87rem;color:var(--muted)}
 
     /* SOLUÇÃO */
-    .sol-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid rgba(55,245,161,.16);background:rgba(55,245,161,.04);border-radius:14px;margin-bottom:10px}
+    .sol-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid rgba(55,245,161,.16);background:rgba(55,245,161,.04);border-radius:var(--radius-lg);margin-bottom:10px}
     .sol-item h4{font-size:.94rem;font-weight:800;color:#37f5a1;margin-bottom:4px}
     .sol-item p{margin:0;font-size:.87rem;color:var(--muted)}
 
@@ -144,11 +142,11 @@
     .metric-val-bad{color:#ff8888;font-weight:700;text-decoration:line-through;opacity:.7}
 
     /* DEPOIMENTO */
-    .testimonial{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:28px;padding:32px;position:relative}
+    .testimonial{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:32px;position:relative}
     .testimonial:before{content:'\"';position:absolute;top:16px;left:24px;font-size:4rem;line-height:.8;color:var(--blue2);opacity:.3;font-family:Georgia,serif}
     .testimonial blockquote{font-size:1.08rem;color:#c8d7e9;line-height:1.72;font-style:italic;padding-left:8px;margin-bottom:20px}
     .testimonial-author{display:flex;align-items:center;gap:12px}
-    .author-avatar-g{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#00b7ff,#1478ff);display:grid;place-items:center;font-weight:900;color:#001224;font-size:1.1rem;flex-shrink:0}
+    .author-avatar-g{width:44px;height:44px;border-radius:var(--radius-full);background:var(--gradient-brand);display:grid;place-items:center;font-weight:900;color:#001224;font-size:1.1rem;flex-shrink:0}
     .author-info strong{display:block;font-size:.92rem;color:#dff9ff}
     .author-info span{font-size:.8rem;color:var(--muted)}
     .stars{color:#fbbf24;font-size:.9rem;margin-top:4px}
@@ -168,7 +166,7 @@
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
       .js .reveal{opacity:1;transform:none}
-      .btn:hover,.card:hover{transform:none}
+      .card:hover{transform:none}
     }
     @media (prefers-reduced-motion: no-preference){
       @view-transition{navigation:auto}
@@ -180,7 +178,7 @@
     @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
     /* MOB-01 */
     @media(max-width:900px){.section-grid{grid-template-columns:minmax(0,1fr)}}
-    @media(max-width:600px){.metrics-table{display:block;overflow-x:auto}.nav .btn{padding:0 12px;font-size:.78rem}}
+    @media(max-width:600px){.metrics-table{display:block;overflow-x:auto}}
     @media(max-width:360px){.nav>div>a:not(.btn){display:none}}
   </style>
 </head>
@@ -190,7 +188,7 @@
       <a href="/" class="brand"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
       <div style="display:flex;align-items:center;gap:12px">
         <a href="/" style="color:var(--muted);font-size:.84rem;font-weight:700">← Voltar ao site</a>
-        <a href="/#diagnostico" class="btn btn-primary">Diagnóstico gratuito</a>
+        <a href="/#diagnostico" class="btn btn-primary btn-sm">Diagnóstico gratuito</a>
       </div>
     </div>
   </header>
@@ -397,7 +395,7 @@
         <h2 class="reveal" style="margin-bottom:16px">MacBooks em empresa precisam de gestão — não de sorte.</h2>
         <p class="reveal">O ambiente macOS é frequentemente subestimado em termos de gestão de TI. A percepção de que "Mac não dá problema" leva empresas a operarem sem nenhuma visibilidade real do parque — o que não elimina vulnerabilidades, apenas as torna invisíveis.</p>
         <p class="reveal">O case da GregTur mostra que a redução de chamados não vem de "resolver mais rápido" — vem de <strong style="color:#dff9ff">evitar que os problemas aconteçam</strong>. Monitoramento proativo, automações e hardening semanal são o que cria essa prevenção de forma sistemática.</p>
-        <div class="reveal" style="border:1px solid rgba(55,245,161,.2);background:rgba(55,245,161,.05);border-radius:16px;padding:20px 24px;margin-top:24px">
+        <div class="reveal" style="border:1px solid rgba(55,245,161,.2);background:rgba(55,245,161,.05);border-radius:var(--radius-lg);padding:20px 24px;margin-top:24px">
           <p style="margin:0;color:#a0f5d4;font-size:.95rem;line-height:1.65"><strong>52% de redução de chamados</strong> não é sorte. É o resultado direto de parar de agir quando quebra e começar a monitorar antes de quebrar.</p>
         </div>
       </div>
@@ -411,9 +409,9 @@
         <p class="reveal">Atendemos empresas em São Paulo e em toda a região do Alto Tietê — com o mesmo padrão de gestão proativa aplicado na GregTur. Diagnóstico gratuito, sem compromisso.</p>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap" class="reveal">
           <a href="/#diagnostico" class="btn btn-primary">Solicitar diagnóstico gratuito →</a>
-          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20vi%20o%20case%20da%20GregTur%20e%20quero%20saber%20mais%20sobre%20gest%C3%A3o%20de%20TI." target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;gap:8px;padding:0 22px;border-radius:999px;font-family:inherit;font-weight:850;font-size:.9rem;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(103,232,255,.28);text-decoration:none;transition:.2s">Falar no WhatsApp</a>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20vi%20o%20case%20da%20GregTur%20e%20quero%20saber%20mais%20sobre%20gest%C3%A3o%20de%20TI." target="_blank" rel="noopener" class="btn btn-secondary">Falar no WhatsApp</a>
         </div>
-        <div style="margin-top:24px;display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:14px" class="reveal">
+        <div style="margin-top:24px;display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:var(--radius-lg)" class="reveal">
           <img src="/assets/help-digital-logo.webp" alt="Help Digital" width="94" height="24" loading="lazy" style="height:24px;width:auto;opacity:.85">
           <span style="color:var(--muted);font-size:.82rem;font-weight:700;border-left:1px solid rgba(103,232,255,.18);padding-left:14px">Help&nbsp;Digital São&nbsp;Paulo</span>
         </div>
