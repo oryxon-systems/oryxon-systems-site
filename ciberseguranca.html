@@ -324,6 +324,9 @@
     /* MOB-01 */
     .split-grid{display:grid;grid-template-columns:1fr 1fr}
     @media(max-width:900px){.split-grid{grid-template-columns:minmax(0,1fr)}}
+    .city-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:860px;margin:0 auto}
+    .city-links a{max-width:100%;border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.5);border-radius:999px;padding:10px 16px;font-size:.9rem;font-weight:700;color:#dff9ff;text-decoration:none;transition:.2s}
+    .city-links a:hover{border-color:rgba(103,232,255,.45);color:#fff}
     /* SEO-03 */
     .breadcrumb{padding-top:18px}
     .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
@@ -627,6 +630,27 @@
             <p>A Lei Geral de Proteção de Dados exige que empresas implementem controles técnicos de segurança. Sem isso, a empresa está sujeita a multas da ANPD e responsabilidade civil.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- CIBERSEGURANÇA NA SUA CIDADE -->
+    <section style="border-top:1px solid rgba(103,232,255,.08);padding:48px 0">
+      <div class="container reveal">
+        <div style="max-width:700px;margin:0 auto 28px;text-align:center">
+          <div class="kicker">Atendimento local</div>
+          <h2 style="font-size:clamp(1.4rem,2.5vw,2rem);letter-spacing:-.05em;margin-bottom:10px">Cibersegurança na sua cidade</h2>
+          <p style="color:var(--muted);font-size:.95rem">Veja como atendemos empresas do Alto Tietê, com sede em Poá.</p>
+        </div>
+        <div class="city-links">
+            <a href="/ti-suzano/">Cibersegurança e TI em Suzano</a>
+            <a href="/ti-mogi-das-cruzes/">Cibersegurança e TI em Mogi das Cruzes</a>
+            <a href="/ti-itaquaquecetuba/">Cibersegurança e TI em Itaquaquecetuba</a>
+            <a href="/ti-poa/">Cibersegurança e TI em Poá</a>
+            <a href="/ti-ferraz-de-vasconcelos/">Cibersegurança e TI em Ferraz de Vasconcelos</a>
+            <a href="/blog/gestao-de-ti-guararema.html">Gestão de TI e segurança em Guararema</a>
+            <a href="/blog/infraestrutura-de-ti-santa-isabel.html">Infraestrutura de TI em Santa Isabel</a>
+        </div>
+        <p style="text-align:center;color:var(--muted);font-size:.92rem;margin-top:22px">Atendemos também <a href="/ti-guarulhos/" style="text-decoration:underline">empresas de Guarulhos</a>.</p>
       </div>
     </section>
 
