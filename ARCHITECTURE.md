@@ -7,7 +7,7 @@ Propósito: descrever a stack, a estrutura de arquivos, as integrações e o flu
 
 HTML/CSS/JS estáticos, sem build e sem gerenciador de pacotes. CSS e JS de cada página ficam inline (`<style>` no `<head>`, `<script>` no fim do `<body>`); não há templating nem includes. Hospedagem na Vercel com Git Integration na branch `main`. Repositório: `oryxon-systems/oryxon-systems-site` (público).
 
-Compartilhados e versionados em `assets/`: `css/consent.v1.css`, `js/consent.v1.js`, `js/hero-network.v1.js`, `fonts/inter.css` + `inter-var.woff2`. Arquivos `*.v1.*` são imutáveis (cache de 1 ano); mudança = novo `v2` e troca em todas as páginas (ver RULES.md).
+Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA4; 47 páginas; injeta `css/consent.v1.css` sozinho), `js/hero-network.v1.js` (rede animada do hero; só `index.html`), `fonts/inter.css` + `inter-var.woff2` (Inter; 47 páginas). Arquivos `*.v1.*` são imutáveis (cache de 1 ano); mudança = novo `v2` e troca em todas as páginas que o carregam (ver RULES.md).
 
 ## Árvore de diretórios (versionada)
 

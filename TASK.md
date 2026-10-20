@@ -30,12 +30,12 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-19 — `/diagnostico/` é só redirect para `/#diagnostico`; não há pasta — `vercel.json`
 - [ ] 2026-10-19 — "Help Digital TI" nunca deve aparecer; revisar ocorrências de "Help Digital" sem "São Paulo" no contexto de franquia — `*.html`
 - [ ] 2026-10-19 — Schema.org usa `contato@oryxonsystems.com.br` além de `suporte@`; confirmar que ambos são válidos — `index.html`
-- [ ] 2026-10-19 — CLAUDE.md afirma que não há CSS/JS compartilhado, mas existem `assets/js/*.v1.js` e `assets/css/consent.v1.css` — `CLAUDE.md`
 - [ ] 2026-10-19 — Métricas de sucesso e prazo de resposta a reporte de vulnerabilidade não definidos — `PRD.md`, `SECURITY.md`
 - [ ] 2026-10-19 — Datas dos ADR-002, 003, 007 não localizáveis no git
 
 ## Concluído
 
+- [x] 2026-10-19 — CLAUDE.md: corrigidas afirmações desatualizadas (assets compartilhados, sede em Poá, `diagnostico/`, handlers de lead, Schema, Guarulhos) — `CLAUDE.md`, `ARCHITECTURE.md`
 - [x] 2026-10-19 — Docs de projeto da raiz adicionados ao `.vercelignore` (ADR-010) — `.vercelignore`, `ARCHITECTURE.md`, `DECISIONS.md`
 - [x] 2026-10-19 — SEO-02: links do pilar, ti-*, home e posts (lotes A, B, C) — `4fc3d81`, `214ae64`, `7b0003d`
 - [x] 2026-10-19 — SEO-03: Schema.org e breadcrumbs (fases 1 e 2) — `cf84f1b`, `94e3327`, `6e68fcf`, `9b4900a`
