@@ -8,6 +8,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 ## Em andamento
 
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
+- [ ] 2026-10-20 — Fase 1 tokens: piloto `index.html` feito; migrar 47 páginas em lotes (blog/, ti-*, raiz) após aprovação — `assets/css/tokens.v1.css`
 
 ## Backlog
 

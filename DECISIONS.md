@@ -1,6 +1,6 @@
 # DECISIONS — Oryxon Systems Site
 
-Última atualização: 2026-10-19
+Última atualização: 2026-10-20
 Propósito: registro de decisões técnicas e editoriais (ADR). Novas decisões entram no fim, com número sequencial.
 
 Formato: ADR-NNN | Data | Status | Contexto | Decisão | Consequências.
@@ -66,3 +66,8 @@ Consequências: proteção de origem (scripts, estilos, fontes, imagens, frames,
 Contexto: novo serviço "Auditoria de Apps Criados com IA", em formato de programa piloto, sem preços definidos.
 Decisão: página própria em `/auditoria-apps-ia/` com formulário → WhatsApp e `generate_lead` (`service: auditoria_apps_ia`); dados de mercado só de fontes linkadas e conferidas (Veracode, Tecnoblog/RedAccess, NVD). Da CVE-2025-48757 cita-se a descrição e a contestação do fornecedor, sem números de severidade. Posicionamento "não é pentest": exploração aprofundada com parceiro. JS do formulário inline com `addEventListener` e sem `style=""` (não amplia a dívida do `'unsafe-inline'`, ADR-011). Alternativas descartadas: preços fictícios no lançamento; título com "Alto Tietê" (estoura 60 caracteres).
 Consequências: preços pendentes (registrados só em TASK.md); a página é a 48ª URL do sitemap, com redirect da versão sem barra. Arujá ficou fora do `areaServed` por não constar no território de RULES.md (incluir exige alterar RULES.md).
+
+**ADR-013 | 2026-10-20 | Aceito (piloto em `index.html`)**
+Contexto: auditoria de 2026-10-20 achou 27 valores de border-radius, 129 declarações de sombra/glow e 9 famílias de botão com 45 `style=""`.
+Decisão: `assets/css/tokens.v1.css` com radius (6/10/14/999/50%), sombras neutras (blur ≤16px), `--focus-ring`, único `--gradient-brand` e botões `.btn-primary/-secondary/-ghost` + `.btn-sm` (44px). Hover de card = borda ciano e fundo mais claro (sombra preta é invisível em `#020713`). Alternativas descartadas: mexer em `consent.v1.css` (imutável); remover os fundos radiais de página.
+Consequências: demais 47 páginas migram em lotes por diretório após aprovação; até lá convivem dois sistemas. Painel Command Center e `.orb-large` (exceto glow) ficam para fase própria.
