@@ -1,6 +1,6 @@
 # TASK — Oryxon Systems Site
 
-Última atualização: 2026-10-19
+Última atualização: 2026-10-20
 Propósito: acompanhar o que está em andamento, o backlog, as verificações pendentes e o que foi concluído.
 
 Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
@@ -8,7 +8,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 ## Em andamento
 
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
-- [ ] 2026-10-20 — Fase 1 tokens: piloto e lote RAIZ feitos (aguardando revisão); faltam `blog/`, `ti-*/`, `cases/`, `suporte/`, `auditoria-apps-ia/` — `assets/css/tokens.v1.css`
+- [ ] 2026-10-20 — Fase 1 tokens (`tokens.v2.css`): `index.html` e as 8 páginas da raiz migradas, aguardando revisão/commit. Lotes pendentes, nesta ordem: `ti-*/` (6), `blog/` (30 posts), `cases/`, `suporte/`, `auditoria-apps-ia/` — `assets/css/tokens.v2.css`
+- [ ] 2026-10-20 — Fase 2 (emojis): os ~354 emojis de UI AINDA estão no site (29 arquivos); a exceção `.post-thumb` é a regra-alvo, não o estado atual. Depende de fechar o ADR-004 — vários
 
 ## Backlog
 

@@ -71,3 +71,6 @@ Consequências: preços pendentes (registrados só em TASK.md); a página é a 4
 Contexto: auditoria de 2026-10-20 achou 27 valores de border-radius, 129 declarações de sombra/glow e 9 famílias de botão com 45 `style=""`.
 Decisão: `assets/css/tokens.v1.css` com radius (6/10/14/999/50%), sombras neutras (blur ≤16px), `--focus-ring`, único `--gradient-brand` e botões `.btn-primary/-secondary/-ghost` + `.btn-sm` (44px). Hover de card = borda ciano e fundo mais claro (sombra preta é invisível em `#020713`). Alternativas descartadas: mexer em `consent.v1.css` (imutável); remover os fundos radiais de página.
 Consequências: demais 47 páginas migram em lotes por diretório após aprovação; até lá convivem dois sistemas. Painel Command Center e `.orb-large` (exceto glow) ficam para fase própria.
+
+**ADR-013, adendo | 2026-10-20 | Versionamento**
+`tokens.v1.css` foi alterado após o primeiro deploy (`94704ba`, `666529c`), e o cache imutável de 1 ano (`vercel.json`) pode manter a cópia antiga em clientes. Regra: arquivo publicado nunca é alterado; toda mudança = nova versão. `tokens.v2.css` = v1 + `.partner-card--row`, `.partner-link*`; as 9 páginas migradas apontam para ele. `tokens.v1.css` permanece no repositório, congelado, para HTML antigo em cache. Os componentes `.city-card` e `.stack-badge` ficam no `<style>` de `index.html` (uso único).
