@@ -61,3 +61,8 @@ Consequências: documentos ficam só no repositório; todo novo doc de projeto n
 Contexto: a CSP estava em Report-Only desde `f0195e4`; o site não carrega recurso externo além do GA4 (via `consent.v1.js`) e nenhum `<form>` tem `action`.
 Decisão: CSP em enforce (`Content-Security-Policy`) mantendo `'unsafe-inline'` em `script-src` e `style-src` por ora. Alternativa descartada: aguardar a remoção do `'unsafe-inline'` (exige mover todo CSS/JS inline para arquivos).
 Consequências: proteção de origem (scripts, estilos, fontes, imagens, frames, `object`, `base`, `form-action`) ativa agora, mas sem proteção contra XSS inline até a etapa 3 (TASK.md).
+
+**ADR-012 | 2026-10-20 | Aceito**
+Contexto: novo serviço "Auditoria de Apps Criados com IA", em formato de programa piloto, sem preços definidos.
+Decisão: página própria em `/auditoria-apps-ia/` com formulário → WhatsApp e `generate_lead` (`service: auditoria_apps_ia`); dados de mercado só de fontes linkadas e conferidas (Veracode, Tecnoblog/RedAccess, NVD). Da CVE-2025-48757 cita-se a descrição e a contestação do fornecedor, sem números de severidade. Posicionamento "não é pentest": exploração aprofundada com parceiro. JS do formulário inline com `addEventListener` e sem `style=""` (não amplia a dívida do `'unsafe-inline'`, ADR-011). Alternativas descartadas: preços fictícios no lançamento; título com "Alto Tietê" (estoura 60 caracteres).
+Consequências: preços pendentes (registrados só em TASK.md); a página é a 48ª URL do sitemap, com redirect da versão sem barra. Arujá ficou fora do `areaServed` por não constar no território de RULES.md (incluir exige alterar RULES.md).
