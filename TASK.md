@@ -8,7 +8,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 ## Em andamento
 
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
-- [ ] 2026-10-20 — Fase 1 tokens (`tokens.v2.css`): `index.html` e as 8 páginas da raiz migradas, aguardando revisão/commit. Lotes pendentes, nesta ordem: `ti-*/` (6), `blog/` (30 posts), `cases/`, `suporte/`, `auditoria-apps-ia/` — `assets/css/tokens.v2.css`
+- [ ] 2026-10-20 — Fase 1 tokens (`tokens.v2.css`): `index.html` e as 8 páginas da raiz migradas e commitadas; lote `ti-*/` (6) migrado em 2026-10-20, aguardando revisão. Pendentes, nesta ordem: `blog/` (30 posts), `cases/`, `suporte/`, `auditoria-apps-ia/` — `assets/css/tokens.v2.css`
 - [ ] 2026-10-20 — Fase 2 (emojis): os ~354 emojis de UI AINDA estão no site (29 arquivos); a exceção `.post-thumb` é a regra-alvo, não o estado atual. Depende de fechar o ADR-004 — vários
 
 ## Backlog
@@ -41,6 +41,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — Auditoria de apps IA: validar com o Uedson o escopo comercial (programa piloto, prazos, revisão de código mediante acesso ao repositório) antes de publicar — `auditoria-apps-ia/index.html`
 - [ ] 2026-10-20 — Título da nova página sem "Alto Tietê" (limite de 60 caracteres: com a região daria 61); região está no H1, meta description e Schema — `auditoria-apps-ia/index.html`
 - [ ] 2026-10-20 — Prompt pedia Tabler Icons (`ti ti-*`); a página não usa ícones (o repositório não tem Tabler, ver ADR-004) — `auditoria-apps-ia/index.html`
+- [ ] 2026-10-20 — `ti-*/`: o `.city-card` local (grade de cobertura) difere do `.city-card` da home; unificar exige decisão (tokens.v3). Box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
 
 ## Concluído
 

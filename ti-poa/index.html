@@ -91,6 +91,7 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v2.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
@@ -107,32 +108,28 @@
     .brand-wordmark{display:flex;flex-direction:column;gap:1px}
     .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
     .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
-    .btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 20px;border-radius:999px;border:1px solid transparent;font-family:inherit;font-weight:850;letter-spacing:-.02em;cursor:pointer;transition:.2s ease;text-decoration:none;white-space:nowrap;font-size:.88rem}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{color:#001224;background:linear-gradient(135deg,#67e8ff 0%,#00b7ff 35%,#1478ff 100%);box-shadow:0 16px 50px rgba(0,183,255,.28)}
-    .btn-ghost{color:#fff;background:rgba(255,255,255,.045);border-color:rgba(103,232,255,.28)}
     .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:10px}
     h1{font-size:clamp(2.4rem,6vw,4rem);line-height:.96;letter-spacing:-.07em;margin-bottom:18px}
     h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.04;letter-spacing:-.055em;margin-bottom:14px}
-    .grad{background:linear-gradient(135deg,#fff 12%,#9df7ff 40%,#00b7ff 62%,#1478ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .grad{background:var(--gradient-brand);background-clip:text;-webkit-background-clip:text;color:transparent}
     section{padding:72px 0}
     .hero{padding:72px 0 60px;border-bottom:1px solid rgba(103,232,255,.10)}
     .hero-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-    .city-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;border:1px solid rgba(55,245,161,.3);background:rgba(55,245,161,.06);color:#a0f5d4;font-size:.76rem;font-weight:900;letter-spacing:.05em;margin-bottom:18px}
-    .live-dot{width:7px;height:7px;border-radius:50%;background:#37f5a1;box-shadow:0 0 12px rgba(55,245,161,.8);flex-shrink:0}
+    .city-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:var(--radius-pill);border:1px solid rgba(55,245,161,.3);background:rgba(55,245,161,.06);color:#a0f5d4;font-size:.76rem;font-weight:900;letter-spacing:.05em;margin-bottom:18px}
+    .live-dot{width:7px;height:7px;border-radius:var(--radius-full);background:#37f5a1;flex-shrink:0}
     .hero p{color:var(--muted);font-size:1.05rem;max-width:560px;line-height:1.7;margin-bottom:26px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
     .trust-pills{display:flex;flex-wrap:wrap;gap:8px}
-    .pill{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.045);border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:750;color:var(--muted)}
+    .pill{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.045);border-radius:var(--radius-pill);padding:7px 12px;font-size:.82rem;font-weight:750;color:var(--muted)}
     .hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:260px}
-    .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(8,21,43,.72);border-radius:18px;padding:16px;text-align:center}
-    .stat-box strong{display:block;font-size:1.8rem;letter-spacing:-.06em;color:#dff9ff;text-shadow:0 0 20px rgba(0,183,255,.4)}
+    .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:16px;text-align:center}
+    .stat-box strong{display:block;font-size:1.8rem;letter-spacing:-.06em;color:#dff9ff}
     .stat-box span{color:var(--muted);font-size:.78rem;font-weight:700}
     .section-head{max-width:700px;margin-bottom:36px}
     .section-head p{color:var(--muted);font-size:1rem}
     .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .svc-card{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028));border-radius:28px;padding:26px;transition:.22s}
-    .svc-card:hover{transform:translateY(-4px);border-color:rgba(103,232,255,.4);box-shadow:0 20px 60px rgba(0,183,255,.10)}
+    .svc-card{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028));border-radius:var(--radius-lg);padding:26px;transition:.22s}
+    .svc-card:hover{border-color:rgba(103,232,255,.35);background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.05))}
     .svc-icon{font-size:1.8rem;margin-bottom:14px}
     .svc-card h3{font-size:1.05rem;letter-spacing:-.03em;margin-bottom:8px}
     .svc-card p{color:var(--muted);font-size:.9rem;line-height:1.65}
@@ -140,30 +137,30 @@
     .why-list{display:grid;gap:12px}
     .why-item{display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.94rem}
     .check{color:var(--success);font-weight:900;flex-shrink:0}
-    .why-panel{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:28px;padding:28px}
+    .why-panel{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:28px}
     .why-panel h3{font-size:1.1rem;margin-bottom:14px;color:#dff9ff}
+    .why-panel .btn{width:100%;margin-top:8px}
     .why-panel p{color:var(--muted);font-size:.9rem;line-height:1.65;margin-bottom:12px}
     .coverage-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .city-card{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:16px;padding:16px;text-align:center;transition:.2s}
-    .city-card.active{border-color:rgba(103,232,255,.4);background:rgba(0,183,255,.08)}
-    .city-card .icon{font-size:1.4rem;margin-bottom:8px}
-    .city-card h4{font-size:.88rem;font-weight:800;margin-bottom:3px}
-    .city-card span{color:var(--muted);font-size:.76rem}
-    .cta-band{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 16rem),rgba(8,21,43,.62);border-radius:34px;padding:clamp(28px,5vw,48px);text-align:center}
-    .form-wrap{border:1px solid rgba(103,232,255,.2);background:rgba(8,21,43,.72);border-radius:28px;padding:clamp(22px,4vw,36px)}
+    .coverage-card{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:16px;text-align:center;transition:.2s}
+    .coverage-card.active{border-color:rgba(103,232,255,.4);background:rgba(0,183,255,.08)}
+    .coverage-card .icon{font-size:1.4rem;margin-bottom:8px}
+    .coverage-card h4{font-size:.88rem;font-weight:800;margin-bottom:3px}
+    .coverage-card span{color:var(--muted);font-size:.76rem}
+    .cta-band{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 16rem),rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:clamp(28px,5vw,48px);text-align:center}
+    .form-wrap{border:1px solid rgba(103,232,255,.2);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:clamp(22px,4vw,36px)}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
-    .field{min-height:50px;width:100%;border:1px solid rgba(103,232,255,.18);background:rgba(2,7,19,.62);color:#fff;border-radius:12px;padding:0 14px;outline:none;font-family:inherit;font-size:.92rem;transition:.2s}
-    .field:focus{border-color:rgba(103,232,255,.55);box-shadow:0 0 0 3px rgba(0,183,255,.10)}
+    .field{min-height:50px;width:100%;border:1px solid rgba(103,232,255,.18);background:rgba(2,7,19,.62);color:#fff;border-radius:var(--radius-md);padding:0 14px;outline:none;font-family:inherit;font-size:.92rem;transition:.2s}
+    .field:focus{border-color:rgba(103,232,255,.55);outline:var(--focus-ring);outline-offset:2px}
     .field.full{grid-column:1/-1}
     textarea.field{min-height:90px;padding-top:13px;resize:vertical}
     .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:24px 0;color:var(--muted2);font-size:.84rem}
     .page-footer .inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
     @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-stats{display:none}.services-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr}.coverage-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:600px){.services-grid,.coverage-grid,.form-grid{grid-template-columns:1fr}section{padding:52px 0}.btn{width:100%}}
+    @media(max-width:600px){.services-grid,.coverage-grid,.form-grid{grid-template-columns:1fr}section{padding:52px 0}}
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-      .btn:hover{transform:none}
     }
     @media (prefers-reduced-motion: no-preference){
       @view-transition{navigation:auto}
@@ -176,7 +173,7 @@
     /* MOB-01 */
     .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr}
     @media(max-width:900px){.why-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}}
-    @media(max-width:600px){.form-grid{grid-template-columns:minmax(0,1fr)}.why-panel .btn{white-space:normal;text-align:center;height:auto;padding-top:10px;padding-bottom:10px}.nav .btn{width:auto;padding:0 12px;font-size:.78rem}.nav-right{gap:8px}}
+    @media(max-width:600px){.form-grid{grid-template-columns:minmax(0,1fr)}.nav-right{gap:8px}}
     @media(max-width:360px){.back-link{display:none}}
     /* SEO-03 */
     .breadcrumb{padding-top:18px}
@@ -185,8 +182,8 @@
     .breadcrumb a{color:var(--muted)}
     .breadcrumb [aria-current]{color:#dff9ff}
     /* SEO-02 */
-    a.city-card{display:block;color:inherit;text-decoration:none}
-    a.city-card:hover{border-color:rgba(103,232,255,.4);background:rgba(0,183,255,.08)}
+    a.coverage-card{display:block;color:inherit;text-decoration:none}
+    a.coverage-card:hover{border-color:rgba(103,232,255,.35);background:rgba(0,183,255,.08)}
   </style>
 </head>
 <body>
@@ -195,7 +192,7 @@
       <a href="/" class="brand"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
       <div class="nav-right">
         <a href="/" class="back-link">← Site principal</a>
-        <a href="#contato" class="btn btn-primary">Diagnóstico gratuito</a>
+        <a href="#contato" class="btn btn-primary btn-sm">Diagnóstico gratuito</a>
       </div>
     </div>
   </header>
@@ -210,7 +207,7 @@
           <p>Poá é conhecida como polo de confecções, comércio e pequenas indústrias. As empresas locais precisam de TI confiável para manter estoques, sistemas fiscais e comunicação com clientes funcionando sem interrupção. Gestão de TI proativa em Poá. Monitoramento 24x7, backup gerenciado, segurança da informação e suporte com chamado confirmado em até 15 minutos e técnico em contato em até 2h no horário de atendimento.</p>
           <div class="hero-actions">
             <a href="#contato" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
-            <a href="https://wa.me/5511934932992?text=Olá%2C%20quero%20um%20Diagnóstico%20Gratuito%20de%20TI%20em%20Poá." target="_blank" rel="noopener" class="btn btn-ghost">Falar no WhatsApp</a>
+            <a href="https://wa.me/5511934932992?text=Olá%2C%20quero%20um%20Diagnóstico%20Gratuito%20de%20TI%20em%20Poá." target="_blank" rel="noopener" class="btn btn-secondary">Falar no WhatsApp</a>
           </div>
           <div class="trust-pills">
             <span class="pill">⚡ Chamado confirmado em 15 min</span>
@@ -265,7 +262,7 @@
           <h3>🏢 Empresas de Poá que confiam na Oryxon</h3>
           <p>Atendemos empresas de comércio, serviços, saúde, indústria e turismo em Poá e toda a região do Alto Tietê — com o mesmo padrão de gestão de TI das grandes corporações.</p>
           <p>Diagnóstico gratuito para empresas de Poá com 5 ou mais computadores. Sem compromisso.</p>
-          <a href="#contato" class="btn btn-primary" style="margin-top:8px;width:100%">Solicitar diagnóstico em Poá →</a>
+          <a href="#contato" class="btn btn-primary">Solicitar diagnóstico em Poá →</a>
         </div>
       </div>
     </section>
@@ -278,14 +275,14 @@
           <p>Além de Poá, atendemos presencialmente todas as cidades da região.</p>
         </div>
         <div class="coverage-grid">
-          <a class="city-card" href="/ti-suzano/"><div class="icon">📍</div><h4>Suzano</h4><span>Atendimento ativo</span></a>
-          <a class="city-card" href="/ti-mogi-das-cruzes/"><div class="icon">📍</div><h4>Mogi das Cruzes</h4><span>Atendimento ativo</span></a>
-          <a class="city-card" href="/ti-itaquaquecetuba/"><div class="icon">📍</div><h4>Itaquaquecetuba</h4><span>Atendimento ativo</span></a>
-          <div class="city-card active"><div class="icon">📍</div><h4>Poá</h4><span>Sede</span></div>
-          <a class="city-card" href="/ti-ferraz-de-vasconcelos/"><div class="icon">📍</div><h4>Ferraz de Vasconcelos</h4><span>Atendimento ativo</span></a>
-          <div class="city-card "><div class="icon">📍</div><h4>Guararema</h4><span>Atendimento ativo</span></div>
-          <div class="city-card "><div class="icon">📍</div><h4>Santa Isabel</h4><span>Atendimento ativo</span></div>
-          <div class="city-card"><div class="icon">🌐</div><h4>Remoto</h4><span>Atendimento remoto para empresas de outras cidades</span></div>
+          <a class="coverage-card" href="/ti-suzano/"><div class="icon">📍</div><h4>Suzano</h4><span>Atendimento ativo</span></a>
+          <a class="coverage-card" href="/ti-mogi-das-cruzes/"><div class="icon">📍</div><h4>Mogi das Cruzes</h4><span>Atendimento ativo</span></a>
+          <a class="coverage-card" href="/ti-itaquaquecetuba/"><div class="icon">📍</div><h4>Itaquaquecetuba</h4><span>Atendimento ativo</span></a>
+          <div class="coverage-card active"><div class="icon">📍</div><h4>Poá</h4><span>Sede</span></div>
+          <a class="coverage-card" href="/ti-ferraz-de-vasconcelos/"><div class="icon">📍</div><h4>Ferraz de Vasconcelos</h4><span>Atendimento ativo</span></a>
+          <div class="coverage-card "><div class="icon">📍</div><h4>Guararema</h4><span>Atendimento ativo</span></div>
+          <div class="coverage-card "><div class="icon">📍</div><h4>Santa Isabel</h4><span>Atendimento ativo</span></div>
+          <div class="coverage-card"><div class="icon">🌐</div><h4>Remoto</h4><span>Atendimento remoto para empresas de outras cidades</span></div>
         </div>
       </div>
     </section>
@@ -300,35 +297,35 @@
         </div>
         <div style="display:grid;gap:12px;max-width:780px">
 
-          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:16px;padding:18px 20px;cursor:pointer">
+          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
             <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
               Tem empresa de TI que atende Poá?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:12px;margin-bottom:0">Sim. A Oryxon Systems atende empresas em Poá com gestão de TI proativa, backup, segurança e suporte remoto (chamado confirmado em até 15 minutos e técnico em contato em até 2h no horário de atendimento). Estamos sediados em Poá e fazemos atendimento presencial quando necessário.</p>
           </details>
-          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:16px;padding:18px 20px;cursor:pointer">
+          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
             <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
               Quanto custa suporte de TI em Poá para pequenas empresas?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:12px;margin-bottom:0">Para empresas em Poá com 5 a 20 computadores, o investimento em gestão de TI gerenciada começa em valores acessíveis — geralmente menor do que o custo de um funcionário técnico interno. O valor exato depende do número de endpoints e dos serviços incluídos. Fazemos diagnóstico gratuito e apresentamos proposta personalizada.</p>
           </details>
-          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:16px;padding:18px 20px;cursor:pointer">
+          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
             <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
               A Oryxon atende o polo de confecções de Poá?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:12px;margin-bottom:0">Sim. Atendemos empresas de todos os segmentos em Poá, incluindo confecções, comércio atacadista e varejista, prestação de serviços e pequenas indústrias. Conhecemos as necessidades específicas das empresas locais e dimensionamos a solução de TI para cada perfil.</p>
           </details>
-          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:16px;padding:18px 20px;cursor:pointer">
+          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
             <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
               O que é monitoramento 24x7 e por que minha empresa em Poá precisa?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:12px;margin-bottom:0">Monitoramento 24x7 significa que sistemas automatizados verificam continuamente seus computadores, servidores e rede — identificando problemas antes que afetem sua operação. Para empresas em Poá, isso garante que falhas de hardware, backups com erro ou vulnerabilidades de segurança sejam detectadas e tratadas sem que você precise ligar pedindo socorro.</p>
           </details>
-          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:16px;padding:18px 20px;cursor:pointer">
+          <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
             <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
               Como contratar gestão de TI para minha empresa em Poá?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
@@ -375,7 +372,7 @@
                 <option>Educação</option><option>Outro</option>
               </select>
               <textarea class="field full" id="mensagem" placeholder="Principal problema de TI hoje?"></textarea>
-              <button class="btn btn-primary full" type="submit" style="min-height:52px;font-size:1rem">Solicitar diagnóstico gratuito →</button>
+              <button class="btn btn-primary full" type="submit">Solicitar diagnóstico gratuito →</button>
             </form>
             <p style="color:var(--muted2);font-size:.8rem;margin-top:10px;text-align:center">🔒 Seus dados estão seguros. Sem spam.</p>
           </div>
@@ -386,7 +383,7 @@
     <section style="border-top:1px solid rgba(103,232,255,.08);padding:40px 0">
       <div class="container" style="text-align:center">
         <p style="color:var(--muted2);font-size:.76rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px">Parceira oficial</p>
-        <div style="display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:14px">
+        <div style="display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:var(--radius-lg)">
           <img src="/assets/help-digital-logo.webp" alt="Help Digital" width="109" height="28" loading="lazy" style="height:28px;width:auto;opacity:.9">
           <span style="color:var(--muted);font-size:.84rem;font-weight:700;border-left:1px solid rgba(103,232,255,.18);padding-left:14px">Help&nbsp;Digital São&nbsp;Paulo</span>
         </div>
@@ -424,7 +421,7 @@
     }
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='none';}}),{threshold:.08});
-    if (!reduceMotion) document.querySelectorAll('.svc-card,.city-card,.why-item,.stat-box').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity .6s ease,transform .6s ease';obs.observe(el);});
+    if (!reduceMotion) document.querySelectorAll('.svc-card,.coverage-card,.why-item,.stat-box').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity .6s ease,transform .6s ease';obs.observe(el);});
   </script>
 </body>
 </html>

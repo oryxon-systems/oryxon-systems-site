@@ -21,6 +21,7 @@ Propósito: registrar os tokens e padrões visuais reais do site (fonte: `index.
 | `--focus-ring` | `2px solid var(--cyan)`, `outline-offset:2px` |
 | `--gradient-brand` | `linear-gradient(135deg,#67e8ff,#1478ff)` (único gradiente; fundos radiais de página mantidos) |
 | Exceções de marca de parceiro | `--brand-helpdigital:#ec6824` (+ `-bg`, `-border`, `-border-hover`, `tokens.v2.css`) no selo Help Digital, `--brand-ace:#44cc88` e `--brand-bni:#ff6666` (cards de associações em `sobre.html`, classes `.partner-card/.partner-ace/.partner-bni`), e `#25D366` no CTA flutuante do WhatsApp. Cores de terceiros, fora da paleta Oryxon. |
+| Exceção de marca (logotipo) | Gradiente do `.brand-wordmark span`: `linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%)` no texto "ORYXON" do header. É o logotipo, não o `--gradient-brand`; fica fora do token e não deve ser migrado. |
 | Botões | `.btn` + `.btn-primary` / `.btn-secondary` / `.btn-ghost`, tamanho `.btn-sm` (min 44px) |
 
 Fundo: gradientes radiais azul/ciano sobre degradê escuro, mais grade sutil em `body:before`. Tema único escuro. Os valores `#0A4A8F` e `#00D9FF` do contexto **não** existem no CSS (ver TASK.md). Tokens são redefinidos por página; copiar de `index.html`.
