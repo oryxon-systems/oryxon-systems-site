@@ -98,3 +98,9 @@ Contexto: o ADR-004 previa Tabler via CDN; o site usa 387 `<svg class="ti">` inl
 Decisão: Tabler Icons (outline, MIT) via sprite SVG: `assets/icons/sprite.v1.svg` (ids = nome Tabler), uso `<svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#nome"/></svg>`. O sprite é imutável (cache de 1 ano): ícone novo = `sprite.v2.svg` e troca da referência em todas as páginas. Estilo `.ti` e `.dot` em `assets/css/tokens.v3.css` (v2 permanece no repositório; troca do `<link>` página a página, por lote). Semáforos viram `.dot` com rótulo de texto adjacente; `✓` tipográfico fica (`.check-list` na Fase 1b); `.post-thumb` mantém emojis.
 Alternativas descartadas: CDN (script/estilo de terceiro, CSP); manter SVG inline (≈345 `style=""` repetidos); fonte de ícones.
 Consequências: CSP inalterada (`default-src 'self'`); +~31 KB brutos (~7 KB gzip) em cache longo.
+
+**ADR-018 | 2026-10-21 | Aceito**
+Contexto: Fase 1b. 1.532 hex soltos fora de `:root` (58 cores) e 1.179 `style=""` não-botão em 224 padrões.
+Decisão: `assets/css/tokens.v4.css` (= v3 + tokens de cor, `.check-list`, utilitários, `.faq`, `.ti--*`); v3 permanece imutável e as páginas trocam o `<link>` por lote. Escopo: só os grupos repetidos, os tokens de cor, `.check-list` e CSS morto; a cauda longa de `style=""` fica. `✓` sai do HTML e vira `::before` de `.check-list`. `#ffffff` fica literal. Fundos por papel: `#020713`=`--bg`, `#01040d`=`--bg-deep`, `#061226`=`--surface`. `#ff6b35` não é usado em nenhuma página (só declarado como `--orange` em `ciberseguranca.html` e não consumido): remover, sem token.
+Alternativas descartadas: variante `.check-list--rows`; `.faq-item` paralelo ao FAQ da home; zerar `style=""`.
+Consequências: mudanças visuais só onde um hex consolidado (`#ff9999`/`#ff5c5c`→`--danger-text`, `#ffd88a`/`#ffcc77`→`--warn-text`) difere do original.

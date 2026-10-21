@@ -26,6 +26,12 @@ Propósito: registrar os tokens e padrões visuais reais do site (fonte: `index.
 
 Fundo: gradientes radiais azul/ciano sobre degradê escuro, mais grade sutil em `body:before`. Tema único escuro. Os valores `#0A4A8F` e `#00D9FF` do contexto **não** existem no CSS (ver TASK.md). Tokens são redefinidos por página; copiar de `index.html`.
 
+### Tokens v4 (`assets/css/tokens.v4.css`, ADR-018; em migração: só `index.html` usa)
+- Fundos: `--bg-deep:#01040d`, `--surface:#061226`, `--bg:#020713`; o degradê do `body` vem do v4 (`--bg-gradient-base`), com brilhos por página via `--glow-a` (ciano) e `--glow-b` (azul) no `:root` local.
+- Texto: `--text-strong:#dff9ff`, `--text-soft:#c8d7e9`, `--text-tint:#bff6ff`.
+- Status: `--danger`/`--danger-text`, `--warn`/`--warn-text`, `--success-text`, `--info-text`. `#ffffff` fica literal.
+- Classes: `.check-list` (✓ via `::before`), `.section-divider`, `.card-title`, `.strong`, `.row-wrap` (gap 16px) e `.row-wrap--lg` (18px), `.term-label`, `.faq`, `.ti--sm|--md|--lg`.
+
 ## Tipografia
 
 Inter variável (100–900), auto-hospedada: `assets/fonts/inter.css`, `font-display: swap`. Fallback `system-ui, sans-serif`. Destaque em títulos com `<span class="grad">`.

@@ -14,7 +14,6 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Backlog
 
-- [ ] 2026-10-21 — Depoimento GregTur (`cases/gregtur.html`): a página termina em "Recomendo bastante." e o texto no Google termina em "Recomendo bastante 👍" (resto idêntico). Decidir se mantém o ponto final ou usa o texto literal — aguarda aprovação do Uedson
 
 - [ ] 2026-10-21 — Revisar afirmações de que controles específicos são "obrigatórios/exigidos pela LGPD" (exige validação jurídica): `lgpd.html:346` e cards 349-377 ("deve", "não são conformes"), `lgpd.html:545`, `ciberseguranca.html:671` ("controles técnicos obrigatórios"), `blog/gestao-de-ti-suzano.html:253` e `:264`, `blog/ciberseguranca-itaquaquecetuba.html:260` ("Controles técnicos obrigatórios pela LGPD"), `blog/perguntas-cliente-grande-antes-renovar-contrato.html:231`
 
@@ -55,6 +54,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Concluído
 
+- [x] 2026-10-21 — Fase 1b, piloto `index.html`: `tokens.v3`→`v4`; 36 hex → tokens; 24 `style=""` → `.ti--sm|--md|--lg`; degradê do `body` e regras de `details`/`.faq` locais removidos (vêm do v4; brilhos via `--glow-a/b` no `:root`); 7 regras mortas removidas (`.brand-orb`, `.rotating-text-fade`, `.score-panel`, `.score-divider`, `.field.full`). Única mudança visual: rótulo "Bitdefender" `#ff5c5c`→`--danger-text` (`#ff8888`). `.row-wrap` ganhou a variante `--lg` (gaps reais: 16px ×32, 18px ×12; 20px ×1 não migrado). Aguardando commit; próximos: raiz, `ti-*`, blog, cases/suporte/auditoria
+- [x] 2026-10-21 — Fase 1b, Lote 0: `assets/css/tokens.v4.css` (tokens de cor, `.check-list`, utilitários, `.faq`, `.ti--*`) e ADR-018; nenhum HTML alterado — `assets/css/`
 - [x] 2026-10-21 — Fase 2, Lote 5: `cases/gregtur.html` (9 emojis → sprite; ★★★★★ mantidas, agora em link `maps.app.goo.gl/yLYKjerQup6VP6uB8` com `aria-label`), `suporte/index.html` (8 SVGs inline → `<use>`, 4 `style` removidos; `onclick` GA4 e links de acesso remoto intactos), `auditoria-apps-ia/index.html` (só `tokens.v3`; formulário testado). Depoimento do case difere do Google só no final (ver pendência)
 - [x] 2026-10-21 — Fase 2, Lote 4 (`blog/*.html`, 30 posts): 326 SVGs inline → `<use>` (326 `style="width:1em…"` removidos) e 63 emojis (callouts, cards "Leia também", títulos) → sprite; `tokens.v3`; texto dos artigos inalterado; sem emoji em title/meta/JSON-LD. Aguardando commit
 - [x] 2026-10-21 — Fase 2, Lote 3 (`ti-*`, 6 páginas): 22 emojis de UI por página (132 no total) → sprite; `tokens.v3`; `.svc-icon` e `.coverage-card .icon` com `color:var(--blue2)`; sem SVG inline, `.dot` ou ícone fora do sprite. Aguardando commit
