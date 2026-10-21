@@ -14,6 +14,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Backlog
 
+- [ ] 2026-10-21 — Revisar afirmações de que controles específicos são "obrigatórios/exigidos pela LGPD" (exige validação jurídica): `lgpd.html:346` e cards 349-377 ("deve", "não são conformes"), `lgpd.html:545`, `ciberseguranca.html:671` ("controles técnicos obrigatórios"), `blog/gestao-de-ti-suzano.html:253` e `:264`, `blog/ciberseguranca-itaquaquecetuba.html:260` ("Controles técnicos obrigatórios pela LGPD"), `blog/perguntas-cliente-grande-antes-renovar-contrato.html:231`
+
 - [ ] 2026-10-21 — Fase 1b: badge da Acronis (`solucoes.html:421`, `rgba(255,80,0,…)`/`#ff7a40`) como candidato a `.stack-badge` com `--badge-rgb`
 - [ ] 2026-10-21 — Fase 1b: componente `.check-list` para o `✓` tipográfico (122 usos; mantido na Fase 2) — raiz, `ti-*`, `suporte/`
 - [ ] 2026-10-21 — Criar página `ti-aruja/` (SEO local, conteúdo com fontes) — nova página, `sitemap.xml`, `llms.txt`
@@ -51,6 +53,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Concluído
 
+- [x] 2026-10-21 — Fase 2, Lote 2 (raiz): 119 emojis de UI → sprite e 21 semáforos → `.dot` em sobre, solucoes, managed-services, ciberseguranca, lgpd, termos, privacidade (blog.html sem ícones fora do `.post-thumb`); `tokens.v3` em todas; `.check-tag` ("Obrigatório/Importante/Boa prática") adicionado aos 9 itens do checklist da `lgpd.html` para o semáforo ter rótulo. Mapeamentos: 🔩→`shield-lock`, 🧑‍💻→`spy`, 🚨→`alert-triangle`. Ícones de card com `color:var(--blue2)` (variantes vermelha/laranja de `.svc-icon` mantêm tom semântico). Checklist LGPD reclassificado por prioridade de risco (Prioridade alta/média, Recomendado). Aguardando commit
 - [x] 2026-10-21 — Fase 2, Lote 1 (piloto `index.html`): 12 emojis de UI → ícones do sprite; 53 SVGs inline → `<use>`; `style="width:1em…"` removido (53); `tokens.v2`→`v3`. Também: `solucoes.html` (🤖→`settings-automation`, "✨ Novo"→"Novo") e `sobre.html` (⭐→`map-pin`, "Perfil da Empresa no Google"), ambas já com `tokens.v3`. Regra de edição (Edit/Write, sem `>`/`sed -i`) em RULES.md e CLAUDE.md. **Pendente de decisão:** ★★★★★ em `cases/gregtur.html:208` e `:384` (sem fonte verificável)
 - [x] 2026-10-21 — Fase 2, Lote 0: `assets/icons/sprite.v1.svg` (127 símbolos Tabler), `assets/css/tokens.v3.css` (v2 + `.ti` + `.dot`), ADR-017 (fecha ADR-004); nenhum HTML migrado ainda — `assets/`
 - [x] 2026-10-21 — Bloco de texto oculto de keywords removido de `index.html` (spam, ADR-016); grades `.coverage-card` padronizadas (10 cards, ordem única, home inclusa); `lastmod` de 18 URLs atualizado em `sitemap.xml`

@@ -178,7 +178,7 @@
   </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v2.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
@@ -250,7 +250,7 @@
     .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .pillar{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028));border-radius:var(--radius-lg);padding:26px;transition:.22s}
     .pillar:hover{border-color:rgba(103,232,255,.35);background-color:rgba(255,255,255,.04);transform:translateY(-4px);}
-    .pillar-icon{font-size:2rem;margin-bottom:14px}
+    .pillar-icon{font-size:2rem;margin-bottom:14px;color:var(--blue2)}
     .pillar h3{margin-bottom:10px}
     .pillar p{color:var(--muted);font-size:.93rem;line-height:1.65}
 
@@ -258,7 +258,7 @@
     .segments-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .segment{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:18px;text-align:center;transition:.2s}
     .segment:hover{border-color:rgba(103,232,255,.36);transform:translateY(-3px)}
-    .segment-icon{font-size:1.6rem;margin-bottom:8px}
+    .segment-icon{font-size:1.6rem;margin-bottom:8px;color:var(--blue2)}
     .segment h4{font-size:.92rem;font-weight:800;margin-bottom:4px}
     .segment p{color:var(--muted);font-size:.8rem}
 
@@ -340,32 +340,32 @@
         </div>
         <div class="compare-grid reveal">
           <div class="compare-card compare-bad">
-            <div class="compare-label">❌ TI reativa (o jeito antigo)</div>
+            <div class="compare-label"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#x"/></svg> TI reativa (o jeito antigo)</div>
             <div class="compare-list">
-              <div class="compare-item"><span class="compare-icon">🔴</span>Chama técnico só quando o sistema cai</div>
-              <div class="compare-item"><span class="compare-icon">🔴</span>Custo imprevisível — cada chamado é uma surpresa</div>
-              <div class="compare-item"><span class="compare-icon">🔴</span>Sem monitoramento — problemas surgem sem aviso</div>
-              <div class="compare-item"><span class="compare-icon">🔴</span>Backup não validado — descobre que não funciona quando precisa</div>
-              <div class="compare-item"><span class="compare-icon">🔴</span>Equipamentos desatualizados e vulneráveis</div>
-              <div class="compare-item"><span class="compare-icon">🔴</span>Sem relatório, sem visibilidade, sem controle</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--red" aria-hidden="true"></span></span>Chama técnico só quando o sistema cai</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--red" aria-hidden="true"></span></span>Custo imprevisível — cada chamado é uma surpresa</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--red" aria-hidden="true"></span></span>Sem monitoramento — problemas surgem sem aviso</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--red" aria-hidden="true"></span></span>Backup não validado — descobre que não funciona quando precisa</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--red" aria-hidden="true"></span></span>Equipamentos desatualizados e vulneráveis</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--red" aria-hidden="true"></span></span>Sem relatório, sem visibilidade, sem controle</div>
             </div>
           </div>
           <div class="compare-card compare-good">
-            <div class="compare-label">✅ TI gerenciada (modelo MSP Oryxon)</div>
+            <div class="compare-label"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#circle-check"/></svg> TI gerenciada (modelo MSP Oryxon)</div>
             <div class="compare-list">
-              <div class="compare-item"><span class="compare-icon">🟢</span>Problemas identificados e resolvidos antes do impacto</div>
-              <div class="compare-item"><span class="compare-icon">🟢</span>Mensalidade fixa — custo previsível e sem surpresas</div>
-              <div class="compare-item"><span class="compare-icon">🟢</span>Monitoramento automatizado 24x7 de endpoints, rede e servidores</div>
-              <div class="compare-item"><span class="compare-icon">🟢</span>Backup com validação periódica e plano de recuperação</div>
-              <div class="compare-item"><span class="compare-icon">🟢</span>Patches e atualizações automáticas e controladas</div>
-              <div class="compare-item"><span class="compare-icon">🟢</span>Relatórios mensais e visibilidade total do ambiente</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--green" aria-hidden="true"></span></span>Problemas identificados e resolvidos antes do impacto</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--green" aria-hidden="true"></span></span>Mensalidade fixa — custo previsível e sem surpresas</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--green" aria-hidden="true"></span></span>Monitoramento automatizado 24x7 de endpoints, rede e servidores</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--green" aria-hidden="true"></span></span>Backup com validação periódica e plano de recuperação</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--green" aria-hidden="true"></span></span>Patches e atualizações automáticas e controladas</div>
+              <div class="compare-item"><span class="compare-icon"><span class="dot dot--green" aria-hidden="true"></span></span>Relatórios mensais e visibilidade total do ambiente</div>
             </div>
           </div>
         </div>
         <div class="reveal" style="text-align:center;margin-top:32px">
           <p style="color:var(--muted);font-size:.95rem;margin-bottom:16px">Quanto sua empresa perde por hora com a TI parada? Descubra agora.</p>
           <a href="https://caf.helpdigitalti.com.br/calculadora?f=6aa5ee2a-f767-4d3d-b38b-649dafdc5991" target="_blank" rel="noopener" class="btn btn-secondary">
-            🧮 Calcule o prejuízo da sua empresa →
+            <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#calculator"/></svg> Calcule o prejuízo da sua empresa →
           </a>
           <p style="color:var(--muted2);font-size:.78rem;margin-top:10px">Ferramenta gratuita da Help Digital — resultado em menos de 1 minuto</p>
         </div>
@@ -438,7 +438,7 @@
         <div class="reveal" style="text-align:center;margin-top:28px;padding:22px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);max-width:600px;margin-inline:auto">
           <p style="color:#a9bad1;font-size:.92rem;margin-bottom:14px">Não sabe qual plano é certo para você? Faça o diagnóstico interativo e descubra em minutos.</p>
           <a href="https://caf.helpdigitalti.com.br/diagnostico?f=6aa5ee2a-f767-4d3d-b38b-649dafdc5991&utm_source=site&utm_medium=referral" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-  🔍 Fazer diagnóstico interativo de TI →
+  <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg> Fazer diagnóstico interativo de TI →
 </a>
         </div>
         <p class="reveal" style="text-align:center;color:var(--muted);font-size:.88rem;margin-top:20px">Valores sob consulta — o investimento depende do número de endpoints e da estrutura do ambiente. <a href="/#diagnostico">Solicite um diagnóstico gratuito.</a></p>
@@ -454,32 +454,32 @@
         </div>
         <div class="pillars-grid">
           <div class="pillar reveal">
-            <div class="pillar-icon">📡</div>
+            <div class="pillar-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#radar"/></svg></div>
             <h3>Suporte remoto e presencial</h3>
             <p>Atendemos chamados remotamente com agilidade e presencialmente quando necessário. SLA definido em contrato, sem surpresas.</p>
           </div>
           <div class="pillar reveal">
-            <div class="pillar-icon">🔧</div>
+            <div class="pillar-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#tool"/></svg></div>
             <h3>Manutenção preventiva e corretiva</h3>
             <p>Evitamos falhas com manutenção programada e resolvemos incidentes com rapidez quando acontecem — sem deixar a operação parada.</p>
           </div>
           <div class="pillar reveal">
-            <div class="pillar-icon">💾</div>
+            <div class="pillar-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#database"/></svg></div>
             <h3>Backup local gerenciado</h3>
             <p>Configuramos, monitoramos e validamos cópias de segurança para garantir que seus dados possam ser recuperados quando necessário.</p>
           </div>
           <div class="pillar reveal">
-            <div class="pillar-icon">🛡️</div>
+            <div class="pillar-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg></div>
             <h3>Antivírus e segurança de endpoints</h3>
             <p>Proteção gerenciada contra malware, ransomware e ameaças digitais em todos os dispositivos do ambiente corporativo.</p>
           </div>
           <div class="pillar reveal">
-            <div class="pillar-icon">🔥</div>
+            <div class="pillar-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#flame"/></svg></div>
             <h3>Proxy e Firewall</h3>
             <p>Controle de acesso à internet, bloqueio de sites maliciosos e proteção do perímetro da rede corporativa.</p>
           </div>
           <div class="pillar reveal">
-            <div class="pillar-icon">📊</div>
+            <div class="pillar-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#chart-bar"/></svg></div>
             <h3>Monitoramento e consultoria</h3>
             <p>Visibilidade contínua do ambiente com alertas em tempo real e consultoria estratégica para evoluir sua infraestrutura de TI.</p>
           </div>
@@ -496,14 +496,14 @@
           <p class="muted">Atendemos empresas a partir de 5 computadores em qualquer segmento que dependa de TI para operar.</p>
         </div>
         <div class="segments-grid reveal">
-          <div class="segment"><div class="segment-icon">🏢</div><h4>Escritórios e Serviços</h4><p>Contabilidade, advocacia, consultoria</p></div>
-          <div class="segment"><div class="segment-icon">🏥</div><h4>Clínicas e Saúde</h4><p>Prontuários, agendas e sistemas críticos</p></div>
-          <div class="segment"><div class="segment-icon">🏭</div><h4>Indústria</h4><p>Sistemas de produção e ERP</p></div>
-          <div class="segment"><div class="segment-icon">🛒</div><h4>Comércio</h4><p>PDV, estoque e e-commerce</p></div>
-          <div class="segment"><div class="segment-icon">🎓</div><h4>Educação</h4><p>Laboratórios, portais e sistemas</p></div>
-          <div class="segment"><div class="segment-icon">✈️</div><h4>Turismo</h4><p>Reservas, emissão e atendimento</p></div>
-          <div class="segment"><div class="segment-icon">🔒</div><h4>SST e Segurança</h4><p>Laudos, documentação e compliance</p></div>
-          <div class="segment"><div class="segment-icon">📦</div><h4>Outros segmentos</h4><p>Qualquer empresa com 5+ computadores</p></div>
+          <div class="segment"><div class="segment-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building"/></svg></div><h4>Escritórios e Serviços</h4><p>Contabilidade, advocacia, consultoria</p></div>
+          <div class="segment"><div class="segment-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building-hospital"/></svg></div><h4>Clínicas e Saúde</h4><p>Prontuários, agendas e sistemas críticos</p></div>
+          <div class="segment"><div class="segment-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building-factory-2"/></svg></div><h4>Indústria</h4><p>Sistemas de produção e ERP</p></div>
+          <div class="segment"><div class="segment-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shopping-cart"/></svg></div><h4>Comércio</h4><p>PDV, estoque e e-commerce</p></div>
+          <div class="segment"><div class="segment-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#school"/></svg></div><h4>Educação</h4><p>Laboratórios, portais e sistemas</p></div>
+          <div class="segment"><div class="segment-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#plane"/></svg></div><h4>Turismo</h4><p>Reservas, emissão e atendimento</p></div>
+          <div class="segment"><div class="segment-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg></div><h4>SST e Segurança</h4><p>Laudos, documentação e compliance</p></div>
+          <div class="segment"><div class="segment-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#package"/></svg></div><h4>Outros segmentos</h4><p>Qualquer empresa com 5+ computadores</p></div>
         </div>
       </div>
     </section>

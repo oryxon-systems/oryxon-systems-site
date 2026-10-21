@@ -213,7 +213,7 @@
   </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v2.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--red:#ff4d4d;--orange:#ff6b35;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
@@ -268,9 +268,9 @@
     .svc-default{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028))}
     .svc-featured{border:1px solid rgba(255,80,80,.3);background:rgba(255,50,50,.05)}
     .svc-partner{border:1px solid rgba(255,180,50,.22);background:rgba(255,140,0,.045)}
-    .svc-icon{width:54px;height:54px;border-radius:var(--radius-lg);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.07)}
-    .svc-icon-red{border-color:rgba(255,80,80,.3);background:rgba(255,50,50,.08)}
-    .svc-icon-orange{border-color:rgba(255,180,50,.3);background:rgba(255,140,0,.08)}
+    .svc-icon{width:54px;height:54px;border-radius:var(--radius-lg);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.07);color:var(--blue2)}
+    .svc-icon-red{border-color:rgba(255,80,80,.3);background:rgba(255,50,50,.08);color:#ff8888}
+    .svc-icon-orange{border-color:rgba(255,180,50,.3);background:rgba(255,140,0,.08);color:#ffa500}
     .svc-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:var(--radius-pill);font-size:.7rem;font-weight:900;letter-spacing:.06em;margin-bottom:14px;width:fit-content}
     .badge-red{background:rgba(255,80,80,.12);border:1px solid rgba(255,80,80,.3);color:#ff9999}
     .badge-blue{background:rgba(0,183,255,.12);border:1px solid rgba(103,232,255,.3);color:#67e8ff}
@@ -288,7 +288,7 @@
     .threats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .threat-card{border:1px solid rgba(255,80,80,.16);background:rgba(255,30,30,.04);border-radius:var(--radius-lg);padding:22px;text-align:center;transition:.2s}
     .threat-card:hover{border-color:rgba(255,80,80,.35);transform:translateY(-3px)}
-    .threat-card .icon{font-size:2rem;margin-bottom:12px}
+    .threat-card .icon{font-size:2rem;margin-bottom:12px;color:var(--blue2)}
     .threat-card h4{font-size:.94rem;font-weight:800;margin-bottom:6px;color:#dff9ff}
     .threat-card p{color:var(--muted);font-size:.82rem;line-height:1.55}
 
@@ -364,7 +364,7 @@
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <div class="kicker kicker-red">🛡️ Cibersegurança empresarial</div>
+          <div class="kicker kicker-red"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg> Cibersegurança empresarial</div>
           <h1>Cibersegurança em camadas<br><span class="grad-red">para empresas do Alto Tietê</span></h1>
           <p><strong>Sua empresa está protegida de verdade?</strong> Ataques cibernéticos não escolhem tamanho de empresa. PMEs do Alto Tietê são alvos frequentes justamente por terem menos proteção. A Oryxon oferece um conjunto completo de serviços de cibersegurança para fechar as brechas antes que alguém as explore.</p>
           <div class="btn-row">
@@ -373,7 +373,7 @@
           </div>
         </div>
         <div class="threat-panel reveal">
-          <h3>⚠️ Ameaças mais comuns em PMEs</h3>
+          <h3><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg> Ameaças mais comuns em PMEs</h3>
           <div class="threat-item"><span class="threat-dot dot-red"></span>Ransomware — sequestro de dados com pedido de resgate</div>
           <div class="threat-item"><span class="threat-dot dot-red"></span>Phishing — e-mails falsos que roubam credenciais</div>
           <div class="threat-item"><span class="threat-dot dot-orange"></span>Acesso remoto não autorizado via RDP exposto</div>
@@ -397,15 +397,15 @@
           </div>
           <div style="display:grid;gap:12px">
             <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:18px 20px;display:flex;align-items:flex-start;gap:14px">
-              <span style="font-size:1.4rem;flex-shrink:0">🏅</span>
+              <span style="font-size:1.4rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#medal"/></svg></span>
               <div><strong style="display:block;color:#dff9ff;font-size:.94rem;margin-bottom:4px">Controles ISO 27001 implementados</strong><span style="color:var(--muted);font-size:.86rem">Controle de acesso, log de acessos, gestão de vulnerabilidades e plano de resposta a incidentes — os mesmos controles que a norma exige.</span></div>
             </div>
             <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:18px 20px;display:flex;align-items:flex-start;gap:14px">
-              <span style="font-size:1.4rem;flex-shrink:0">🔍</span>
+              <span style="font-size:1.4rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg></span>
               <div><strong style="display:block;color:#dff9ff;font-size:.94rem;margin-bottom:4px">Direito de auditoria</strong><span style="color:var(--muted);font-size:.86rem">Clientes podem auditar nossos acessos e processos a qualquer momento. Todos os acessos são documentados, controlados e rastreáveis.</span></div>
             </div>
             <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:18px 20px;display:flex;align-items:flex-start;gap:14px">
-              <span style="font-size:1.4rem;flex-shrink:0">📋</span>
+              <span style="font-size:1.4rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clipboard-list"/></svg></span>
               <div><strong style="display:block;color:#dff9ff;font-size:.94rem;margin-bottom:4px">Código de Conduta público</strong><span style="color:var(--muted);font-size:.86rem">Publicamos nosso Código de Conduta com os compromissos que a Oryxon assume com cada cliente. <a href="/codigo-de-conduta-oryxon.pdf" style="color:var(--blue2)">Baixar PDF →</a></span></div>
             </div>
           </div>
@@ -424,8 +424,8 @@
 
           <!-- FWaaS -->
           <div class="svc-card svc-featured reveal">
-            <div class="svc-badge badge-red">🔥 Firewall</div>
-            <div class="svc-icon svc-icon-red">🔥</div>
+            <div class="svc-badge badge-red"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#flame"/></svg> Firewall</div>
+            <div class="svc-icon svc-icon-red"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#flame"/></svg></div>
             <h3>Firewall como Serviço (FWaaS)</h3>
             <p>Proteção do perímetro da rede sem precisar de hardware dedicado. Bloqueamos tráfego malicioso, controlamos o acesso à internet e segmentamos a rede para limitar o impacto de um eventual incidente.</p>
             <div class="svc-features">
@@ -439,8 +439,8 @@
 
           <!-- BITDEFENDER -->
           <div class="svc-card svc-default reveal">
-            <div class="svc-badge badge-blue">🛡️ Endpoint Security</div>
-            <div class="svc-icon">🔐</div>
+            <div class="svc-badge badge-blue"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg> Endpoint Security</div>
+            <div class="svc-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg></div>
             <h3>Proteção de Endpoints com Bitdefender</h3>
             <p>Antivírus e EDR empresarial gerenciado pela Oryxon. O Bitdefender protege computadores, notebooks e servidores contra malware, ransomware e ameaças avançadas — com IA e análise comportamental, sem impactar a performance.</p>
             <div class="svc-features">
@@ -454,8 +454,8 @@
 
           <!-- HARDENING -->
           <div class="svc-card svc-default reveal">
-            <div class="svc-badge badge-blue">⚙️ Hardening</div>
-            <div class="svc-icon">🔩</div>
+            <div class="svc-badge badge-blue"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#settings"/></svg> Hardening</div>
+            <div class="svc-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-lock"/></svg></div>
             <h3>Hardening de Sistemas</h3>
             <p>Configuração segura de servidores, estações e sistemas operacionais segundo boas práticas de segurança. Reduzimos a superfície de ataque desativando serviços desnecessários, aplicando políticas restritivas e removendo vetores de risco.</p>
             <div class="svc-features">
@@ -469,8 +469,8 @@
 
           <!-- VULNERABILITY ASSESSMENT -->
           <div class="svc-card svc-featured reveal">
-            <div class="svc-badge badge-red">🔎 Vulnerability Assessment</div>
-            <div class="svc-icon svc-icon-red">🔍</div>
+            <div class="svc-badge badge-red"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg> Vulnerability Assessment</div>
+            <div class="svc-icon svc-icon-red"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg></div>
             <h3>Vulnerability Assessment</h3>
             <p>Varredura automatizada e análise técnica de toda a sua infraestrutura para identificar vulnerabilidades conhecidas antes que atacantes as explorem. Geramos um relatório priorizado com o que corrigir primeiro e por quê.</p>
             <div class="svc-features">
@@ -484,8 +484,8 @@
 
           <!-- CONSCIENTIZAÇÃO -->
           <div class="svc-card svc-default reveal">
-            <div class="svc-badge badge-green">👥 People Security</div>
-            <div class="svc-icon">🎓</div>
+            <div class="svc-badge badge-green"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#users"/></svg> People Security</div>
+            <div class="svc-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#school"/></svg></div>
             <h3>Conscientização em Segurança</h3>
             <p>O elo mais fraco da segurança é humano. Treinamos sua equipe para reconhecer phishing, uso seguro de senhas, boas práticas no dia a dia e comportamentos de risco — reduzindo drasticamente a chance de um colaborador ser o vetor de um ataque.</p>
             <div class="svc-features">
@@ -499,8 +499,8 @@
 
           <!-- PENTEST (via parceiro) -->
           <div class="svc-card svc-partner reveal">
-            <div class="svc-badge badge-orange">🤝 Via parceiro</div>
-            <div class="svc-icon svc-icon-orange">🎯</div>
+            <div class="svc-badge badge-orange"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#heart-handshake"/></svg> Via parceiro</div>
+            <div class="svc-icon svc-icon-orange"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#target"/></svg></div>
             <h3>Pentest Profissional</h3>
             <p>Teste de invasão para simular um ataque real ao seu ambiente. Oferecemos esse serviço via parceiro especializado, com relatório técnico e executivo e acompanhamento da remediação pela Oryxon.</p>
             <div class="svc-features">
@@ -526,42 +526,42 @@
         </div>
         <div class="threats-grid">
           <div class="threat-card reveal">
-            <div class="icon">🔒</div>
+            <div class="icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg></div>
             <h4>Ransomware</h4>
             <p>Malware que criptografa seus dados e exige resgate. Pode paralisar a operação por dias ou semanas.</p>
           </div>
           <div class="threat-card reveal">
-            <div class="icon">🎣</div>
+            <div class="icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#fish-hook"/></svg></div>
             <h4>Phishing</h4>
             <p>E-mails e links falsos que enganam colaboradores para roubar senhas e acessos corporativos.</p>
           </div>
           <div class="threat-card reveal">
-            <div class="icon">🕵️</div>
+            <div class="icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#spy"/></svg></div>
             <h4>Acesso não autorizado</h4>
             <p>Invasores exploram portas abertas, senhas fracas ou VPNs mal configuradas para entrar na rede.</p>
           </div>
           <div class="threat-card reveal">
-            <div class="icon">💉</div>
+            <div class="icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#vaccine"/></svg></div>
             <h4>Vulnerabilidades conhecidas</h4>
             <p>Software desatualizado com CVEs públicas — portas abertas que atacantes varrem automaticamente.</p>
           </div>
           <div class="threat-card reveal">
-            <div class="icon">📧</div>
+            <div class="icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#mail"/></svg></div>
             <h4>Comprometimento de e-mail (BEC)</h4>
             <p>Contas corporativas invadidas para fraudes financeiras e roubo de informações confidenciais.</p>
           </div>
           <div class="threat-card reveal">
-            <div class="icon">💾</div>
+            <div class="icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#database"/></svg></div>
             <h4>Perda de dados</h4>
             <p>Ausência de backup validado significa que um incidente pode resultar em perda total e irreversível.</p>
           </div>
           <div class="threat-card reveal">
-            <div class="icon">🧑‍💻</div>
+            <div class="icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#spy"/></svg></div>
             <h4>Ameaça interna</h4>
             <p>Colaboradores mal-intencionados ou descuidados com acesso a dados sensíveis sem controle adequado.</p>
           </div>
           <div class="threat-card reveal">
-            <div class="icon">⚖️</div>
+            <div class="icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#scale"/></svg></div>
             <h4>Não conformidade LGPD</h4>
             <p>Falta de controles de segurança pode resultar em multas da ANPD e danos à reputação da empresa.</p>
           </div>
@@ -669,7 +669,7 @@
         <div class="kicker" style="margin-bottom:10px">Relacionado à cibersegurança</div>
         <h2 style="font-size:clamp(1.4rem,2.5vw,2rem);letter-spacing:-.05em;margin-bottom:12px">Sua empresa está adequada à LGPD?</h2>
         <p style="color:var(--muted);font-size:.95rem;max-width:520px;margin:0 auto 22px;line-height:1.65">Cibersegurança e conformidade LGPD andam juntas. Veja o que a lei exige, os riscos reais e como a Oryxon implementa os controles técnicos obrigatórios.</p>
-        <a href="/lgpd.html" class="btn btn-primary">⚖️ Ver página LGPD para PMEs →</a>
+        <a href="/lgpd.html" class="btn btn-primary"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#scale"/></svg> Ver página LGPD para PMEs →</a>
       </div>
     </section>
 

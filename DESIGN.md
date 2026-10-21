@@ -32,7 +32,7 @@ Inter variável (100–900), auto-hospedada: `assets/fonts/inter.css`, `font-dis
 
 ## Ícones
 
-Tabler Icons (outline, MIT) via sprite SVG: `assets/icons/sprite.v1.svg` (127 símbolos, ADR-017). Uso: `<svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#nome"/></svg>`; `.ti` (1em, `currentColor`) e `.dot` (semáforo, sempre com rótulo de texto) em `tokens.v3.css`. Tamanho e cor por `font-size`/`color` do elemento pai (cards: `var(--blue2)`). Ícone só-ícone: `aria-label` no pai interativo. Sprite imutável: ícone novo = `sprite.v2.svg`. Migração em andamento (Fase 2): `index.html` migrada; demais páginas ainda com SVG inline/emoji. Blog: emoji em `.post-thumb` (intencional).
+Tabler Icons (outline, MIT) via sprite SVG: `assets/icons/sprite.v1.svg` (127 símbolos, ADR-017). Uso: `<svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#nome"/></svg>`; `.ti` (1em, `currentColor`) e `.dot` (semáforo, sempre com rótulo de texto) em `tokens.v3.css`. Tamanho e cor por `font-size`/`color` do elemento pai (cards: `var(--blue2)`). Ícone só-ícone: `aria-label` no pai interativo. Sprite imutável: ícone novo = `sprite.v2.svg`. Migração em andamento (Fase 2): `index.html` e as páginas da raiz migradas; faltam `ti-*`, blog, cases, suporte e auditoria. Semáforo: `.dot dot--red|yellow|green` com rótulo de texto (`.check-tag` na `lgpd.html`). Blog: emoji em `.post-thumb` (intencional).
 
 ## Componentes
 

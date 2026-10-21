@@ -319,7 +319,7 @@
     .badge-backup{background:rgba(55,245,161,.1);border:1px solid rgba(55,245,161,.25);color:#37f5a1}
     .badge-cloud{background:rgba(100,150,255,.12);border:1px solid rgba(100,150,255,.28);color:#aabfff}
     .badge-email{background:rgba(255,180,50,.1);border:1px solid rgba(255,180,50,.25);color:#ffd88a}
-    .sol-icon{width:52px;height:52px;border-radius:var(--radius-lg);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.07)}
+    .sol-icon{width:52px;height:52px;border-radius:var(--radius-lg);display:grid;place-items:center;font-size:1.5rem;margin-bottom:18px;border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.07);color:var(--blue2)}
     .sol-card h3{font-size:1.18rem;letter-spacing:-.03em;margin-bottom:8px}
     .sol-card .sol-tagline{color:var(--blue2);font-size:.82rem;font-weight:800;margin-bottom:12px}
     .sol-card p{color:var(--muted);font-size:.92rem;line-height:1.65;flex:1}
@@ -332,7 +332,7 @@
     /* STACK VISUAL */
     .stack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
     .stack-item{border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:18px 20px;display:flex;align-items:center;gap:14px}
-    .stack-icon{font-size:1.4rem;flex-shrink:0}
+    .stack-icon{font-size:1.4rem;flex-shrink:0;color:var(--blue2)}
     .stack-item h4{font-size:.94rem;font-weight:800;margin-bottom:3px}
     .stack-item p{color:var(--muted);font-size:.82rem}
 
@@ -469,8 +469,8 @@
 
           <!-- NINJAONE -->
           <div class="sol-card sol-featured reveal">
-            <div class="sol-badge badge-rmm">🏆 RMM #1 do Mercado</div>
-            <div class="sol-icon">🖥️</div>
+            <div class="sol-badge badge-rmm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#trophy"/></svg> RMM #1 do Mercado</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#device-desktop"/></svg></div>
             <h3>NinjaOne</h3>
             <div class="sol-tagline">Monitoramento e gestão remota unificada</div>
             <p>Plataforma RMM líder de mercado que centraliza monitoramento, gerenciamento de endpoints, patching automático e acesso remoto em um único painel. Permite que a Oryxon gerencie todos os dispositivos dos clientes com visibilidade total e resposta em tempo real.</p>
@@ -485,8 +485,8 @@
 
           <!-- ACTION1 -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-rmm">🔧 Patch Management</div>
-            <div class="sol-icon">🛠️</div>
+            <div class="sol-badge badge-rmm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#tool"/></svg> Patch Management</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#tools"/></svg></div>
             <h3>Action1</h3>
             <div class="sol-tagline">Gestão autônoma de vulnerabilidades e patches</div>
             <p>Plataforma cloud-native especializada em patch management autônomo para Windows, macOS e Linux. Identifica vulnerabilidades em tempo real e automatiza a implantação de correções — eliminando brechas antes que sejam exploradas por atacantes.</p>
@@ -501,8 +501,8 @@
 
           <!-- ACRONIS -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-backup">💾 Backup & Recovery</div>
-            <div class="sol-icon">💾</div>
+            <div class="sol-badge badge-backup"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#database"/></svg> Backup & Recovery</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#database"/></svg></div>
             <h3>Acronis</h3>
             <div class="sol-tagline">Backup, recuperação e proteção de dados</div>
             <p>Solução líder mundial em backup e recuperação de dados para ambientes corporativos. Protege servidores, endpoints e dados em nuvem com recuperação rápida e confiável — garantindo continuidade operacional mesmo em cenários de desastre ou ataque de ransomware.</p>
@@ -517,8 +517,8 @@
 
           <!-- BITDEFENDER -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-seguranca">🛡️ Segurança</div>
-            <div class="sol-icon">🔐</div>
+            <div class="sol-badge badge-seguranca"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg> Segurança</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg></div>
             <h3>Bitdefender</h3>
             <div class="sol-tagline">Antivírus e segurança de endpoints empresarial</div>
             <p>Uma das soluções de segurança de endpoints mais reconhecidas do mundo. O Bitdefender protege dispositivos corporativos contra vírus, malware, ransomware e ameaças avançadas com tecnologia de IA — sem impactar a performance das máquinas.</p>
@@ -533,8 +533,8 @@
 
           <!-- PWS CLOUD -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-cloud">☁️ Cloud</div>
-            <div class="sol-icon">🌐</div>
+            <div class="sol-badge badge-cloud"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#cloud"/></svg> Cloud</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#world"/></svg></div>
             <h3>PWS Cloud</h3>
             <div class="sol-tagline">Infraestrutura cloud para ambientes corporativos</div>
             <p>Plataforma de infraestrutura em nuvem que suporta os serviços gerenciados da Oryxon. Permite hospedar, escalar e proteger ambientes corporativos com alta disponibilidade, flexibilidade e segurança — sem a necessidade de servidores físicos locais.</p>
@@ -549,8 +549,8 @@
 
           <!-- HELP MAIL -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-email">📧 E-mail Corporativo</div>
-            <div class="sol-icon">✉️</div>
+            <div class="sol-badge badge-email"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#mail"/></svg> E-mail Corporativo</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#mail"/></svg></div>
             <h3>Help Mail</h3>
             <div class="sol-tagline">E-mail corporativo seguro e gerenciado</div>
             <p>Solução de e-mail corporativo gerenciada pela Help Digital, com foco em segurança, antispam, disponibilidade e suporte. Ideal para empresas que precisam de comunicação profissional confiável, sem os custos e complexidade de gerenciar servidores de e-mail internamente.</p>
@@ -566,7 +566,7 @@
 
           <!-- ANSIBLE + PYTHON -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-rmm">⚙️ Automação</div>
+            <div class="sol-badge badge-rmm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#settings"/></svg> Automação</div>
             <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#settings-automation"/></svg></div>
             <h3>Ansible & Python</h3>
             <div class="sol-tagline">Automação de infraestrutura e rotinas de TI</div>
@@ -583,7 +583,7 @@
           <!-- IA PARA PMEs -->
           <div class="sol-card sol-featured reveal">
             <div class="sol-badge badge-cloud">Novo</div>
-            <div class="sol-icon">🧠</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brain"/></svg></div>
             <h3>IA para PMEs</h3>
             <div class="sol-tagline">Inteligência artificial aplicada ao dia a dia da empresa</div>
             <p>Levamos as vantagens da inteligência artificial para pequenas e médias empresas de forma prática e acessível — sem exigir equipe de dados ou grandes investimentos. Da automação de atendimento à análise de dados operacionais, ajudamos sua empresa a usar IA onde faz mais sentido.</p>
@@ -598,8 +598,8 @@
 
           <!-- VIRTUALIZAÇÃO -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-cloud">🖥️ Virtualização</div>
-            <div class="sol-icon">⚡</div>
+            <div class="sol-badge badge-cloud"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#device-desktop"/></svg> Virtualização</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#bolt"/></svg></div>
             <h3>Virtualização</h3>
             <div class="sol-tagline">Maximize o uso dos seus servidores e equipamentos</div>
             <p>Transformamos servidores físicos em múltiplas máquinas virtuais, aproveitando 100% da capacidade dos equipamentos. Ideal para empresas que querem reduzir custos de hardware, isolar ambientes e aumentar a disponibilidade dos sistemas sem investir em novos servidores.</p>
@@ -614,8 +614,8 @@
 
           <!-- REDES CORPORATIVAS -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-rmm">🌐 Redes</div>
-            <div class="sol-icon">📶</div>
+            <div class="sol-badge badge-rmm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#world"/></svg> Redes</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#wifi"/></svg></div>
             <h3>Redes Corporativas</h3>
             <div class="sol-tagline">Infraestrutura de rede planejada, estável e segura</div>
             <p>Projetamos, implantamos e gerenciamos redes corporativas com equipamentos de qualidade enterprise (Ubiquiti, Cisco, HPE Aruba). Cobertura Wi-Fi adequada, segmentação de redes, VLANs e controle de acesso — para que a rede da sua empresa seja um ativo estratégico, não um ponto de falha.</p>
@@ -630,8 +630,8 @@
 
           <!-- OUTSOURCING DE TI -->
           <div class="sol-card sol-featured reveal">
-            <div class="sol-badge badge-parceiro">🤝 Outsourcing</div>
-            <div class="sol-icon">🏢</div>
+            <div class="sol-badge badge-parceiro"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#heart-handshake"/></svg> Outsourcing</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building"/></svg></div>
             <h3>Outsourcing de TI</h3>
             <div class="sol-tagline">Terceirize sua TI e foque no que importa</div>
             <p>A Oryxon assume a gestão completa da sua infraestrutura de TI — servidores, estações, redes, segurança e suporte — para que você e sua equipe possam focar 100% no negócio. Sem contratar, treinar ou gerenciar equipe técnica interna. TI como serviço, com custo previsível e resultado garantido. <a href="/blog/terceirizacao-de-ti.html">Entenda quando vale a pena terceirizar →</a></p>
@@ -646,8 +646,8 @@
 
           <!-- CIBERSEGURANÇA / FWaaS -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-seguranca">🔥 Cibersegurança</div>
-            <div class="sol-icon">🛡️</div>
+            <div class="sol-badge badge-seguranca"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#flame"/></svg> Cibersegurança</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg></div>
             <h3>Cibersegurança & FWaaS</h3>
             <div class="sol-tagline">Proteção avançada contra ameaças digitais</div>
             <p>Além do antivírus, oferecemos uma camada completa de cibersegurança com Firewall como Serviço (FWaaS), monitoramento proativo de ameaças e programas de conscientização de usuários. Protegemos os ativos digitais da sua empresa contra ataques modernos — sem exigir hardware dedicado.</p>
@@ -662,8 +662,8 @@
 
           <!-- BACKUP MICROSOFT 365 -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-blue">☁️ Microsoft 365</div>
-            <div class="sol-icon">📧</div>
+            <div class="sol-badge badge-blue"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#cloud"/></svg> Microsoft 365</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#mail"/></svg></div>
             <h3>Backup Microsoft 365</h3>
             <div class="sol-tagline">Proteção completa do seu ambiente Microsoft 365</div>
             <p>O Microsoft 365 não faz backup automático dos seus dados. E-mails apagados, arquivos perdidos no OneDrive ou mensagens deletadas no Teams podem ser irrecuperáveis sem uma solução dedicada. A Oryxon protege todo o seu ambiente M365 com Acronis — backup automático, retenção configurável e recuperação granular em minutos.</p>
@@ -679,8 +679,8 @@
 
           <!-- BACKUP GOOGLE WORKSPACE -->
           <div class="sol-card sol-default reveal">
-            <div class="sol-badge badge-cloud">🌐 Google Workspace</div>
-            <div class="sol-icon">📁</div>
+            <div class="sol-badge badge-cloud"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#world"/></svg> Google Workspace</div>
+            <div class="sol-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#folder"/></svg></div>
             <h3>Backup Google Workspace</h3>
             <div class="sol-tagline">Seus dados no Google também precisam de backup</div>
             <p>Assim como o Microsoft 365, o Google Workspace não garante recuperação de dados deletados por erro humano, ataque ou problema de sincronização. A Oryxon oferece backup gerenciado do Gmail, Drive, Calendário e Contacts — garantindo que nenhum dado crítico da sua empresa se perca.</p>
@@ -707,10 +707,10 @@
           <p class="muted">Ao operar como parceiro da Help Digital, a Oryxon oferece acesso a plataformas enterprise com condições acessíveis para pequenas e médias empresas do Alto Tietê.</p>
         </div>
         <div class="stack-grid reveal">
-          <div class="stack-item"><span class="stack-icon">🔗</span><div><h4>Stack integrado e testado</h4><p>Todas as ferramentas funcionam em conjunto, sem conflitos ou lacunas de proteção.</p></div></div>
-          <div class="stack-item"><span class="stack-icon">🔄</span><div><h4>Atualizações automáticas</h4><p>As plataformas são mantidas atualizadas pela Oryxon — sem trabalho extra para o cliente.</p></div></div>
-          <div class="stack-item"><span class="stack-icon">👁️</span><div><h4>Visibilidade centralizada</h4><p>Um único painel consolida dados de todas as ferramentas para decisões rápidas e precisas.</p></div></div>
-          <div class="stack-item"><span class="stack-icon">🏆</span><div><h4>Líderes de mercado</h4><p>NinjaOne, Acronis e Bitdefender são consistentemente premiados como melhores em suas categorias.</p></div></div>
+          <div class="stack-item"><span class="stack-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#link"/></svg></span><div><h4>Stack integrado e testado</h4><p>Todas as ferramentas funcionam em conjunto, sem conflitos ou lacunas de proteção.</p></div></div>
+          <div class="stack-item"><span class="stack-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#refresh"/></svg></span><div><h4>Atualizações automáticas</h4><p>As plataformas são mantidas atualizadas pela Oryxon — sem trabalho extra para o cliente.</p></div></div>
+          <div class="stack-item"><span class="stack-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#eye"/></svg></span><div><h4>Visibilidade centralizada</h4><p>Um único painel consolida dados de todas as ferramentas para decisões rápidas e precisas.</p></div></div>
+          <div class="stack-item"><span class="stack-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#trophy"/></svg></span><div><h4>Líderes de mercado</h4><p>NinjaOne, Acronis e Bitdefender são consistentemente premiados como melhores em suas categorias.</p></div></div>
         </div>
       </div>
     </section>
@@ -734,7 +734,7 @@
         <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.05em;margin-bottom:14px">Faça o diagnóstico interativo de TI.</h2>
         <p style="color:var(--muted);font-size:1rem;max-width:520px;margin:0 auto 24px">Responda algumas perguntas sobre sua empresa e receba um plano de ação personalizado — em menos de 5 minutos, sem compromisso.</p>
         <a href="https://caf.helpdigitalti.com.br/diagnostico?f=6aa5ee2a-f767-4d3d-b38b-649dafdc5991&utm_source=site&utm_medium=referral" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
-  🔍 Fazer diagnóstico interativo de TI →
+  <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg> Fazer diagnóstico interativo de TI →
 </a>
       </div>
     </section>

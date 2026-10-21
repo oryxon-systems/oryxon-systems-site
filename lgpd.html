@@ -158,7 +158,7 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v2.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--danger:#ff4d4d;--warn:#ffa500;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
@@ -207,14 +207,14 @@
     .exige-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .exige-card{border:1px solid rgba(103,232,255,.18);background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.028));border-radius:var(--radius-lg);padding:26px;transition:.22s}
     .exige-card:hover{transform:translateY(-4px);border-color:rgba(103,232,255,.35);background-color:rgba(255,255,255,.04)}
-    .exige-icon{font-size:1.8rem;margin-bottom:14px}
+    .exige-icon{font-size:1.8rem;margin-bottom:14px;color:var(--blue2)}
     .exige-card h3{font-size:1rem;margin-bottom:8px}
     .exige-card p{color:var(--muted);font-size:.88rem;line-height:1.65}
 
     /* SEGMENTOS */
     .seg-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
     .seg-card{border:1px solid rgba(255,77,77,.2);background:rgba(255,30,30,.04);border-radius:var(--radius-lg);padding:20px 22px;display:flex;gap:16px;align-items:flex-start}
-    .seg-icon{font-size:1.6rem;flex-shrink:0}
+    .seg-icon{font-size:1.6rem;flex-shrink:0;color:var(--blue2)}
     .seg-card h4{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:6px}
     .seg-card p{color:var(--muted);font-size:.86rem;line-height:1.6;margin:0}
 
@@ -225,6 +225,7 @@
     .check-item.warn{border:1px solid rgba(255,165,0,.2);background:rgba(255,140,0,.04)}
     .check-item.fail{border:1px solid rgba(255,77,77,.2);background:rgba(255,50,50,.04)}
     .check-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+    .check-tag{display:block;font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--muted2);margin-bottom:2px}
     .check-item h4{font-size:.94rem;font-weight:800;margin-bottom:4px}
     .check-item.done h4{color:#37f5a1}
     .check-item.warn h4{color:#ffa500}
@@ -315,7 +316,7 @@
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <div class="kicker kicker-red">⚖️ Obrigação legal — não é opcional</div>
+          <div class="kicker kicker-red"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#scale"/></svg> Obrigação legal — não é opcional</div>
           <h1>LGPD para empresas do Alto Tietê:<br><span class="grad-red">controles técnicos que protegem os dados</span></h1>
           <p>A Lei Geral de Proteção de Dados obriga toda empresa que trata dados de pessoas — clientes, colaboradores, fornecedores — a implementar controles técnicos de segurança. Multas chegam a R$ 50 milhões por infração. No Alto Tietê, a maioria das PMEs ainda não está adequada.</p>
           <p class="hero-note">Implementamos os controles técnicos de segurança da informação; a adequação jurídica à LGPD deve ser conduzida com assessoria jurídica.</p>
@@ -325,7 +326,7 @@
           </div>
         </div>
         <div class="alert-box reveal">
-          <h3>⚠️ Sinais de que sua empresa não está adequada</h3>
+          <h3><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg> Sinais de que sua empresa não está adequada</h3>
           <div class="alert-item"><span class="alert-dot dot-red"></span>Funcionários acessam dados de clientes sem controle de permissão</div>
           <div class="alert-item"><span class="alert-dot dot-red"></span>Não há registro de quem acessa dados sensíveis da empresa</div>
           <div class="alert-item"><span class="alert-dot dot-red"></span>Dados de clientes são compartilhados por WhatsApp ou e-mail sem criptografia</div>
@@ -346,32 +347,32 @@
         </div>
         <div class="exige-grid">
           <div class="exige-card reveal">
-            <div class="exige-icon">🔐</div>
+            <div class="exige-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg></div>
             <h3>Controle de acesso</h3>
             <p>Somente quem precisa pode acessar dados pessoais. Cada acesso deve ser identificado, registrado e auditável. Senhas compartilhadas não são conformes.</p>
           </div>
           <div class="exige-card reveal">
-            <div class="exige-icon">🔒</div>
+            <div class="exige-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg></div>
             <h3>Criptografia e segurança</h3>
             <p>Dados pessoais em trânsito e em repouso devem ser protegidos por criptografia. Isso inclui backups, e-mails com dados de clientes e arquivos compartilhados.</p>
           </div>
           <div class="exige-card reveal">
-            <div class="exige-icon">📋</div>
+            <div class="exige-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clipboard-list"/></svg></div>
             <h3>Inventário de dados (ROPA)</h3>
             <p>A empresa deve saber quais dados pessoais coleta, por que coleta, por quanto tempo retém e com quem compartilha. Sem documentação, sem conformidade.</p>
           </div>
           <div class="exige-card reveal">
-            <div class="exige-icon">🚨</div>
+            <div class="exige-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></div>
             <h3>Plano de resposta a incidentes</h3>
             <p>Em caso de vazamento de dados, a empresa tem prazo legal para notificar a ANPD e os titulares afetados. Sem plano documentado, o prazo não é cumprido.</p>
           </div>
           <div class="exige-card reveal">
-            <div class="exige-icon">🗑️</div>
+            <div class="exige-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#trash"/></svg></div>
             <h3>Retenção e descarte</h3>
             <p>Dados não podem ser guardados indefinidamente. A empresa precisa definir por quanto tempo retém cada tipo de dado e como descarta com segurança quando o prazo vence.</p>
           </div>
           <div class="exige-card reveal">
-            <div class="exige-icon">👤</div>
+            <div class="exige-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#user"/></svg></div>
             <h3>Direitos dos titulares</h3>
             <p>Clientes e colaboradores podem pedir acesso, correção ou exclusão de seus dados. A empresa precisa ter processo para responder a essas solicitações em prazo legal.</p>
           </div>
@@ -389,42 +390,42 @@
         </div>
         <div class="seg-grid">
           <div class="seg-card reveal">
-            <div class="seg-icon">🏛️</div>
+            <div class="seg-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building-bank"/></svg></div>
             <div>
               <h4>Cartórios e Tabelionatos</h4>
               <p>Tratam dados sensíveis de pessoa física e jurídica — documentos, certidões, escrituras. A LGPD se aplica integralmente, incluindo dados históricos digitalizados. A ausência de controle de acesso é infração direta.</p>
             </div>
           </div>
           <div class="seg-card reveal">
-            <div class="seg-icon">🏥</div>
+            <div class="seg-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building-hospital"/></svg></div>
             <div>
               <h4>Clínicas e Consultórios</h4>
               <p>Dados de saúde são considerados dados sensíveis pela LGPD — categoria com proteção reforçada e penalidades maiores em caso de vazamento. Prontuários eletrônicos, laudos e exames exigem controles específicos.</p>
             </div>
           </div>
           <div class="seg-card reveal">
-            <div class="seg-icon">📊</div>
+            <div class="seg-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#chart-bar"/></svg></div>
             <div>
               <h4>Escritórios de Contabilidade</h4>
               <p>Contadores tratam dados financeiros, fiscais e de folha de pagamento de dezenas de empresas clientes. São processadores de dados — com responsabilidade legal compartilhada com o controlador (o cliente).</p>
             </div>
           </div>
           <div class="seg-card reveal">
-            <div class="seg-icon">⚖️</div>
+            <div class="seg-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#scale"/></svg></div>
             <div>
               <h4>Escritórios de Advocacia</h4>
               <p>Dados de processos, partes envolvidas e estratégias jurídicas são altamente sensíveis. A LGPD aplica-se aos dados pessoais tratados — não às informações sujeitas ao sigilo profissional, mas o limite precisa ser definido.</p>
             </div>
           </div>
           <div class="seg-card reveal">
-            <div class="seg-icon">🏭</div>
+            <div class="seg-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building-factory-2"/></svg></div>
             <div>
               <h4>Indústrias e Distribuidoras</h4>
               <p>Dados de colaboradores (folha, saúde ocupacional, biometria de ponto), dados de clientes e de fornecedores. Empresas com mais de 50 funcionários têm escopo amplo de adequação.</p>
             </div>
           </div>
           <div class="seg-card reveal">
-            <div class="seg-icon">🛒</div>
+            <div class="seg-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shopping-cart"/></svg></div>
             <div>
               <h4>Comércio e Varejo</h4>
               <p>Programas de fidelidade, cadastros de clientes, histórico de compras — tudo é dado pessoal sob a LGPD. Sistemas de câmera com reconhecimento facial exigem consentimento específico.</p>
@@ -442,7 +443,7 @@
           <h2>O que acontece quando a empresa não está adequada.</h2>
         </div>
         <div class="multa-panel reveal">
-          <h3>⚖️ Penalidades previstas pela LGPD (Art. 52)</h3>
+          <h3><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#scale"/></svg> Penalidades previstas pela LGPD (Art. 52)</h3>
           <div class="multa-grid">
             <div class="multa-card">
               <div class="multa-val">2%</div>
@@ -459,21 +460,21 @@
           </div>
           <div style="display:grid;gap:10px">
             <div style="display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid rgba(255,77,77,.12)">
-              <span style="color:#ff4d4d;font-size:1rem;flex-shrink:0">⚠</span>
+              <span style="color:#ff4d4d;font-size:1rem;flex-shrink:0"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
               <div>
                 <strong style="display:block;color:#ff8888;font-size:.9rem;margin-bottom:3px">Publicidade do incidente</strong>
                 <span style="color:var(--muted);font-size:.86rem">A ANPD pode tornar público o nome da empresa infratora — dano reputacional que vai além da multa financeira.</span>
               </div>
             </div>
             <div style="display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid rgba(255,77,77,.12)">
-              <span style="color:#ffa500;font-size:1rem;flex-shrink:0">⚠</span>
+              <span style="color:#ffa500;font-size:1rem;flex-shrink:0"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
               <div>
                 <strong style="display:block;color:#ffd88a;font-size:.9rem;margin-bottom:3px">Responsabilidade civil</strong>
                 <span style="color:var(--muted);font-size:.86rem">Titulares de dados prejudicados podem processar a empresa por danos morais — ação individual ou coletiva.</span>
               </div>
             </div>
             <div style="display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid rgba(255,77,77,.12)">
-              <span style="color:#ffa500;font-size:1rem;flex-shrink:0">⚠</span>
+              <span style="color:#ffa500;font-size:1rem;flex-shrink:0"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
               <div>
                 <strong style="display:block;color:#ffd88a;font-size:.9rem;margin-bottom:3px">Perda de contratos</strong>
                 <span style="color:var(--muted);font-size:.86rem">Empresas parceiras e clientes maiores já exigem conformidade LGPD de seus fornecedores como requisito contratual.</span>
@@ -490,46 +491,46 @@
         <div class="section-head reveal" style="max-width:700px;margin-bottom:28px">
           <div class="kicker">Autoavaliação</div>
           <h2>Checklist LGPD para PMEs do Alto Tietê.</h2>
-          <p class="muted">Marque mentalmente o que sua empresa já tem. Os itens em vermelho são obrigatórios e representam risco imediato.</p>
+          <p class="muted">Marque mentalmente o que sua empresa já tem. Os itens em vermelho representam risco imediato e devem ser tratados primeiro.</p>
         </div>
         <div class="checklist reveal">
 
           <div class="check-item fail">
-            <span class="check-icon">🔴</span>
-            <div><h4>Controle de acesso por usuário</h4><p>Cada colaborador tem login próprio nos sistemas — sem compartilhamento de senhas. Acessos são revogados imediatamente quando alguém sai da empresa.</p></div>
+            <span class="check-icon"><span class="dot dot--red" aria-hidden="true"></span></span>
+            <div><span class="check-tag">Prioridade alta</span><h4>Controle de acesso por usuário</h4><p>Cada colaborador tem login próprio nos sistemas — sem compartilhamento de senhas. Acessos são revogados imediatamente quando alguém sai da empresa.</p></div>
           </div>
           <div class="check-item fail">
-            <span class="check-icon">🔴</span>
-            <div><h4>Registro de acessos a dados sensíveis</h4><p>Existe log de quem acessou dados de clientes, colaboradores ou pacientes — com data, hora e ação realizada. Auditável em caso de investigação da ANPD.</p></div>
+            <span class="check-icon"><span class="dot dot--red" aria-hidden="true"></span></span>
+            <div><span class="check-tag">Prioridade alta</span><h4>Registro de acessos a dados sensíveis</h4><p>Existe log de quem acessou dados de clientes, colaboradores ou pacientes — com data, hora e ação realizada. Auditável em caso de investigação da ANPD.</p></div>
           </div>
           <div class="check-item fail">
-            <span class="check-icon">🔴</span>
-            <div><h4>Plano de resposta a incidentes documentado</h4><p>Existe um documento que define o que fazer se dados vazarem: quem notificar, em qual prazo, como comunicar a ANPD e os titulares afetados.</p></div>
+            <span class="check-icon"><span class="dot dot--red" aria-hidden="true"></span></span>
+            <div><span class="check-tag">Prioridade alta</span><h4>Plano de resposta a incidentes documentado</h4><p>Existe um documento que define o que fazer se dados vazarem: quem notificar, em qual prazo, como comunicar a ANPD e os titulares afetados.</p></div>
           </div>
           <div class="check-item warn">
-            <span class="check-icon">🟡</span>
-            <div><h4>Inventário de dados (ROPA)</h4><p>A empresa sabe quais dados pessoais coleta, qual a base legal de cada tratamento, por quanto tempo retém e com quem compartilha.</p></div>
+            <span class="check-icon"><span class="dot dot--yellow" aria-hidden="true"></span></span>
+            <div><span class="check-tag">Prioridade média</span><h4>Inventário de dados (ROPA)</h4><p>A empresa sabe quais dados pessoais coleta, qual a base legal de cada tratamento, por quanto tempo retém e com quem compartilha.</p></div>
           </div>
           <div class="check-item warn">
-            <span class="check-icon">🟡</span>
-            <div><h4>Backup com criptografia e política de retenção</h4><p>Backups de dados pessoais são criptografados. Existe política documentada de por quanto tempo cada tipo de dado é retido e como é descartado.</p></div>
+            <span class="check-icon"><span class="dot dot--yellow" aria-hidden="true"></span></span>
+            <div><span class="check-tag">Prioridade média</span><h4>Backup com criptografia e política de retenção</h4><p>Backups de dados pessoais são criptografados. Existe política documentada de por quanto tempo cada tipo de dado é retido e como é descartado.</p></div>
           </div>
           <div class="check-item warn">
-            <span class="check-icon">🟡</span>
-            <div><h4>Contratos com fornecedores revisados</h4><p>Contratos com fornecedores que acessam dados da empresa incluem cláusulas de proteção de dados — definindo responsabilidades de cada parte.</p></div>
+            <span class="check-icon"><span class="dot dot--yellow" aria-hidden="true"></span></span>
+            <div><span class="check-tag">Prioridade média</span><h4>Contratos com fornecedores revisados</h4><p>Contratos com fornecedores que acessam dados da empresa incluem cláusulas de proteção de dados — definindo responsabilidades de cada parte.</p></div>
           </div>
           <div class="check-item done">
-            <span class="check-icon">🟢</span>
-            <div><h4>Política de privacidade publicada</h4><p>O site da empresa tem política de privacidade acessível, explicando quais dados são coletados e como são usados.</p></div>
+            <span class="check-icon"><span class="dot dot--green" aria-hidden="true"></span></span>
+            <div><span class="check-tag">Recomendado</span><h4>Política de privacidade publicada</h4><p>O site da empresa tem política de privacidade acessível, explicando quais dados são coletados e como são usados.</p></div>
           </div>
           <div class="check-item done">
-            <span class="check-icon">🟢</span>
-            <div><h4>Antivírus e segurança de endpoint ativos</h4><p>Todos os dispositivos que acessam dados pessoais têm solução de segurança ativa e atualizada.</p></div>
+            <span class="check-icon"><span class="dot dot--green" aria-hidden="true"></span></span>
+            <div><span class="check-tag">Recomendado</span><h4>Antivírus e segurança de endpoint ativos</h4><p>Todos os dispositivos que acessam dados pessoais têm solução de segurança ativa e atualizada.</p></div>
           </div>
 
         </div>
         <div style="margin-top:20px;padding:16px 20px;border-radius:var(--radius-lg);background:rgba(255,77,77,.06);border:1px solid rgba(255,77,77,.2);display:flex;gap:12px;align-items:flex-start" class="reveal">
-          <span style="font-size:1.1rem;flex-shrink:0">🔴</span>
+          <span style="font-size:1.1rem;flex-shrink:0"><span class="dot dot--red" aria-hidden="true"></span></span>
           <p style="margin:0;color:var(--muted);font-size:.88rem;line-height:1.6"><strong style="color:#ff8888">Se você marcou qualquer item vermelho como "não tenho"</strong>, sua empresa tem risco de conformidade imediato. Os itens vermelhos são os que a ANPD verifica primeiro em caso de investigação.</p>
         </div>
       </div>
@@ -579,12 +580,12 @@
         <!-- ISO 27001 + AUDITORIA -->
         <div class="split-grid reveal" style="margin-top:22px;gap:14px">
           <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:20px">
-            <div style="font-size:1.3rem;margin-bottom:10px">🏅</div>
+            <div style="font-size:1.3rem;margin-bottom:10px;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#medal"/></svg></div>
             <h3 style="font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:6px">Controles ISO 27001 implementados</h3>
             <p style="color:var(--muted);font-size:.86rem;line-height:1.6;margin:0">Implementamos os controles técnicos previstos na norma ISO 27001 em todos os ambientes gerenciados — sem precisar do certificado para entregar o padrão que ele representa.</p>
           </div>
           <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:20px">
-            <div style="font-size:1.3rem;margin-bottom:10px">🔍</div>
+            <div style="font-size:1.3rem;margin-bottom:10px;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg></div>
             <h3 style="font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:6px">Direito de auditoria</h3>
             <p style="color:var(--muted);font-size:.86rem;line-height:1.6;margin:0">Clientes podem auditar nossos acessos e processos a qualquer momento. Todo acesso ao ambiente do cliente é documentado, controlado e revogado ao fim do contrato.</p>
           </div>
@@ -595,7 +596,7 @@
             <p style="font-weight:900;color:#37f5a1;margin-bottom:4px">A Oryxon entrega o que é verificável — não só o que é documentável.</p>
             <p style="color:var(--muted);font-size:.88rem;margin:0">Controles técnicos que funcionam na prática, não só no papel para uma eventual auditoria.</p>
           </div>
-          <a href="/codigo-de-conduta-oryxon.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">📄 Ver Código de Conduta →</a>
+          <a href="/codigo-de-conduta-oryxon.pdf" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#file-text"/></svg> Ver Código de Conduta →</a>
         </div>
       </div>
     </section>
@@ -644,7 +645,7 @@
               </select>
               <button type="submit" class="btn btn-primary full">Solicitar diagnóstico LGPD gratuito →</button>
             </form>
-            <p style="color:var(--muted2);font-size:.78rem;margin-top:10px;text-align:center">🔒 Seus dados estão seguros. Sem spam.</p>
+            <p style="color:var(--muted2);font-size:.78rem;margin-top:10px;text-align:center"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg> Seus dados estão seguros. Sem spam.</p>
           </div>
         </div>
       </div>
