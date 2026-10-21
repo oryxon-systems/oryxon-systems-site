@@ -70,7 +70,7 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v2.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
   <style>
     :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
@@ -124,7 +124,7 @@
 
     /* PROBLEMA */
     .prob-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid rgba(255,77,77,.18);background:rgba(255,50,50,.04);border-radius:var(--radius-lg);margin-bottom:10px}
-    .prob-icon{font-size:1.1rem;flex-shrink:0}
+    .prob-icon{font-size:1.1rem;flex-shrink:0;color:#ff9999}
     .prob-item h4{font-size:.94rem;font-weight:800;color:#ff9999;margin-bottom:4px}
     .prob-item p{margin:0;font-size:.87rem;color:var(--muted)}
 
@@ -203,12 +203,12 @@
           <div class="case-badge"><span class="case-badge-dot"></span> Resultado verificado — 2026</div>
           <h1>Como a GregTur reduziu <span class="grad">52% dos chamados</span> com TI gerenciada</h1>
           <p class="case-lead">14 MacBooks sem monitoramento, sem gestão de hardware e sem visibilidade de segurança. Em poucos meses, a Oryxon transformou esse ambiente em um parque 100% gerenciado, com cobertura total de antivírus, patches em dia e hardening aplicado semanalmente.</p>
-          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+          <a href="https://maps.app.goo.gl/yLYKjerQup6VP6uB8" target="_blank" rel="noopener" aria-label="Avaliação 5 de 5 estrelas no Google" style="display:flex;align-items:center;gap:8px;margin-top:8px;text-decoration:none">
             <div style="display:flex">
               <span style="color:#fbbf24">★★★★★</span>
             </div>
             <span style="color:var(--muted);font-size:.86rem">Avaliação Google — GregTur Turismo</span>
-          </div>
+          </a>
         </div>
         <div class="client-card reveal">
           <h3>Sobre o cliente</h3>
@@ -269,19 +269,19 @@
         <div class="reveal">
           <div class="kicker kicker-red" style="color:#ff8888">Problemas identificados</div>
           <div class="prob-item">
-            <span class="prob-icon">⚠️</span>
+            <span class="prob-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
             <div><h4>Sem monitoramento dos MacBooks</h4><p>Nenhuma ferramenta de RMM para visibilidade centralizada — cada máquina era uma caixa preta.</p></div>
           </div>
           <div class="prob-item">
-            <span class="prob-icon">⚠️</span>
+            <span class="prob-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
             <div><h4>Sem gestão de hardware</h4><p>Sem inventário atualizado, sem controle de vida útil dos equipamentos, sem alertas de saúde de disco ou memória.</p></div>
           </div>
           <div class="prob-item">
-            <span class="prob-icon">⚠️</span>
+            <span class="prob-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
             <div><h4>TI reativa e sem estratégia</h4><p>Suporte apenas quando algo quebrava. Nenhuma ação preventiva, sem patches aplicados, sem visibilidade de vulnerabilidades.</p></div>
           </div>
           <div class="prob-item">
-            <span class="prob-icon">⚠️</span>
+            <span class="prob-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
             <div><h4>Segurança sem cobertura garantida</h4><p>Sem controle centralizado de antivírus — impossível garantir que todos os 14 dispositivos estavam protegidos.</p></div>
           </div>
         </div>
@@ -295,23 +295,23 @@
           <div class="kicker">Solução implementada</div>
           <h2>O que a Oryxon implementou.</h2>
           <div class="sol-item">
-            <span style="font-size:1.1rem;flex-shrink:0">📡</span>
+            <span style="font-size:1.1rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#radar"/></svg></span>
             <div><h4>Monitoramento NinjaOne para macOS</h4><p>Implantação do agente NinjaOne em todos os 14 MacBooks — visibilidade em tempo real de CPU, memória, disco, serviços e status de atualizações de cada dispositivo.</p></div>
           </div>
           <div class="sol-item">
-            <span style="font-size:1.1rem;flex-shrink:0">⚙️</span>
+            <span style="font-size:1.1rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#settings"/></svg></span>
             <div><h4>Scripts e automações via NinjaOne</h4><p>Scripts automatizados de limpeza de sistema, análise de performance e geração de relatórios semanais — reduzindo a carga manual e eliminando tarefas que antes só eram feitas quando o problema aparecia.</p></div>
           </div>
           <div class="sol-item">
-            <span style="font-size:1.1rem;flex-shrink:0">🔒</span>
+            <span style="font-size:1.1rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg></span>
             <div><h4>Hardening semanal</h4><p>Aplicação semanal de configurações de hardening nos MacBooks — fechamento de vetores de ataque, desativação de serviços desnecessários e validação de conformidade de cada dispositivo.</p></div>
           </div>
           <div class="sol-item">
-            <span style="font-size:1.1rem;flex-shrink:0">🛡️</span>
+            <span style="font-size:1.1rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg></span>
             <div><h4>Cobertura de antivírus em 100% do parque</h4><p>Garantia de que todos os 14 MacBooks estão com solução de segurança ativa, atualizada e gerenciada centralmente — com alertas automáticos para qualquer desvio.</p></div>
           </div>
           <div class="sol-item">
-            <span style="font-size:1.1rem;flex-shrink:0">📊</span>
+            <span style="font-size:1.1rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#chart-bar"/></svg></span>
             <div><h4>Relatórios semanais automatizados</h4><p>A gestão da GregTur recebe relatório semanal automático com o status de todos os equipamentos — sem precisar perguntar e sem depender de memória do técnico.</p></div>
           </div>
         </div>
@@ -381,7 +381,7 @@
             <div class="author-info">
               <strong>GregTur Turismo</strong>
               <span>Agência de Viagens — São Paulo, SP</span>
-              <div class="stars">★★★★★ Google Reviews</div>
+              <a class="stars" href="https://maps.app.goo.gl/yLYKjerQup6VP6uB8" target="_blank" rel="noopener" aria-label="Avaliação 5 de 5 estrelas no Google" style="display:block;text-decoration:none">★★★★★ Google Reviews</a>
             </div>
           </div>
         </div>

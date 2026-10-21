@@ -9,10 +9,12 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
 - [x] 2026-10-20 — **Fase 1 encerrada** (`tokens.v2.css` em todas as páginas; `.cta-band` e `.cta-article` com parágrafo à esquerda; contraste WhatsApp conferido), commitada (`a5d7671` e anteriores). Medição antes/depois: adendo em `/media/uedson/storage/Projetos/oryxon-auditorias/vibe-coding-audit-2026-10-20.md` (fora do repo) — `assets/css/tokens.v2.css`
-- [ ] 2026-10-20 — Próximas fases, em ordem: (1) Fase 2 — emojis (ADR-017, sprite SVG Tabler; Lote 0 feito); (2) Fase 1b — cores e inline; (3) `.valor-tab` — `index.html`, `sobre.html`
-- [ ] 2026-10-20 — Fase 2 (emojis): os ~354 emojis de UI AINDA estão no site (29 arquivos); a exceção `.post-thumb` é a regra-alvo, não o estado atual. Depende de fechar o ADR-004 — vários
+- [x] 2026-10-21 — **Fase 2 encerrada** (emojis → sprite Tabler, ADR-017): varredura final vazia (emojis de UI, `svg.ti` com path inline, `tokens.v2`). Medição no adendo do relatório de auditoria. Lote 5 aguardando commit
+- [ ] 2026-10-20 — Próximas fases, em ordem: (1) Fase 1b — cores e inline; (2) `.valor-tab` — `index.html`, `sobre.html`
 
 ## Backlog
+
+- [ ] 2026-10-21 — Depoimento GregTur (`cases/gregtur.html`): a página termina em "Recomendo bastante." e o texto no Google termina em "Recomendo bastante 👍" (resto idêntico). Decidir se mantém o ponto final ou usa o texto literal — aguarda aprovação do Uedson
 
 - [ ] 2026-10-21 — Revisar afirmações de que controles específicos são "obrigatórios/exigidos pela LGPD" (exige validação jurídica): `lgpd.html:346` e cards 349-377 ("deve", "não são conformes"), `lgpd.html:545`, `ciberseguranca.html:671` ("controles técnicos obrigatórios"), `blog/gestao-de-ti-suzano.html:253` e `:264`, `blog/ciberseguranca-itaquaquecetuba.html:260` ("Controles técnicos obrigatórios pela LGPD"), `blog/perguntas-cliente-grande-antes-renovar-contrato.html:231`
 
@@ -53,6 +55,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Concluído
 
+- [x] 2026-10-21 — Fase 2, Lote 5: `cases/gregtur.html` (9 emojis → sprite; ★★★★★ mantidas, agora em link `maps.app.goo.gl/yLYKjerQup6VP6uB8` com `aria-label`), `suporte/index.html` (8 SVGs inline → `<use>`, 4 `style` removidos; `onclick` GA4 e links de acesso remoto intactos), `auditoria-apps-ia/index.html` (só `tokens.v3`; formulário testado). Depoimento do case difere do Google só no final (ver pendência)
 - [x] 2026-10-21 — Fase 2, Lote 4 (`blog/*.html`, 30 posts): 326 SVGs inline → `<use>` (326 `style="width:1em…"` removidos) e 63 emojis (callouts, cards "Leia também", títulos) → sprite; `tokens.v3`; texto dos artigos inalterado; sem emoji em title/meta/JSON-LD. Aguardando commit
 - [x] 2026-10-21 — Fase 2, Lote 3 (`ti-*`, 6 páginas): 22 emojis de UI por página (132 no total) → sprite; `tokens.v3`; `.svc-icon` e `.coverage-card .icon` com `color:var(--blue2)`; sem SVG inline, `.dot` ou ícone fora do sprite. Aguardando commit
 - [x] 2026-10-21 — Fase 2, Lote 2 (raiz): 119 emojis de UI → sprite e 21 semáforos → `.dot` em sobre, solucoes, managed-services, ciberseguranca, lgpd, termos, privacidade (blog.html sem ícones fora do `.post-thumb`); `tokens.v3` em todas; `.check-tag` ("Obrigatório/Importante/Boa prática") adicionado aos 9 itens do checklist da `lgpd.html` para o semáforo ter rótulo. Mapeamentos: 🔩→`shield-lock`, 🧑‍💻→`spy`, 🚨→`alert-triangle`. Ícones de card com `color:var(--blue2)` (variantes vermelha/laranja de `.svc-icon` mantêm tom semântico). Checklist LGPD reclassificado por prioridade de risco (Prioridade alta/média, Recomendado). Aguardando commit
