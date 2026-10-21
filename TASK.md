@@ -1,6 +1,6 @@
 # TASK — Oryxon Systems Site
 
-Última atualização: 2026-10-20
+Última atualização: 2026-10-21
 Propósito: acompanhar o que está em andamento, o backlog, as verificações pendentes e o que foi concluído.
 
 Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
@@ -14,6 +14,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Backlog
 
+- [ ] 2026-10-21 — Fase 1b: badge da Acronis (`solucoes.html:421`, `rgba(255,80,0,…)`/`#ff7a40`) como candidato a `.stack-badge` com `--badge-rgb`
+- [ ] 2026-10-21 — Criar página `ti-aruja/` (SEO local, conteúdo com fontes) — nova página, `sitemap.xml`, `llms.txt`
 - [ ] 2026-10-20 — `.valor-tab` (`sobre.html`): trocar o estilo inline reescrito por `showValor()` por toggle de classe `.is-active` + `aria-selected` — `sobre.html`
 
 - [ ] 2026-10-19 — Ferramenta de autoavaliação de risco em `/avaliacao-de-risco/` (lead magnet → WhatsApp); a pasta não existe — nova página, `sitemap.xml`
@@ -43,16 +45,16 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — Título da nova página sem "Alto Tietê" (limite de 60 caracteres: com a região daria 61); região está no H1, meta description e Schema — `auditoria-apps-ia/index.html`
 - [ ] 2026-10-20 — Prompt pedia Tabler Icons (`ti ti-*`); a página não usa ícones (o repositório não tem Tabler, ver ADR-004) — `auditoria-apps-ia/index.html`
 - [ ] 2026-10-20 — `ti-*/`: o `.city-card` local (grade de cobertura) difere do `.city-card` da home; unificar exige decisão (tokens.v3). Box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
-- [ ] 2026-10-20 — `blog/`: links "Leia também" em alguns posts são `<a style="">` inline (cards, não botões), sem hover; padronizar exige classe `.related a` (Fase 1b). Card laranja da calculadora em `terceirizacao-de-ti.html` (`#ff6b35`, `rgba(255,80,0,.06)`) segue fora da paleta — decidir se vira callout padrão — `blog/*.html`
 - [ ] 2026-10-20 — `suporte/index.html`: `.btn-wa` mudou de gradiente verde (`#3ee08a→#17b866`) para sólido `#25D366` (cor do WhatsApp já documentada); confirmar — `suporte/index.html`
-- [ ] 2026-10-20 — **ALTA PRIORIDADE:** decidir cláusula de uptime — verificar se contratos reais têm meta de disponibilidade medível (`termos.html:204`, "meta de 99,9% de uptime")
-- [ ] 2026-10-20 — Confirmar se "24x7" se refere a monitoramento automatizado (RMM); se sim, ajustar rótulo para "Monitoramento automatizado 24x7" (`index.html` métricas, `llms.txt`, `sobre`, `ti-*`, `managed-services`); avaliar também a redundância do "<15min" no `.metrics` com o painel novo
 
 ## Concluído
 
+- [x] 2026-10-21 — Bloco de texto oculto de keywords removido de `index.html` (spam, ADR-016); grades `.coverage-card` padronizadas (10 cards, ordem única, home inclusa); `lastmod` de 18 URLs atualizado em `sitemap.xml`
+- [x] 2026-10-21 — Meta de 99,9% de uptime removida de `termos.html` (ADR-015); Arujá incluída no território (Schema `areaServed` ×6, grades `ti-*` ×6, home, FAQs, `llms.txt`, RULES/PRD/CLAUDE); rótulo `.metrics` "Monitoramento automatizado"
+- [x] 2026-10-21 — "24x7" → "Monitoramento automatizado 24x7" nos rótulos (home, ti-*, solucoes, managed-services, sobre, llms.txt); `<15min` mantido; card da calculadora em `terceirizacao-de-ti.html` com tokens `--brand-helpdigital*`
 - [x] 2026-10-20 — Fase 0: painel Command Center, `.orb-*` e canvas removidos; card "Prazos de atendimento" com SLA real; `hero-network.v1.js` apagado (ADR-014) — `index.html`
 
-- [x] 2026-10-20 — Ajustes da página de auditoria: redirect sem barra, `llms.txt`, mapa de 48 URLs, comentário do `consent.v1.js` (47→48, só comentário), Arujá removida do Schema (decisão pendente do Uedson: incluir no território?) — `vercel.json`, `llms.txt`, `ARCHITECTURE.md`, `assets/js/consent.v1.js`, `auditoria-apps-ia/index.html`
+- [x] 2026-10-20 — Ajustes da página de auditoria: redirect sem barra, `llms.txt`, mapa de 48 URLs, comentário do `consent.v1.js` (47→48, só comentário), Arujá removida do Schema (depois incluída, ver 2026-10-21) — `vercel.json`, `llms.txt`, `ARCHITECTURE.md`, `assets/js/consent.v1.js`, `auditoria-apps-ia/index.html`
 - [x] 2026-10-20 — Página /auditoria-apps-ia/ criada (Service + FAQPage, formulário → WhatsApp, `generate_lead` com `service: auditoria_apps_ia`), card em soluções e URL no sitemap; fontes conferidas (Veracode, Tecnoblog, NVD CVE-2025-48757) — `auditoria-apps-ia/index.html`, `solucoes.html`, `sitemap.xml`
 - [x] 2026-10-19 — CSP ativada em enforce com `'unsafe-inline'` temporário (ADR-011); validar pós-deploy — `vercel.json`, `SECURITY.md`, `DECISIONS.md`
 - [x] 2026-10-19 — Verificação de cache e de CSS injetado pelo `consent.v1.js`: CSS externo via `<link>` (linhas 121-124), sem `style=`/`<style>`/eval/handlers inline no arquivo; nada bloqueado pela CSP atual em enforce — `assets/js/consent.v1.js`, `vercel.json`

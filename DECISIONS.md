@@ -1,6 +1,6 @@
 # DECISIONS — Oryxon Systems Site
 
-Última atualização: 2026-10-20
+Última atualização: 2026-10-21
 Propósito: registro de decisões técnicas e editoriais (ADR). Novas decisões entram no fim, com número sequencial.
 
 Formato: ADR-NNN | Data | Status | Contexto | Decisão | Consequências.
@@ -79,4 +79,16 @@ Consequências: demais 47 páginas migram em lotes por diretório após aprovaç
 Contexto: a auditoria (item 7) apontou o painel "Oryxon Command Center" (99,9% de disponibilidade, "Proteção ativa" com ponto pulsante), a esfera `.orb-large`/`.orb-glow` e o canvas de rede animada como visuais sem função e com dados sem fonte.
 Decisão: o `.hero-visual` vira um único card "Prazos de atendimento" com os 3 prazos de SLA do RULES.md (confirmação automática em até 15 min; contato humano em até 2 h; plantão para incidentes críticos fora do horário), sem gráficos, percentuais ou animação. Removidos `.orb-*`, `@keyframes orb-*`, `.hero-net`, `.dash-*`, `.status`, o `<script>` do canvas e `assets/js/hero-network.v1.js` (apagado; nada o referenciava).
 Alternativas descartadas: manter o canvas como textura (custo de rAF contínuo sem informação); manter o painel com dados reais de outra fonte (não há métrica medida de disponibilidade).
-Consequências: menos JS e CSS no hero; `termos.html` mantém a meta de 99,9% de uptime (cláusula contratual, pendência de decisão no TASK.md).
+Consequências: menos JS e CSS no hero; `termos.html` mantinha a meta de 99,9% de uptime (resolvido no ADR-015).
+
+**ADR-015 | 2026-10-21 | Aceito**
+Contexto: `termos.html` (seção 4) prometia "meta de 99,9% de uptime"; os contratos reais não têm meta de disponibilidade medível.
+Decisão: remover a meta; a seção passa a se chamar "Garantias e prazos de atendimento" e cita só os prazos reais (confirmação automática em até 15 min, contato de técnico em até 2 h, plantão para incidentes críticos). O aviso de exclusões passou a valer para os prazos de atendimento. Âncora `#garantias` mantida. Também: Arujá entra no território (Alto Tietê); "24x7" passa a ser rotulado "Monitoramento automatizado 24x7" (RMM, sem promessa de atendimento humano).
+Alternativas descartadas: manter o 99,9% como "meta"; afirmar no texto que o contrato não tem meta (expõe a ausência sem necessidade).
+Consequências: texto contratual alinhado à operação; `ti-aruja/` fica no backlog (Arujá é card sem link).
+
+**ADR-016 | 2026-10-21 | Aceito**
+Contexto: `index.html` tinha um `<p>` oculto (`position:absolute;width:1px;height:1px;opacity:0`) com lista de cidades e palavras-chave para crawlers.
+Decisão: texto oculto para crawlers é proibido (política de spam do Google). SEO local apenas por Schema `areaServed`, grades de cidades visíveis, páginas `ti-*` e FAQ. O bloco foi removido; não havia outro no site.
+Alternativas descartadas: manter o bloco (risco de penalidade por texto oculto/keyword stuffing).
+Consequências: nenhuma perda de cobertura visível; as cidades continuam em Schema, grades e FAQ.

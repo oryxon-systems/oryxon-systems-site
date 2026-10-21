@@ -1,6 +1,6 @@
 # RULES — Oryxon Systems Site
 
-Última atualização: 2026-10-19
+Última atualização: 2026-10-21
 Propósito: regras editoriais, técnicas e de workflow que valem para toda alteração no projeto.
 
 ## Editoriais
@@ -13,7 +13,7 @@ Propósito: regras editoriais, técnicas e de workflow que valem para toda alter
 - Pentest é executado por parceiro.
 - SLA: confirmação automática do chamado no GLPI em até 15 min; contato humano em até 2 h; plantão para incidentes críticos. Não prometer "24x7" além do que a operação entrega.
 - Sede única: Rua Presidente Rodrigues Alves, 715 A, Jardim Santa Helena, Poá-SP, 08553-520. "Suzano" em SEO é território, não endereço; não alterar.
-- Guarulhos é vizinha, não faz parte do Alto Tietê.
+- Território: Suzano, Mogi das Cruzes, Itaquaquecetuba, Poá, Ferraz de Vasconcelos, Guararema, Santa Isabel e Arujá (Alto Tietê). Guarulhos é atendida, mas é vizinha e não faz parte do Alto Tietê. Guararema, Santa Isabel e Arujá não têm página `ti-*` (card sem link).
 - Canais de chamado: `https://suporte.oryxonsystems.com.br/` e `suporte@oryxonsystems.com.br`.
 - Emojis em `.post-thumb` do blog são intencionais; não trocar por ícones.
 - Análise de concorrentes (Netcenter, HabiliSystem, Nexigen): só para extrair padrões, sem cópia.
@@ -42,3 +42,4 @@ Propósito: regras editoriais, técnicas e de workflow que valem para toda alter
 3. **Restrições editoriais**: as regras acima.
 4. **Proibição explícita** de comandos Git/Vercel.
 5. **Saída esperada**: arquivos alterados, divergências, itens `[A CONFIRMAR]`.
+- Proibido texto oculto para crawlers (`opacity:0`, 1px, off-screen, `display:none` com palavras-chave etc.): SEO local só por Schema `areaServed`, grades de cidades visíveis, páginas `ti-*` e FAQ (ADR-016). `.sr-only` só com função real de acessibilidade.

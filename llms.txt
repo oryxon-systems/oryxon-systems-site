@@ -20,7 +20,7 @@
 ## Serviços
 
 - Gestão de TI MSP (Managed Services)
-- Monitoramento 24x7 de endpoints e servidores
+- Monitoramento automatizado 24x7 de endpoints e servidores
 - Backup e continuidade operacional (Acronis Cyber Protect)
 - Segurança da informação e antivírus (Bitdefender)
 - Automação de infraestrutura (Ansible, Python)
@@ -51,6 +51,7 @@
 - Ferraz de Vasconcelos
 - Guararema
 - Santa Isabel
+- Arujá
 - Guarulhos (fora do Alto Tietê)
 - Atendimento remoto para empresas fora dessas cidades
 

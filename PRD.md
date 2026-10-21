@@ -1,6 +1,6 @@
 # PRD — Oryxon Systems Site
 
-Última atualização: 2026-10-19
+Última atualização: 2026-10-21
 Propósito: definir o problema, o público, os objetivos e o escopo do site institucional da Oryxon Systems.
 
 ## Problema
@@ -9,7 +9,7 @@ PMEs do Alto Tietê (SP) e de Guarulhos dependem de TI e não têm equipe intern
 
 ## Público-alvo
 
-- Donos e gestores de PMEs (escritórios, clínicas, comércio, indústria leve) em Suzano, Mogi das Cruzes, Itaquaquecetuba, Poá, Ferraz de Vasconcelos, Guararema e Santa Isabel (Alto Tietê) e em Guarulhos (vizinha, fora do Alto Tietê). Atendimento remoto fora dessas cidades.
+- Donos e gestores de PMEs (escritórios, clínicas, comércio, indústria leve) em Suzano, Mogi das Cruzes, Itaquaquecetuba, Poá, Ferraz de Vasconcelos, Guararema, Santa Isabel e Arujá (Alto Tietê) e em Guarulhos (vizinha, fora do Alto Tietê). Atendimento remoto fora dessas cidades.
 - Clientes atuais que procuram suporte (`/suporte/`).
 
 ## Proposta de valor
