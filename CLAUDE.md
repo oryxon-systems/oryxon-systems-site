@@ -65,4 +65,6 @@ Documentos-base na raiz: `PRD.md`, `ARCHITECTURE.md`, `RULES.md`, `DESIGN.md`, `
 
 Listar no resumo final quais documentos foram atualizados.
 
+**Edição de arquivos:** docs e HTML só podem ser editados com a ferramenta de edição de arquivo (Edit/Write). Proibido sobrescrever arquivo via redirecionamento de shell (`>`) ou `sed -i` sem backup.
+
 **Nunca** executar `git add`, `git commit`, `git push`, `vercel` ou `vercel --prod`. Commit, push e deploy são exclusivos do Uedson.

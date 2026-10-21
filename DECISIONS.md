@@ -92,3 +92,9 @@ Contexto: `index.html` tinha um `<p>` oculto (`position:absolute;width:1px;heigh
 Decisão: texto oculto para crawlers é proibido (política de spam do Google). SEO local apenas por Schema `areaServed`, grades de cidades visíveis, páginas `ti-*` e FAQ. O bloco foi removido; não havia outro no site.
 Alternativas descartadas: manter o bloco (risco de penalidade por texto oculto/keyword stuffing).
 Consequências: nenhuma perda de cobertura visível; as cidades continuam em Schema, grades e FAQ.
+
+**ADR-017 | 2026-10-21 | Aceito (fecha o ADR-004)**
+Contexto: o ADR-004 previa Tabler via CDN; o site usa 387 `<svg class="ti">` inline (90 desenhos, 345 com `style` repetido) e ainda tem ~469 emojis de UI.
+Decisão: Tabler Icons (outline, MIT) via sprite SVG: `assets/icons/sprite.v1.svg` (ids = nome Tabler), uso `<svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#nome"/></svg>`. O sprite é imutável (cache de 1 ano): ícone novo = `sprite.v2.svg` e troca da referência em todas as páginas. Estilo `.ti` e `.dot` em `assets/css/tokens.v3.css` (v2 permanece no repositório; troca do `<link>` página a página, por lote). Semáforos viram `.dot` com rótulo de texto adjacente; `✓` tipográfico fica (`.check-list` na Fase 1b); `.post-thumb` mantém emojis.
+Alternativas descartadas: CDN (script/estilo de terceiro, CSP); manter SVG inline (≈345 `style=""` repetidos); fonte de ícones.
+Consequências: CSP inalterada (`default-src 'self'`); +~31 KB brutos (~7 KB gzip) em cache longo.

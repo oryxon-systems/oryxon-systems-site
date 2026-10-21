@@ -1,6 +1,6 @@
 # ARCHITECTURE — Oryxon Systems Site
 
-Última atualização: 2026-10-20
+Última atualização: 2026-10-21
 Propósito: descrever a stack, a estrutura de arquivos, as integrações e o fluxo de deploy.
 
 ## Stack
@@ -20,7 +20,7 @@ suporte/index.html     central de suporte
 auditoria-apps-ia/     serviço Auditoria de Apps Criados com IA (index.html)
 ti-<cidade>/index.html suzano, mogi-das-cruzes, guarulhos, itaquaquecetuba, poa,
                        ferraz-de-vasconcelos
-assets/                css/, js/, fonts/, logos .webp, avatar .webp
+assets/                css/, js/, fonts/, icons/ (sprite.v1.svg), logos .webp, avatar .webp
 .claude/               agentes (seo-checker, a11y-reviewer), hook, skill sync-shared
 vercel.json  sitemap.xml  robots.txt  llms.txt  speculationrules.json
 og-image.jpg  favicon.ico  codigo-de-conduta-oryxon.pdf  .mcp.json  .vercelignore
@@ -35,6 +35,7 @@ O sitemap lista 48 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 30 p
 
 ## Assets
 
+- Ícones: `assets/icons/sprite.v1.svg` (127 símbolos, Tabler Icons 3.34.1 outline, licença MIT, © Paweł Kuna; ADR-017). Imutável; ícone novo = `sprite.v2.svg`. Estilo em `assets/css/tokens.v3.css` (`.ti`, `.dot`); as páginas migram do v2 para o v3 por lote (Fase 2).
 - Fonte: Inter variável, auto-hospedada (`assets/fonts/inter.css`). Sem Google Fonts.
 - Ícones: SVG inline nas páginas. **Não há Tabler Icons/CDN** no repositório (divergência, ver TASK.md).
 - Imagens: logos e avatar em `.webp`, OG image em `og-image.jpg` (1200×630), favicon embutido como data URI + `favicon.ico`.

@@ -43,3 +43,4 @@ Propósito: regras editoriais, técnicas e de workflow que valem para toda alter
 4. **Proibição explícita** de comandos Git/Vercel.
 5. **Saída esperada**: arquivos alterados, divergências, itens `[A CONFIRMAR]`.
 - Proibido texto oculto para crawlers (`opacity:0`, 1px, off-screen, `display:none` com palavras-chave etc.): SEO local só por Schema `areaServed`, grades de cidades visíveis, páginas `ti-*` e FAQ (ADR-016). `.sr-only` só com função real de acessibilidade.
+- Docs e HTML só podem ser editados com a ferramenta de edição de arquivo (Edit/Write). Proibido sobrescrever arquivo via redirecionamento de shell (`>`) ou `sed -i` sem backup.

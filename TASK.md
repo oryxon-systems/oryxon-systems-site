@@ -8,12 +8,15 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 ## Em andamento
 
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
-- [x] 2026-10-20 — **Fase 1 encerrada** (`tokens.v2.css` em todas as páginas; `.cta-band` e `.cta-article` com parágrafo à esquerda; contraste WhatsApp conferido), aguardando revisão/commit. Medição antes/depois: adendo em `/media/uedson/storage/Projetos/oryxon-auditorias/vibe-coding-audit-2026-10-20.md` (fora do repo) — `assets/css/tokens.v2.css`
-- [ ] 2026-10-20 — Próximas fases, em ordem: (1) Fase 1b — cores e inline; (3) Fase 2 — emojis; (4) `.valor-tab` — `index.html`, `sobre.html`
+- [x] 2026-10-20 — **Fase 1 encerrada** (`tokens.v2.css` em todas as páginas; `.cta-band` e `.cta-article` com parágrafo à esquerda; contraste WhatsApp conferido), commitada (`a5d7671` e anteriores). Medição antes/depois: adendo em `/media/uedson/storage/Projetos/oryxon-auditorias/vibe-coding-audit-2026-10-20.md` (fora do repo) — `assets/css/tokens.v2.css`
+- [ ] 2026-10-20 — Próximas fases, em ordem: (1) Fase 2 — emojis (ADR-017, sprite SVG Tabler; Lote 0 feito); (2) Fase 1b — cores e inline; (3) `.valor-tab` — `index.html`, `sobre.html`
 - [ ] 2026-10-20 — Fase 2 (emojis): os ~354 emojis de UI AINDA estão no site (29 arquivos); a exceção `.post-thumb` é a regra-alvo, não o estado atual. Depende de fechar o ADR-004 — vários
 
 ## Backlog
 
+- [ ] 2026-10-21 — Fase 1b: badge da Acronis (`solucoes.html:421`, `rgba(255,80,0,…)`/`#ff7a40`) como candidato a `.stack-badge` com `--badge-rgb`
+- [ ] 2026-10-21 — Fase 1b: componente `.check-list` para o `✓` tipográfico (122 usos; mantido na Fase 2) — raiz, `ti-*`, `suporte/`
+- [ ] 2026-10-21 — Criar página `ti-aruja/` (SEO local, conteúdo com fontes) — nova página, `sitemap.xml`, `llms.txt`
 - [ ] 2026-10-21 — Fase 1b: badge da Acronis (`solucoes.html:421`, `rgba(255,80,0,…)`/`#ff7a40`) como candidato a `.stack-badge` com `--badge-rgb`
 - [ ] 2026-10-21 — Criar página `ti-aruja/` (SEO local, conteúdo com fontes) — nova página, `sitemap.xml`, `llms.txt`
 - [ ] 2026-10-20 — `.valor-tab` (`sobre.html`): trocar o estilo inline reescrito por `showValor()` por toggle de classe `.is-active` + `aria-selected` — `sobre.html`
@@ -44,14 +47,15 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — Auditoria de apps IA: validar com o Uedson o escopo comercial (programa piloto, prazos, revisão de código mediante acesso ao repositório) antes de publicar — `auditoria-apps-ia/index.html`
 - [ ] 2026-10-20 — Título da nova página sem "Alto Tietê" (limite de 60 caracteres: com a região daria 61); região está no H1, meta description e Schema — `auditoria-apps-ia/index.html`
 - [ ] 2026-10-20 — Prompt pedia Tabler Icons (`ti ti-*`); a página não usa ícones (o repositório não tem Tabler, ver ADR-004) — `auditoria-apps-ia/index.html`
-- [ ] 2026-10-20 — `ti-*/`: o `.city-card` local (grade de cobertura) difere do `.city-card` da home; unificar exige decisão (tokens.v3). Box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
-- [ ] 2026-10-20 — `suporte/index.html`: `.btn-wa` mudou de gradiente verde (`#3ee08a→#17b866`) para sólido `#25D366` (cor do WhatsApp já documentada); confirmar — `suporte/index.html`
+- [ ] 2026-10-20 — `ti-*/`: box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
 
 ## Concluído
 
+- [x] 2026-10-21 — Fase 2, Lote 1 (piloto `index.html`): 12 emojis de UI → ícones do sprite; 53 SVGs inline → `<use>`; `style="width:1em…"` removido (53); `tokens.v2`→`v3`. Também: `solucoes.html` (🤖→`settings-automation`, "✨ Novo"→"Novo") e `sobre.html` (⭐→`map-pin`, "Perfil da Empresa no Google"), ambas já com `tokens.v3`. Regra de edição (Edit/Write, sem `>`/`sed -i`) em RULES.md e CLAUDE.md. **Pendente de decisão:** ★★★★★ em `cases/gregtur.html:208` e `:384` (sem fonte verificável)
+- [x] 2026-10-21 — Fase 2, Lote 0: `assets/icons/sprite.v1.svg` (127 símbolos Tabler), `assets/css/tokens.v3.css` (v2 + `.ti` + `.dot`), ADR-017 (fecha ADR-004); nenhum HTML migrado ainda — `assets/`
 - [x] 2026-10-21 — Bloco de texto oculto de keywords removido de `index.html` (spam, ADR-016); grades `.coverage-card` padronizadas (10 cards, ordem única, home inclusa); `lastmod` de 18 URLs atualizado em `sitemap.xml`
 - [x] 2026-10-21 — Meta de 99,9% de uptime removida de `termos.html` (ADR-015); Arujá incluída no território (Schema `areaServed` ×6, grades `ti-*` ×6, home, FAQs, `llms.txt`, RULES/PRD/CLAUDE); rótulo `.metrics` "Monitoramento automatizado"
-- [x] 2026-10-21 — "24x7" → "Monitoramento automatizado 24x7" nos rótulos (home, ti-*, solucoes, managed-services, sobre, llms.txt); `<15min` mantido; card da calculadora em `terceirizacao-de-ti.html` com tokens `--brand-helpdigital*`
+- [x] 2026-10-21 — "24x7" → "Monitoramento automatizado 24x7" nos rótulos (home, ti-*, solucoes, managed-services, sobre, 2 `<h3>` de blog, llms.txt); `<15min` mantido; card da calculadora em `terceirizacao-de-ti.html` com tokens `--brand-helpdigital*`
 - [x] 2026-10-20 — Fase 0: painel Command Center, `.orb-*` e canvas removidos; card "Prazos de atendimento" com SLA real; `hero-network.v1.js` apagado (ADR-014) — `index.html`
 
 - [x] 2026-10-20 — Ajustes da página de auditoria: redirect sem barra, `llms.txt`, mapa de 48 URLs, comentário do `consent.v1.js` (47→48, só comentário), Arujá removida do Schema (depois incluída, ver 2026-10-21) — `vercel.json`, `llms.txt`, `ARCHITECTURE.md`, `assets/js/consent.v1.js`, `auditoria-apps-ia/index.html`
