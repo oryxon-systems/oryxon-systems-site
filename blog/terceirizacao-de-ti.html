@@ -101,11 +101,11 @@
   </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--prose:720px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--glow-a:.12;--glow-b:0;--prose:720px}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}a:not(.btn):hover{text-decoration:underline}
     .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
@@ -116,42 +116,41 @@
     .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
     .nav-links{display:flex;gap:22px;color:var(--muted);font-size:.9rem;font-weight:700}
     .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
-    .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:10px}
 
     /* ARTICLE LAYOUT */
     .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
     .article-main{min-width:0}
     .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
     .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);background:rgba(0,183,255,.12);border:1px solid rgba(103,232,255,.25);color:#67e8ff}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);background:rgba(0,183,255,.12);border:1px solid rgba(103,232,255,.25);color:var(--cyan)}
     .article-date{color:var(--muted2);font-size:.82rem;font-weight:700}
     .article-read{color:var(--muted2);font-size:.82rem;font-weight:700}
     h1{font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.08;letter-spacing:-.055em;margin-bottom:16px}
-    .article-lead{font-size:1.12rem;color:#c8d7e9;line-height:1.72;margin-bottom:0}
+    .article-lead{font-size:1.12rem;color:var(--text-soft);line-height:1.72;margin-bottom:0}
 
     /* PROSE */
-    .prose h2{font-size:1.4rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 14px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
-    .prose h3{font-size:1.1rem;font-weight:700;margin:24px 0 10px;color:#c8d7e9}
+    .prose h2{font-size:1.4rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 14px;color:var(--text-strong);padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .prose h3{font-size:1.1rem;font-weight:700;margin:24px 0 10px;color:var(--text-soft)}
     .prose p{color:var(--muted);margin-bottom:16px;font-size:.98rem;line-height:1.75}
     .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:16px;display:grid;gap:8px;font-size:.98rem}
     .prose li{padding-left:4px;line-height:1.65}
-    .prose strong{color:#dff9ff;font-weight:700}
+    .prose strong{color:var(--text-strong);font-weight:700}
     .prose a{color:var(--blue2)}
     .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:18px 22px;margin:24px 0}
-    .callout p{margin:0;color:#c8e8ff;font-size:.95rem}
+    .callout p{margin:0;color:var(--info-text);font-size:.95rem}
     .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
-    .callout-warn p{color:#ffd8a0}
+    .callout-warn p{color:var(--warn-text)}
     .comparison-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.9rem}
-    .comparison-table th{background:rgba(0,183,255,.10);color:#dff9ff;font-weight:800;padding:12px 14px;text-align:left;border-bottom:1px solid rgba(103,232,255,.2)}
+    .comparison-table th{background:rgba(0,183,255,.10);color:var(--text-strong);font-weight:800;padding:12px 14px;text-align:left;border-bottom:1px solid rgba(103,232,255,.2)}
     .comparison-table td{padding:10px 14px;border-bottom:1px solid rgba(103,232,255,.08);color:var(--muted)}
     .comparison-table tr:last-child td{border-bottom:0}
-    .comparison-table .yes{color:#37f5a1;font-weight:700}
-    .comparison-table .no{color:#ff8888;font-weight:700}
+    .comparison-table .yes{color:var(--success);font-weight:700}
+    .comparison-table .no{color:var(--danger-text);font-weight:700}
 
     /* SIDEBAR */
     .sidebar{position:sticky;top:90px;display:grid;gap:18px}
     .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:22px}
-    .sidebar-card h3{font-size:.92rem;font-weight:800;margin-bottom:12px;color:#dff9ff}
+    .sidebar-card h3{font-size:.92rem;font-weight:800;margin-bottom:12px;color:var(--text-strong)}
     .sidebar-card p{color:var(--muted);font-size:.84rem;line-height:1.6;margin-bottom:14px}
     .toc{list-style:none;display:grid;gap:8px}
     .toc li a{color:var(--muted);font-size:.84rem;font-weight:600;display:flex;align-items:center;gap:8px;transition:.2s}
@@ -165,7 +164,7 @@
 
     .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:var(--radius-lg);padding:16px;margin-top:36px}
     .author-avatar{width:48px;height:48px;border-radius:var(--radius-full);background:var(--gradient-brand);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1.1rem}
-    .author-info strong{display:block;font-size:.92rem;color:#dff9ff}
+    .author-info strong{display:block;font-size:.92rem;color:var(--text-strong)}
     .author-info span{color:var(--muted);font-size:.8rem}
 
     .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:24px 0;color:var(--muted2);font-size:.84rem}
@@ -191,7 +190,7 @@
     .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
     .breadcrumb li+li:before{content:"›";margin-right:8px}
     .breadcrumb a{color:var(--muted)}
-    .breadcrumb [aria-current]{color:#dff9ff}
+    .breadcrumb [aria-current]{color:var(--text-strong)}
     .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
     .crumb-wrap+.article-wrap{padding-top:28px}
   </style>
@@ -326,7 +325,7 @@
 
         <div style="border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.55);border-radius:var(--radius-lg);padding:22px;margin-top:36px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
           <div style="flex:1;min-width:200px">
-            <p style="margin:0 0 4px;color:#dff9ff;font-weight:800;font-size:.95rem"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg> Diagnóstico interativo de TI</p>
+            <p style="margin:0 0 4px;color:var(--text-strong);font-weight:800;font-size:.95rem"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg> Diagnóstico interativo de TI</p>
             <p style="margin:0;color:var(--muted);font-size:.86rem">Responda algumas perguntas e receba um plano de ação personalizado para sua empresa — grátis.</p>
           </div>
           <a href="https://caf.helpdigitalti.com.br/diagnostico?f=6aa5ee2a-f767-4d3d-b38b-649dafdc5991&utm_source=site&utm_medium=referral" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Fazer diagnóstico →</a>
@@ -346,18 +345,18 @@
         </div>
 
         <div style="margin-top:44px;padding-top:32px;border-top:1px solid rgba(103,232,255,.1)">
-          <h3 style="font-size:1rem;font-weight:800;color:#dff9ff;margin-bottom:16px">Leia também</h3>
+          <h3 style="font-size:1rem;font-weight:800;color:var(--text-strong);margin-bottom:16px">Leia também</h3>
           <a href="/blog/backup-nuvem-vs-local.html" style="display:flex;align-items:center;gap:12px;padding:14px;border:1px solid rgba(103,232,255,.14);border-radius:var(--radius-lg);color:var(--muted);font-size:.9rem;transition:.2s;text-decoration:none;margin-bottom:10px">
             <span style="font-size:1.4rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#database"/></svg></span>
             <div>
-              <strong style="display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px">Backup em nuvem vs backup local: qual escolher para sua empresa?</strong>
+              <strong class="card-title">Backup em nuvem vs backup local: qual escolher para sua empresa?</strong>
               <span style="font-size:.82rem">Nuvem &amp; Infraestrutura · 7 min de leitura</span>
             </div>
           </a>
           <a href="/blog/o-que-pmes-deveriam-exigir-do-provedor-de-ti.html" style="display:flex;align-items:center;gap:12px;padding:14px;border:1px solid rgba(103,232,255,.14);border-radius:var(--radius-lg);color:var(--muted);font-size:.9rem;transition:.2s;text-decoration:none">
             <span style="font-size:1.4rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#circle-check"/></svg></span>
             <div>
-              <strong style="display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px">O que PMEs deveriam exigir do provedor de TI</strong>
+              <strong class="card-title">O que PMEs deveriam exigir do provedor de TI</strong>
               <span style="font-size:.82rem">Gestão de TI · 8 min de leitura</span>
             </div>
           </a>
@@ -405,7 +404,7 @@
   <footer class="page-footer">
     <div class="inner">
       <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
-      <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <div class="row-wrap row-wrap--lg">
         <a href="/blog.html">← Blog</a>
         <a href="/privacidade.html">Privacidade</a>
         <a href="/suporte/">Central de Suporte</a>

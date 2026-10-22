@@ -101,11 +101,11 @@
   </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--glow-a:.12;--glow-b:0}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.12),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}a:not(.btn):hover{text-decoration:underline}
     .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
@@ -120,40 +120,40 @@
     .article-main{min-width:0}
     .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
     .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);background:rgba(255,77,77,.10);border:1px solid rgba(255,100,100,.25);color:#ff9999}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);background:rgba(255,77,77,.10);border:1px solid rgba(255,100,100,.25);color:var(--danger-text)}
     .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700}
     h1{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.05em;margin-bottom:16px}
-    .article-lead{font-size:1.08rem;color:#c8d7e9;line-height:1.72}
-    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 10px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
-    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:#c8d7e9}
+    .article-lead{font-size:1.08rem;color:var(--text-soft);line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 10px;color:var(--text-strong);padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:var(--text-soft)}
     .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
     .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
     .prose li{padding-left:4px;line-height:1.65}
-    .prose strong{color:#dff9ff;font-weight:700}
+    .prose strong{color:var(--text-strong);font-weight:700}
     .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:20px 0}
-    .callout p{margin:0;color:#c8e8ff;font-size:.93rem;line-height:1.65}
+    .callout p{margin:0;color:var(--info-text);font-size:.93rem;line-height:1.65}
     .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:var(--radius-lg);padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-    .cta-mid p{margin:0;color:#a0f5d4;font-size:.95rem;font-weight:700}
+    .cta-mid p{margin:0;color:var(--success-text);font-size:.95rem;font-weight:700}
     .faq-section{margin-top:44px;padding-top:32px;border-top:1px solid rgba(103,232,255,.1)}
-    .faq-section h2{font-size:1.3rem;font-weight:800;color:#dff9ff;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.1);letter-spacing:-.03em}
+    .faq-section h2{font-size:1.3rem;font-weight:800;color:var(--text-strong);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.1);letter-spacing:-.03em}
     .faq-item{border:1px solid rgba(103,232,255,.14);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;margin-bottom:10px}
-    .faq-q{font-weight:800;font-size:.96rem;color:#dff9ff;margin-bottom:8px}
+    .faq-q{font-weight:800;font-size:.96rem;color:var(--text-strong);margin-bottom:8px}
     .faq-a{color:var(--muted);font-size:.9rem;line-height:1.7}
     .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:28px;text-align:center;margin-top:44px}
     .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:8px;border:0;padding:0}
     .cta-article p{color:var(--muted);font-size:.9rem;margin:0 auto 18px;max-width:60ch;text-align:left}
     .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:var(--radius-lg);padding:14px;margin-top:32px}
     .author-avatar{width:44px;height:44px;border-radius:var(--radius-full);background:var(--gradient-brand);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
-    .author-info strong{display:block;font-size:.9rem;color:#dff9ff}
+    .author-info strong{display:block;font-size:.9rem;color:var(--text-strong)}
     .author-info span{color:var(--muted);font-size:.78rem}
     .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
-    .related h3{font-size:.96rem;font-weight:800;color:#dff9ff;margin-bottom:14px}
+    .related h3{font-size:.96rem;font-weight:800;color:var(--text-strong);margin-bottom:14px}
     .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:var(--radius-lg);color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
     .related a:hover{border-color:rgba(103,232,255,.35);background:rgba(255,255,255,.05);color:#fff;text-decoration:none}
     .related a span{font-size:1.3rem;flex-shrink:0}
     .sidebar{position:sticky;top:90px;display:grid;gap:16px}
     .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:20px}
-    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:#dff9ff}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:var(--text-strong)}
     .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
     .toc{list-style:none;display:grid;gap:7px}
     .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s}
@@ -179,7 +179,7 @@
     .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
     .breadcrumb li+li:before{content:"›";margin-right:8px}
     .breadcrumb a{color:var(--muted)}
-    .breadcrumb [aria-current]{color:#dff9ff}
+    .breadcrumb [aria-current]{color:var(--text-strong)}
     .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
     .crumb-wrap+.article-wrap{padding-top:28px}
   </style>
@@ -300,21 +300,21 @@
           <a href="/ciberseguranca.html">
             <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg>
             <div>
-              <strong style="display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px">Cibersegurança para empresas — Oryxon Systems</strong>
+              <strong class="card-title">Cibersegurança para empresas — Oryxon Systems</strong>
               <span style="font-size:.82rem">FWaaS · EDR · Pentest · VA</span>
             </div>
           </a>
           <a href="/blog/backup-nuvem-vs-local.html">
             <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#database"/></svg>
             <div>
-              <strong style="display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px">Backup em nuvem vs local: qual escolher?</strong>
+              <strong class="card-title">Backup em nuvem vs local: qual escolher?</strong>
               <span style="font-size:.82rem">Nuvem &amp; Infraestrutura · 7 min</span>
             </div>
           </a>
           <a href="/ti-itaquaquecetuba/">
             <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#map-pin"/></svg>
             <div>
-              <strong style="display:block;color:#dff9ff;font-size:.92rem;margin-bottom:3px">TI gerenciada em Itaquaquecetuba</strong>
+              <strong class="card-title">TI gerenciada em Itaquaquecetuba</strong>
               <span style="font-size:.82rem">Oryxon Systems</span>
             </div>
           </a>
@@ -351,7 +351,7 @@
   <footer class="page-footer">
     <div class="inner">
       <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
-      <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <div class="row-wrap">
         <a href="/blog.html">← Blog</a>
         <a href="/privacidade.html">Privacidade</a>
         <a href="/suporte/">Central de Suporte</a>
