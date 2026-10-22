@@ -70,11 +70,11 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--glow-a:.14;--glow-b:0}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.14),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}
     .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
@@ -92,8 +92,8 @@
     /* HERO */
     .case-hero{padding:64px 0;border-bottom:1px solid rgba(103,232,255,.10)}
     .case-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-    .case-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:var(--radius-pill);border:1px solid rgba(55,245,161,.28);background:rgba(55,245,161,.06);color:#a0f5d4;font-size:.76rem;font-weight:900;margin-bottom:16px}
-    .case-badge-dot{width:6px;height:6px;border-radius:var(--radius-full);background:#37f5a1}
+    .case-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:var(--radius-pill);border:1px solid rgba(55,245,161,.28);background:rgba(55,245,161,.06);color:var(--success-text);font-size:.76rem;font-weight:900;margin-bottom:16px}
+    .case-badge-dot{width:6px;height:6px;border-radius:var(--radius-full);background:var(--success)}
     h1{font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.04;letter-spacing:-.06em;margin-bottom:18px}
     .case-lead{color:var(--muted);font-size:1.02rem;line-height:1.72;margin-bottom:22px}
     .client-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:24px}
@@ -101,7 +101,7 @@
     .client-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(103,232,255,.08);font-size:.9rem}
     .client-row:last-child{border-bottom:0;padding-bottom:0}
     .client-row span{color:var(--muted)}
-    .client-row strong{color:#dff9ff;text-align:right}
+    .client-row strong{color:var(--text-strong);text-align:right}
 
     /* RESULTADOS */
     .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0}
@@ -110,44 +110,44 @@
     .result-card.blue{border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.06)}
     .result-card.orange{border:1px solid rgba(255,165,0,.28);background:rgba(255,140,0,.06)}
     .result-val{font-size:2.8rem;font-weight:900;letter-spacing:-.06em;line-height:1;margin-bottom:8px}
-    .result-card.green .result-val{color:#37f5a1}
+    .result-card.green .result-val{color:var(--success)}
     .result-card.blue .result-val{color:#67e8ff}
-    .result-card.orange .result-val{color:#ffcc77}
+    .result-card.orange .result-val{color:var(--warn-text)}
     .result-label{color:var(--muted);font-size:.84rem;line-height:1.5}
 
     /* SEÇÕES */
     section{padding:64px 0;border-top:1px solid rgba(103,232,255,.08)}
     h2{font-size:clamp(1.6rem,3.5vw,2.4rem);line-height:1.06;letter-spacing:-.055em;margin-bottom:14px}
-    h3{font-size:1.06rem;font-weight:700;margin-bottom:8px;color:#c8d7e9}
+    h3{font-size:1.06rem;font-weight:700;margin-bottom:8px;color:var(--text-soft)}
     p{color:var(--muted);font-size:.97rem;line-height:1.75;margin-bottom:14px}
     .section-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
 
     /* PROBLEMA */
     .prob-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid rgba(255,77,77,.18);background:rgba(255,50,50,.04);border-radius:var(--radius-lg);margin-bottom:10px}
-    .prob-icon{font-size:1.1rem;flex-shrink:0;color:#ff9999}
-    .prob-item h4{font-size:.94rem;font-weight:800;color:#ff9999;margin-bottom:4px}
+    .prob-icon{font-size:1.1rem;flex-shrink:0;color:var(--danger-text)}
+    .prob-item h4{font-size:.94rem;font-weight:800;color:var(--danger-text);margin-bottom:4px}
     .prob-item p{margin:0;font-size:.87rem;color:var(--muted)}
 
     /* SOLUÇÃO */
     .sol-item{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1px solid rgba(55,245,161,.16);background:rgba(55,245,161,.04);border-radius:var(--radius-lg);margin-bottom:10px}
-    .sol-item h4{font-size:.94rem;font-weight:800;color:#37f5a1;margin-bottom:4px}
+    .sol-item h4{font-size:.94rem;font-weight:800;color:var(--success);margin-bottom:4px}
     .sol-item p{margin:0;font-size:.87rem;color:var(--muted)}
 
     /* MÉTRICAS COMPLETAS */
     .metrics-table{width:100%;border-collapse:collapse;font-size:.9rem}
-    .metrics-table th{background:rgba(0,183,255,.08);color:#dff9ff;font-weight:800;padding:12px 16px;text-align:left;border-bottom:1px solid rgba(103,232,255,.15)}
+    .metrics-table th{background:rgba(0,183,255,.08);color:var(--text-strong);font-weight:800;padding:12px 16px;text-align:left;border-bottom:1px solid rgba(103,232,255,.15)}
     .metrics-table td{padding:12px 16px;border-bottom:1px solid rgba(103,232,255,.07);color:var(--muted);vertical-align:top}
     .metrics-table tr:last-child td{border-bottom:0}
-    .metric-val-good{color:#37f5a1;font-weight:800}
-    .metric-val-bad{color:#ff8888;font-weight:700;text-decoration:line-through;opacity:.7}
+    .metric-val-good{color:var(--success);font-weight:800}
+    .metric-val-bad{color:var(--danger-text);font-weight:700;text-decoration:line-through;opacity:.7}
 
     /* DEPOIMENTO */
     .testimonial{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:32px;position:relative}
     .testimonial:before{content:'\"';position:absolute;top:16px;left:24px;font-size:4rem;line-height:.8;color:var(--blue2);opacity:.3;font-family:Georgia,serif}
-    .testimonial blockquote{font-size:1.08rem;color:#c8d7e9;line-height:1.72;font-style:italic;padding-left:8px;margin-bottom:20px}
+    .testimonial blockquote{font-size:1.08rem;color:var(--text-soft);line-height:1.72;font-style:italic;padding-left:8px;margin-bottom:20px}
     .testimonial-author{display:flex;align-items:center;gap:12px}
     .author-avatar-g{width:44px;height:44px;border-radius:var(--radius-full);background:var(--gradient-brand);display:grid;place-items:center;font-weight:900;color:#001224;font-size:1.1rem;flex-shrink:0}
-    .author-info strong{display:block;font-size:.92rem;color:#dff9ff}
+    .author-info strong{display:block;font-size:.92rem;color:var(--text-strong)}
     .author-info span{font-size:.8rem;color:var(--muted)}
     .stars{color:#fbbf24;font-size:.9rem;margin-top:4px}
 
@@ -267,7 +267,7 @@
           <p>Sem visibilidade do parque, qualquer problema só era descoberto quando já havia impactado a operação. Não havia como saber o estado de atualização dos sistemas, a saúde dos discos ou a cobertura de segurança de cada dispositivo.</p>
         </div>
         <div class="reveal">
-          <div class="kicker kicker-red" style="color:#ff8888">Problemas identificados</div>
+          <div class="kicker kicker-red" style="color:var(--danger-text)">Problemas identificados</div>
           <div class="prob-item">
             <span class="prob-icon"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
             <div><h4>Sem monitoramento dos MacBooks</h4><p>Nenhuma ferramenta de RMM para visibilidade centralizada — cada máquina era uma caixa preta.</p></div>
@@ -394,9 +394,9 @@
         <div class="kicker reveal" style="margin-bottom:12px">Lição do case</div>
         <h2 class="reveal" style="margin-bottom:16px">MacBooks em empresa precisam de gestão — não de sorte.</h2>
         <p class="reveal">O ambiente macOS é frequentemente subestimado em termos de gestão de TI. A percepção de que "Mac não dá problema" leva empresas a operarem sem nenhuma visibilidade real do parque — o que não elimina vulnerabilidades, apenas as torna invisíveis.</p>
-        <p class="reveal">O case da GregTur mostra que a redução de chamados não vem de "resolver mais rápido" — vem de <strong style="color:#dff9ff">evitar que os problemas aconteçam</strong>. Monitoramento proativo, automações e hardening semanal são o que cria essa prevenção de forma sistemática.</p>
+        <p class="reveal">O case da GregTur mostra que a redução de chamados não vem de "resolver mais rápido" — vem de <strong style="color:var(--text-strong)">evitar que os problemas aconteçam</strong>. Monitoramento proativo, automações e hardening semanal são o que cria essa prevenção de forma sistemática.</p>
         <div class="reveal" style="border:1px solid rgba(55,245,161,.2);background:rgba(55,245,161,.05);border-radius:var(--radius-lg);padding:20px 24px;margin-top:24px">
-          <p style="margin:0;color:#a0f5d4;font-size:.95rem;line-height:1.65"><strong>52% de redução de chamados</strong> não é sorte. É o resultado direto de parar de agir quando quebra e começar a monitorar antes de quebrar.</p>
+          <p style="margin:0;color:var(--success-text);font-size:.95rem;line-height:1.65"><strong>52% de redução de chamados</strong> não é sorte. É o resultado direto de parar de agir quando quebra e começar a monitorar antes de quebrar.</p>
         </div>
       </div>
     </section>
@@ -411,7 +411,7 @@
           <a href="/#diagnostico" class="btn btn-primary">Solicitar diagnóstico gratuito →</a>
           <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20vi%20o%20case%20da%20GregTur%20e%20quero%20saber%20mais%20sobre%20gest%C3%A3o%20de%20TI." target="_blank" rel="noopener" class="btn btn-secondary">Falar no WhatsApp</a>
         </div>
-        <div style="margin-top:24px;display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:var(--radius-lg)" class="reveal">
+        <div style="margin-top:24px;display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border-radius:var(--radius-lg)" class="partner-hd reveal">
           <img src="/assets/help-digital-logo.webp" alt="Help Digital" width="94" height="24" loading="lazy" style="height:24px;width:auto;opacity:.85">
           <span style="color:var(--muted);font-size:.82rem;font-weight:700;border-left:1px solid rgba(103,232,255,.18);padding-left:14px">Help&nbsp;Digital São&nbsp;Paulo</span>
         </div>
@@ -423,7 +423,7 @@
   <footer class="page-footer">
     <div class="inner container">
       <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
-      <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <div class="row-wrap row-wrap--lg">
         <a href="/">Site principal</a>
         <a href="/managed-services.html">Planos</a>
         <a href="/privacidade.html">Privacidade</a>

@@ -55,11 +55,11 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--panel:rgba(8,21,43,.78);--border:rgba(93,176,255,.22);--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1180px}
+    :root{--bg:#020713;--panel:rgba(8,21,43,.78);--border:rgba(93,176,255,.22);--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1180px;--glow-a:.20;--glow-b:.18}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.20),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.18),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.5}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.5}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(circle at 50% 15%,black,transparent 75%);z-index:-1}
     a{color:inherit;text-decoration:none}
     .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
@@ -76,7 +76,7 @@
     .mobile-toggle{display:none;background:rgba(255,255,255,.05);border:1px solid var(--border);color:#fff;border-radius:var(--radius-lg);padding:10px 12px;font-weight:850}
     main{display:block}
     .hero{padding:56px 0 40px}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.30);background:rgba(0,183,255,.08);color:#bff6ff;font-size:.78rem;font-weight:900;letter-spacing:.02em;margin-bottom:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.30);background:rgba(0,183,255,.08);color:var(--text-tint);font-size:.78rem;font-weight:900;letter-spacing:.02em;margin-bottom:18px}
     h1{font-size:clamp(2rem,5vw,3rem);line-height:1.05;letter-spacing:-.05em;margin-bottom:14px}
     .hero p.lead{color:var(--muted);font-size:1.02rem;line-height:1.65;max-width:640px;margin-bottom:26px}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -106,23 +106,23 @@
     .step h4{font-size:.94rem;font-weight:800;margin-bottom:5px}
     .step p{font-size:.84rem;color:var(--muted);line-height:1.6}
     .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:820px}
-    .checklist li{list-style:none;display:flex;align-items:flex-start;gap:10px;font-size:.92rem;color:#d6e6f8;font-weight:600}
-    .checklist .check{color:var(--success);font-weight:950;flex-shrink:0}
+    .checklist li{font-size:.92rem;color:#d6e6f8;font-weight:600}
+    .checklist li::before{font-weight:950}
     .checklist-note{margin-top:16px;color:var(--muted);font-size:.86rem}
     .security-panel{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:26px;display:flex;gap:16px;align-items:flex-start}
     .security-panel .icon{width:48px;height:48px}
     .security-panel h3{font-size:1.05rem;margin-bottom:8px}
     .security-panel p{color:var(--muted);font-size:.92rem;line-height:1.7;margin-bottom:8px}
     .security-panel p:last-child{margin-bottom:0}
-    .faq{display:grid;gap:12px;max-width:900px}
+    .faq{display:grid;gap:12px;max-width:900px;margin:0}
     .faq details{border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.035);border-radius:var(--radius-lg);padding:16px 18px}
-    .faq summary{cursor:pointer;font-weight:800;font-size:.94rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq summary{cursor:pointer;font-weight:800;font-size:.94rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;letter-spacing:normal}
     .faq summary::-webkit-details-marker{display:none}
     .faq summary .plus{color:var(--blue2);font-size:1.2rem;font-weight:400;flex-shrink:0}
     .faq details[open] .plus{transform:rotate(45deg)}
     .faq details p{color:var(--muted);margin-top:10px;font-size:.88rem;line-height:1.65}
     .commercial-box{border:1px solid rgba(55,245,161,.22);background:rgba(55,245,161,.05);border-radius:var(--radius-lg);padding:26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-    .commercial-box h3{font-size:1rem;font-weight:800;color:#37f5a1;margin-bottom:4px}
+    .commercial-box h3{font-size:1rem;font-weight:800;color:var(--success);margin-bottom:4px}
     .commercial-box p{color:var(--muted);font-size:.88rem}
     footer{padding:40px 0 26px;background:rgba(1,4,13,.76);border-top:1px solid rgba(103,232,255,.12)}
     .footer-grid{display:grid;grid-template-columns:1.15fr .7fr .7fr .8fr;gap:28px;color:var(--muted)}
@@ -239,13 +239,13 @@
     <section id="checklist">
       <div class="container">
         <div class="section-head"><div class="kicker">Antes de abrir</div><h2>Informações para agilizar o atendimento</h2></div>
-        <ul class="checklist">
-          <li><span class="check">✓</span> Nome e empresa</li>
-          <li><span class="check">✓</span> Equipamento afetado</li>
-          <li><span class="check">✓</span> Descrição do problema</li>
-          <li><span class="check">✓</span> Quando o problema começou</li>
-          <li><span class="check">✓</span> Prints de tela, se houver</li>
-          <li><span class="check">✓</span> Mensagens de erro, se houver</li>
+        <ul class="checklist check-list">
+          <li>Nome e empresa</li>
+          <li>Equipamento afetado</li>
+          <li>Descrição do problema</li>
+          <li>Quando o problema começou</li>
+          <li>Prints de tela, se houver</li>
+          <li>Mensagens de erro, se houver</li>
         </ul>
         <p class="checklist-note">Esse checklist vale tanto para o Portal quanto para o corpo do e-mail.</p>
       </div>
@@ -320,7 +320,7 @@
       </div>
       <div class="copy">
         <span>© 2026 Oryxon Systems — Rua Presidente Rodrigues Alves, 715 A, Poá - SP</span>
-        <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div class="row-wrap">
           <a href="/">Site principal</a>
           <a href="/privacidade.html">Privacidade</a>
           <a href="/termos.html">Termos e Condições</a>
