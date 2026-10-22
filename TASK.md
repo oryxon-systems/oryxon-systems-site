@@ -1,6 +1,6 @@
 # TASK — Oryxon Systems Site
 
-Última atualização: 2026-10-21
+Última atualização: 2026-10-22
 Propósito: acompanhar o que está em andamento, o backlog, as verificações pendentes e o que foi concluído.
 
 Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
@@ -55,6 +55,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 ## Concluído
 
 - [x] 2026-10-21 — Fase 1b, piloto `index.html`: `tokens.v3`→`v4`; 36 hex → tokens; 24 `style=""` → `.ti--sm|--md|--lg`; degradê do `body` e regras de `details`/`.faq` locais removidos (vêm do v4; brilhos via `--glow-a/b` no `:root`); 7 regras mortas removidas (`.brand-orb`, `.rotating-text-fade`, `.score-panel`, `.score-divider`, `.field.full`). Rótulo "Bitdefender" mantido como literal `#ff5c5c` (exceção de marca de fabricante, não é status; reversão do `--danger-text` feita após revisão). Nenhuma mudança visual. `.row-wrap` ganhou a variante `--lg` (gaps reais: 16px ×32, 18px ×12; 20px ×1 não migrado). Aguardando commit; próximos: raiz, `ti-*`, blog, cases/suporte/auditoria
+- [x] 2026-10-22 — Fase 1b, Lote RAIZ: `sobre`, `solucoes`, `managed-services`, `ciberseguranca`, `lgpd`, `termos`, `privacidade`, `blog.html` migradas para `tokens.v4` (`--glow-a/b` no `:root`, degradê local removido); hex → tokens por papel (marcas fabricantes e `.dot` mantidos literais); ✓ → `.check-list` (sobre 30, managed-services 21, lgpd 5); `.faq` na `lgpd`; `.ent-badge` da `solucoes` com `--badge-rgb` (sem v5); `--orange` removido; regras mortas removidas. Diferenças visuais: ver resumo da sessão. Aguardando commit; próximos: `ti-*`, blog posts, cases/suporte/auditoria
 - [x] 2026-10-21 — Fase 1b, Lote 0: `assets/css/tokens.v4.css` (tokens de cor, `.check-list`, utilitários, `.faq`, `.ti--*`) e ADR-018; nenhum HTML alterado — `assets/css/`
 - [x] 2026-10-21 — Fase 2, Lote 5: `cases/gregtur.html` (9 emojis → sprite; ★★★★★ mantidas, agora em link `maps.app.goo.gl/yLYKjerQup6VP6uB8` com `aria-label`), `suporte/index.html` (8 SVGs inline → `<use>`, 4 `style` removidos; `onclick` GA4 e links de acesso remoto intactos), `auditoria-apps-ia/index.html` (só `tokens.v3`; formulário testado). Depoimento do case difere do Google só no final (ver pendência)
 - [x] 2026-10-21 — Fase 2, Lote 4 (`blog/*.html`, 30 posts): 326 SVGs inline → `<use>` (326 `style="width:1em…"` removidos) e 63 emojis (callouts, cards "Leia também", títulos) → sprite; `tokens.v3`; texto dos artigos inalterado; sem emoji em title/meta/JSON-LD. Aguardando commit

@@ -178,11 +178,11 @@
   </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:1100px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:1100px;--glow-a:.18;--glow-b:.16}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.18),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.16),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
     .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
@@ -210,7 +210,7 @@
 
     /* HERO */
     .hero{padding:72px 0 64px;border-bottom:1px solid rgba(103,232,255,.10)}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);color:#bff6ff;font-size:.78rem;font-weight:900;letter-spacing:.04em;margin-bottom:22px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);color:var(--text-tint);font-size:.78rem;font-weight:900;letter-spacing:.04em;margin-bottom:22px}
     .live-dot{width:7px;height:7px;border-radius:var(--radius-full);background:#37f5a1}
     .hero p{color:var(--muted);font-size:1.08rem;max-width:620px;line-height:1.7;margin-bottom:28px}
     .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
@@ -221,7 +221,7 @@
     .compare-bad{border:1px solid rgba(255,100,100,.22);background:rgba(255,50,50,.05)}
     .compare-good{border:1px solid rgba(55,245,161,.22);background:rgba(55,245,161,.05)}
     .compare-label{font-size:.76rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
-    .compare-bad .compare-label{color:#ff8888}
+    .compare-bad .compare-label{color:var(--danger-text)}
     .compare-good .compare-label{color:var(--success)}
     .compare-list{display:grid;gap:10px}
     .compare-item{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem}
@@ -237,14 +237,14 @@
     .plan-card .btn{width:100%}
     .plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gradient-brand);color:#001224;font-size:.72rem;font-weight:950;letter-spacing:.08em;padding:5px 14px;border-radius:var(--radius-pill);white-space:nowrap}
     .plan-name{font-size:1.5rem;font-weight:900;letter-spacing:-.04em;margin-bottom:6px}
-    .plan-basic .plan-name{color:#a9bad1}
+    .plan-basic .plan-name{color:var(--muted)}
     .plan-standard .plan-name{color:#67e8ff}
     .plan-professional .plan-name{color:#fff}
     .plan-desc{color:var(--muted);font-size:.88rem;margin-bottom:22px;line-height:1.5}
     .plan-divider{border:none;border-top:1px solid rgba(103,232,255,.12);margin-bottom:20px}
-    .plan-features{display:grid;gap:10px;margin-bottom:24px}
-    .plan-feature{display:flex;align-items:center;gap:10px;font-size:.92rem;font-weight:600}
-    .plan-feature .check{color:var(--success);font-size:1rem;flex-shrink:0}
+    .plan-features{margin-bottom:24px}
+    .plan-features li{align-items:center;font-size:.92rem;font-weight:600;color:inherit}
+    .plan-features li::before{font-size:1rem;font-weight:inherit}
 
     /* PILARES */
     .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -287,7 +287,6 @@
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
       .js .reveal{opacity:1;transform:none}
-      .card:hover{transform:none}
     }
     @media (prefers-reduced-motion: no-preference){
       @view-transition{navigation:auto}
@@ -302,7 +301,7 @@
     .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
     .breadcrumb li+li:before{content:"›";margin-right:8px}
     .breadcrumb a{color:var(--muted)}
-    .breadcrumb [aria-current]{color:#dff9ff}
+    .breadcrumb [aria-current]{color:var(--text-strong)}
   </style>
 </head>
 <body>
@@ -387,13 +386,13 @@
             <div class="plan-name">Basic</div>
             <p class="plan-desc">Ideal para empresas que precisam de suporte confiável e manutenção preventiva com backup local.</p>
             <hr class="plan-divider">
-            <div class="plan-features">
-              <div class="plan-feature"><span class="check">✓</span> Suporte remoto</div>
-              <div class="plan-feature"><span class="check">✓</span> Suporte presencial</div>
-              <div class="plan-feature"><span class="check">✓</span> Manutenção corretiva</div>
-              <div class="plan-feature"><span class="check">✓</span> Manutenção preventiva</div>
-              <div class="plan-feature"><span class="check">✓</span> Backup local</div>
-            </div>
+            <ul class="check-list plan-features">
+              <li>Suporte remoto</li>
+              <li>Suporte presencial</li>
+              <li>Manutenção corretiva</li>
+              <li>Manutenção preventiva</li>
+              <li>Backup local</li>
+            </ul>
             <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20Basic%20da%20Oryxon%20Systems." target="_blank" rel="noopener" class="btn btn-secondary">Falar sobre o Basic →</a>
           </div>
 
@@ -403,15 +402,15 @@
             <div class="plan-name">Standard</div>
             <p class="plan-desc">Para empresas que precisam de proteção adicional com antivírus gerenciado e controle de acesso via firewall.</p>
             <hr class="plan-divider">
-            <div class="plan-features">
-              <div class="plan-feature"><span class="check">✓</span> Suporte remoto</div>
-              <div class="plan-feature"><span class="check">✓</span> Suporte presencial</div>
-              <div class="plan-feature"><span class="check">✓</span> Manutenção corretiva</div>
-              <div class="plan-feature"><span class="check">✓</span> Manutenção preventiva</div>
-              <div class="plan-feature"><span class="check">✓</span> Backup local</div>
-              <div class="plan-feature"><span class="check">✓</span> Antivírus gerenciado</div>
-              <div class="plan-feature"><span class="check">✓</span> Proxy / Firewall</div>
-            </div>
+            <ul class="check-list plan-features">
+              <li>Suporte remoto</li>
+              <li>Suporte presencial</li>
+              <li>Manutenção corretiva</li>
+              <li>Manutenção preventiva</li>
+              <li>Backup local</li>
+              <li>Antivírus gerenciado</li>
+              <li>Proxy / Firewall</li>
+            </ul>
             <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20Standard%20da%20Oryxon%20Systems." target="_blank" rel="noopener" class="btn btn-primary">Falar sobre o Standard →</a>
           </div>
 
@@ -420,17 +419,17 @@
             <div class="plan-name">Professional</div>
             <p class="plan-desc">A solução completa: monitoramento contínuo, segurança avançada e consultoria estratégica de TI.</p>
             <hr class="plan-divider">
-            <div class="plan-features">
-              <div class="plan-feature"><span class="check">✓</span> Suporte remoto</div>
-              <div class="plan-feature"><span class="check">✓</span> Suporte presencial</div>
-              <div class="plan-feature"><span class="check">✓</span> Manutenção corretiva</div>
-              <div class="plan-feature"><span class="check">✓</span> Manutenção preventiva</div>
-              <div class="plan-feature"><span class="check">✓</span> Backup local</div>
-              <div class="plan-feature"><span class="check">✓</span> Antivírus gerenciado</div>
-              <div class="plan-feature"><span class="check">✓</span> Proxy / Firewall</div>
-              <div class="plan-feature"><span class="check">✓</span> Monitoramento automatizado 24x7</div>
-              <div class="plan-feature"><span class="check">✓</span> Consultoria de TI</div>
-            </div>
+            <ul class="check-list plan-features">
+              <li>Suporte remoto</li>
+              <li>Suporte presencial</li>
+              <li>Manutenção corretiva</li>
+              <li>Manutenção preventiva</li>
+              <li>Backup local</li>
+              <li>Antivírus gerenciado</li>
+              <li>Proxy / Firewall</li>
+              <li>Monitoramento automatizado 24x7</li>
+              <li>Consultoria de TI</li>
+            </ul>
             <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20Plano%20Professional%20da%20Oryxon%20Systems." target="_blank" rel="noopener" class="btn btn-secondary">Falar sobre o Professional →</a>
           </div>
 

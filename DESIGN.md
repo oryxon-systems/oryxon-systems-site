@@ -1,6 +1,6 @@
 # DESIGN — Oryxon Systems Site
 
-Última atualização: 2026-10-21
+Última atualização: 2026-10-22
 Propósito: registrar os tokens e padrões visuais reais do site (fonte: `index.html`, bloco `:root`, linha 211).
 
 ## Paleta (valores do CSS)
@@ -26,7 +26,7 @@ Propósito: registrar os tokens e padrões visuais reais do site (fonte: `index.
 
 Fundo: gradientes radiais azul/ciano sobre degradê escuro, mais grade sutil em `body:before`. Tema único escuro. Os valores `#0A4A8F` e `#00D9FF` do contexto **não** existem no CSS (ver TASK.md). Tokens são redefinidos por página; copiar de `index.html`.
 
-### Tokens v4 (`assets/css/tokens.v4.css`, ADR-018; em migração: só `index.html` usa)
+### Tokens v4 (`assets/css/tokens.v4.css`, ADR-018; em migração: `index.html` e as 8 páginas da raiz usam)
 - Fundos: `--bg-deep:#01040d`, `--surface:#061226`, `--bg:#020713`; o degradê do `body` vem do v4 (`--bg-gradient-base`), com brilhos por página via `--glow-a` (ciano) e `--glow-b` (azul) no `:root` local.
 - Texto: `--text-strong:#dff9ff`, `--text-soft:#c8d7e9`, `--text-tint:#bff6ff`.
 - Status: `--danger`/`--danger-text`, `--warn`/`--warn-text`, `--success-text`, `--info-text`. `#ffffff` fica literal.

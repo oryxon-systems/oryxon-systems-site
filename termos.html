@@ -43,12 +43,12 @@
   </script>
   <script src="/assets/js/consent.v1.js" data-ga="off" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:820px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:820px;--glow-a:.14;--glow-b:0}
     *{margin:0;padding:0;box-sizing:border-box}
     @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.14),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}
     a:hover{text-decoration:underline}
@@ -71,15 +71,15 @@
     .toc li a{color:var(--muted);font-size:.9rem;font-weight:600;transition:.2s}
     .toc li a:hover{color:#fff;text-decoration:none}
     .section{margin-bottom:44px;scroll-margin-top:90px}
-    .section h2{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;margin-bottom:14px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
-    .section h3{font-size:1rem;font-weight:700;margin:18px 0 8px;color:#c8d7e9}
+    .section h2{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;margin-bottom:14px;color:var(--text-strong);padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .section h3{font-size:1rem;font-weight:700;margin:18px 0 8px;color:var(--text-soft)}
     .section p{color:var(--muted);margin-bottom:12px;font-size:.97rem}
     .section ul,.section ol{color:var(--muted);padding-left:20px;display:grid;gap:6px;margin-bottom:12px;font-size:.97rem}
     .section li{padding-left:4px}
     .highlight{border:1px solid rgba(103,232,255,.20);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:16px 0}
-    .highlight p{margin:0;color:#c8e8ff}
+    .highlight p{margin:0;color:var(--info-text)}
     .warning{border:1px solid rgba(255,160,50,.22);background:rgba(255,120,0,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:16px 0}
-    .warning p{margin:0;color:#ffd4a0}
+    .warning p{margin:0;color:var(--warn-text)}
     .contact-box{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:22px 26px;margin-top:16px}
     .contact-box p{margin:0 0 6px;color:var(--muted);font-size:.95rem}
     .contact-box a{color:var(--blue2);font-weight:700}
@@ -118,7 +118,7 @@
     <div class="page-header">
       <div class="kicker">Legal</div>
       <h1>Termos e Condições de Uso</h1>
-      <p style="color:var(--muted);font-size:1rem;margin-top:10px">Ao contratar ou utilizar os serviços da <strong style="color:#dff9ff">Oryxon Systems</strong>, você declara que leu, entendeu e concorda com os termos abaixo. Caso não concorde, não utilize nossos serviços.</p>
+      <p style="color:var(--muted);font-size:1rem;margin-top:10px">Ao contratar ou utilizar os serviços da <strong class="strong">Oryxon Systems</strong>, você declara que leu, entendeu e concorda com os termos abaixo. Caso não concorde, não utilize nossos serviços.</p>
       <p class="last-update">Última atualização: outubro de 2026</p>
     </div>
 
@@ -214,7 +214,7 @@
       <p>Ambas as partes se comprometem a manter sigilo sobre todas as informações confidenciais obtidas durante a vigência do contrato, incluindo dados de clientes, processos internos, credenciais de acesso, arquitetura de sistemas e informações estratégicas.</p>
       <p>Esta obrigação de confidencialidade:</p>
       <ul>
-        <li>Permanece em vigor por <strong style="color:#dff9ff">5 (cinco) anos</strong> após o término do contrato</li>
+        <li>Permanece em vigor por <strong class="strong">5 (cinco) anos</strong> após o término do contrato</li>
         <li>Se aplica igualmente a colaboradores, subcontratados e parceiros de ambas as partes</li>
         <li>Não se aplica a informações que já sejam de domínio público ou cuja divulgação seja exigida por lei</li>
       </ul>
@@ -238,10 +238,10 @@
     <!-- 7 -->
     <div class="section" id="prazo">
       <h2>7. Prazo e rescisão</h2>
-      <p>O contrato de serviços tem prazo mínimo de <strong style="color:#dff9ff">12 (doze) meses</strong>, salvo disposição diferente na proposta comercial, com renovação automática por períodos iguais.</p>
+      <p>O contrato de serviços tem prazo mínimo de <strong class="strong">12 (doze) meses</strong>, salvo disposição diferente na proposta comercial, com renovação automática por períodos iguais.</p>
       <h3>Rescisão pela CONTRATANTE</h3>
       <ul>
-        <li>Com aviso prévio de <strong style="color:#dff9ff">30 dias</strong> por escrito, ao final do período mínimo contratado</li>
+        <li>Com aviso prévio de <strong class="strong">30 dias</strong> por escrito, ao final do período mínimo contratado</li>
         <li>Rescisão antecipada está sujeita a multa correspondente às mensalidades restantes do período mínimo, limitada a 3 (três) mensalidades</li>
       </ul>
       <h3>Rescisão pela CONTRATADA</h3>
@@ -261,9 +261,9 @@
       <h2>8. Suspensão por inadimplência</h2>
       <p>Em caso de inadimplência, a CONTRATADA seguirá o seguinte fluxo:</p>
       <ul>
-        <li><strong style="color:#dff9ff">Até 15 dias de atraso:</strong> notificação por WhatsApp e e-mail</li>
-        <li><strong style="color:#dff9ff">Entre 15 e 30 dias:</strong> suspensão parcial de serviços não críticos</li>
-        <li><strong style="color:#dff9ff">Acima de 30 dias:</strong> suspensão total dos serviços e início de processo de rescisão contratual</li>
+        <li><strong class="strong">Até 15 dias de atraso:</strong> notificação por WhatsApp e e-mail</li>
+        <li><strong class="strong">Entre 15 e 30 dias:</strong> suspensão parcial de serviços não críticos</li>
+        <li><strong class="strong">Acima de 30 dias:</strong> suspensão total dos serviços e início de processo de rescisão contratual</li>
       </ul>
       <p>A reativação dos serviços após suspensão está sujeita ao pagamento de todos os valores em aberto acrescidos de multa de 2% e juros de 1% ao mês, além de taxa de reativação quando aplicável.</p>
     </div>
@@ -271,7 +271,7 @@
     <!-- 9 -->
     <div class="section" id="reajustes">
       <h2>9. Reajustes</h2>
-      <p>Os valores dos serviços serão reajustados anualmente com base no <strong style="color:#dff9ff">IGPM</strong> (Índice Geral de Preços do Mercado) ou outro índice que o substitua, aplicado na data de aniversário do contrato.</p>
+      <p>Os valores dos serviços serão reajustados anualmente com base no <strong class="strong">IGPM</strong> (Índice Geral de Preços do Mercado) ou outro índice que o substitua, aplicado na data de aniversário do contrato.</p>
       <p>Reajustes extraordinários podem ser aplicados em casos de:</p>
       <ul>
         <li>Aumento substancial no custo de ferramentas e licenças de terceiros</li>
@@ -311,7 +311,7 @@
     <!-- 12 -->
     <div class="section" id="ativacao">
       <h2>12. Ativação dos serviços</h2>
-      <p>Após a assinatura do contrato ou aceite da proposta, a ativação dos serviços ocorrerá em até <strong style="color:#dff9ff">5 dias úteis</strong>, sujeito a:</p>
+      <p>Após a assinatura do contrato ou aceite da proposta, a ativação dos serviços ocorrerá em até <strong class="strong">5 dias úteis</strong>, sujeito a:</p>
       <ul>
         <li>Recebimento do primeiro pagamento ou confirmação de crédito</li>
         <li>Fornecimento das credenciais e acessos necessários pela CONTRATANTE</li>
@@ -323,7 +323,7 @@
     <!-- 13 -->
     <div class="section" id="lgpd">
       <h2>13. Tratamento de dados pessoais — LGPD</h2>
-      <p>Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), a CONTRATADA atuará como <strong style="color:#dff9ff">operadora</strong> dos dados pessoais quando processar dados em nome da CONTRATANTE, e como <strong style="color:#dff9ff">controladora</strong> dos dados dos contatos e usuários do próprio site e serviços administrativos.</p>
+      <p>Em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), a CONTRATADA atuará como <strong class="strong">operadora</strong> dos dados pessoais quando processar dados em nome da CONTRATANTE, e como <strong class="strong">controladora</strong> dos dados dos contatos e usuários do próprio site e serviços administrativos.</p>
       <h3>Compromissos da CONTRATADA como operadora</h3>
       <ul>
         <li>Tratar os dados pessoais somente conforme as instruções documentadas da CONTRATANTE</li>
@@ -344,7 +344,7 @@
     <!-- 14 -->
     <div class="section" id="foro">
       <h2>14. Foro</h2>
-      <p>As partes elegem o foro da <strong style="color:#dff9ff">Comarca de Suzano, São Paulo</strong>, para dirimir quaisquer controvérsias decorrentes deste contrato, com renúncia expressa a qualquer outro, por mais privilegiado que seja.</p>
+      <p>As partes elegem o foro da <strong class="strong">Comarca de Suzano, São Paulo</strong>, para dirimir quaisquer controvérsias decorrentes deste contrato, com renúncia expressa a qualquer outro, por mais privilegiado que seja.</p>
       <p>As partes se comprometem a tentar solucionar eventuais disputas de forma amigável antes de recorrer ao judiciário, com prazo de 30 dias para negociação direta.</p>
       <div class="highlight" style="margin-top:20px">
         <p>Ao contratar os serviços da Oryxon Systems, você confirma que leu, compreendeu e concordou integralmente com estes Termos e Condições.</p>
@@ -357,12 +357,12 @@
       <h2>Fale conosco</h2>
       <p>Para dúvidas sobre estes termos, entre em contato:</p>
       <div class="contact-box">
-        <p><strong style="color:#dff9ff">Oryxon Systems</strong></p>
-        <p><strong style="color:#dff9ff">CNPJ:</strong> 66.498.962/0001-20</p>
-        <p><strong style="color:#dff9ff">Responsável:</strong> Uedson Azevedo — CEO & Head de Infraestrutura de TI</p>
-        <p><strong style="color:#dff9ff">E-mail:</strong> <a href="mailto:contato@oryxonsystems.com.br">contato@oryxonsystems.com.br</a></p>
-        <p><strong style="color:#dff9ff">WhatsApp:</strong> <a href="https://wa.me/5511934932992">(11) 93493-2992</a></p>
-        <p><strong style="color:#dff9ff">Horário:</strong> Seg–Sex, 8h–18h | Sáb, 8h–12h</p>
+        <p><strong class="strong">Oryxon Systems</strong></p>
+        <p><strong class="strong">CNPJ:</strong> 66.498.962/0001-20</p>
+        <p><strong class="strong">Responsável:</strong> Uedson Azevedo — CEO & Head de Infraestrutura de TI</p>
+        <p><strong class="strong">E-mail:</strong> <a href="mailto:contato@oryxonsystems.com.br">contato@oryxonsystems.com.br</a></p>
+        <p><strong class="strong">WhatsApp:</strong> <a href="https://wa.me/5511934932992">(11) 93493-2992</a></p>
+        <p><strong class="strong">Horário:</strong> Seg–Sex, 8h–18h | Sáb, 8h–12h</p>
         <p style="margin-top:10px"><a href="/privacidade.html">→ Ver Política de Privacidade</a></p>
       </div>
     </div>

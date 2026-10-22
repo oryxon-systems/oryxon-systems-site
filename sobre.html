@@ -61,11 +61,11 @@
   </script>
   <script src="/assets/js/consent.v1.js" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:1100px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:1100px;--glow-a:.18;--glow-b:.16}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.18),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.16),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}a:hover{text-decoration:underline}
     .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
@@ -92,7 +92,7 @@
     /* HERO */
     .hero{padding:72px 0 60px;border-bottom:1px solid rgba(103,232,255,.10)}
     .hero-inner{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);color:#bff6ff;font-size:.78rem;font-weight:900;letter-spacing:.04em;margin-bottom:22px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);color:var(--text-tint);font-size:.78rem;font-weight:900;letter-spacing:.04em;margin-bottom:22px}
     .live-dot{width:7px;height:7px;border-radius:var(--radius-full);background:#37f5a1}
     .hero p{color:var(--muted);font-size:1.08rem;max-width:580px;line-height:1.7}
     .hero-logo{width:130px;height:130px;object-fit:contain}
@@ -116,10 +116,6 @@
     .stat-card span{color:var(--muted);font-size:.82rem;font-weight:700}
 
     /* VALORES */
-    .valores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .valor-card{padding:22px 20px}
-    .valor-num{font-size:.7rem;font-weight:900;letter-spacing:.14em;color:var(--blue2);text-transform:uppercase;margin-bottom:8px}
-    .valor-card p{color:var(--muted);font-size:.9rem;line-height:1.6}
 
     /* FUNDADOR */
     .founder-wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px)}
@@ -128,7 +124,7 @@
     .founder-role{color:var(--blue2);font-size:.9rem;font-weight:800;margin-bottom:16px}
     .founder-bio{color:var(--muted);font-size:.97rem;line-height:1.72;margin-bottom:20px}
     .founder-links{display:flex;gap:12px;flex-wrap:wrap}
-    .founder-links a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);border-radius:var(--radius-md);padding:8px 14px;color:#bff6ff;font-size:.82rem;font-weight:800;transition:.2s}
+    .founder-links a{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);border-radius:var(--radius-md);padding:8px 14px;color:var(--text-tint);font-size:.82rem;font-weight:800;transition:.2s}
     .founder-links a:hover{border-color:rgba(103,232,255,.6);text-decoration:none}
 
     /* PARCEIROS */
@@ -151,8 +147,8 @@
     .page-footer a{color:var(--muted2)}
     .page-footer a:hover{color:#fff}
 
-    @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-logo{display:none}.mvv-grid,.valores-grid{grid-template-columns:repeat(2,1fr)}.history-grid{grid-template-columns:1fr}.founder-wrap{grid-template-columns:1fr;text-align:center}.founder-photo{margin:0 auto}.founder-links{justify-content:center}}
-    @media(max-width:600px){.mvv-grid,.valores-grid,.history-stats{grid-template-columns:1fr}section{padding:56px 0}}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-logo{display:none}.mvv-grid{grid-template-columns:repeat(2,1fr)}.history-grid{grid-template-columns:1fr}.founder-wrap{grid-template-columns:1fr;text-align:center}.founder-photo{margin:0 auto}.founder-links{justify-content:center}}
+    @media(max-width:600px){.mvv-grid,.history-stats{grid-template-columns:1fr}section{padding:56px 0}}
     @media (prefers-reduced-motion: reduce){
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
       .js .reveal{opacity:1;transform:none}
@@ -289,12 +285,12 @@
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 01</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Responsabilidade técnica</h3>
                   <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Assumimos cada ambiente como se fosse nosso. Quando algo falha, somos os primeiros a agir — sem terceirizar o problema ou empurrar a culpa para terceiros.</p>
-                  <ul style="list-style:none;display:grid;gap:9px">
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Assumir responsabilidade total pelo ambiente gerenciado</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Agir imediatamente em incidentes sem esperar autorização desnecessária</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Documentar cada ação tomada e seus resultados</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Assumir e corrigir erros sem minimizar impactos</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Trabalhar com as melhores ferramentas disponíveis no mercado</li>
+                  <ul class="check-list" style="gap:9px">
+                    <li>Assumir responsabilidade total pelo ambiente gerenciado</li>
+                    <li>Agir imediatamente em incidentes sem esperar autorização desnecessária</li>
+                    <li>Documentar cada ação tomada e seus resultados</li>
+                    <li>Assumir e corrigir erros sem minimizar impactos</li>
+                    <li>Trabalhar com as melhores ferramentas disponíveis no mercado</li>
                   </ul>
                 </div>
               </div>
@@ -308,12 +304,12 @@
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 02</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Transparência</h3>
                   <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Comunicamos problemas antes que virem crises. Relatórios claros, linguagem acessível e sem jargão técnico desnecessário — o cliente sempre sabe o que está acontecendo com a TI dele.</p>
-                  <ul style="list-style:none;display:grid;gap:9px">
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Comunicar problemas ativamente — não esperar o cliente perguntar</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Traduzir linguagem técnica para linguagem de negócio</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Entregar relatórios mensais claros e objetivos</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Ser sincero sobre limitações e prazos reais</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Honrar o que foi combinado em contrato</li>
+                  <ul class="check-list" style="gap:9px">
+                    <li>Comunicar problemas ativamente — não esperar o cliente perguntar</li>
+                    <li>Traduzir linguagem técnica para linguagem de negócio</li>
+                    <li>Entregar relatórios mensais claros e objetivos</li>
+                    <li>Ser sincero sobre limitações e prazos reais</li>
+                    <li>Honrar o que foi combinado em contrato</li>
                   </ul>
                 </div>
               </div>
@@ -327,12 +323,12 @@
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 03</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Proatividade</h3>
                   <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Não esperamos o sistema cair para agir. Monitoramos, antecipamos e corrigimos antes do impacto chegar na operação — eliminando o modo bombeiro que paralisa empresas.</p>
-                  <ul style="list-style:none;display:grid;gap:9px">
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Monitorar alertas antes que virem incidentes</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Aplicar patches e atualizações preventivamente</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Identificar gargalos de performance antes de impactar usuários</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Propor melhorias de infraestrutura sem esperar o cliente pedir</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Validar backups periodicamente — não só criar cópias</li>
+                  <ul class="check-list" style="gap:9px">
+                    <li>Monitorar alertas antes que virem incidentes</li>
+                    <li>Aplicar patches e atualizações preventivamente</li>
+                    <li>Identificar gargalos de performance antes de impactar usuários</li>
+                    <li>Propor melhorias de infraestrutura sem esperar o cliente pedir</li>
+                    <li>Validar backups periodicamente — não só criar cópias</li>
                   </ul>
                 </div>
               </div>
@@ -346,12 +342,12 @@
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 04</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Comprometimento</h3>
                   <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">SLA não é só um número contratual. É um compromisso de respeito ao tempo e à continuidade do negócio do cliente — e levamos isso a sério em cada chamado aberto.</p>
-                  <ul style="list-style:none;display:grid;gap:9px">
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Respeitar os SLAs contratados em todos os chamados</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Cumprir prazos e horários combinados</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Tratar cada tarefa com dedicação total, independente do tamanho</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Estar disponível quando o cliente mais precisa</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Ter consciência de que fazemos parte do resultado final do cliente</li>
+                  <ul class="check-list" style="gap:9px">
+                    <li>Respeitar os SLAs contratados em todos os chamados</li>
+                    <li>Cumprir prazos e horários combinados</li>
+                    <li>Tratar cada tarefa com dedicação total, independente do tamanho</li>
+                    <li>Estar disponível quando o cliente mais precisa</li>
+                    <li>Ter consciência de que fazemos parte do resultado final do cliente</li>
                   </ul>
                 </div>
               </div>
@@ -365,12 +361,12 @@
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 05</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Melhoria Contínua</h3>
                   <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Cada incidente é uma oportunidade de aprendizado. Revisamos processos, atualizamos ferramentas e evoluímos constantemente — porque a tecnologia não para e nossos clientes merecem o melhor.</p>
-                  <ul style="list-style:none;display:grid;gap:9px">
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Revisar processos após cada incidente relevante</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Manter certificações e capacitações atualizadas</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Adotar novas ferramentas quando trazem vantagem real</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Buscar permanentemente inovação em infraestrutura e segurança</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Compartilhar aprendizados com os clientes de forma proativa</li>
+                  <ul class="check-list" style="gap:9px">
+                    <li>Revisar processos após cada incidente relevante</li>
+                    <li>Manter certificações e capacitações atualizadas</li>
+                    <li>Adotar novas ferramentas quando trazem vantagem real</li>
+                    <li>Buscar permanentemente inovação em infraestrutura e segurança</li>
+                    <li>Compartilhar aprendizados com os clientes de forma proativa</li>
                   </ul>
                 </div>
               </div>
@@ -384,12 +380,12 @@
                   <div style="font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue2);margin-bottom:6px">Valor 06</div>
                   <h3 style="font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px">Foco no Cliente</h3>
                   <p style="color:var(--muted);font-size:.95rem;margin-bottom:20px;line-height:1.7">Entendemos o negócio do cliente antes de propor soluções. TI que não gera resultado real para a operação não faz sentido — e não é isso que entregamos.</p>
-                  <ul style="list-style:none;display:grid;gap:9px">
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Entender o negócio do cliente antes de propor qualquer solução</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Priorizar o que reduz risco e melhora operação com melhor custo-benefício</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Colocar-se no lugar do cliente para entender o impacto real dos problemas</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Dar importância igual a clientes de todos os portes</li>
-                    <li style="display:flex;align-items:flex-start;gap:10px;color:#c8d7e9;font-size:.9rem"><span style="color:#37f5a1;font-weight:900;flex-shrink:0">✓</span>Medir sucesso pelo impacto no negócio do cliente, não pela complexidade técnica</li>
+                  <ul class="check-list" style="gap:9px">
+                    <li>Entender o negócio do cliente antes de propor qualquer solução</li>
+                    <li>Priorizar o que reduz risco e melhora operação com melhor custo-benefício</li>
+                    <li>Colocar-se no lugar do cliente para entender o impacto real dos problemas</li>
+                    <li>Dar importância igual a clientes de todos os portes</li>
+                    <li>Medir sucesso pelo impacto no negócio do cliente, não pela complexidade técnica</li>
                   </ul>
                 </div>
               </div>
@@ -420,7 +416,7 @@
             <p style="font-size:.84rem;color:var(--muted);margin:0 0 8px"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#map-pin"/></svg> Rua Presidente Rodrigues Alves, 715 A — Jardim Santa Helena, Poá<br><span style="font-size:.76rem;color:var(--muted2)">Laboratório · Análise e manutenção de hardware</span></p>
             <a href="https://www.google.com/maps/search/?api=1&query=Rua+Presidente+Rodrigues+Alves%2C+715+A%2C+Jardim+Santa+Helena%2C+Po%C3%A1+SP" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Como chegar</a>
             <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.03);border-radius:var(--radius-md);font-size:.8rem;color:var(--muted)">
-              <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clock"/></svg> <span><strong style="color:#dff9ff">Seg–Sex, 8h–18h | Sáb, 8h–12h</strong><br><span style="font-size:.72rem">Monitoramento automatizado 24x7</span></span>
+              <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clock"/></svg> <span><strong class="strong">Seg–Sex, 8h–18h | Sáb, 8h–12h</strong><br><span style="font-size:.72rem">Monitoramento automatizado 24x7</span></span>
             </div><a href="https://share.google/MjPMX25cF8Ahsxwi1" target="_blank" rel="noopener"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#map-pin"/></svg> Perfil da Empresa no Google</a>
             </div>
           </div>

@@ -43,12 +43,12 @@
   </script>
   <script src="/assets/js/consent.v1.js" data-ga="off" defer></script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:820px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--border:rgba(93,176,255,.22);--max:820px;--glow-a:.14;--glow-b:0}
     *{margin:0;padding:0;box-sizing:border-box}
     @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.14),transparent 26rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}
     a:hover{text-decoration:underline}
@@ -75,16 +75,16 @@
     .toc li a{color:var(--muted);font-size:.9rem;font-weight:600;transition:.2s}
     .toc li a:hover{color:#fff;text-decoration:none}
     .section{margin-bottom:44px;scroll-margin-top:90px}
-    .section h2{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;margin-bottom:14px;color:#dff9ff;padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
-    .section h3{font-size:1rem;font-weight:700;margin:18px 0 8px;color:#c8d7e9}
+    .section h2{font-size:1.25rem;font-weight:800;letter-spacing:-.03em;margin-bottom:14px;color:var(--text-strong);padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .section h3{font-size:1rem;font-weight:700;margin:18px 0 8px;color:var(--text-soft)}
     .section p{color:var(--muted);margin-bottom:12px;font-size:.97rem}
     .section ul,.section ol{color:var(--muted);padding-left:20px;display:grid;gap:6px;margin-bottom:12px;font-size:.97rem}
     .section li{padding-left:4px}
-    .section code{background:rgba(255,255,255,.06);padding:1px 6px;border-radius:var(--radius-sm);font-size:.88em;color:#dff9ff}
+    .section code{background:rgba(255,255,255,.06);padding:1px 6px;border-radius:var(--radius-sm);font-size:.88em;color:var(--text-strong)}
 
 
     .highlight{border:1px solid rgba(103,232,255,.20);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:16px 0}
-    .highlight p{margin:0;color:#c8e8ff}
+    .highlight p{margin:0;color:var(--info-text)}
     .contact-box{border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:22px 26px;margin-top:16px}
     .contact-box p{margin:0 0 6px;color:var(--muted);font-size:.95rem}
     .contact-box a{color:var(--blue2);font-weight:700}
@@ -123,7 +123,7 @@
     <div class="page-header">
       <div class="kicker">Transparência & LGPD</div>
       <h1>Política de Privacidade</h1>
-      <p style="color:var(--muted);font-size:1rem;margin-top:10px">Esta política descreve como a <strong style="color:#dff9ff">Oryxon Systems</strong> coleta, usa, armazena e protege seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+      <p style="color:var(--muted);font-size:1rem;margin-top:10px">Esta política descreve como a <strong class="strong">Oryxon Systems</strong> coleta, usa, armazena e protege seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
       <p class="last-update">Última atualização: outubro de 2026</p>
     </div>
 
@@ -148,13 +148,13 @@
     <!-- 1 -->
     <div class="section" id="quem-somos">
       <h2>1. Quem somos</h2>
-      <p><strong style="color:#dff9ff">Oryxon Systems</strong> é uma empresa de gestão de TI, automação e segurança empresarial, com atuação na região do Alto Tietê e São Paulo.</p>
+      <p><strong class="strong">Oryxon Systems</strong> é uma empresa de gestão de TI, automação e segurança empresarial, com atuação na região do Alto Tietê e São Paulo.</p>
       <div class="contact-box">
-        <p><strong style="color:#dff9ff">Razão social:</strong> Oryxon Systems</p>
-        <p><strong style="color:#dff9ff">CNPJ:</strong> 66.498.962/0001-20</p>
-        <p><strong style="color:#dff9ff">Localização:</strong> Alto Tietê — São Paulo, SP</p>
-        <p><strong style="color:#dff9ff">E-mail:</strong> <a href="mailto:contato@oryxonsystems.com.br">contato@oryxonsystems.com.br</a></p>
-        <p><strong style="color:#dff9ff">WhatsApp:</strong> <a href="https://wa.me/5511934932992">(11) 93493-2992</a></p>
+        <p><strong class="strong">Razão social:</strong> Oryxon Systems</p>
+        <p><strong class="strong">CNPJ:</strong> 66.498.962/0001-20</p>
+        <p><strong class="strong">Localização:</strong> Alto Tietê — São Paulo, SP</p>
+        <p><strong class="strong">E-mail:</strong> <a href="mailto:contato@oryxonsystems.com.br">contato@oryxonsystems.com.br</a></p>
+        <p><strong class="strong">WhatsApp:</strong> <a href="https://wa.me/5511934932992">(11) 93493-2992</a></p>
       </div>
     </div>
 
@@ -203,10 +203,10 @@
       <h2>4. Base legal do tratamento</h2>
       <p>O tratamento dos seus dados pessoais é realizado com base nas seguintes hipóteses previstas na LGPD:</p>
       <ul>
-        <li><strong style="color:#dff9ff">Consentimento</strong> — quando você preenche o formulário de diagnóstico ou nos contacta voluntariamente</li>
-        <li><strong style="color:#dff9ff">Execução de contrato</strong> — quando há uma relação contratual de prestação de serviços</li>
-        <li><strong style="color:#dff9ff">Legítimo interesse</strong> — para melhorar nossos serviços e comunicar novidades relevantes</li>
-        <li><strong style="color:#dff9ff">Cumprimento de obrigação legal</strong> — quando exigido por lei ou autoridade competente</li>
+        <li><strong class="strong">Consentimento</strong> — quando você preenche o formulário de diagnóstico ou nos contacta voluntariamente</li>
+        <li><strong class="strong">Execução de contrato</strong> — quando há uma relação contratual de prestação de serviços</li>
+        <li><strong class="strong">Legítimo interesse</strong> — para melhorar nossos serviços e comunicar novidades relevantes</li>
+        <li><strong class="strong">Cumprimento de obrigação legal</strong> — quando exigido por lei ou autoridade competente</li>
       </ul>
     </div>
 
@@ -215,9 +215,9 @@
       <h2>5. Compartilhamento de dados</h2>
       <p>A Oryxon Systems não vende, aluga ou comercializa seus dados pessoais. Podemos compartilhá-los apenas nos seguintes casos:</p>
       <ul>
-        <li><strong style="color:#dff9ff">Parceiros de serviço:</strong> ferramentas de gestão, monitoramento e comunicação utilizadas para prestar os serviços contratados (ex: plataformas de RMM, backup e helpdesk)</li>
-        <li><strong style="color:#dff9ff">Parceiros comerciais:</strong> <img src="/assets/help-digital-logo.webp" alt="Help Digital" width="70" height="18" loading="lazy" style="height:18px;width:auto;vertical-align:middle;opacity:.85;filter:brightness(1.1) invert(1)"> Help Digital, exclusivamente para fins de prestação de serviços e suporte técnico</li>
-        <li><strong style="color:#dff9ff">Obrigação legal:</strong> quando exigido por lei, decisão judicial ou autoridade regulatória</li>
+        <li><strong class="strong">Parceiros de serviço:</strong> ferramentas de gestão, monitoramento e comunicação utilizadas para prestar os serviços contratados (ex: plataformas de RMM, backup e helpdesk)</li>
+        <li><strong class="strong">Parceiros comerciais:</strong> <img src="/assets/help-digital-logo.webp" alt="Help Digital" width="70" height="18" loading="lazy" style="height:18px;width:auto;vertical-align:middle;opacity:.85;filter:brightness(1.1) invert(1)"> Help Digital, exclusivamente para fins de prestação de serviços e suporte técnico</li>
+        <li><strong class="strong">Obrigação legal:</strong> quando exigido por lei, decisão judicial ou autoridade regulatória</li>
       </ul>
       <p>Todos os parceiros e fornecedores com quem compartilhamos dados estão sujeitos a obrigações contratuais de confidencialidade e proteção de dados.</p>
     </div>
@@ -256,13 +256,13 @@
       <h2>8. Seus direitos (LGPD)</h2>
       <p>Nos termos da LGPD, você tem os seguintes direitos em relação aos seus dados pessoais:</p>
       <ul>
-        <li><strong style="color:#dff9ff">Acesso:</strong> solicitar confirmação da existência e acesso aos seus dados</li>
-        <li><strong style="color:#dff9ff">Correção:</strong> solicitar a correção de dados incompletos, inexatos ou desatualizados</li>
-        <li><strong style="color:#dff9ff">Anonimização ou eliminação:</strong> solicitar a anonimização ou exclusão de dados desnecessários ou tratados em desconformidade com a LGPD</li>
-        <li><strong style="color:#dff9ff">Portabilidade:</strong> solicitar a portabilidade dos seus dados a outro fornecedor de serviço</li>
+        <li><strong class="strong">Acesso:</strong> solicitar confirmação da existência e acesso aos seus dados</li>
+        <li><strong class="strong">Correção:</strong> solicitar a correção de dados incompletos, inexatos ou desatualizados</li>
+        <li><strong class="strong">Anonimização ou eliminação:</strong> solicitar a anonimização ou exclusão de dados desnecessários ou tratados em desconformidade com a LGPD</li>
+        <li><strong class="strong">Portabilidade:</strong> solicitar a portabilidade dos seus dados a outro fornecedor de serviço</li>
         <li><strong style="color:#dff9fw">Revogação do consentimento:</strong> retirar o consentimento a qualquer momento, sem prejuízo dos tratamentos realizados anteriormente</li>
-        <li><strong style="color:#dff9ff">Oposição:</strong> opor-se ao tratamento realizado com fundamento em uma das hipóteses de dispensa de consentimento</li>
-        <li><strong style="color:#dff9ff">Informação:</strong> ser informado sobre as entidades públicas e privadas com as quais seus dados são compartilhados</li>
+        <li><strong class="strong">Oposição:</strong> opor-se ao tratamento realizado com fundamento em uma das hipóteses de dispensa de consentimento</li>
+        <li><strong class="strong">Informação:</strong> ser informado sobre as entidades públicas e privadas com as quais seus dados são compartilhados</li>
       </ul>
       <div class="highlight">
         <p>Para exercer qualquer um desses direitos, entre em contato pelo e-mail <a href="mailto:contato@oryxonsystems.com.br" style="color:var(--blue2)">contato@oryxonsystems.com.br</a>. Responderemos em até 15 dias úteis.</p>
@@ -287,11 +287,11 @@
       <h2>11. Contato e DPO</h2>
       <p>Para dúvidas, solicitações ou reclamações relacionadas ao tratamento dos seus dados pessoais, entre em contato com nosso responsável pela proteção de dados:</p>
       <div class="contact-box">
-        <p><strong style="color:#dff9ff">Responsável:</strong> Uedson Azevedo</p>
-        <p><strong style="color:#dff9ff">Cargo:</strong> CEO & Head de Infraestrutura de TI</p>
-        <p><strong style="color:#dff9ff">E-mail:</strong> <a href="mailto:contato@oryxonsystems.com.br">contato@oryxonsystems.com.br</a></p>
-        <p><strong style="color:#dff9ff">WhatsApp:</strong> <a href="https://wa.me/5511934932992">(11) 93493-2992</a></p>
-        <p style="margin-top:12px;font-size:.88rem">Você também pode registrar reclamações perante a <strong style="color:#dff9ff">Autoridade Nacional de Proteção de Dados (ANPD)</strong> em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">www.gov.br/anpd</a>.</p>
+        <p><strong class="strong">Responsável:</strong> Uedson Azevedo</p>
+        <p><strong class="strong">Cargo:</strong> CEO & Head de Infraestrutura de TI</p>
+        <p><strong class="strong">E-mail:</strong> <a href="mailto:contato@oryxonsystems.com.br">contato@oryxonsystems.com.br</a></p>
+        <p><strong class="strong">WhatsApp:</strong> <a href="https://wa.me/5511934932992">(11) 93493-2992</a></p>
+        <p style="margin-top:12px;font-size:.88rem">Você também pode registrar reclamações perante a <strong class="strong">Autoridade Nacional de Proteção de Dados (ANPD)</strong> em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">www.gov.br/anpd</a>.</p>
       </div>
     </div>
 
