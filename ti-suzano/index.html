@@ -91,11 +91,11 @@
   }
   </script>
   <link rel="stylesheet" href="/assets/fonts/inter.css">
-  <link rel="stylesheet" href="/assets/css/tokens.v3.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
   <style>
-    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px}
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--glow-a:.22;--glow-b:.20}
     *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 8%,rgba(0,183,255,.22),transparent 26rem),radial-gradient(circle at 20% 18%,rgba(20,120,255,.20),transparent 24rem),linear-gradient(180deg,#01040d 0%,#061226 44%,#020713 100%);color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.6;min-height:100vh}
     body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
     a{color:var(--blue2);text-decoration:none}
     .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
@@ -112,8 +112,8 @@
     /* HERO */
     .hero{padding:72px 0 60px;border-bottom:1px solid rgba(103,232,255,.10)}
     .hero-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-    .city-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:var(--radius-pill);border:1px solid rgba(55,245,161,.3);background:rgba(55,245,161,.06);color:#a0f5d4;font-size:.76rem;font-weight:900;letter-spacing:.05em;margin-bottom:18px}
-    .live-dot{width:7px;height:7px;border-radius:var(--radius-full);background:#37f5a1;flex-shrink:0}
+    .city-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:var(--radius-pill);border:1px solid rgba(55,245,161,.3);background:rgba(55,245,161,.06);color:var(--success-text);font-size:.76rem;font-weight:900;letter-spacing:.05em;margin-bottom:18px}
+    .live-dot{width:7px;height:7px;border-radius:var(--radius-full);background:var(--success);flex-shrink:0}
     .kicker{color:var(--blue2);text-transform:uppercase;letter-spacing:.13em;font-size:.76rem;font-weight:950;margin-bottom:10px}
     h1{font-size:clamp(2.4rem,6vw,4rem);line-height:.96;letter-spacing:-.07em;margin-bottom:18px}
     .grad{background:var(--gradient-brand);background-clip:text;-webkit-background-clip:text;color:transparent}
@@ -123,7 +123,7 @@
     .pill{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.045);border-radius:var(--radius-pill);padding:7px 12px;font-size:.82rem;font-weight:750;color:var(--muted)}
     .hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:260px}
     .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:16px;text-align:center}
-    .stat-box strong{display:block;font-size:1.8rem;letter-spacing:-.06em;color:#dff9ff}
+    .stat-box strong{display:block;font-size:1.8rem;letter-spacing:-.06em;color:var(--text-strong)}
     .stat-box span{color:var(--muted);font-size:.78rem;font-weight:700}
     /* SECTIONS */
     section{padding:72px 0}
@@ -140,10 +140,10 @@
     /* WHY LOCAL */
     .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
     .why-list{display:grid;gap:14px}
-    .why-item{display:flex;align-items:flex-start;gap:12px;color:#c8d7e9;font-size:.95rem}
-    .check{color:var(--success);font-weight:900;flex-shrink:0;font-size:1rem}
+    .why-list li{gap:12px;font-size:.95rem}
+    .why-list li::before{font-size:1rem;font-weight:900}
     .why-panel{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:28px}
-    .why-panel h3{font-size:1.1rem;margin-bottom:16px;color:#dff9ff}
+    .why-panel h3{font-size:1.1rem;margin-bottom:16px;color:var(--text-strong)}
     .why-panel .btn{width:100%;margin-top:8px}
     .why-panel p{color:var(--muted);font-size:.9rem;line-height:1.65;margin-bottom:12px}
     /* COVERAGE */
@@ -154,9 +154,6 @@
     .coverage-card h4{font-size:.88rem;font-weight:800;margin-bottom:3px}
     .coverage-card span{color:var(--muted);font-size:.76rem}
     /* CTA */
-    .cta-band{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 16rem),rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:clamp(28px,5vw,48px);text-align:center}
-    .cta-band p{color:var(--muted);font-size:1rem;margin-bottom:26px;max-width:60ch;margin-inline:auto;text-align:left}
-    .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
     /* FORM */
     .form-wrap{border:1px solid rgba(103,232,255,.2);background:rgba(8,21,43,.72);border-radius:var(--radius-lg);padding:clamp(22px,4vw,36px)}
     .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
@@ -191,7 +188,7 @@
     .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
     .breadcrumb li+li:before{content:"›";margin-right:8px}
     .breadcrumb a{color:var(--muted)}
-    .breadcrumb [aria-current]{color:#dff9ff}
+    .breadcrumb [aria-current]{color:var(--text-strong)}
     /* SEO-02 */
     a.coverage-card{display:block;color:inherit;text-decoration:none}
     a.coverage-card:hover{border-color:rgba(103,232,255,.35);background:rgba(0,183,255,.08)}
@@ -264,14 +261,14 @@
         <div>
           <div class="kicker">Por que a Oryxon em Suzano?</div>
           <h2>TI local que conhece a realidade do Alto Tietê.</h2>
-          <div class="why-list" style="margin-top:20px">
-            <div class="why-item"><span class="check">✓</span> Atendimento presencial em Suzano — técnico na sua empresa quando precisar</div>
-            <div class="why-item"><span class="check">✓</span> Conhecemos os provedores de internet e fornecedores locais da região</div>
-            <div class="why-item"><span class="check">✓</span> Chamado confirmado em até 15 minutos e técnico em até 2h (horário de atendimento)</div>
-            <div class="why-item"><span class="check">✓</span> Parceira oficial Help Digital — acesso a ferramentas enterprise</div>
-            <div class="why-item"><span class="check">✓</span> Gestão proativa — resolvemos antes de você perceber o problema</div>
-            <div class="why-item"><span class="check">✓</span> Contrato sem burocracia e com SLA documentado</div>
-          </div>
+          <ul class="check-list why-list" style="margin-top:20px">
+            <li>Atendimento presencial em Suzano — técnico na sua empresa quando precisar</li>
+            <li>Conhecemos os provedores de internet e fornecedores locais da região</li>
+            <li>Chamado confirmado em até 15 minutos e técnico em até 2h (horário de atendimento)</li>
+            <li>Parceira oficial Help Digital — acesso a ferramentas enterprise</li>
+            <li>Gestão proativa — resolvemos antes de você perceber o problema</li>
+            <li>Contrato sem burocracia e com SLA documentado</li>
+          </ul>
         </div>
         <div class="why-panel">
           <h3><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building"/></svg> Empresas de Suzano que confiam na Oryxon</h3>
@@ -317,35 +314,35 @@
         <div style="display:grid;gap:12px;max-width:780px">
 
           <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
-            <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
+            <summary style="font-weight:800;font-size:.96rem;color:var(--text-strong);list-style:none;display:flex;justify-content:space-between;align-items:center">
               A Oryxon atende presencialmente em Suzano?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:12px;margin-bottom:0">Sim. Nossa sede fica em Poá, a poucos quilômetros de Suzano. Isso significa tempo de resposta curto para atendimentos presenciais e conhecimento direto dos provedores de internet, fornecedores e parceiros locais. Somos uma empresa do Alto Tietê, não uma empresa de fora tentando atender a região à distância.</p>
           </details>
           <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
-            <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
+            <summary style="font-weight:800;font-size:.96rem;color:var(--text-strong);list-style:none;display:flex;justify-content:space-between;align-items:center">
               Quanto custa suporte de TI em Suzano?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:12px;margin-bottom:0">O custo varia conforme o número de computadores e o plano contratado (Basic, Standard ou Professional). Para a maioria das PMEs de Suzano com 5 a 30 estações, o investimento mensal é menor do que o custo de um analista de TI interno com encargos. Solicite um diagnóstico gratuito e receba uma proposta personalizada.</p>
           </details>
           <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
-            <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
+            <summary style="font-weight:800;font-size:.96rem;color:var(--text-strong);list-style:none;display:flex;justify-content:space-between;align-items:center">
               Qual empresa de TI atende Suzano com suporte local?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:12px;margin-bottom:0">A Oryxon Systems é uma empresa de gestão de TI sediada em Poá, com atendimento presencial e remoto para empresas de Suzano e de todo o Alto Tietê. Diferente de provedores de São Paulo capital, conhecemos a realidade local, os provedores de internet da região e os desafios específicos das empresas de Suzano.</p>
           </details>
           <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
-            <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
+            <summary style="font-weight:800;font-size:.96rem;color:var(--text-strong);list-style:none;display:flex;justify-content:space-between;align-items:center">
               A Oryxon atende empresas de qual porte em Suzano?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
             <p style="color:var(--muted);font-size:.9rem;line-height:1.7;margin-top:12px;margin-bottom:0">Atendemos empresas com a partir de 5 computadores — comércio, indústria, saúde, serviços e qualquer segmento que dependa de TI. Temos planos dimensionados para diferentes portes, do pequeno escritório à empresa com múltiplas filiais.</p>
           </details>
           <details style="border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.5);border-radius:var(--radius-lg);padding:18px 20px;cursor:pointer">
-            <summary style="font-weight:800;font-size:.96rem;color:#dff9ff;list-style:none;display:flex;justify-content:space-between;align-items:center">
+            <summary style="font-weight:800;font-size:.96rem;color:var(--text-strong);list-style:none;display:flex;justify-content:space-between;align-items:center">
               O que é gestão de TI gerenciada e como funciona em Suzano?
               <span style="color:var(--blue2);font-size:1.2rem;font-weight:400">+</span>
             </summary>
@@ -363,12 +360,12 @@
             <div class="kicker">Diagnóstico gratuito em Suzano</div>
             <h2>Descubra os riscos da TI da sua empresa.</h2>
             <p style="color:var(--muted);margin:14px 0 20px;line-height:1.7">Análise completa da infraestrutura, identificação de vulnerabilidades e plano de ação para empresas de Suzano com 5 ou mais computadores.</p>
-            <div class="why-list">
-              <div class="why-item"><span class="check">✓</span> Análise da infraestrutura atual</div>
-              <div class="why-item"><span class="check">✓</span> Identificação de riscos e vulnerabilidades</div>
-              <div class="why-item"><span class="check">✓</span> Plano de ação faseado e objetivo</div>
-              <div class="why-item"><span class="check">✓</span> Sem compromisso de contratação</div>
-            </div>
+            <ul class="check-list why-list">
+              <li>Análise da infraestrutura atual</li>
+              <li>Identificação de riscos e vulnerabilidades</li>
+              <li>Plano de ação faseado e objetivo</li>
+              <li>Sem compromisso de contratação</li>
+          </ul>
           </div>
           <div class="form-wrap">
             <div class="kicker">Preencha e entraremos em contato</div>
@@ -400,10 +397,10 @@
     </section>
 
     <!-- PARCEIRO -->
-    <section style="border-top:1px solid rgba(103,232,255,.08);padding:40px 0">
+    <section class="section-divider" style="padding:40px 0">
       <div class="container" style="text-align:center">
         <p style="color:var(--muted2);font-size:.76rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px">Parceira oficial</p>
-        <div style="display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border:1px solid rgba(103,232,255,.16);background:rgba(8,21,43,.55);border-radius:var(--radius-lg)">
+        <div class="partner-hd" style="display:inline-flex;align-items:center;gap:14px;padding:14px 24px;border-radius:var(--radius-lg)">
           <img src="/assets/help-digital-logo.webp" alt="Help Digital" width="109" height="28" loading="lazy" style="height:28px;width:auto;opacity:.9">
           <span style="color:var(--muted);font-size:.84rem;font-weight:700;border-left:1px solid rgba(103,232,255,.18);padding-left:14px">Help&nbsp;Digital São&nbsp;Paulo</span>
         </div>
@@ -444,7 +441,7 @@
     // Reveal animation
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const obs = new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.style.opacity='1',x.target.style.transform='none';}),{threshold:.08});
-    if (!reduceMotion) document.querySelectorAll('.svc-card,.coverage-card,.why-item,.stat-box').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity .6s ease,transform .6s ease';obs.observe(el);});
+    if (!reduceMotion) document.querySelectorAll('.svc-card,.coverage-card,.why-list li,.stat-box').forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity .6s ease,transform .6s ease';obs.observe(el);});
   </script>
 </body>
 </html>
