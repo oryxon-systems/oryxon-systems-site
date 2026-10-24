@@ -1,6 +1,6 @@
 # TASK — Oryxon Systems Site
 
-Última atualização: 2026-10-22
+Última atualização: 2026-10-24
 Propósito: acompanhar o que está em andamento, o backlog, as verificações pendentes e o que foi concluído.
 
 Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
@@ -53,6 +53,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — `ti-*/`: box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
 
 ## Concluído
+
+- [x] 2026-10-24 — Redirects curtos de agendamento em `vercel.json`: `/bni` (BNI 1-a-1) e `/agendar` (alias genérico) → Google Agenda, 307, com e sem barra final. `/diagnostico` mantido → `/#diagnostico` (308, ADR-019). Pendência: validar com `curl` após o deploy (rota, com/sem barra, home 200) — `vercel.json`
 
 - [x] 2026-10-21 — Fase 1b, piloto `index.html`: `tokens.v3`→`v4`; 36 hex → tokens; 24 `style=""` → `.ti--sm|--md|--lg`; degradê do `body` e regras de `details`/`.faq` locais removidos (vêm do v4; brilhos via `--glow-a/b` no `:root`); 7 regras mortas removidas (`.brand-orb`, `.rotating-text-fade`, `.score-panel`, `.score-divider`, `.field.full`). Rótulo "Bitdefender" mantido como literal `#ff5c5c` (exceção de marca de fabricante, não é status; reversão do `--danger-text` feita após revisão). Nenhuma mudança visual. `.row-wrap` ganhou a variante `--lg` (gaps reais: 16px ×32, 18px ×12; 20px ×1 não migrado). Aguardando commit; próximos: raiz, `ti-*`, blog, cases/suporte/auditoria
 - [x] 2026-10-22 — Fase 1b, Lote 5 (`cases/gregtur`, `suporte`, `auditoria-apps-ia`) e ENCERRAMENTO da Fase 1b: as 48 páginas em `tokens.v4`; hex fora de `:root` 1.554→475; `style=""` 1.179→949; 0 hex de marca virado token semântico. `suporte`: `.faq` local colidia com o do v4 (margin/letter-spacing) — neutralizado; `.checklist`→`.check-list` sem diferença; 4 `onclick` GA4 intactos. `gregtur`: só consolidações de cor; ★ e link intactos; box Help Digital do gregtur migrado para `.partner-hd` (tokens `--brand-helpdigital*`), igual às `ti-*`. `auditoria`: zero diferença; `generate_lead` + `wa.me` iguais antes/depois. Remanescentes: `.valor-tab`; backlog jurídico LGPD ("obrigatório pela LGPD"); cache immutable em 404 (`vercel.json`); `ti-aruja/`; `.term-label` e `<span>` do "Leia também" não convertidos (especificidade); `.faq` da `lgpd` sem o ícone +/−; hex de marca avulsos (`#cc99ff` etc.). Aguardando commit

@@ -1,6 +1,6 @@
 # DECISIONS — Oryxon Systems Site
 
-Última atualização: 2026-10-21
+Última atualização: 2026-10-24
 Propósito: registro de decisões técnicas e editoriais (ADR). Novas decisões entram no fim, com número sequencial.
 
 Formato: ADR-NNN | Data | Status | Contexto | Decisão | Consequências.
@@ -104,3 +104,9 @@ Contexto: Fase 1b. 1.532 hex soltos fora de `:root` (58 cores) e 1.179 `style=""
 Decisão: `assets/css/tokens.v4.css` (= v3 + tokens de cor, `.check-list`, utilitários, `.faq`, `.ti--*`); v3 permanece imutável e as páginas trocam o `<link>` por lote. Escopo: só os grupos repetidos, os tokens de cor, `.check-list` e CSS morto; a cauda longa de `style=""` fica. `✓` sai do HTML e vira `::before` de `.check-list`. `#ffffff` fica literal. Fundos por papel: `#020713`=`--bg`, `#01040d`=`--bg-deep`, `#061226`=`--surface`. `#ff6b35` não é usado em nenhuma página (só declarado como `--orange` em `ciberseguranca.html` e não consumido): remover, sem token.
 Alternativas descartadas: variante `.check-list--rows`; `.faq-item` paralelo ao FAQ da home; zerar `style=""`.
 Consequências: mudanças visuais só onde um hex consolidado (`#ff9999`/`#ff5c5c`→`--danger-text`, `#ffd88a`/`#ffcc77`→`--warn-text`) difere do original.
+
+**ADR-019 | 2026-10-24 | Aceito**
+Contexto: pedido de URLs curtas para agendamento no Google Agenda. `/diagnostico` já redireciona 308 para `/#diagnostico`, e esse redirect permanente pode estar cacheado nos navegadores.
+Decisão: `/bni` (reuniões 1-a-1 do BNI) e `/agendar` (alias genérico, GBP/site) redirecionam para o Google Agenda com 307 (`permanent: false`), porque os destinos podem mudar. `/diagnostico` e `/diagnostico/` ficam como estavam, apontando para o formulário da home.
+Alternativas descartadas: apontar `/diagnostico` para o Google Agenda (quebra o funil do formulário e fica inconsistente com o 308 já cacheado).
+Consequências: trocar o destino do Agenda exige só editar `vercel.json`; quem já visitou `/diagnostico` continua sendo levado ao formulário.

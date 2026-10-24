@@ -11,6 +11,26 @@
       "permanent": true
     },
     {
+      "source": "/bni",
+      "destination": "https://calendar.app.google/14tRRCc1BpJjuQgZ8",
+      "permanent": false
+    },
+    {
+      "source": "/bni/",
+      "destination": "https://calendar.app.google/14tRRCc1BpJjuQgZ8",
+      "permanent": false
+    },
+    {
+      "source": "/agendar",
+      "destination": "https://calendar.app.google/QjF7b11kNYPrWtxGA",
+      "permanent": false
+    },
+    {
+      "source": "/agendar/",
+      "destination": "https://calendar.app.google/QjF7b11kNYPrWtxGA",
+      "permanent": false
+    },
+    {
       "source": "/suporte",
       "destination": "/suporte/",
       "permanent": true

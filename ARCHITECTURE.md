@@ -1,6 +1,6 @@
 # ARCHITECTURE — Oryxon Systems Site
 
-Última atualização: 2026-10-21
+Última atualização: 2026-10-24
 Propósito: descrever a stack, a estrutura de arquivos, as integrações e o fluxo de deploy.
 
 ## Stack
@@ -44,6 +44,10 @@ O sitemap lista 48 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 30 p
 ## vercel.json
 
 - Redirects permanentes: diagnóstico → `/#diagnostico`; `/suporte` e `/ti-*` → com barra final.
+- Redirects temporários (307, `permanent: false`, destino mutável) para páginas de agendamento do Google Agenda, com e sem barra final:
+  - `/bni` → reuniões 1-a-1 do BNI.
+  - `/agendar` → alias genérico de agendamento do diagnóstico de TI (perfil do Google Business, site).
+  - `/diagnostico` não entra aqui: continua levando ao formulário da home (ADR-019).
 - Cache `public, max-age=31536000, immutable` para js, css, webp, woff2, jpg, jpeg, png, svg.
 - Headers de segurança em todas as rotas: ver [SECURITY.md](SECURITY.md).
 - Header `Speculation-Rules` apontando para `/speculationrules.json` (prerender `moderate`, exclui `target=_blank`, download, nofollow e âncoras).
