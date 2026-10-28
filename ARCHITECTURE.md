@@ -1,6 +1,6 @@
 # ARCHITECTURE — Oryxon Systems Site
 
-Última atualização: 2026-10-24
+Última atualização: 2026-10-27
 Propósito: descrever a stack, a estrutura de arquivos, as integrações e o fluxo de deploy.
 
 ## Stack
@@ -48,6 +48,7 @@ O sitemap lista 48 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 30 p
   - `/bni` → reuniões 1-a-1 do BNI.
   - `/agendar` → alias genérico de agendamento do diagnóstico de TI (perfil do Google Business, site).
   - `/diagnostico` não entra aqui: continua levando ao formulário da home (ADR-019).
+- Redirect temporário (307) para o WhatsApp comercial, com e sem barra final: `/whatsapp` → `wa.me/5511934932992` com a mensagem "Vim pelo Instagram". É o primeiro link da bio do Instagram (exibe `oryxonsystems.com.br/whatsapp` no perfil em vez da URL crua do wa.me).
 - Cache `public, max-age=31536000, immutable` para js, css, webp, woff2, jpg, jpeg, png, svg.
 - Headers de segurança em todas as rotas: ver [SECURITY.md](SECURITY.md).
 - Header `Speculation-Rules` apontando para `/speculationrules.json` (prerender `moderate`, exclui `target=_blank`, download, nofollow e âncoras).

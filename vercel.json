@@ -31,6 +31,16 @@
       "permanent": false
     },
     {
+      "source": "/whatsapp",
+      "destination": "https://wa.me/5511934932992?text=Vim%20pelo%20Instagram",
+      "permanent": false
+    },
+    {
+      "source": "/whatsapp/",
+      "destination": "https://wa.me/5511934932992?text=Vim%20pelo%20Instagram",
+      "permanent": false
+    },
+    {
       "source": "/suporte",
       "destination": "/suporte/",
       "permanent": true
