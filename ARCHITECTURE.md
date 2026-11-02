@@ -1,20 +1,20 @@
 # ARCHITECTURE — Oryxon Systems Site
 
-Última atualização: 2026-10-27
+Última atualização: 2026-11-02
 Propósito: descrever a stack, a estrutura de arquivos, as integrações e o fluxo de deploy.
 
 ## Stack
 
 HTML/CSS/JS estáticos, sem build e sem gerenciador de pacotes. CSS e JS de cada página ficam inline (`<style>` no `<head>`, `<script>` no fim do `<body>`); não há templating nem includes. Hospedagem na Vercel com Git Integration na branch `main`. Repositório: `oryxon-systems/oryxon-systems-site` (público).
 
-Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA4; 48 páginas; injeta `css/consent.v1.css` sozinho), `fonts/inter.css` + `inter-var.woff2` (Inter; 48 páginas). Arquivos `*.v1.*` são imutáveis (cache de 1 ano); mudança = novo `v2` e troca em todas as páginas que o carregam (ver RULES.md). Tokens e botões: `css/tokens.v1.css (congelado), assets/css/tokens.v2.css` (ADR-013; migração em andamento, piloto: `index.html`).
+Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA4; 51 páginas; injeta `css/consent.v1.css` sozinho), `fonts/inter.css` + `inter-var.woff2` (Inter; 51 páginas). Arquivos `*.v1.*` são imutáveis (cache de 1 ano); mudança = novo `v2` e troca em todas as páginas que o carregam (ver RULES.md). Tokens e botões: `css/tokens.v1.css (congelado), assets/css/tokens.v2.css` (ADR-013; migração em andamento, piloto: `index.html`).
 
 ## Árvore de diretórios (versionada)
 
 ```
 /                      index, sobre, solucoes, managed-services, ciberseguranca,
                        lgpd, privacidade, termos, blog (.html)
-blog/                  30 posts
+blog/                  33 posts
 cases/gregtur.html     case
 suporte/index.html     central de suporte
 auditoria-apps-ia/     serviço Auditoria de Apps Criados com IA (index.html)
@@ -31,7 +31,7 @@ Excluídos do deploy (`.vercelignore`): os mesmos mais `.claude/`, `CLAUDE.md`, 
 
 ## Mapa de páginas
 
-O sitemap lista 48 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 30 posts, 6 cidades, case, suporte, `auditoria-apps-ia/` (serviço, programa piloto). `/diagnostico` e `/diagnostico/` redirecionam (301/308) para `/#diagnostico` (não há pasta `diagnostico/`). Pastas `ti-*` e `suporte` sem barra final redirecionam para a versão com barra.
+O sitemap lista 51 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 33 posts, 6 cidades, case, suporte, `auditoria-apps-ia/` (serviço, programa piloto). `/diagnostico` e `/diagnostico/` redirecionam (301/308) para `/#diagnostico` (não há pasta `diagnostico/`). Pastas `ti-*` e `suporte` sem barra final redirecionam para a versão com barra.
 
 ## Assets
 

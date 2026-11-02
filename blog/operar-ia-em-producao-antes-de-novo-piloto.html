@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IA em produção: operar antes de pilotar | Oryxon Systems</title>
+  <meta name="description" content="Antes de abrir outro piloto de IA, sua empresa sabe quem responde, quanto custa e como desligar o que já roda? Um roteiro de operação baseado no NIST."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html"/>
+  <meta property="og:title" content="IA em produção: operar antes de pilotar | Oryxon Systems"/>
+  <meta property="og:description" content="Antes de abrir outro piloto de IA, sua empresa sabe quem responde, quanto custa e como desligar o que já roda? Um roteiro de operação baseado no NIST."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script src="/assets/js/consent.v1.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html#webpage",
+        "url": "https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html",
+        "name": "IA em produção: operar antes de pilotar | Oryxon Systems",
+        "description": "Antes de abrir outro piloto de IA, sua empresa sabe quem responde, quanto custa e como desligar o que já roda? Um roteiro de operação baseado no NIST.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html#article"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html#article",
+        "headline": "A maioria das empresas não precisa de mais um piloto de IA — precisa operar o que já colocou em produção",
+        "description": "Antes de abrir outro piloto de IA, sua empresa sabe quem responde, quanto custa e como desligar o que já roda? Um roteiro de operação baseado no NIST.",
+        "inLanguage": "pt-BR",
+        "datePublished": "2026-11-02",
+        "dateModified": "2026-11-02",
+        "author": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html#webpage"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.oryxonsystems.com.br/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Operar IA em produção",
+            "item": "https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--glow-a:.12;--glow-b:0}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:not(.btn):hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:var(--cyan)}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:var(--text-soft);line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:var(--text-strong);padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i,h2 svg{color:var(--cyan);font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:var(--text-soft)}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:var(--text-strong);font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:var(--radius-md);padding:11px 14px}
+    .checklist li>span{min-width:0}
+    .checklist i,.checklist svg{color:var(--cyan);font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+    .stat-box{border:1px solid rgba(103,232,255,.2);background:rgba(0,183,255,.05);border-radius:var(--radius-lg);padding:16px;text-align:center}
+    .stat-box .num{font-size:1.7rem;font-weight:900;background:var(--gradient-brand);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1;margin-bottom:6px}
+    .stat-box span{color:var(--muted);font-size:.78rem;line-height:1.4;display:block}
+    .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:var(--radius-lg);padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
+    .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:var(--radius-full);background:var(--gradient-brand);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
+    .qbox .qbody h4{font-size:1rem;color:var(--text-strong);margin-bottom:6px}
+    .qbox .qbody p{margin:0;font-size:.92rem}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i,.callout svg{color:var(--cyan);font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:var(--info-text);font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i,.callout-warn svg{color:var(--warn)}
+    .callout-warn p{color:var(--warn-text)}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:var(--radius-lg);padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:var(--success-text);font-size:.95rem;font-weight:700}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:var(--text-strong);justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin:0 auto 18px;max-width:60ch;text-align:left}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:var(--radius-lg);padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:var(--radius-full);background:var(--gradient-brand);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:var(--text-strong)}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:var(--text-strong);margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:var(--text-strong);margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:var(--radius-lg);color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a:hover{border-color:rgba(103,232,255,.35);background:rgba(255,255,255,.06);text-decoration:none}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:var(--cyan)}
+    .related a strong{display:block;color:var(--text-strong);font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:var(--text-strong)}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:var(--radius-full);background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}.stat-row{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid .btn{width:100%}.stat-row{grid-template-columns:1fr}.qbox{flex-direction:column}}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    }
+    @media (prefers-reduced-motion: no-preference){
+      @view-transition{navigation:auto}
+      .nav-shell{view-transition-name:site-nav}
+      ::view-transition-old(root){animation:vt-out .22s cubic-bezier(.2,.8,.2,1) both}
+      ::view-transition-new(root){animation:vt-in .32s cubic-bezier(.2,.8,.2,1) both}
+    }
+    @keyframes vt-out{to{opacity:0}}
+    @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:var(--text-strong)}
+    .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .crumb-wrap+.article-wrap{padding-top:28px}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn btn-primary btn-sm">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="crumb-wrap"><nav class="breadcrumb" aria-label="breadcrumb"><ol><li><a href="/">Início</a></li><li><a href="/blog.html">Blog</a></li><li aria-current="page">Operar IA em produção</li></ol></nav></div>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Inteligência Artificial &amp; Automação</span>
+            <span class="article-date"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#calendar"/></svg>2 de novembro de 2026</span>
+            <span class="article-read"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clock"/></svg>6 min de leitura</span>
+          </div>
+          <h1>A maioria das empresas não precisa de mais um piloto de IA — precisa operar o que já colocou em produção</h1>
+          <p class="article-lead">Entusiasmo inicial com novas ferramentas, protótipos aprovados em reuniões de diretoria e automações ativadas às pressas. O ciclo de adoção de inteligência artificial em muitas empresas costuma focar excessivamente na fase de teste. No entanto, na avaliação da Oryxon, o maior desafio atual não é criar o próximo protótipo, mas sim governar, monitorar e operar com segurança o que já está rodando no ambiente de produção.</p>
+        </header>
+        <div class="prose">
+
+          <h2 id="panorama-ia"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#chart-bar"/></svg>O panorama da IA nas empresas: adota-se muito, escala-se pouco</h2>
+          <p>O mercado global reflete um contraste claro entre a adoção inicial de soluções de inteligência artificial e a capacidade das organizações de transformá-las em uso escalado. A pesquisa global <i>"The state of AI in 2025"</i>, publicada pela McKinsey em novembro de 2025, ilustra essa dinâmica através de dados colhidos com participantes do mercado internacional:</p>
+
+          <div class="stat-row">
+            <div class="stat-box"><div class="num">88%</div><span>relatam uso regular de IA em ao menos uma função de negócio (eram 78% no ano anterior)</span></div>
+            <div class="stat-box"><div class="num">~2/3</div><span>dizem que a organização ainda não começou a escalar IA na empresa</span></div>
+            <div class="stat-box"><div class="num">39%</div><span>relatam impacto em EBIT no nível da empresa</span></div>
+          </div>
+
+          <p>A mesma pesquisa aponta que 23% dos respondentes relatam escalar um sistema agêntico e outros 39% começaram a experimentar agentes. Por outro lado, 51% dos respondentes de organizações que usam IA relatam ter vivenciado ao menos uma consequência negativa derivada do uso da tecnologia.</p>
+
+          <div class="callout callout-warn">
+            <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg>
+            <p><strong>Ressalva importante de amostragem:</strong> A pesquisa da McKinsey foi realizada online entre 25 de junho e 29 de julho de 2025, com 1.993 participantes em 105 países, sendo que 38% deles atuam em organizações com receita anual acima de US$ 1 bilhão. Portanto, esses números não representam a realidade das pequenas e médias empresas brasileiras.</p>
+          </div>
+
+          <h2 id="risco-cancelamento"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg>Por que projetos de IA agêntica correm risco de cancelamento até 2027</h2>
+          <p>Em comunicado de 25 de junho de 2025, o Gartner previu que mais de 40% dos projetos de IA agêntica serão cancelados até o fim de 2027, em razão de custos crescentes, valor de negócio pouco claro ou controles de risco inadequados. Trata-se de uma previsão, não de um resultado medido.</p>
+          <p>Na visão técnica da Oryxon, implementar novas ferramentas sem calcular o custo total de operação em nuvem e sem estabelecer governança atrai frustração e desperdício de orçamento. Para entender mais sobre o impacto financeiro, veja nosso artigo sobre <a href="/blog/custo-automacao-ia-nuvem-fora-de-controle.html">como controlar custos de automação com IA</a>.</p>
+
+          <h2 id="virada-de-chave"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#settings"/></svg>A virada de chave: quando a IA deixa de ser experimento e vira serviço com dono</h2>
+          <p>Durante a fase de piloto ou prova de conceito (PoC), é natural haver tolerância a falhas temporárias, acompanhamento manual constante e custos absorvidos sem rigor. Contudo, no momento em que um fluxo automatizado ou agente de IA passa a interagir com clientes, emitir notas fiscais ou processar chamados internos, ocorre uma mudança fundamental de status.</p>
+          <p>A IA deixa de ser um projeto experimental e passa a ser um <strong>serviço crítico de TI</strong>. Como qualquer serviço corporativo de infraestrutura, ela exige monitoramento contínuo, orçamento previsível, plano de continuidade e, acima de tudo, um <strong>dono nominal definido</strong>. Sem um responsável claro pelo serviço, falhas de execução e consumos excessivos de API permanecem invisíveis até gerarem um prejuízo financeiro ou operacional grave.</p>
+          <p>Essa transição exige maturidade de gestão, tema que aprofundamos no artigo sobre <a href="/blog/ia-gestao-ti-pme.html">IA na gestão de TI para PMEs em 2026: o que mudou e como sua empresa pode começar agora</a>.</p>
+
+          <h2 id="roteiro-manage-nist"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clipboard-check"/></svg>Roteiro de operação em produção: 7 perguntas baseadas no NIST AI RMF</h2>
+          <p>O National Institute of Standards and Technology (NIST) desenvolveu o <i>AI Risk Management Framework (AI RMF 1.0)</i>, de uso voluntário, e o seu respectivo Playbook operacional. A função <strong>Manage</strong> do framework orienta a alocação de recursos para gerenciar os riscos de sistemas de IA implantados. A Oryxon redigiu um roteiro prático de <strong>sete perguntas de operação</strong> que todo gestor deve responder sobre as automações que possui rodando hoje, indicando os códigos MANAGE apenas como referência:</p>
+
+          <div class="qbox">
+            <div class="qnum">1</div>
+            <div class="qbody">
+              <h4>Quem responde pelo sistema? (MANAGE 2.4)</h4>
+              <p>Existe um responsável nominal identificado dentro da empresa para acompanhar o desempenho, ajustar configurações e responder por eventuais falhas do sistema de IA?</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">2</div>
+            <div class="qbody">
+              <h4>Como se mede o desempenho real? (MANAGE 4.1)</h4>
+              <p>A empresa acompanha métricas objetivas de precisão, tempo de resposta e satisfação dos usuários, ou apenas pressupõe que a automação está funcionando corretamente?</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">3</div>
+            <div class="qbody">
+              <h4>Como usuários reportam erros e alucinações? (MANAGE 4.1 e 4.3)</h4>
+              <p>Existe um canal claro para que colaboradores ou clientes relatem respostas incorretas, dados inconsistentes ou comportamentos inadequados gerados pela IA?</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">4</div>
+            <div class="qbody">
+              <h4>Como se reverte uma decisão incorreta? (MANAGE 4.1)</h4>
+              <p>Caso a automação execute uma ação indevida (como enviar um e-mail incorreto ou alterar um cadastro), há um processo manual definido para reverter o impacto imediatamente?</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">5</div>
+            <div class="qbody">
+              <h4>Como se desliga o sistema em emergências? (MANAGE 2.4)</h4>
+              <p>Existe um mecanismo acessível de desativação (kill switch) para interromper o funcionamento do agente ou integração instantaneamente se ele apresentar comportamento anômalo?</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">6</div>
+            <div class="qbody">
+              <h4>Como os fornecedores de tecnologia são monitorados? (MANAGE 3.1)</h4>
+              <p>A empresa acompanha ativamente as atualizações, alterações de termos, SLAs e custos de consumo das APIs e plataformas de IA de terceiros contratadas?</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">7</div>
+            <div class="qbody">
+              <h4>Como são geridas as mudanças e atualizações? (MANAGE 4.1)</h4>
+              <p>Quando o modelo de IA subjacente é atualizado pelo provedor, há um ambiente de homologação para testar se os prompts e integrações continuam funcionando sem erros?</p>
+            </div>
+          </div>
+
+          <div class="cta-mid">
+            <p>Quer avaliar a maturidade operacional das suas automações de IA atuais?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20revisar%20a%20opera%C3%A7%C3%A3o%20e%20os%20custos%20das%20minhas%20automa%C3%A7%C3%B5es%20de%20IA." target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="quando-abrir-piloto"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#rocket"/></svg>Quando faz sentido abrir um novo piloto</h2>
+          <p>Propor a pausa na criação de novos protótipos não significa estagnar a inovação da empresa. Significa estabelecer critérios claros de maturidade. Na análise prática da Oryxon Systems, o início de um novo piloto de IA só faz sentido quando a organização preenche quatro requisitos operacionais prévios:</p>
+
+          <ul class="checklist">
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Sistemas atuais operados e auditados:</strong> Todas as automações e agentes já em produção possuem donos definidos, métricas de acompanhamento e custos previsíveis.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Problema de negócio delimitado:</strong> O novo piloto busca resolver uma dor específica de processo com indicador claro de sucesso, e não apenas "testar a tecnologia".</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Teto orçamentário definido:</strong> Os custos de consumo de API, infraestrutura e sustentação foram estimados com limite máximo de gastos aprovado.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Plano de transição para produção:</strong> O projeto nasce com regras de segurança, controle de acessos e plano de sustentação definidos antes do primeiro teste.</span></li>
+          </ul>
+
+        </div>
+        <div class="cta-article">
+          <h2>Sua empresa quer colocar ordem nas automações de IA que já possui?</h2>
+          <p>A Oryxon ajuda PMEs do Alto Tietê e Guarulhos a revisar automações, acompanhar custos de nuvem e estruturar a governança operacional de TI com pragmatismo e foco em resultados.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20diagn%C3%B3stico%20operacional%20de%20IA%20e%20automa%C3%A7%C3%A3o%20para%20minha%20empresa." target="_blank" rel="noopener" class="btn btn-primary"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI<br>Oryxon Systems · Parceira oficial Help&nbsp;Digital&nbsp;São&nbsp;Paulo</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fontes</h3>
+          <ul>
+            <li>McKinsey &amp; Company — "The state of AI in 2025" (novembro de 2025): <a href="https://www.mckinsey.com/~/media/mckinsey/business%20functions/quantumblack/our%20insights/the%20state%20of%20ai/november%202025/the-state-of-ai-in-2025.pdf" target="_blank" rel="noopener">mckinsey.com/.../the-state-of-ai-in-2025.pdf</a></li>
+            <li>Gartner — Comunicado de Imprensa: "Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027" (25 de junho de 2025): <a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027" target="_blank" rel="noopener">gartner.com/.../2025-06-25-gartner-predicts-over-40-percent...</a></li>
+            <li>NIST AI Risk Management Framework (AI RMF 1.0) Playbook — Função Manage: <a href="https://airc.nist.gov/airmf-resources/playbook/manage/" target="_blank" rel="noopener">airc.nist.gov/airmf-resources/playbook/manage/</a></li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/blog/custo-automacao-ia-nuvem-fora-de-controle.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#calculator"/></svg><div><strong>A conta de nuvem pode crescer sem ninguém perceber: como controlar custos de automação com IA</strong><span>Inteligência Artificial &amp; Automação</span></div></a>
+          <a href="/blog/ia-gestao-ti-pme.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#settings-automation"/></svg><div><strong>IA na gestão de TI para PMEs em 2026: o que mudou e como sua empresa pode começar agora</strong><span>Inteligência Artificial &amp; Automação</span></div></a>
+          <a href="/blog/perguntas-cliente-grande-antes-renovar-contrato.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clipboard-list"/></svg><div><strong>3 perguntas que seu cliente grande vai fazer sobre cibersegurança antes de renovar o contrato em 2026</strong><span>Cibersegurança</span></div></a>
+          <a href="/blog/lgpd-evidencia-tecnica-pme.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#file-search"/></svg><div><strong>LGPD na prática: qual evidência técnica sua PME consegue apresentar hoje?</strong><span>Cibersegurança</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#panorama-ia">Panorama da IA</a></li>
+            <li><a href="#risco-cancelamento">Previsão Gartner até 2027</a></li>
+            <li><a href="#virada-de-chave">A virada para serviço com dono</a></li>
+            <li><a href="#roteiro-manage-nist">7 perguntas de operação</a></li>
+            <li><a href="#quando-abrir-piloto">Quando abrir um novo piloto</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico de Exposição Digital e IA</h3>
+          <p>Mapeamos os agentes, automações e integrações de IA da sua empresa — sem custo e sem compromisso.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA." target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn btn-secondary btn-sm">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div class="row-wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/suporte/">Central de Suporte</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>

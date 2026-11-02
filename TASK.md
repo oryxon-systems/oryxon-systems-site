@@ -54,6 +54,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Concluído
 
+- [x] 2026-11-02 — 3 novos artigos do blog (Zero Trust em automações, Operação de IA em produção e Evidências técnicas para LGPD); registros em `blog.html` e `sitemap.xml` (51 URLs); `ARCHITECTURE.md` atualizado. Validados: títulos, meta descriptions, H1s, JSON-LD schema, XML sitemap, IDs/âncoras TOC, ícones do sprite SVG, links internos, contagem de palavras e ausência de overflow a 320px (`min-width:0` em `.checklist li` no post 1). Aguardando commit — `blog/`, `blog.html`, `sitemap.xml`, `ARCHITECTURE.md`
 - [x] 2026-10-27 — Redirect `/whatsapp` (e `/whatsapp/`) em `vercel.json` → `wa.me/5511934932992?text=Vim pelo Instagram`, 307, para o primeiro link da bio do Instagram. Pendências: commit/push (Uedson); validar com `curl -sI https://www.oryxonsystems.com.br/whatsapp` (esperado 307 + location wa.me); trocar o link no app do Instagram — `vercel.json`, `ARCHITECTURE.md`
 - [x] 2026-10-24 — Redirects curtos de agendamento em `vercel.json`: `/bni` (BNI 1-a-1) e `/agendar` (alias genérico) → Google Agenda, 307, com e sem barra final. `/diagnostico` mantido → `/#diagnostico` (308, ADR-019). Validado com `curl` em produção em 2026-10-24 (em `www`: `/bni` e `/agendar` 307 com/sem barra, `/diagnostico` 308, home 200); o apex sem `www` faz 308 para o `www` antes do 307, então divulgar os links com `www` — `vercel.json`
 

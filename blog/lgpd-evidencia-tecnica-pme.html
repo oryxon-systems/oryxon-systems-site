@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LGPD na prática: evidências técnicas | Oryxon Systems</title>
+  <meta name="description" content="Política escrita não demonstra controle em funcionamento. Veja que registros técnicos ajudam sua PME a comprovar as medidas de segurança adotadas."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html"/>
+  <meta property="og:title" content="LGPD na prática: evidências técnicas | Oryxon Systems"/>
+  <meta property="og:description" content="Política escrita não demonstra controle em funcionamento. Veja que registros técnicos ajudam sua PME a comprovar as medidas de segurança adotadas."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script src="/assets/js/consent.v1.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html#webpage",
+        "url": "https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html",
+        "name": "LGPD na prática: evidências técnicas | Oryxon Systems",
+        "description": "Política escrita não demonstra controle em funcionamento. Veja que registros técnicos ajudam sua PME a comprovar as medidas de segurança adotadas.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html#article"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html#article",
+        "headline": "LGPD na prática: qual evidência técnica sua PME consegue apresentar hoje?",
+        "description": "Política escrita não demonstra controle em funcionamento. Veja que registros técnicos ajudam sua PME a comprovar as medidas de segurança adotadas.",
+        "inLanguage": "pt-BR",
+        "datePublished": "2026-11-02",
+        "dateModified": "2026-11-02",
+        "author": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html#webpage"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.oryxonsystems.com.br/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "LGPD: evidências técnicas",
+            "item": "https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--glow-a:.12;--glow-b:0}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:not(.btn):hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:var(--cyan)}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:var(--text-soft);line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:var(--text-strong);padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i,h2 svg{color:var(--cyan);font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:var(--text-soft)}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:var(--text-strong);font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:var(--radius-md);padding:11px 14px}
+    .checklist li>span{min-width:0}
+    .checklist i,.checklist svg{color:var(--cyan);font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:var(--radius-lg);padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
+    .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:var(--radius-full);background:var(--gradient-brand);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
+    .qbox .qbody h4{font-size:1rem;color:var(--text-strong);margin-bottom:6px}
+    .qbox .qbody p{margin:0;font-size:.92rem}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i,.callout svg{color:var(--cyan);font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:var(--info-text);font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i,.callout-warn svg{color:var(--warn)}
+    .callout-warn p{color:var(--warn-text)}
+    .cta-mid{border:1px solid rgba(55,245,161,.25);background:rgba(55,245,161,.06);border-radius:var(--radius-lg);padding:18px 22px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .cta-mid p{margin:0;color:var(--success-text);font-size:.95rem;font-weight:700}
+    .cta-article{border:1px solid rgba(103,232,255,.18);background:radial-gradient(circle at 50% 0%,rgba(0,183,255,.12),transparent 14rem),rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:28px;text-align:center;margin-top:44px}
+    .cta-article h2{font-size:1.3rem;letter-spacing:-.04em;margin-bottom:10px;border:0;padding:0;color:var(--text-strong);justify-content:center}
+    .cta-article p{color:var(--muted);font-size:.9rem;margin:0 auto 18px;max-width:60ch;text-align:left}
+    .author-box{display:flex;align-items:center;gap:14px;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.03);border-radius:var(--radius-lg);padding:14px;margin-top:32px}
+    .author-avatar{width:44px;height:44px;border-radius:var(--radius-full);background:var(--gradient-brand);flex-shrink:0;display:grid;place-items:center;font-weight:900;color:#001224;font-size:1rem}
+    .author-info strong{display:block;font-size:.9rem;color:var(--text-strong)}
+    .author-info span{color:var(--muted);font-size:.78rem}
+    .sources{margin-top:32px;padding-top:20px;border-top:1px solid rgba(103,232,255,.1)}
+    .sources h3{font-size:.86rem;font-weight:800;color:var(--text-strong);margin-bottom:10px}
+    .sources ul{list-style:none;padding:0;display:grid;gap:6px}
+    .sources li{font-size:.8rem;color:var(--muted2)}
+    .sources a{color:var(--muted2);word-break:break-all}
+    .related{margin-top:40px;padding-top:28px;border-top:1px solid rgba(103,232,255,.1)}
+    .related h3{font-size:.96rem;font-weight:800;color:var(--text-strong);margin-bottom:14px}
+    .related a{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid rgba(103,232,255,.14);border-radius:var(--radius-lg);color:var(--muted);font-size:.88rem;transition:.2s;text-decoration:none;margin-bottom:8px}
+    .related a:hover{border-color:rgba(103,232,255,.35);background:rgba(255,255,255,.06);text-decoration:none}
+    .related a i,a svg{font-size:1.3rem;flex-shrink:0;color:var(--cyan)}
+    .related a strong{display:block;color:var(--text-strong);font-size:.92rem;margin-bottom:3px}
+    .related a span{font-size:.82rem}
+    .sidebar{position:sticky;top:90px;display:grid;gap:16px}
+    .sidebar-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:20px}
+    .sidebar-card h3{font-size:.9rem;font-weight:800;margin-bottom:10px;color:var(--text-strong)}
+    .sidebar-card p{color:var(--muted);font-size:.83rem;line-height:1.6;margin-bottom:12px}
+    .toc{list-style:none;display:grid;gap:7px}
+    .toc li a{color:var(--muted);font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:7px;transition:.2s;text-decoration:none}
+    .toc li a:before{content:"";width:4px;height:4px;border-radius:var(--radius-full);background:rgba(103,232,255,.4);flex-shrink:0}
+    .toc li a:hover{color:#fff}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    .table-container{width:100%;overflow-x:auto;margin:20px 0;border:1px solid rgba(103,232,255,.18);border-radius:var(--radius-lg)}
+    .data-table{width:100%;border-collapse:collapse;font-size:.88rem;color:var(--muted);text-align:left}
+    .data-table th{background:rgba(0,183,255,.08);color:var(--text-strong);font-weight:700;padding:12px 14px;border-bottom:1px solid rgba(103,232,255,.18)}
+    .data-table td{padding:12px 14px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .data-table tr:last-child td{border-bottom:none}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid .btn{width:100%}.qbox{flex-direction:column}}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    }
+    @media (prefers-reduced-motion: no-preference){
+      @view-transition{navigation:auto}
+      .nav-shell{view-transition-name:site-nav}
+      ::view-transition-old(root){animation:vt-out .22s cubic-bezier(.2,.8,.2,1) both}
+      ::view-transition-new(root){animation:vt-in .32s cubic-bezier(.2,.8,.2,1) both}
+    }
+    @keyframes vt-out{to{opacity:0}}
+    @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:var(--text-strong)}
+    .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .crumb-wrap+.article-wrap{padding-top:28px}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn btn-primary btn-sm">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="crumb-wrap"><nav class="breadcrumb" aria-label="breadcrumb"><ol><li><a href="/">Início</a></li><li><a href="/blog.html">Blog</a></li><li aria-current="page">LGPD: evidências técnicas</li></ol></nav></div>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança</span>
+            <span class="article-date"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#calendar"/></svg>2 de novembro de 2026</span>
+            <span class="article-read"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clock"/></svg>7 min de leitura</span>
+          </div>
+          <h1>LGPD na prática: qual evidência técnica sua PME consegue apresentar hoje?</h1>
+          <p class="article-lead">Ter uma política de privacidade publicada no site ou um termo de consentimento assinado em papel não comprova que os dados pessoais tratados na sua empresa estão protegidos contra acessos indevidos ou vazamentos. Quando a Agência Nacional de Proteção de Dados (ANPD), um auditor externo ou um cliente de grande porte solicita comprovações, a resposta depende da capacidade da TI de apresentar evidências técnicas de segurança em funcionamento.</p>
+        </header>
+        <div class="prose">
+
+          <div class="callout callout-warn">
+            <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg>
+            <p><strong>Aviso legal importante:</strong> Este conteúdo é informativo e não substitui orientação jurídica. A avaliação de conformidade depende do caso concreto e deve envolver profissional habilitado. Veja também nossa página sobre <a href="/lgpd.html">LGPD para empresas do Alto Tietê</a>.</p>
+          </div>
+
+          <h2 id="se-pedirem-hoje"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#file-search"/></svg>Se pedirem hoje, qual registro técnico sua PME consegue apresentar?</h2>
+          <p>Imagine o seguinte cenário operacional: a empresa recebe um questionário de segurança enviado por um cliente corporativo relevante ou uma notificação formal solicitando explicações sobre como o acesso a um banco de dados de clientes é controlado. Ter apenas intenções declaradas em documentos de texto dificilmente responde à pergunta.</p>
+          <p>A Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) estabelece no seu <strong>Art. 6º, inciso X</strong>, o princípio da <i>prestação de contas e responsabilização</i>. O dispositivo exige a demonstração da adoção de medidas eficazes e capazes de comprovar a observância e o cumprimento das normas de proteção de dados e, inclusive, a eficácia dessas medidas.</p>
+          <p>É importante ressaltar que <strong>"evidência técnica"</strong> é um conceito operacional da área de TI e cibersegurança — não um vocábulo jurídico da lei. Na prática, é o registro, relatório, log ou documento que ajuda a demonstrar que determinado controle está ativo e funcionando na rotina da empresa.</p>
+
+          <h2 id="o-que-a-lei-determina"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#scale"/></svg>O que a LGPD determina e o que ela deixa em aberto</h2>
+          <p>A legislação brasileira estabelece obrigações gerais de proteção, mas não prescreve uma lista de ferramentas tecnológicas específicas:</p>
+          <ul>
+            <li><strong>Art. 37:</strong> Determina que o controlador e o operador devem manter registro das operações de tratamento de dados pessoais que realizarem.</li>
+            <li><strong>Art. 46:</strong> Exige a adoção de medidas de segurança, técnicas e administrativas, aptas a proteger os dados pessoais de acessos não autorizados e de situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito. A lei não lista marcas de software ou fabricantes.</li>
+            <li><strong>Art. 48:</strong> Estabelece o dever de comunicar à autoridade nacional e ao titular a ocorrência de incidente de segurança que possa acarretar risco ou dano relevante aos titulares.</li>
+            <li><strong>Art. 52, § 1º:</strong> Fixa os critérios considerados na aplicação de sanções pela ANPD (incisos I a XI). Destacam-se a <i>adoção reiterada e demonstrada de mecanismos e procedimentos internos capazes de minimizar o dano</i> (inciso VIII), a <i>política de boas práticas e governança</i> (inciso IX) e a <i>pronta adoção de medidas corretivas</i> (inciso X). Trata-se de critérios de dosimetria examinados no caso concreto, sem garantir isenção automática de penalidades.</li>
+          </ul>
+
+          <h2 id="tabela-evidencias"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clipboard-list"/></svg>Tabela de evidências técnicas para PMEs: adaptação da Oryxon</h2>
+          <p>A ANPD publicou o <i>Guia Orientativo de Segurança da Informação para Agentes de Tratamento de Pequeno Porte (ATPP)</i> (v1.0, out/2021). Trata-se de um documento de caráter orientativo e <strong>não vinculante</strong>.</p>
+          <p>Com base nessas recomendações e na experiência prática de gerenciamento de infraestrutura, a Oryxon Systems elaborou a tabela abaixo. Trata-se de uma <strong>adaptação e consolidação operacional própria da Oryxon</strong> — e não de um rol de exigências legais diretas da LGPD:</p>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Tema de Segurança</th>
+                  <th>Pergunta do Auditor / Cliente</th>
+                  <th>Exemplo de Evidência Técnica (Oryxon)</th>
+                  <th>Frequência Sugerida</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Registro de operações</td>
+                  <td>Quais dados pessoais a empresa trata, para quê e com quem compartilha?</td>
+                  <td>Registro das operações atualizado, em formato completo ou simplificado, quando aplicável.</td>
+                  <td>Revisão semestral e a cada novo processo</td>
+                </tr>
+                <tr>
+                  <td>Controle de Acesso &amp; MFA</td>
+                  <td>Como a empresa garante que apenas pessoas autorizadas acessam os sistemas?</td>
+                  <td>Relatório do painel de identidade exibindo usuários ativos e status de MFA ativado.</td>
+                  <td>Mensal</td>
+                </tr>
+                <tr>
+                  <td>Gestão de Privilégios</td>
+                  <td>Quantos usuários possuem privilégios administrativos de sistema?</td>
+                  <td>Lista exportada das contas administrativas, comparada com as funções de cada pessoa.</td>
+                  <td>Trimestral</td>
+                </tr>
+                <tr>
+                  <td>Registros e Auditoria (Logs)</td>
+                  <td>Como é possível rastrear quem acessou ou exportou determinada base de dados?</td>
+                  <td>Logs de acesso e alteração centralizados, com prazo de retenção definido.</td>
+                  <td>Coleta diária contínua</td>
+                </tr>
+                <tr>
+                  <td>Gestão de Atualizações</td>
+                  <td>Os computadores e servidores possuem correções de segurança aplicadas?</td>
+                  <td>Relatório de inventário e aplicação de atualizações.</td>
+                  <td>Semanal / Mensal</td>
+                </tr>
+                <tr>
+                  <td>Proteção contra Malware</td>
+                  <td>Há antimalware gerenciado e atualizado nos endpoints corporativos?</td>
+                  <td>Relatório de status do antimalware gerenciado.</td>
+                  <td>Monitoramento contínuo</td>
+                </tr>
+                <tr>
+                  <td>Backup e Restauração</td>
+                  <td>Se os dados forem sequestrados por ransomware, como a empresa recupera?</td>
+                  <td>Relatório de rotinas de backup em nuvem e termo de teste periódico de restauração com sucesso.</td>
+                  <td>Execução diária / Teste mensal</td>
+                </tr>
+                <tr>
+                  <td>Contratos com Terceiros</td>
+                  <td>Os fornecedores que acessam dados possuem compromissos de segurança?</td>
+                  <td>Cláusulas de confidencialidade e segurança anexadas aos contratos de prestação de serviços.</td>
+                  <td>Por contratação / Anual</td>
+                </tr>
+                <tr>
+                  <td>Conscientização técnica</td>
+                  <td>Os colaboradores recebem treinamento em segurança da informação?</td>
+                  <td>Listas de presença e certificados emitidos em plataforma de treinamento ou testes de phishing.</td>
+                  <td>Semestral</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="cta-mid">
+            <p>Sua PME consegue gerar esses relatórios de infraestrutura se for notificada hoje?</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20saber%20como%20gerar%20relat%C3%B3rios%20de%20evid%C3%AAncia%20t%C3%A9cnica%20de%20TI%20para%20a%20LGPD." target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Falar no WhatsApp</a>
+          </div>
+
+          <h2 id="incidentes-e-registros"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#file-alert"/></svg>Incidentes: o prazo de três dias úteis e o registro exigido</h2>
+          <p>A gestão de incidentes de segurança é o momento em que a falta de logs e registros técnicos causa maior fragilidade. A <strong>Resolução CD/ANPD nº 15/2024</strong> regulamentou a comunicação de incidentes de segurança e estabeleceu prazos:</p>
+
+          <ul class="checklist">
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Prazo de três dias úteis:</strong> quando o incidente puder acarretar risco ou dano relevante aos titulares, o controlador deve comunicá-lo à ANPD e aos titulares em três dias úteis (arts. 6º e 9º). Os prazos à ANPD e aos titulares são contados do conhecimento pelo controlador de que o incidente afetou dados pessoais. Para agentes de pequeno porte, os prazos são contados em dobro (art. 6º, §8º, e art. 9º, §6º), observadas as exceções da Resolução CD/ANPD nº 2/2022, art. 14.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Registro por no mínimo cinco anos:</strong> o controlador deve manter o registro do incidente, inclusive daquele não comunicado à ANPD e aos titulares, contado da data do registro, salvo obrigação que exija prazo maior (art. 10). O registro inclui, entre outros itens, a avaliação de risco, as medidas de correção e a forma e o conteúdo da comunicação, quando houver.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Relatório solicitado pela ANPD:</strong> o art. 8º prevê que a ANPD pode solicitar a qualquer tempo informações complementares, incluindo o relatório de tratamento do incidente. Sem registros de acesso e de rede, tende a ser mais difícil demonstrar o alcance do incidente.</span></li>
+          </ul>
+
+          <h2 id="pequeno-porte"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#building"/></svg>Agentes de pequeno porte: tratamento simplificado não é isenção</h2>
+          <p>A <strong>Resolução CD/ANPD nº 2/2022</strong> estabeleceu regulamentação flexibilizada para Agentes de Tratamento de Pequeno Porte (ATPP). No entanto, flexibilização não é isenção de segurança:</p>
+
+          <p>O regulamento concede facilidades como: permissão para registro simplificado das operações (art. 9º), dispensa de indicar DPO, exigindo canal aos titulares (art. 11), política simplificada (art. 13) e prazos em dobro para certas obrigações, inclusive a comunicação de incidente, com exceção de casos que envolvam risco à integridade física ou moral dos titulares ou à segurança nacional (art. 14).</p>
+
+          <div class="callout callout-warn">
+            <svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg>
+            <p><strong>Atenção às exceções do Art. 3º:</strong> O tratamento simplificado NÃO se aplica a empresas que realizem tratamento de alto risco (ressalvada a hipótese do art. 8º), que tenham receita bruta superior aos limites legais ou que pertençam a grupo econômico cujo faturamento global ultrapasse esses limites. Além disso, mesmo a PME enquadrada como ATPP continua obrigada a adotar medidas de segurança aptas a proteger os dados nos termos do art. 46 da lei.</p>
+          </div>
+
+          <h2 id="como-comecar"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#calendar"/></svg>Roteiro Oryxon: como estruturar suas primeiras evidências técnicas em uma semana</h2>
+          <p>Para empresas que ainda não possuem controles de TI documentados, a Oryxon Systems sugere um roteiro inicial pragmático em quatro etapas operacionais:</p>
+
+          <div class="qbox">
+            <div class="qnum">1</div>
+            <div class="qbody">
+              <h4>Dia 1: Inventário de credenciais e acessos</h4>
+              <p>Mapeie todas as contas de usuários ativas em servidores, e-mails e sistemas de gestão. Inative imediatamente contas de ex-colaboradores e prestadores desligados.</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">2</div>
+            <div class="qbody">
+              <h4>Dia 2 e 3: Ativação e exportação de relatórios de MFA</h4>
+              <p>Ative a autenticação em dois fatores em todas as contas de e-mail e acessos à nuvem. Exporte e arquive o primeiro relatório registrando as exceções pendentes.</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">3</div>
+            <div class="qbody">
+              <h4>Dia 4 e 5: Centralização e teste de rotina de backups</h4>
+              <p>Verifique se as rotinas de backup estão isoladas e criptografadas. Execute um teste de restauração de pasta ou banco de dados e formalize um termo interno assinado pela TI com o resultado do teste.</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">4</div>
+            <div class="qbody">
+              <h4>Dia 6 e 7: Formalização do registro de ativos</h4>
+              <p>Gere o relatório consolidado de inventário de máquinas e antivírus atualizados. Guarde esses quatro documentos em uma pasta organizada de auditoria interna.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="cta-article">
+          <h2>Sua PME precisa de suporte para organizar a infraestrutura de TI?</h2>
+          <p>A Oryxon Systems implementa gerenciamento de endpoints, backups em nuvem, controle de acessos e geração de relatórios técnicos de segurança para empresas do Alto Tietê e Guarulhos.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20diagn%C3%B3stico%20de%20infraestrutura%20e%20evid%C3%AAncias%20t%C3%A9cnicas%20para%20minha%20empresa." target="_blank" rel="noopener" class="btn btn-primary"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar diagnóstico gratuito</a>
+        </div>
+        <div class="author-box">
+          <div class="author-avatar">U</div>
+          <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI<br>Oryxon Systems · Parceira oficial Help&nbsp;Digital&nbsp;São&nbsp;Paulo</span></div>
+        </div>
+        <div class="sources">
+          <h3>Fontes</h3>
+          <ul>
+            <li>Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais - LGPD): <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener">planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm</a></li>
+            <li>Resolução CD/ANPD nº 15/2024 — Regulamento de Comunicação de Incidentes de Segurança (abril de 2024): <a href="https://bibliotecadigital.mj.gov.br/bitstream/1/12879/2/RES_ANPD_2024_15.html" target="_blank" rel="noopener">bibliotecadigital.mj.gov.br/.../RES_ANPD_2024_15.html</a></li>
+            <li>Resolução CD/ANPD nº 2/2022 — Regulamento para Agentes de Tratamento de Pequeno Porte (janeiro de 2022): <a href="https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-2-de-27-de-janeiro-de-2022" target="_blank" rel="noopener">gov.br/anpd/.../resolucao-cd-anpd-no-2-de-27-de-janeiro-de-2022</a></li>
+            <li>ANPD — Guia Orientativo de Segurança da Informação para Agentes de Tratamento de Pequeno Porte (outubro de 2021): <a href="https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_seguranca_da_informacao_para_atpps___defeso_eleitoral.pdf/@@download/file" target="_blank" rel="noopener">gov.br/anpd/.../guia_seguranca_da_informacao_para_atpps...pdf</a></li>
+          </ul>
+        </div>
+        <div class="related">
+          <h3>Leia também</h3>
+          <a href="/lgpd.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg><div><strong>LGPD para empresas do Alto Tietê: controles técnicos que protegem os dados</strong><span>Cibersegurança</span></div></a>
+          <a href="/blog/perguntas-cliente-grande-antes-renovar-contrato.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clipboard-list"/></svg><div><strong>3 perguntas que seu cliente grande vai fazer sobre cibersegurança antes de renovar o contrato em 2026</strong><span>Cibersegurança</span></div></a>
+          <a href="/blog/identidade-e-o-novo-perimetro.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#id-badge-2"/></svg><div><strong>Identidade é o novo perímetro: usuários, tokens, automações e agentes precisam do mesmo rigor</strong><span>Cibersegurança</span></div></a>
+          <a href="/blog/agentes-ia-identidades-zero-trust-automacoes.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#robot"/></svg><div><strong>Agentes de IA já são identidades corporativas: por que Zero Trust também vale para automações</strong><span>Cibersegurança</span></div></a>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#se-pedirem-hoje">Se pedirem hoje</a></li>
+            <li><a href="#o-que-a-lei-determina">O que a LGPD determina</a></li>
+            <li><a href="#tabela-evidencias">Tabela de evidências técnicas</a></li>
+            <li><a href="#incidentes-e-registros">Incidentes e registro exigido</a></li>
+            <li><a href="#pequeno-porte">Agentes de pequeno porte</a></li>
+            <li><a href="#como-comecar">Roteiro para uma semana</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico de Exposição Digital e IA</h3>
+          <p>Mapeamos os agentes, automações e integrações de IA da sua empresa — sem custo e sem compromisso.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Exposi%C3%A7%C3%A3o%20Digital%20e%20IA." target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — com SLA documentado e segurança incluída.</p>
+          <a href="/managed-services.html" class="btn btn-secondary btn-sm">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div class="row-wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/suporte/">Central de Suporte</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>

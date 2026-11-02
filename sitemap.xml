@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://www.oryxonsystems.com.br/blog.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -285,6 +285,24 @@
   <url>
     <loc>https://www.oryxonsystems.com.br/blog/identidade-e-o-novo-perimetro.html</loc>
     <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/agentes-ia-identidades-zero-trust-automacoes.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/operar-ia-em-producao-antes-de-novo-piloto.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html</loc>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
