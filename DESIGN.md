@@ -1,6 +1,6 @@
 # DESIGN — Oryxon Systems Site
 
-Última atualização: 2026-10-22
+Última atualização: 2026-11-02
 Propósito: registrar os tokens e padrões visuais reais do site (fonte: `index.html`, bloco `:root`, linha 211).
 
 ## Paleta (valores do CSS)
@@ -49,7 +49,7 @@ Tabler Icons (outline, MIT) via sprite SVG: `assets/icons/sprite.v1.svg` (127 s�
 - **Contadores** `.counter[data-target]` com `data-prefix`/`data-suffix`.
 - **Texto rotativo** no hero (`.hero-rotator`).
 - **Painel "Prazos de atendimento"** (`.hero-visual`, `.sla-row`): único card com os 3 prazos de SLA (RULES.md). Sem dado ao vivo, sem animação.
-- **`.metrics` (home):** 4 métricas — "40+ Endpoints gerenciados", "<15min Confirmação do chamado", "7+ Clientes ativos" (clientes, não cidades) e "24x7 Monitoramento automatizado" (RMM, sem promessa de atendimento humano).
+- **`.metrics` (home):** 4 métricas — "60+ Endpoints gerenciados", "<15min Confirmação do chamado", "9+ Clientes ativos" (clientes, não cidades) e "24x7 Monitoramento automatizado" (RMM, sem promessa de atendimento humano).
 - **Banner de cookies**: `consent.v1.css`.
 - **Reveal** `.js .reveal` / `.visible`.
 
