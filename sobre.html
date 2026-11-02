@@ -93,7 +93,6 @@
     .hero{padding:72px 0 60px;border-bottom:1px solid rgba(103,232,255,.10)}
     .hero-inner{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
     .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.28);background:rgba(0,183,255,.07);color:var(--text-tint);font-size:.78rem;font-weight:900;letter-spacing:.04em;margin-bottom:22px}
-    .live-dot{width:7px;height:7px;border-radius:var(--radius-full);background:#37f5a1}
     .hero p{color:var(--muted);font-size:1.08rem;max-width:580px;line-height:1.7}
     .hero-logo{width:130px;height:130px;object-fit:contain}
 
@@ -112,6 +111,10 @@
     .history-text p{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:14px}
     .history-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
     .stat-card{border:1px solid rgba(103,232,255,.18);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:22px;text-align:center}
+    .valor-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;justify-content:center}
+    .valor-tab{min-height:44px;padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-family:inherit;font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s}
+    .valor-tab.is-active{border-color:rgba(103,232,255,.35);background:rgba(0,183,255,.10);color:var(--cyan)}
+    .valor-tab:focus-visible{outline:var(--focus-ring);outline-offset:2px}
     .stat-card strong{display:block;font-size:2rem;letter-spacing:-.06em;color:#dff9ff}
     .stat-card span{color:var(--muted);font-size:.82rem;font-weight:700}
 
@@ -184,7 +187,7 @@
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <div class="hero-badge"><span class="live-dot"></span> Alto Tietê — São Paulo, SP</div>
+          <div class="hero-badge">Alto Tietê — São Paulo, SP</div>
           <h1>Somos a <span class="grad">Oryxon</span><br>Systems.</h1>
           <p>Uma empresa de gestão de TI, automação e segurança empresarial nascida para resolver um problema real: pequenas e médias empresas do Alto Tietê sem acesso a TI estratégica, proativa e confiável.</p>
         </div>
@@ -265,13 +268,13 @@
         <!-- TABS DE VALORES -->
         <div class="reveal" style="max-width:960px;margin:0 auto">
           <!-- Tab buttons -->
-          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;justify-content:center" id="valor-tabs">
-            <button onclick="showValor(0)" class="valor-tab active" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.35);background:rgba(0,183,255,.10);color:#67e8ff;font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">01 · Responsabilidade</button>
-            <button onclick="showValor(1)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">02 · Transparência</button>
-            <button onclick="showValor(2)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">03 · Proatividade</button>
-            <button onclick="showValor(3)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">04 · Comprometimento</button>
-            <button onclick="showValor(4)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">05 · Melhoria Contínua</button>
-            <button onclick="showValor(5)" class="valor-tab" style="padding:9px 18px;border-radius:var(--radius-pill);border:1px solid rgba(103,232,255,.18);background:transparent;color:var(--muted);font-size:.82rem;font-weight:800;cursor:pointer;transition:.2s;font-family:inherit">06 · Foco no Cliente</button>
+          <div class="valor-tabs" id="valor-tabs" role="tablist" aria-label="Carta de valores">
+            <button onclick="showValor(0)" class="valor-tab is-active" role="tab" aria-controls="valor-panels" aria-selected="true">01 · Responsabilidade</button>
+            <button onclick="showValor(1)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">02 · Transparência</button>
+            <button onclick="showValor(2)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">03 · Proatividade</button>
+            <button onclick="showValor(3)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">04 · Comprometimento</button>
+            <button onclick="showValor(4)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">05 · Melhoria Contínua</button>
+            <button onclick="showValor(5)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">06 · Foco no Cliente</button>
           </div>
 
           <!-- Tab panels -->
@@ -547,15 +550,8 @@
       const tabs = document.querySelectorAll('.valor-tab');
       panels.forEach((p, i) => { p.style.display = i === idx ? 'block' : 'none'; });
       tabs.forEach((t, i) => {
-        if (i === idx) {
-          t.style.background = 'rgba(0,183,255,.10)';
-          t.style.borderColor = 'rgba(103,232,255,.35)';
-          t.style.color = '#67e8ff';
-        } else {
-          t.style.background = 'transparent';
-          t.style.borderColor = 'rgba(103,232,255,.18)';
-          t.style.color = '#a9bad1';
-        }
+        t.classList.toggle('is-active', i === idx);
+        t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
       });
     }
   </script>

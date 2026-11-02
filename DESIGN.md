@@ -50,6 +50,8 @@ Tabler Icons (outline, MIT) via sprite SVG: `assets/icons/sprite.v1.svg` (127 s�
 - **Texto rotativo** no hero (`.hero-rotator`).
 - **Painel "Prazos de atendimento"** (`.hero-visual`, `.sla-row`): único card com os 3 prazos de SLA (RULES.md). Sem dado ao vivo, sem animação.
 - **`.metrics` (home):** 4 métricas — "60+ Endpoints gerenciados", "<15min Confirmação do chamado", "9+ Clientes ativos" (clientes, não cidades) e "24x7 Monitoramento automatizado" (RMM, sem promessa de atendimento humano).
+- **Abas de valores** `.valor-tab` / `.valor-tab.is-active` (`sobre.html`, CSS local; `role="tab"` + `aria-selected`; `showValor()` alterna a classe, sem `style=""`).
+- **Ponto verde "ao vivo" (`.live-dot`)**: removido; não usar indicador de status sem dado real por trás.
 - **Banner de cookies**: `consent.v1.css`.
 - **Reveal** `.js .reveal` / `.visible`.
 
