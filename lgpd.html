@@ -234,7 +234,7 @@
     /* MULTAS */
     .multa-panel{border:1px solid rgba(255,77,77,.3);background:rgba(255,30,30,.05);border-radius:var(--radius-lg);padding:32px}
     .multa-panel h3{color:var(--danger-text);font-size:1.1rem;font-weight:800;margin-bottom:20px}
-    .multa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+    .multa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:20px}
     .multa-card{padding:4px 18px;text-align:center}
     .multa-val{font-size:1.6rem;font-weight:900;color:var(--danger-text);letter-spacing:-.05em;line-height:1;margin-bottom:6px}
     .multa-label{color:var(--muted);font-size:.8rem;line-height:1.5}
@@ -322,12 +322,7 @@
         </div>
         <div class="alert-box reveal">
           <h3><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg> Sinais de que sua empresa não está adequada</h3>
-          <div class="alert-item"><span class="alert-dot dot-red"></span>Funcionários acessam dados de clientes sem controle de permissão</div>
-          <div class="alert-item"><span class="alert-dot dot-red"></span>Não há registro de quem acessa dados sensíveis da empresa</div>
-          <div class="alert-item"><span class="alert-dot dot-red"></span>Dados de clientes são compartilhados por WhatsApp ou e-mail sem criptografia</div>
-          <div class="alert-item"><span class="alert-dot dot-orange"></span>Backup de dados não tem política de retenção e descarte documentada</div>
-          <div class="alert-item"><span class="alert-dot dot-orange"></span>Contratos com fornecedores não incluem cláusulas de proteção de dados</div>
-          <div class="alert-item"><span class="alert-dot dot-orange"></span>Não existe plano de resposta documentado para incidentes de dados</div>
+          <div class="alert-item"><span class="alert-dot dot-red"></span>Dados de clientes sem controle de permissão, sem registro de acessos, sem política de backup e sem plano para incidentes.</div>
         </div>
       </div>
     </section>
@@ -448,34 +443,8 @@
               <div class="multa-val">R$ 50M</div>
               <div class="multa-label">limite por infração — independente do porte da empresa</div>
             </div>
-            <div class="multa-card">
-              <div class="multa-val">100%</div>
-              <div class="multa-label">dos dados podem ser bloqueados ou excluídos pela ANPD</div>
-            </div>
           </div>
-          <div style="display:grid;gap:10px">
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid rgba(255,77,77,.12)">
-              <span style="color:var(--danger);font-size:1rem;flex-shrink:0"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
-              <div>
-                <strong style="display:block;color:var(--danger-text);font-size:.9rem;margin-bottom:3px">Publicidade do incidente</strong>
-                <span style="color:var(--muted);font-size:.86rem">A ANPD pode tornar público o nome da empresa infratora — dano reputacional que vai além da multa financeira.</span>
-              </div>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid rgba(255,77,77,.12)">
-              <span style="color:var(--warn);font-size:1rem;flex-shrink:0"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
-              <div>
-                <strong style="display:block;color:var(--warn-text);font-size:.9rem;margin-bottom:3px">Responsabilidade civil</strong>
-                <span style="color:var(--muted);font-size:.86rem">Titulares de dados prejudicados podem processar a empresa por danos morais — ação individual ou coletiva.</span>
-              </div>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-top:1px solid rgba(255,77,77,.12)">
-              <span style="color:var(--warn);font-size:1rem;flex-shrink:0"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg></span>
-              <div>
-                <strong style="display:block;color:var(--warn-text);font-size:.9rem;margin-bottom:3px">Perda de contratos</strong>
-                <span style="color:var(--muted);font-size:.86rem">Empresas parceiras e clientes maiores já exigem conformidade LGPD de seus fornecedores como requisito contratual.</span>
-              </div>
-            </div>
-          </div>
+          <p style="color:var(--muted);font-size:.9rem;border-top:1px solid rgba(255,77,77,.12);padding-top:14px">Além da multa: bloqueio dos dados, publicidade do incidente e responsabilidade civil.</p>
         </div>
       </div>
     </section>
