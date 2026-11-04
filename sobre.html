@@ -269,19 +269,19 @@
         <div class="reveal" style="max-width:960px;margin:0 auto">
           <!-- Tab buttons -->
           <div class="valor-tabs" id="valor-tabs" role="tablist" aria-label="Carta de valores">
-            <button onclick="showValor(0)" class="valor-tab is-active" role="tab" aria-controls="valor-panels" aria-selected="true">01 · Responsabilidade</button>
-            <button onclick="showValor(1)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">02 · Transparência</button>
-            <button onclick="showValor(2)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">03 · Proatividade</button>
-            <button onclick="showValor(3)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">04 · Comprometimento</button>
-            <button onclick="showValor(4)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">05 · Melhoria Contínua</button>
-            <button onclick="showValor(5)" class="valor-tab" role="tab" aria-controls="valor-panels" aria-selected="false">06 · Foco no Cliente</button>
+            <button onclick="showValor(0)" class="valor-tab is-active" role="tab" id="valor-tab-0" aria-controls="valor-panel-0" aria-selected="true" tabindex="0">01 · Responsabilidade</button>
+            <button onclick="showValor(1)" class="valor-tab" role="tab" id="valor-tab-1" aria-controls="valor-panel-1" aria-selected="false" tabindex="-1">02 · Transparência</button>
+            <button onclick="showValor(2)" class="valor-tab" role="tab" id="valor-tab-2" aria-controls="valor-panel-2" aria-selected="false" tabindex="-1">03 · Proatividade</button>
+            <button onclick="showValor(3)" class="valor-tab" role="tab" id="valor-tab-3" aria-controls="valor-panel-3" aria-selected="false" tabindex="-1">04 · Comprometimento</button>
+            <button onclick="showValor(4)" class="valor-tab" role="tab" id="valor-tab-4" aria-controls="valor-panel-4" aria-selected="false" tabindex="-1">05 · Melhoria Contínua</button>
+            <button onclick="showValor(5)" class="valor-tab" role="tab" id="valor-tab-5" aria-controls="valor-panel-5" aria-selected="false" tabindex="-1">06 · Foco no Cliente</button>
           </div>
 
           <!-- Tab panels -->
           <div id="valor-panels">
 
             <!-- 01 Responsabilidade técnica -->
-            <div class="valor-panel" style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
+            <div class="valor-panel" id="valor-panel-0" role="tabpanel" aria-labelledby="valor-tab-0" style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
                 <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#tools"/></svg></div>
                 <div>
@@ -300,7 +300,7 @@
             </div>
 
             <!-- 02 Transparência -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
+            <div class="valor-panel" id="valor-panel-1" role="tabpanel" aria-labelledby="valor-tab-1" hidden style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
                 <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#search"/></svg></div>
                 <div>
@@ -319,7 +319,7 @@
             </div>
 
             <!-- 03 Proatividade -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
+            <div class="valor-panel" id="valor-panel-2" role="tabpanel" aria-labelledby="valor-tab-2" hidden style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
                 <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#radar"/></svg></div>
                 <div>
@@ -338,7 +338,7 @@
             </div>
 
             <!-- 04 Comprometimento -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
+            <div class="valor-panel" id="valor-panel-3" role="tabpanel" aria-labelledby="valor-tab-3" hidden style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
                 <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#heart-handshake"/></svg></div>
                 <div>
@@ -357,7 +357,7 @@
             </div>
 
             <!-- 05 Melhoria Contínua -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
+            <div class="valor-panel" id="valor-panel-4" role="tabpanel" aria-labelledby="valor-tab-4" hidden style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
                 <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#refresh"/></svg></div>
                 <div>
@@ -376,7 +376,7 @@
             </div>
 
             <!-- 06 Foco no Cliente -->
-            <div class="valor-panel" style="display:none;border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
+            <div class="valor-panel" id="valor-panel-5" role="tabpanel" aria-labelledby="valor-tab-5" hidden style="border:1px solid rgba(103,232,255,.22);background:rgba(8,21,43,.62);border-radius:var(--radius-lg);padding:32px">
               <div style="display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start">
                 <div style="width:56px;height:56px;border-radius:var(--radius-lg);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);display:grid;place-items:center;font-size:1.5rem;flex-shrink:0;color:var(--blue2)"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#target"/></svg></div>
                 <div>
@@ -548,12 +548,24 @@
     function showValor(idx) {
       const panels = document.querySelectorAll('.valor-panel');
       const tabs = document.querySelectorAll('.valor-tab');
-      panels.forEach((p, i) => { p.style.display = i === idx ? 'block' : 'none'; });
+      panels.forEach((p, i) => { p.hidden = i !== idx; });
       tabs.forEach((t, i) => {
         t.classList.toggle('is-active', i === idx);
         t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+        t.tabIndex = i === idx ? 0 : -1;
       });
     }
+    document.getElementById('valor-tabs').addEventListener('keydown', e => {
+      const tabs = [...document.querySelectorAll('.valor-tab')];
+      const cur = tabs.indexOf(document.activeElement);
+      if (cur < 0) return;
+      const n = tabs.length;
+      const next = { ArrowRight: (cur + 1) % n, ArrowLeft: (cur - 1 + n) % n, Home: 0, End: n - 1 }[e.key];
+      if (next === undefined) return;
+      e.preventDefault();
+      showValor(next);
+      tabs[next].focus();
+    });
   </script>
 
 </body>

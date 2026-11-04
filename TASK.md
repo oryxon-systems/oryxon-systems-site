@@ -1,6 +1,6 @@
 # TASK — Oryxon Systems Site
 
-Última atualização: 2026-11-02
+Última atualização: 2026-11-04
 Propósito: acompanhar o que está em andamento, o backlog, as verificações pendentes e o que foi concluído.
 
 Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
@@ -10,7 +10,6 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
 - [x] 2026-10-20 — **Fase 1 encerrada** (`tokens.v2.css` em todas as páginas; `.cta-band` e `.cta-article` com parágrafo à esquerda; contraste WhatsApp conferido), commitada (`a5d7671` e anteriores). Medição antes/depois: adendo em `/media/uedson/storage/Projetos/oryxon-auditorias/vibe-coding-audit-2026-10-20.md` (fora do repo) — `assets/css/tokens.v2.css`
 - [x] 2026-10-21 — **Fase 2 encerrada** (emojis → sprite Tabler, ADR-017): varredura final vazia (emojis de UI, `svg.ti` com path inline, `tokens.v2`). Medição no adendo do relatório de auditoria. Lote 5 aguardando commit
-- [ ] 2026-10-20 — Próximas fases, em ordem: (1) Fase 1b — cores e inline; (2) `.valor-tab` — `index.html`, `sobre.html`
 
 ## Backlog
 
@@ -22,7 +21,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-21 — Criar página `ti-aruja/` (SEO local, conteúdo com fontes) — nova página, `sitemap.xml`, `llms.txt`
 - [ ] 2026-10-21 — Fase 1b: badge da Acronis (`solucoes.html:421`, `rgba(255,80,0,…)`/`#ff7a40`) como candidato a `.stack-badge` com `--badge-rgb`
 - [ ] 2026-10-21 — Criar página `ti-aruja/` (SEO local, conteúdo com fontes) — nova página, `sitemap.xml`, `llms.txt`
-- [ ] 2026-10-20 — `.valor-tab` (`sobre.html`): trocar o estilo inline reescrito por `showValor()` por toggle de classe `.is-active` + `aria-selected` — `sobre.html`
+- [ ] 2026-11-04 — Opcional: dado do GLPI para substituir "a maioria dos chamados" em `blog/gestao-de-ti-guararema.html`
 
 - [ ] 2026-10-19 — Ferramenta de autoavaliação de risco em `/avaliacao-de-risco/` (lead magnet → WhatsApp); a pasta não existe — nova página, `sitemap.xml`
 - [ ] 2026-10-19 — Depoimentos com nome/cargo/empresa — `index.html`
@@ -53,6 +52,11 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — `ti-*/`: box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
 
 ## Concluído
+
+- [x] 2026-11-04 — GregTur: 52% e 2% com período/base e "medido pelo NinjaOne" (cards, tabela, caixa final sem frase de causa, meta/og/JSON-LD com 142 caracteres); `lastmod` do case em `sitemap.xml`; `index.html:363` mantido. Aguardando commit — `cases/gregtur.html`, `sitemap.xml`
+
+- [x] 2026-11-04 — Abas da Carta de Valores (`sobre.html`) com WAI-ARIA completo: `id`/`aria-controls`/`tabindex` roving nas abas, `role=tabpanel` + `aria-labelledby` + `hidden` nos painéis, ←/→ com wrap, Home/End. Validado: clique e teclado, 1 painel visível. Aguardando commit
+- [x] 2026-11-04 — Decisões do Uedson (fechadas): setas `→`/`←` tipográficas mantidas (convenção editorial); "planos partem de valores mensais" (`infraestrutura-de-ti-santa-isabel:285`, `suporte-de-ti-poa…:276`) e custo relativo nas `ti-*` mantidos (sem cifra); `.badge-orange`, `.check-item.warn` e `.city-badge` mantidos. Pendente: proposta de redação do 52%/2% do GregTur (período/base, NinjaOne), sem aplicar
 
 - [x] 2026-11-02 — Lote final da reauditoria (`vibe-coding-reaudit-2026-11-02.md`): `⏱` → sprite `#clock` em 14 posts; chips `.article-cat` roxo (1) e laranja (2) → ciano; cards desaninhados (`index.html` `.risk-band` sem moldura e aviso do `.lead-card` sem caixa, `lgpd.html` `.multa-card` sem moldura, `suporte/index.html` `.tool-link` → `.btn .btn-secondary .btn-sm`); texto à esquerda em `.threat-card`, `.cta-section p` do GregTur e 3 `<p>` inline; `.valor-tab` de `sobre.html` sem `style=""` (`.is-active` + `aria-selected`); `.live-dot` removido das 9 páginas (HTML e CSS). Validado a 320/375/480/1280px (18 páginas, sem overflow), console sem erros, 6 abas testadas. Sem alteração em `tokens.v4.css` ou sprite. Aguardando commit. **Pendências:** setas `→`/`←` tipográficas em ~113 links/CTAs (decisão pendente); `.badge-orange`/`.check-item.warn`/`.result-card.orange` (tints de status, fora do escopo); navegação por setas nas abas (`role=tablist` completo) e `role=tabpanel`; pill verde `.city-badge` das `ti-*` sem o ponto
 - [x] 2026-11-02 — Ajustes finais da Parte B: `lastmod` de `gestao-de-ti-suzano`, `ia-gestao-ti-pme` e `infraestrutura-de-ti-santa-isabel`; faixas de licença/equipamento removidas em Mogi; "65% / CompTIA MSP Insights Report" removido de `suporte-de-ti-poa…` (relatório e número não encontrados); preços de plano (R$ 800–3.000 e ~R$ 800–1.200/mês, e o total anual R$ 9.600–14.400) removidos, com CTA para `/#diagnostico`; tabela de `terceirizacao-de-ti` agora qualitativa. Aguardando commit. **Pendências:** ~~meta description e `og:description` de `terceirizacao-de-ti-mogi-das-cruzes`~~ (resolvido em 2026-11-02: meta, og e JSON-LD nas linhas 45 e 61 aplicados); "partem de valores mensais" em `infraestrutura-de-ti-santa-isabel:285` e `suporte-de-ti-poa…:276`; afirmações de custo relativo nas `ti-*`; dado do GLPI para `gestao-de-ti-guararema`
