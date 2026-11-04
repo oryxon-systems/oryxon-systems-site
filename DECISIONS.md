@@ -1,6 +1,6 @@
 # DECISIONS — Oryxon Systems Site
 
-Última atualização: 2026-10-24
+Última atualização: 2026-11-04
 Propósito: registro de decisões técnicas e editoriais (ADR). Novas decisões entram no fim, com número sequencial.
 
 Formato: ADR-NNN | Data | Status | Contexto | Decisão | Consequências.
@@ -110,3 +110,9 @@ Contexto: pedido de URLs curtas para agendamento no Google Agenda. `/diagnostico
 Decisão: `/bni` (reuniões 1-a-1 do BNI) e `/agendar` (alias genérico, GBP/site) redirecionam para o Google Agenda com 307 (`permanent: false`), porque os destinos podem mudar. `/diagnostico` e `/diagnostico/` ficam como estavam, apontando para o formulário da home.
 Alternativas descartadas: apontar `/diagnostico` para o Google Agenda (quebra o funil do formulário e fica inconsistente com o 308 já cacheado).
 Consequências: trocar o destino do Agenda exige só editar `vercel.json`; quem já visitou `/diagnostico` continua sendo levado ao formulário.
+
+**ADR-020 | 2026-11-04 | Aceito** (numerado 020 porque o ADR-019 já existe)
+Contexto: a reauditoria "cara de vibe coding" (2026-11-02) achou números sem fonte, superlativos, preços em posts e "100%" sem medição.
+Decisão: política de dados e claims, em `RULES.md` ("Conteúdo e dados"): todo número com período e fonte/medição; sem superlativo sem fonte, "garantido" como promessa, estatística sem fonte primária, preço da Oryxon em posts nem obrigação legal além da lei; exemplos numéricos rotulados "Exemplo ilustrativo". Aplicada em: meta de 99,9% de uptime removida (ADR-015); GregTur com 52% e 2% datados (1º sem/2026 vs. 2º sem/2025) e "medido pelo NinjaOne"; estatísticas sem fonte e faixas de preço removidas dos posts; "RMM #1", "líderes de mercado", "melhores" e "resultado garantido" removidos; "100%" de cobertura com nota NinjaOne; "100%" dos dados da multa LGPD removido.
+Alternativas descartadas: manter "segundo pesquisas de mercado" e faixas de preço como estimativa; nota de rodapé genérica em vez de fonte por número.
+Consequências: copy mais curta e menos persuasiva, porém verificável; novo número só entra com fonte; pendência: dado do GLPI para Guararema.

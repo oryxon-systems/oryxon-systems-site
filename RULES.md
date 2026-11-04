@@ -1,6 +1,6 @@
 # RULES — Oryxon Systems Site
 
-Última atualização: 2026-10-21
+Última atualização: 2026-11-04
 Propósito: regras editoriais, técnicas e de workflow que valem para toda alteração no projeto.
 
 ## Editoriais
@@ -17,6 +17,20 @@ Propósito: regras editoriais, técnicas e de workflow que valem para toda alter
 - Canais de chamado: `https://suporte.oryxonsystems.com.br/` e `suporte@oryxonsystems.com.br`.
 - Emojis em `.post-thumb` do blog são intencionais; não trocar por ícones.
 - Análise de concorrentes (Netcenter, HabiliSystem, Nexigen): só para extrair padrões, sem cópia.
+
+## Conteúdo e dados
+
+- Todo número tem período e fonte ou medição (ex.: "medido pelo NinjaOne"). Números confirmados da Oryxon: 60+ endpoints e 9 clientes ativos. SLA: confirmação em até 15 min, contato humano em até 2 h, plantão para incidentes críticos.
+- Proibido: superlativo sem fonte ("#1", "líder", "melhor"); "garantido" como promessa de resultado; estatística sem fonte primária; texto oculto para SEO (ADR-016); preço da Oryxon em posts do blog; afirmar obrigação legal além do texto da lei.
+- Exemplos numéricos só com o rótulo "Exemplo ilustrativo".
+- Política completa e motivos: ADR-020.
+
+## Design
+
+- Tokens e sprite publicados são imutáveis (`tokens.v1`–`v4`, `sprite.v1.svg`); mudança = nova versão e troca da referência nas páginas.
+- Hex de marca (fabricantes, parceiros) nunca vira token semântico (`--danger`, `--warn` etc.).
+- Páginas em `tokens.v4` definem `--glow-a` e `--glow-b` no próprio `:root`.
+- Ícones só via sprite (`<svg class="ti"><use href="/assets/icons/sprite.v1.svg#nome"/></svg>`); sem SVG inline nem emoji de UI (exceção: `.post-thumb`).
 
 ## Técnicas
 

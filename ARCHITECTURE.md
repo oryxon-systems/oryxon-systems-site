@@ -1,6 +1,6 @@
 # ARCHITECTURE — Oryxon Systems Site
 
-Última atualização: 2026-11-02
+Última atualização: 2026-11-04
 Propósito: descrever a stack, a estrutura de arquivos, as integrações e o fluxo de deploy.
 
 ## Stack
@@ -35,8 +35,8 @@ O sitemap lista 51 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 33 p
 
 ## Assets
 
-- Tokens: `assets/css/tokens.v4.css` (= v3 + cores, `.check-list`, utilitários; ADR-018). Páginas migram por lote da Fase 1b: `index.html` já usa v4; as demais seguem em `tokens.v3.css`. v2 e v3 permanecem no repositório (imutáveis).
-- Ícones: `assets/icons/sprite.v1.svg` (127 símbolos, Tabler Icons 3.34.1 outline, licença MIT, © Paweł Kuna; ADR-017). Imutável; ícone novo = `sprite.v2.svg`. Estilo em `assets/css/tokens.v3.css` (`.ti`, `.dot`); as páginas migram do v2 para o v3 por lote (Fase 2).
+- Tokens: `assets/css/tokens.v4.css` (= v3 + cores, `.check-list`, utilitários; ADR-018). Todas as páginas usam v4 (Fase 1b encerrada). v1, v2 e v3 permanecem no repositório (imutáveis).
+- Ícones: `assets/icons/sprite.v1.svg` (127 símbolos, Tabler Icons 3.34.1 outline, licença MIT, © Paweł Kuna; ADR-017). Imutável; ícone novo = `sprite.v2.svg`. Estilo em `assets/css/tokens.v4.css` (`.ti`, `.dot`, `.ti--*`); todas as páginas usam o sprite (Fase 2 encerrada).
 - Fonte: Inter variável, auto-hospedada (`assets/fonts/inter.css`). Sem Google Fonts.
 - Ícones: SVG inline nas páginas. **Não há Tabler Icons/CDN** no repositório (divergência, ver TASK.md).
 - Imagens: logos e avatar em `.webp`, OG image em `og-image.jpg` (1200×630), favicon embutido como data URI + `favicon.ico`.
