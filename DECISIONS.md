@@ -119,3 +119,4 @@ Consequências: copy mais curta e menos persuasiva, porém verificável; novo n�
 
 ## ADR-020 — Atendimento e entidade (2026-11-04)
 Bloco de atendimento sem SLA de uptime; 24x7 = RMM. taxID/hasMap/geo omitidos até haver dados; aggregateRating descartado. Sede em Poá já consistente no repo e na produção.  Sitemap: lastmod 2026-11-04 (home, managed-services); campos de entidade seguem omitidos por falta de dados.
+ADR-020 (adendo 2026-11-04): taxID e hasMap/sameAs (Maps) adicionados; geo omitido; sede de Poá declarada como administrativa, sem atendimento ao público.
