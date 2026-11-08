@@ -1,13 +1,13 @@
 # ARCHITECTURE — Oryxon Systems Site
 
-Última atualização: 2026-11-04
+Última atualização: 2026-11-08
 Propósito: descrever a stack, a estrutura de arquivos, as integrações e o fluxo de deploy.
 
 ## Stack
 
 HTML/CSS/JS estáticos, sem build e sem gerenciador de pacotes. CSS e JS de cada página ficam inline (`<style>` no `<head>`, `<script>` no fim do `<body>`); não há templating nem includes. Hospedagem na Vercel com Git Integration na branch `main`. Repositório: `oryxon-systems/oryxon-systems-site` (público).
 
-Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA4; 51 páginas; injeta `css/consent.v1.css` sozinho), `fonts/inter.css` + `inter-var.woff2` (Inter; 51 páginas). Arquivos `*.v1.*` são imutáveis (cache de 1 ano); mudança = novo `v2` e troca em todas as páginas que o carregam (ver RULES.md). Tokens e botões: `css/tokens.v1.css (congelado), assets/css/tokens.v2.css` (ADR-013; migração em andamento, piloto: `index.html`).
+Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA4; 51 páginas; injeta `css/consent.v1.css` sozinho), `fonts/inter.css` + `inter-var.woff2` (Inter; 51 páginas). Só na home: `css/projetos.v1.css` + `js/projetos.v2.js` (índice de projetos, ADR-021). Arquivos `*.v1.*` são imutáveis (cache de 1 ano); mudança = novo `v2` e troca em todas as páginas que o carregam (ver RULES.md). Tokens e botões: `assets/css/tokens.v4.css` (ADR-013/018; carregado por todas as 51 páginas; v1–v3 congelados).
 
 ## Árvore de diretórios (versionada)
 

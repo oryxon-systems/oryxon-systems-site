@@ -1,6 +1,6 @@
 # TASK — Oryxon Systems Site
 
-Última atualização: 2026-11-04
+Última atualização: 2026-11-08
 Propósito: acompanhar o que está em andamento, o backlog, as verificações pendentes e o que foi concluído.
 
 Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
@@ -55,6 +55,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — `ti-*/`: box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
 
 ## Concluído
+
+- [x] 2026-11-08 — Índice de projetos com preview que segue o cursor em `index.html` (`#projetos`, `projetos.v1.css` + `projetos.v2.js`, dados em HTML; ADR-021). Pendências (Uedson): (1) fornecer `assets/img/cases/gregtur.webp` e preencher `data-img` do GregTur em `index.html`; (2) preencher as entradas-modelo `TODO Uedson` (comentários HTML) só com dados reais; (3) `assets/img/cases/logo.png` está sem uso; (4) rever visualmente no navegador (não testado aqui) e atualizar `sitemap.xml` lastmod da home se desejar.
 
 - [x] 2026-11-04 — Análise de vibe coding encerrada (2026-11-04): relatórios em `/media/uedson/storage/Projetos/oryxon-auditorias/` — auditoria `vibe-coding-audit-2026-10-20.md`, reauditoria `vibe-coding-reaudit-2026-11-02.md` (com adendo do item 6), proposta de copy `copy-cards-proposta-2026-11-04.md` e fontes `fontes-posts-2026-11-02.md`. Regras consolidadas em `RULES.md` ("Conteúdo e dados", "Design") e ADR-020; `ARCHITECTURE.md` conferido (tokens.v4 e sprite.v1 em todas as páginas)
 

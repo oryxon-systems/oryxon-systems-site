@@ -1,6 +1,6 @@
 # DECISIONS — Oryxon Systems Site
 
-Última atualização: 2026-11-04
+Última atualização: 2026-11-08
 Propósito: registro de decisões técnicas e editoriais (ADR). Novas decisões entram no fim, com número sequencial.
 
 Formato: ADR-NNN | Data | Status | Contexto | Decisão | Consequências.
@@ -120,3 +120,9 @@ Consequências: copy mais curta e menos persuasiva, porém verificável; novo n�
 ## ADR-020 — Atendimento e entidade (2026-11-04)
 Bloco de atendimento sem SLA de uptime; 24x7 = RMM. taxID/hasMap/geo omitidos até haver dados; aggregateRating descartado. Sede em Poá já consistente no repo e na produção.  Sitemap: lastmod 2026-11-04 (home, managed-services); campos de entidade seguem omitidos por falta de dados.
 ADR-020 (adendo 2026-11-04): taxID e hasMap/sameAs (Maps) adicionados; geo omitido; sede de Poá declarada como administrativa, sem atendimento ao público.
+
+**ADR-021 | 2026-11-08 | Aceito**
+Contexto: pedido de índice de projetos com preview que segue o cursor, sem libs e sem inline novo (CSP `script-src 'self' 'unsafe-inline'`).
+Decisão: seção `#projetos` na home, após `#clientes`; CSS em `assets/css/projetos.v1.css`; JS inicialmente `projetos.v1.js` (dados em array JS), substituído em 2026-11-08 por `assets/js/projetos.v2.js` (v1 removido) — progressive enhancement: dados em HTML estático dentro de `#projetos` (fonte: `cases/gregtur.html`), o JS só lê o DOM e cria contador, filtros e preview; categoria = tipo de serviço, filtros só com ≥2 categorias; lerp em rAF e `mousemove` só com o cursor sobre a lista; preview só com hover/ponteiro fino.
+Alternativas descartadas: GSAP/Lenis/Three (peso e CDN fora da CSP); canvas procedural no placeholder; inline no HTML.
+Consequências: nova entrada = editar o `<ul>` em `index.html` (sem mexer no JS); sem JS a lista fica visível e navegável, sem contador nem filtros; mudar o JS exige `projetos.v3.js`.

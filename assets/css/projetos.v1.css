@@ -1,0 +1,28 @@
+/* Índice de projetos (ADR-021). Imutável: mudança = projetos.v2.css e troca do <link>. Usa só tokens do site. */
+.proj-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.proj-count{color:var(--muted);font-size:.92rem}
+.proj-filters{display:flex;flex-wrap:wrap;gap:8px}
+.proj-filters button{min-height:44px;padding:0 16px;border-radius:var(--radius-pill);border:1px solid var(--border);background:transparent;color:var(--muted);font:inherit;font-weight:700;cursor:pointer;transition:background-color .2s,border-color .2s,color .2s}
+.proj-filters button:hover{border-color:var(--cyan);color:var(--text)}
+.proj-filters button[aria-pressed="true"]{background:var(--panel);border-color:var(--cyan);color:var(--text)}
+.proj-filters button:focus-visible,.proj-row:focus-visible{outline:var(--focus-ring);outline-offset:2px}
+.proj-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--border)}
+.proj-cols,.proj-row{display:grid;grid-template-columns:80px 1.2fr 2fr 1.2fr;gap:16px;align-items:center;padding:18px 12px}
+.proj-cols{color:var(--muted2);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border)}
+.proj-row{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border);transition:background-color .2s}
+.proj-row:hover,.proj-row:focus-visible{background:var(--panel)}
+.proj-row b{font-weight:800}
+.proj-row span:not(.proj-lbl){color:var(--muted)}
+.proj-lbl{display:none}
+.proj-preview{position:fixed;left:0;top:0;width:280px;aspect-ratio:4/3;margin:0;border-radius:var(--radius-md);border:1px solid var(--border);background:var(--panel);box-shadow:var(--shadow-md);overflow:hidden;pointer-events:none;opacity:0;z-index:50;transition:opacity .2s;display:none}
+.proj-preview.on{opacity:1}
+.proj-preview img{width:100%;height:100%;object-fit:cover;display:block}
+.proj-ph{display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:16px;text-align:center;color:var(--muted);font-weight:800;background:radial-gradient(circle at 30% 20%,rgba(20,120,255,.18),transparent 60%),var(--bg)}
+@media (hover:hover) and (pointer:fine){.proj-preview{display:block}}
+@media (prefers-reduced-motion:reduce){.proj-preview{transition:none}}
+@media (max-width:760px){
+  .proj-cols{display:none}
+  .proj-row{grid-template-columns:1fr;gap:4px;padding:16px 8px}
+  .proj-lbl{display:inline;color:var(--muted2);font-size:.8rem;margin-right:6px}
+  .proj-preview{display:none!important}
+}

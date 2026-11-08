@@ -54,6 +54,7 @@ Tabler Icons (outline, MIT) via sprite SVG: `assets/icons/sprite.v1.svg` (127 s�
 - **Ponto verde "ao vivo" (`.live-dot`)**: removido; não usar indicador de status sem dado real por trás.
 - **Banner de cookies**: `consent.v1.css`.
 - **Reveal** `.js .reveal` / `.visible`.
+- **Índice de projetos** (`#projetos` em `index.html`; `assets/css/projetos.v1.css` + `assets/js/projetos.v2.js`, ADR-021): tabela Ano | Cliente | Escopo | Cidade, linhas `<a>` com `--focus-ring`; filtros `button[aria-pressed]` só com ≥2 categorias; preview `position:fixed` (280px, `--radius-md`, `--shadow-md`) que segue o cursor com lerp 0,15 em rAF, ativo só em `(hover:hover) and (pointer:fine)`; `prefers-reduced-motion`: sem lerp nem transição. ≤760px: lista empilhada com rótulos, sem preview. Dados em HTML estático (`data-cat`, `data-img`); contador e filtros criados pelo JS; sem JS a lista fica completa. Imagens em `assets/img/cases/<slug>.webp`, com placeholder em tokens se ausente.
 
 ## Breakpoints reais
 
