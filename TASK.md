@@ -7,7 +7,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Em andamento
 
-- [x] 2026-11-04 — Bloco "Como funciona o atendimento" em managed-services e home (resumo). Pendente: condição do contato técnico em 2h; CNPJ, URL do mapa e geo para o JSON-LD (taxID/hasMap/geo omitidos).
+- [x] 2026-11-04 — Bloco "Como funciona o atendimento" em managed-services e home (resumo); contato técnico em até 2 horas, em horário comercial.
+- [x] 2026-11-04 — Entidade: `taxID`, `hasMap` e link do Maps em `sameAs` no JSON-LD da home; nota de sede administrativa (sem atendimento ao público) no rodapé da home e em `ti-poa`; `lastmod` do sitemap atualizado (home, managed-services). Pendente: `geo` (coordenadas) e `aggregateRating` omitidos por falta de dados.
 
 - [ ] 2026-10-19 — Documentação-base e mecanismo de manutenção (PRD, ARCHITECTURE, RULES, DESIGN, TASK, SECURITY, DECISIONS, CLAUDE.md) — raiz
 - [x] 2026-10-20 — **Fase 1 encerrada** (`tokens.v2.css` em todas as páginas; `.cta-band` e `.cta-article` com parágrafo à esquerda; contraste WhatsApp conferido), commitada (`a5d7671` e anteriores). Medição antes/depois: adendo em `/media/uedson/storage/Projetos/oryxon-auditorias/vibe-coding-audit-2026-10-20.md` (fora do repo) — `assets/css/tokens.v2.css`
