@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IA governada: agentes, APIs e automações | Oryxon Systems</title>
+  <meta name="description" content="Como colocar agentes de IA, APIs, memória e integrações sob governança: identidade, escopo, credenciais, monitoramento e desativação, com fontes."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html"/>
+  <meta property="og:title" content="IA governada: agentes, APIs e automações | Oryxon Systems"/>
+  <meta property="og:description" content="Como colocar agentes de IA, APIs, memória e integrações sob governança: identidade, escopo, credenciais, monitoramento e desativação, com fontes."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script src="/assets/js/consent.v1.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html#webpage",
+        "url": "https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html",
+        "name": "IA governada: agentes, APIs e automações | Oryxon Systems",
+        "description": "Como colocar agentes de IA, APIs, memória e integrações sob governança: identidade, escopo, credenciais, monitoramento e desativação, com fontes.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html#article"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html#article",
+        "headline": "Governed AI & Automation: como colocar agentes, APIs, memória e integrações sob governança",
+        "description": "Como colocar agentes de IA, APIs, memória e integrações sob governança: identidade, escopo, credenciais, monitoramento e desativação, com fontes.",
+        "inLanguage": "pt-BR",
+        "datePublished": "2026-11-23",
+        "dateModified": "2026-11-23",
+        "author": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html#webpage"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.oryxonsystems.com.br/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Governed AI & Automation",
+            "item": "https://www.oryxonsystems.com.br/blog/ia-governada-automacao-pme.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--glow-a:.12;--glow-b:0}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:not(.btn):hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:var(--cyan)}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:var(--text-soft);line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:var(--text-strong);padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i,h2 svg{color:var(--cyan);font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:var(--text-soft)}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:var(--text-strong);font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:var(--radius-md);padding:11px 14px;min-width:0}
+    .checklist li>span{min-width:0}
+    .checklist i,.checklist svg{color:var(--cyan);font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .split-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .split-box{border-radius:var(--radius-lg);padding:18px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.02)}
+    .split-box h4{display:flex;align-items:center;gap:8px;font-size:.95rem;color:var(--text-strong);margin-bottom:10px}
+    .split-box h4 i,h4 svg{color:var(--cyan)}
+    .split-box ul{padding-left:18px;color:var(--muted);font-size:.88rem;display:grid;gap:5px;margin:0}
+    .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:var(--radius-lg);padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
+    .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:var(--radius-full);background:var(--gradient-brand);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
+    .qbox .qbody h4{font-size:1rem;color:var(--text-strong);margin-bottom:6px}
+    .qbox .qbody p{margin:0;font-size:.92rem}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i,.callout svg{color:var(--cyan);font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:var(--info-text);font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i,.callout-warn svg{color:var(--warn)}
+    .callout-warn p{color:var(--warn-text)}
+    .cta-mid{margin:36px 0;padding:26px 28px;border-radius:var(--radius-lg);border:1px solid rgba(103,232,255,.28);background:linear-gradient(135deg,rgba(0,183,255,.08),rgba(20,120,255,.04));display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta-mid h3{font-size:1.15rem;margin-bottom:4px;color:var(--text-strong)}
+    .cta-mid p{margin:0;color:var(--muted);font-size:.92rem}
+    .cta-article{margin:40px 0;padding:32px;border-radius:var(--radius-xl);background:linear-gradient(135deg,rgba(0,183,255,.10),rgba(20,120,255,.04));border:1px solid rgba(103,232,255,.22);text-align:left}
+    .cta-article h2{font-size:1.4rem;margin-bottom:8px;color:var(--text-strong);border:none;padding:0}
+    .cta-article p{color:var(--muted);margin-bottom:20px;max-width:680px}
+    .author-box{display:flex;gap:16px;align-items:center;padding:20px;border-radius:var(--radius-lg);border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);margin:36px 0}
+    .author-avatar{width:52px;height:52px;border-radius:var(--radius-full);background:var(--gradient-brand);display:grid;place-items:center;font-weight:900;color:#001224;font-size:1.2rem;flex-shrink:0}
+    .author-info strong{display:block;color:var(--text-strong);font-size:.95rem}
+    .author-info span{color:var(--muted2);font-size:.82rem}
+    .sources{margin:32px 0;padding:20px;border-radius:var(--radius-md);border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.01)}
+    .sources h3{font-size:.88rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);margin-bottom:12px}
+    .sources ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .sources li{font-size:.82rem;color:var(--muted2);word-break:break-word}
+    .sources a{color:var(--blue2)}
+    .related{margin:40px 0;padding-top:28px;border-top:1px solid rgba(103,232,255,.10)}
+    .related h3{font-size:1rem;color:var(--text-strong);margin-bottom:16px}
+    .related a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--radius-md);border:1px solid rgba(103,232,255,.12);background:rgba(255,255,255,.02);color:var(--text-soft);margin-bottom:10px;transition:.2s}
+    .related a:hover{border-color:rgba(103,232,255,.35);background:rgba(0,183,255,.05);text-decoration:none;color:#fff}
+    .related a svg{color:var(--cyan);flex-shrink:0}
+    .related a strong{font-size:.9rem}
+    .related a span{display:block;font-size:.74rem;color:var(--muted2)}
+    .sidebar{position:sticky;top:96px;display:grid;gap:20px}
+    .sidebar-card{padding:22px;border-radius:var(--radius-lg);border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02)}
+    .sidebar-card h3{font-size:.95rem;color:var(--text-strong);margin-bottom:12px}
+    .sidebar-card p{color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:14px}
+    .sidebar-card ul.toc{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .sidebar-card ul.toc li a{color:var(--muted);font-size:.84rem;transition:.2s;display:block}
+    .sidebar-card ul.toc li a:hover{color:var(--cyan);text-decoration:none}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}.split-row{grid-template-columns:1fr}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid .btn{width:100%}.qbox{flex-direction:column}}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    }
+    @media (prefers-reduced-motion: no-preference){
+      @view-transition{navigation:auto}
+      .nav-shell{view-transition-name:site-nav}
+      ::view-transition-old(root){animation:vt-out .22s cubic-bezier(.2,.8,.2,1) both}
+      ::view-transition-new(root){animation:vt-in .32s cubic-bezier(.2,.8,.2,1) both}
+    }
+    @keyframes vt-out{to{opacity:0}}
+    @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:var(--text-strong)}
+    .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .crumb-wrap+.article-wrap{padding-top:28px}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn btn-primary btn-sm">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Inteligência Artificial &amp; Automação</span>
+            <span class="article-date"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#calendar"/></svg>23 de novembro de 2026</span>
+            <span class="article-read"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clock"/></svg>7 min de leitura</span>
+          </div>
+          <h1>Governed AI &amp; Automation: como colocar agentes, APIs, memória e integrações sob governança</h1>
+          <p class="article-lead">Agentes, APIs e automações precisam de dono, identidade, escopo e um jeito de serem desligados. Este guia organiza esses controles e indica onde aprofundar.</p>
+        </header>
+        <div class="prose">
+          <p>Agentes de IA, APIs e automações já fazem parte da rotina de muitas empresas, muitas vezes sem passar pela TI. Governar esse conjunto significa saber quais identidades existem, o que cada uma pode acessar, onde ficam as chaves, o que o agente guarda em memória e como desativá-lo quando algo sai do esperado. Este guia organiza esses temas em seis blocos e indica os artigos da Oryxon que aprofundam cada um.</p>
+
+          <h2 id="agente-identidade-privilegiada"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#robot"/></svg>O agente é uma identidade privilegiada</h2>
+          <p>O OWASP Top 10 for Agentic Applications 2026 lista, entre os riscos de aplicações com agentes, o ASI03 "Identity and Privilege Abuse", isto é, o abuso de identidade e de privilégios.</p>
+          <p>Na análise da Oryxon, um agente que lê e-mails, abre chamados ou altera arquivos age em nome de alguém e, portanto, precisa ser tratado como usuário com direitos definidos. A questão central é quem aprova o acesso e quem responde por ele. O ponto de partida está em <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html">Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</a>, e a relação com Zero Trust está em <a href="/blog/agentes-ia-identidades-zero-trust-automacoes.html">Agentes de IA já são identidades corporativas: por que Zero Trust também vale para automações</a>.</p>
+          <p>Na análise da Oryxon, a pergunta prática para o gestor é: se este agente fosse um funcionário, qual cargo ele ocuparia e quem seria o responsável por ele? Responder isso força a definir limites de acesso, de aprovação e de registro antes que a ferramenta se espalhe pela empresa.</p>
+          <p>Também é recomendável registrar quem autorizou cada agente a operar, em que data e para qual finalidade. Esse registro simples facilita revisões futuras e evita que uma ferramenta testada por uma pessoa continue com acesso depois que o teste terminou.</p>
+
+          <h2 id="acesso-minimo-jit"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock-access"/></svg>Acesso mínimo, no momento em que é necessário</h2>
+          <p>As boas práticas de segurança do Model Context Protocol (MCP), na versão de 28/07/2026, determinam que servidores MCP não devem aceitar tokens que não tenham sido emitidos explicitamente para eles (o chamado "token passthrough"). O documento também trata da minimização de escopo, com um conjunto inicial reduzido de permissões, e prevê que o cliente mostre o comando exato, sem truncamento, antes de executar a configuração de um servidor local.</p>
+          <p>Na análise da Oryxon, o equivalente na rotina da PME é conceder ao agente apenas a permissão da tarefa em curso, por tempo limitado, e revogá-la ao final. Esse modelo de acesso sob demanda é detalhado em <a href="/blog/agente-de-ia-acesso-just-in-time.html">Agente de IA é uma identidade privilegiada: como limitar acessos sem bloquear a produtividade</a>.</p>
+          <p>Na análise da Oryxon, o acesso sob demanda tem um benefício adicional: cada concessão deixa um registro com data, motivo e responsável. Quando algo dá errado, esse histórico encurta a investigação. Sem ele, o time precisa reconstruir o que o agente fez a partir de pistas dispersas.</p>
+
+          <h2 id="credenciais-chaves"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#key"/></svg>Credenciais curtas e chaves sob controle</h2>
+          <p>Na análise da Oryxon, o erro mais comum com APIs não é sofisticado: uma chave fixa fica em um repositório, em uma planilha ou em um script esquecido e continua válida por anos. Credenciais de curta duração, emitidas para cada automação e com escopo restrito, limitam o dano quando algo vaza.</p>
+          <p>O raciocínio sobre credenciais temporárias está em <a href="/blog/credenciais-temporarias-automacoes-sem-chave-fixa.html">Zero Trust para automações: identidade própria, credencial curta e menor privilégio</a>. As consequências de uma chave esquecida, inclusive para a fatura de nuvem, estão em <a href="/blog/chave-de-api-esquecida-vazamento-dados.html">A chave de API esquecida que pode gerar vazamento de dados e uma fatura de nuvem inesperada</a>.</p>
+          <p>Na análise da Oryxon, um inventário de chaves de API, com origem, dono e data de criação, é um dos controles mais simples e mais negligenciados. Chaves sem dono ou sem uso recente devem ser revogadas; as demais devem ter escopo restrito e, quando o serviço permitir, validade curta.</p>
+          <p>Quando a chave precisa existir, ela deve ficar em um cofre de segredos e não em texto aberto, e o acesso a esse cofre deve ser registrado. A revogação rápida precisa estar ensaiada, para não depender de pesquisa durante um incidente.</p>
+
+          <h2 id="ferramentas-memoria"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#database"/></svg>Ferramentas, memória e integrações</h2>
+          <p>O mesmo OWASP Top 10 for Agentic Applications 2026 registra, entre outros, o ASI02 "Tool Misuse and Exploitation" (uso indevido e exploração de ferramentas) e o ASI06 "Memory &amp; Context Poisoning" (envenenamento de memória e de contexto).</p>
+          <p>Na análise da Oryxon, cada ferramenta conectada ao agente amplia o que ele consegue fazer, e a memória persistente pode carregar instruções indevidas de uma conversa para outra. Por isso a pergunta útil é se o agente está protegido, limitado e auditável, e não apenas conectado, como discutimos em <a href="/blog/agente-de-ia-protegido-limitado-auditavel.html">Seu agente de IA está protegido, limitado e auditável — ou apenas conectado?</a>.</p>
+          <p>Na análise da Oryxon, vale tratar a lista de ferramentas de um agente como uma lista de permissões: cada item precisa de justificativa. A memória persistente, por sua vez, deve ter regras sobre o que pode ser guardado, por quanto tempo e quem pode revisar ou apagar esse conteúdo, inclusive por exigência de privacidade.</p>
+          <p>Integrações com e-mail, calendário, armazenamento de arquivos e sistemas internos merecem atenção redobrada, porque misturam conteúdo de origem externa com permissões internas. Quanto menor o conjunto de ferramentas, menor a superfície a ser acompanhada.</p>
+
+          <h2 id="operar-producao"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clock-check"/></svg>Operar o que já está em produção</h2>
+          <p>O NIST AI Risk Management Framework, em sua função Manage, inclui a subcategoria MANAGE 2.4, sobre mecanismos para substituir, desengajar ou desativar sistemas de IA, e a MANAGE 4.1, sobre planos de monitoramento após a implantação.</p>
+          <p>Na análise da Oryxon, antes de abrir um novo piloto, vale confirmar que o que já está em uso tem dono, monitoramento e um procedimento claro para ser desligado. A discussão completa está em <a href="/blog/operar-ia-em-producao-antes-de-novo-piloto.html">A maioria das empresas não precisa de mais um piloto de IA — precisa operar o que já colocou em produção</a>.</p>
+          <p>Na análise da Oryxon, "operar" inclui medir se o agente continua entregando o esperado, registrar erros e quase-erros e revisar permissões quando o uso muda. Esses itens não exigem ferramentas sofisticadas; exigem dono e periodicidade definidos, e um canal para quem usa relatar comportamentos estranhos.</p>
+          <p>Outro ponto é a documentação mínima: o que o agente faz, que dados usa, quem aprova mudanças e como ele é desligado. Um documento curto e atualizado vale mais do que um manual extenso que ninguém consulta.</p>
+
+          <h2 id="custo-consumo"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#cloud"/></svg>Custo e consumo como sinal de alerta</h2>
+          <p>Na análise da Oryxon, um laço de automação mal configurado, uma chave exposta ou um agente que repete chamadas aparecem primeiro na fatura de nuvem. Alertas de orçamento, limites por chave e revisão mensal do consumo funcionam como controle e como sinal de incidente.</p>
+          <p>O tema é desenvolvido em <a href="/blog/custo-automacao-ia-nuvem-fora-de-controle.html">A conta de nuvem pode crescer sem ninguém perceber: como controlar custos de automação com IA</a>.</p>
+          <p>Na análise da Oryxon, alertas de orçamento por projeto e por chave são a forma mais rápida de perceber um problema, porque o consumo anormal costuma aparecer antes de qualquer outro sintoma. A revisão mensal da fatura, com quem criou cada recurso presente, completa o controle.</p>
+
+          <h2 id="por-onde-comecar"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#info-circle"/></svg>Por onde começar e limites deste guia</h2>
+          <p>Na análise da Oryxon, a governança de IA começa pelo inventário, e não por uma política longa. Antes de definir regras, a empresa precisa saber quais agentes, APIs e automações estão em uso, quem os criou e a quais dados eles chegam. Em muitos casos, parte desse uso acontece fora da área de TI, o que torna o levantamento a etapa mais reveladora.</p>
+          <p>As referências do OWASP, do MCP e do NIST citadas aqui são materiais públicos de terceiros e servem como vocabulário comum. O AI RMF, por exemplo, é um framework de uso voluntário e não uma obrigação legal. Cabe à empresa decidir quais controles adotar, conforme o risco do seu uso de IA e as exigências de privacidade que a atingem.</p>
+
+          <h2 id="checklist-ia"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#list-check"/></svg>Checklist de IA governada (adaptação da Oryxon)</h2>
+          <p>Use a lista como roteiro de conversa interna. Ela não mede maturidade nem substitui uma avaliação técnica.</p>
+
+          <ul class="checklist">
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Inventário de agentes e automações:</strong> cada agente, API e integração tem dono, finalidade e lista de sistemas acessados.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Identidade própria:</strong> nenhum agente usa a conta de uma pessoa; cada um tem identidade e permissões separadas.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Escopo mínimo:</strong> as permissões cobrem apenas a tarefa e são revisadas quando a tarefa muda.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Credenciais de curta duração:</strong> chaves fixas foram substituídas ou têm rotação, e não ficam em código ou planilhas.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Registro e monitoramento:</strong> ações do agente, uso de ferramentas e consumo ficam registrados e são revisados.</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Desativação:</strong> existe um procedimento para suspender o agente e revogar seus acessos rapidamente.</span></li>
+          </ul>
+
+          <div class="cta-article">
+            <h2>Quer avaliar seu ambiente com um olhar externo?</h2>
+            <p>A equipe da Oryxon Systems faz uma conversa inicial para entender o seu ambiente e indicar os próximos passos nas cidades do Alto Tietê e em Guarulhos.</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20diagn%C3%B3stico%20gratuito%20para%20minha%20empresa." target="_blank" rel="noopener" class="btn btn-primary"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar diagnóstico gratuito</a>
+          </div>
+
+          <div class="author-box">
+            <div class="author-avatar">U</div>
+            <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI<br>Oryxon Systems · Parceira oficial Help&nbsp;Digital&nbsp;São&nbsp;Paulo</span></div>
+          </div>
+
+          <div class="sources">
+            <h3>Fontes citadas neste artigo</h3>
+            <ul>
+              <li>OWASP GenAI Security Project — "OWASP Top 10 for Agentic Applications 2026": <a href="https://genai.owasp.org/top-10-for-agentic-applications-2026/" target="_blank" rel="noopener">genai.owasp.org/top-10-for-agentic-applications-2026/</a></li>
+              <li>Model Context Protocol — "Security Best Practices" (versão 2026-07-28): <a href="https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices" target="_blank" rel="noopener">modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices</a></li>
+              <li>NIST — "AI RMF Playbook: Manage" (MANAGE 2.4 e MANAGE 4.1): <a href="https://airc.nist.gov/airmf-resources/playbook/manage/" target="_blank" rel="noopener">airc.nist.gov/airmf-resources/playbook/manage/</a></li>
+              <li>NIST — "AI Risk Management Framework": <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">www.nist.gov/itl/ai-risk-management-framework</a></li>
+            </ul>
+          </div>
+
+          <div class="related">
+            <h3>Leia também</h3>
+            <a href="/blog/seu-agente-de-ia-e-um-usuario-privilegiado.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-lock"/></svg><div><strong>Seu agente de IA virou um usuário privilegiado. Alguém controla os acessos dele?</strong><span>Cibersegurança</span></div></a>
+            <a href="/blog/agente-de-ia-acesso-just-in-time.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-lock"/></svg><div><strong>Agente de IA é uma identidade privilegiada: como limitar acessos sem bloquear a produtividade</strong><span>Cibersegurança</span></div></a>
+            <a href="/blog/agente-de-ia-protegido-limitado-auditavel.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-lock"/></svg><div><strong>Seu agente de IA está protegido, limitado e auditável — ou apenas conectado?</strong><span>Cibersegurança</span></div></a>
+            <a href="/blog/operar-ia-em-producao-antes-de-novo-piloto.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-lock"/></svg><div><strong>A maioria das empresas não precisa de mais um piloto de IA — precisa operar o que já colocou em produção</strong><span>Inteligência Artificial &amp; Automação</span></div></a>
+          </div>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#agente-identidade-privilegiada">Agente como identidade</a></li>
+            <li><a href="#acesso-minimo-jit">Acesso mínimo</a></li>
+            <li><a href="#credenciais-chaves">Credenciais e chaves</a></li>
+            <li><a href="#ferramentas-memoria">Ferramentas e memória</a></li>
+            <li><a href="#operar-producao">Operar em produção</a></li>
+            <li><a href="#custo-consumo">Custo e consumo</a></li>
+            <li><a href="#por-onde-comecar">Por onde começar</a></li>
+            <li><a href="#checklist-ia">Checklist</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico gratuito</h3>
+          <p>Uma conversa inicial para entender seu ambiente e os próximos passos.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20diagn%C3%B3stico%20gratuito%20para%20minha%20empresa." target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — gestão de TI com SLA documentado.</p>
+          <a href="/managed-services.html" class="btn btn-secondary btn-sm">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div class="row-wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/suporte/">Central de Suporte</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # TASK — Oryxon Systems Site
 
-Última atualização: 2026-11-08
+Última atualização: 2026-11-23
 Propósito: acompanhar o que está em andamento, o backlog, as verificações pendentes e o que foi concluído.
 
 Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
@@ -16,7 +16,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Backlog
 
-- [ ] 2026-11-23 — Pilares 1-3 do lote 2026-11b refeitos em nova rodada — blog/
+- [x] 2026-11-23 — Pilares 1-3 do lote 2026-11b (identidade e segurança; IA governada; infraestrutura e continuidade) — blog/, blog.html, sitemap.xml, ARCHITECTURE.md — aguardando commit
 
 
 - [ ] 2026-10-21 — Revisar afirmações de que controles específicos são "obrigatórios/exigidos pela LGPD" (exige validação jurídica): `lgpd.html:346` e cards 349-377 ("deve", "não são conformes"), `lgpd.html:545`, `ciberseguranca.html:671` ("controles técnicos obrigatórios"), `blog/gestao-de-ti-suzano.html:253` e `:264`, `blog/ciberseguranca-itaquaquecetuba.html:260` ("Controles técnicos obrigatórios pela LGPD"), `blog/perguntas-cliente-grande-antes-renovar-contrato.html:231`
