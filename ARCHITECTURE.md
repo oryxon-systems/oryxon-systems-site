@@ -1,6 +1,6 @@
 # ARCHITECTURE — Oryxon Systems Site
 
-Última atualização: 2026-11-08
+Última atualização: 23 de novembro de 2026
 Propósito: descrever a stack, a estrutura de arquivos, as integrações e o fluxo de deploy.
 
 ## Stack
@@ -14,7 +14,7 @@ Compartilhados em `assets/` (uso): `js/consent.v1.js` (banner, consentimento, GA
 ```
 /                      index, sobre, solucoes, managed-services, ciberseguranca,
                        lgpd, privacidade, termos, blog (.html)
-blog/                  33 posts
+blog/                  36 posts (lote 2026-11b etapa A)
 cases/gregtur.html     case
 suporte/index.html     central de suporte
 auditoria-apps-ia/     serviço Auditoria de Apps Criados com IA (index.html)
@@ -31,7 +31,7 @@ Excluídos do deploy (`.vercelignore`): os mesmos mais `.claude/`, `CLAUDE.md`, 
 
 ## Mapa de páginas
 
-O sitemap lista 51 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 33 posts, 6 cidades, case, suporte, `auditoria-apps-ia/` (serviço, programa piloto). `/diagnostico` e `/diagnostico/` redirecionam (301/308) para `/#diagnostico` (não há pasta `diagnostico/`). Pastas `ti-*` e `suporte` sem barra final redirecionam para a versão com barra.
+O sitemap lista 54 URLs (`sitemap.xml`). Grupos: hubs da raiz (9 páginas), 36 posts, 6 cidades, case, suporte, `auditoria-apps-ia/` (serviço, programa piloto). `/diagnostico` e `/diagnostico/` redirecionam (301/308) para `/#diagnostico` (não há pasta `diagnostico/`). Pastas `ti-*` e `suporte` sem barra final redirecionam para a versão com barra.
 
 ## Assets
 

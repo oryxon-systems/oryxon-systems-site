@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://www.oryxonsystems.com.br/blog.html</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -303,6 +303,24 @@
   <url>
     <loc>https://www.oryxonsystems.com.br/blog/lgpd-evidencia-tecnica-pme.html</loc>
     <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/agentes-ia-exploram-falhas-reduzir-exposicao.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/credenciais-temporarias-automacoes-sem-chave-fixa.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html</loc>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

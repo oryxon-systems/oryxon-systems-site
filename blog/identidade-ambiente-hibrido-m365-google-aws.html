@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Identidade em ambiente híbrido e SaaS | Oryxon Systems</title>
+  <meta name="description" content="Um login comprometido abre e-mail, nuvem e SaaS ao mesmo tempo. Veja como centralizar identidades e controlar tokens e apps OAuth entre plataformas."/>
+  <link rel="canonical" href="https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html"/>
+  <meta property="og:title" content="Identidade em ambiente híbrido e SaaS | Oryxon Systems"/>
+  <meta property="og:description" content="Um login comprometido abre e-mail, nuvem e SaaS ao mesmo tempo. Veja como centralizar identidades e controlar tokens e apps OAuth entre plataformas."/>
+  <meta property="og:url" content="https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html"/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-site-verification" content="CkAtCAqN-dHOFc6Rn9Z7V0-eoIsFkHgesXKecFJcSMQ"/>
+  <script src="/assets/js/consent.v1.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.oryxonsystems.com.br/#organization",
+        "name": "Oryxon Systems",
+        "url": "https://www.oryxonsystems.com.br/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.oryxonsystems.com.br/#website",
+        "url": "https://www.oryxonsystems.com.br/",
+        "name": "Oryxon Systems",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.oryxonsystems.com.br/#person-uedson",
+        "name": "Uedson Azevedo",
+        "jobTitle": "CEO & Head de Infraestrutura de TI"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html#webpage",
+        "url": "https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html",
+        "name": "Identidade em ambiente híbrido e SaaS | Oryxon Systems",
+        "description": "Um login comprometido abre e-mail, nuvem e SaaS ao mesmo tempo. Veja como centralizar identidades e controlar tokens e apps OAuth entre plataformas.",
+        "isPartOf": {
+          "@id": "https://www.oryxonsystems.com.br/#website"
+        },
+        "inLanguage": "pt-BR",
+        "mainEntity": {
+          "@id": "https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html#article"
+        },
+        "breadcrumb": {
+          "@id": "https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html#article",
+        "headline": "Seu ambiente é híbrido — o atacante também: como proteger identidades entre Microsoft 365, Google, AWS e aplicações",
+        "description": "Um login comprometido abre e-mail, nuvem e SaaS ao mesmo tempo. Veja como centralizar identidades e controlar tokens e apps OAuth entre plataformas.",
+        "inLanguage": "pt-BR",
+        "datePublished": "2026-11-23",
+        "dateModified": "2026-11-23",
+        "author": {
+          "@id": "https://www.oryxonsystems.com.br/#person-uedson"
+        },
+        "publisher": {
+          "@id": "https://www.oryxonsystems.com.br/#organization"
+        },
+        "mainEntityOfPage": {
+          "@id": "https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html#webpage"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://www.oryxonsystems.com.br/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.oryxonsystems.com.br/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Identidade híbrida e SaaS",
+            "item": "https://www.oryxonsystems.com.br/blog/identidade-ambiente-hibrido-m365-google-aws.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/fonts/inter.css">
+  <link rel="stylesheet" href="/assets/css/tokens.v4.css">
+  <style>
+    :root{--bg:#020713;--text:#f7fbff;--muted:#a9bad1;--muted2:#71839d;--blue:#1478ff;--blue2:#00b7ff;--cyan:#67e8ff;--success:#37f5a1;--max:1100px;--glow-a:.12;--glow-b:0}
+    *{margin:0;padding:0;box-sizing:border-box}@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);overflow-x:hidden;line-height:1.7;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:linear-gradient(rgba(103,232,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,255,.12) 1px,transparent 1px);background-size:72px 72px;z-index:-1}
+    a{color:var(--blue2);text-decoration:none}a:not(.btn):hover{text-decoration:underline}
+    .nav-shell{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(2,7,19,.82);backdrop-filter:blur(22px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .brand-wordmark{display:flex;flex-direction:column;gap:1px}
+    .brand-wordmark span{font-size:1.1rem;font-weight:900;letter-spacing:.06em;background:linear-gradient(135deg,#fff 20%,#9df7ff 55%,#00b7ff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;line-height:1}
+    .brand-wordmark small{font-size:.52rem;letter-spacing:.38em;color:var(--muted);font-weight:700;text-transform:uppercase}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;font-weight:700}
+    .nav-links a{color:var(--muted);transition:.2s}.nav-links a:hover{color:#fff;text-decoration:none}
+    .article-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:52px;padding:52px 0 80px;align-items:start}
+    .article-main{min-width:0}
+    .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(103,232,255,.10)}
+    .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+    .article-cat{font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:var(--radius-pill);background:rgba(0,183,255,.10);border:1px solid rgba(103,232,255,.25);color:var(--cyan)}
+    .article-date,.article-read{color:var(--muted2);font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:5px}
+    h1{font-size:clamp(1.6rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.05em;margin-bottom:16px}
+    .article-lead{font-size:1.08rem;color:var(--text-soft);line-height:1.72}
+    .prose h2{font-size:1.35rem;font-weight:800;letter-spacing:-.04em;margin:36px 0 12px;color:var(--text-strong);padding-bottom:10px;border-bottom:1px solid rgba(103,232,255,.10);display:flex;align-items:center;gap:9px}
+    .prose h2 i,h2 svg{color:var(--cyan);font-size:1.1rem}
+    .prose h3{font-size:1.06rem;font-weight:700;margin:20px 0 8px;color:var(--text-soft)}
+    .prose p{color:var(--muted);margin-bottom:14px;font-size:.97rem;line-height:1.75}
+    .prose ul,.prose ol{color:var(--muted);padding-left:20px;margin-bottom:14px;display:grid;gap:7px;font-size:.97rem}
+    .prose li{padding-left:4px;line-height:1.65}
+    .prose strong{color:var(--text-strong);font-weight:700}
+    .checklist{list-style:none;padding-left:0;display:grid;gap:10px;margin:18px 0}
+    .checklist li{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.94rem;line-height:1.55;border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);border-radius:var(--radius-md);padding:11px 14px;min-width:0}
+    .checklist li>span{min-width:0}
+    .checklist i,.checklist svg{color:var(--cyan);font-size:1.05rem;flex-shrink:0;margin-top:2px}
+    .split-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .split-box{border-radius:var(--radius-lg);padding:18px;border:1px solid rgba(103,232,255,.16);background:rgba(255,255,255,.02)}
+    .split-box h4{display:flex;align-items:center;gap:8px;font-size:.95rem;color:var(--text-strong);margin-bottom:10px}
+    .split-box h4 i,h4 svg{color:var(--cyan)}
+    .split-box ul{padding-left:18px;color:var(--muted);font-size:.88rem;display:grid;gap:5px;margin:0}
+    .qbox{border:1px solid rgba(103,232,255,.18);background:rgba(255,255,255,.02);border-radius:var(--radius-lg);padding:18px 20px;margin:18px 0;display:flex;gap:14px;align-items:flex-start}
+    .qbox .qnum{flex-shrink:0;width:34px;height:34px;border-radius:var(--radius-full);background:var(--gradient-brand);display:grid;place-items:center;font-weight:900;color:#001224;font-size:.95rem}
+    .qbox .qbody h4{font-size:1rem;color:var(--text-strong);margin-bottom:6px}
+    .qbox .qbody p{margin:0;font-size:.92rem}
+    .callout{border:1px solid rgba(103,232,255,.22);background:rgba(0,183,255,.06);border-radius:var(--radius-lg);padding:16px 20px;margin:20px 0;display:flex;gap:12px;align-items:flex-start}
+    .callout i,.callout svg{color:var(--cyan);font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .callout p{margin:0;color:var(--info-text);font-size:.93rem;line-height:1.65}
+    .callout-warn{border-color:rgba(255,180,50,.22);background:rgba(255,120,0,.05)}
+    .callout-warn i,.callout-warn svg{color:var(--warn)}
+    .callout-warn p{color:var(--warn-text)}
+    .cta-mid{margin:36px 0;padding:26px 28px;border-radius:var(--radius-lg);border:1px solid rgba(103,232,255,.28);background:linear-gradient(135deg,rgba(0,183,255,.08),rgba(20,120,255,.04));display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .cta-mid h3{font-size:1.15rem;margin-bottom:4px;color:var(--text-strong)}
+    .cta-mid p{margin:0;color:var(--muted);font-size:.92rem}
+    .cta-article{margin:40px 0;padding:32px;border-radius:var(--radius-xl);background:linear-gradient(135deg,rgba(0,183,255,.10),rgba(20,120,255,.04));border:1px solid rgba(103,232,255,.22);text-align:left}
+    .cta-article h2{font-size:1.4rem;margin-bottom:8px;color:var(--text-strong);border:none;padding:0}
+    .cta-article p{color:var(--muted);margin-bottom:20px;max-width:680px}
+    .author-box{display:flex;gap:16px;align-items:center;padding:20px;border-radius:var(--radius-lg);border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02);margin:36px 0}
+    .author-avatar{width:52px;height:52px;border-radius:var(--radius-full);background:var(--gradient-brand);display:grid;place-items:center;font-weight:900;color:#001224;font-size:1.2rem;flex-shrink:0}
+    .author-info strong{display:block;color:var(--text-strong);font-size:.95rem}
+    .author-info span{color:var(--muted2);font-size:.82rem}
+    .sources{margin:32px 0;padding:20px;border-radius:var(--radius-md);border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.01)}
+    .sources h3{font-size:.88rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);margin-bottom:12px}
+    .sources ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .sources li{font-size:.82rem;color:var(--muted2);word-break:break-word}
+    .sources a{color:var(--blue2)}
+    .related{margin:40px 0;padding-top:28px;border-top:1px solid rgba(103,232,255,.10)}
+    .related h3{font-size:1rem;color:var(--text-strong);margin-bottom:16px}
+    .related a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--radius-md);border:1px solid rgba(103,232,255,.12);background:rgba(255,255,255,.02);color:var(--text-soft);margin-bottom:10px;transition:.2s}
+    .related a:hover{border-color:rgba(103,232,255,.35);background:rgba(0,183,255,.05);text-decoration:none;color:#fff}
+    .related a svg{color:var(--cyan);flex-shrink:0}
+    .related a strong{font-size:.9rem}
+    .related a span{display:block;font-size:.74rem;color:var(--muted2)}
+    .sidebar{position:sticky;top:96px;display:grid;gap:20px}
+    .sidebar-card{padding:22px;border-radius:var(--radius-lg);border:1px solid rgba(103,232,255,.14);background:rgba(255,255,255,.02)}
+    .sidebar-card h3{font-size:.95rem;color:var(--text-strong);margin-bottom:12px}
+    .sidebar-card p{color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:14px}
+    .sidebar-card ul.toc{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .sidebar-card ul.toc li a{color:var(--muted);font-size:.84rem;transition:.2s;display:block}
+    .sidebar-card ul.toc li a:hover{color:var(--cyan);text-decoration:none}
+    .page-footer{border-top:1px solid rgba(103,232,255,.10);padding:22px 0;color:var(--muted2);font-size:.83rem}
+    .page-footer .inner{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+    .page-footer a{color:var(--muted2)}.page-footer a:hover{color:#fff}
+    @media(max-width:900px){.article-wrap{grid-template-columns:1fr}.sidebar{position:static}.nav-links{display:none}.split-row{grid-template-columns:1fr}}
+    @media(max-width:480px){.article-wrap{padding:32px 0 56px}.cta-mid{flex-direction:column;align-items:flex-start}.cta-mid .btn{width:100%}.qbox{flex-direction:column}}
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    }
+    @media (prefers-reduced-motion: no-preference){
+      @view-transition{navigation:auto}
+      .nav-shell{view-transition-name:site-nav}
+      ::view-transition-old(root){animation:vt-out .22s cubic-bezier(.2,.8,.2,1) both}
+      ::view-transition-new(root){animation:vt-in .32s cubic-bezier(.2,.8,.2,1) both}
+    }
+    @keyframes vt-out{to{opacity:0}}
+    @keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+    .breadcrumb{padding-top:18px}
+    .breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px 8px;font-size:.82rem;color:var(--muted2)}
+    .breadcrumb li+li:before{content:"›";margin-right:8px}
+    .breadcrumb a{color:var(--muted)}
+    .breadcrumb [aria-current]{color:var(--text-strong)}
+    .crumb-wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .crumb-wrap+.article-wrap{padding-top:28px}
+  </style>
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="nav">
+      <a href="/" style="text-decoration:none"><div class="brand-wordmark"><span>ORYXON</span><small>SYSTEMS</small></div></a>
+      <nav class="nav-links"><a href="/blog.html">Blog</a><a href="/solucoes.html">Soluções</a><a href="/managed-services.html">Planos</a><a href="/sobre.html">Sobre</a></nav>
+      <a href="/#diagnostico" class="btn btn-primary btn-sm">Diagnóstico gratuito</a>
+    </div>
+  </header>
+  <main>
+    <div class="article-wrap">
+      <article class="article-main">
+        <header class="article-header">
+          <div class="article-meta">
+            <span class="article-cat">Cibersegurança</span>
+            <span class="article-date"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#calendar"/></svg>23 de novembro de 2026</span>
+            <span class="article-read"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#clock"/></svg>6 min de leitura</span>
+          </div>
+          <h1>Seu ambiente é híbrido — o atacante também: como proteger identidades entre Microsoft 365, Google, AWS e aplicações</h1>
+          <p class="article-lead">A infraestrutura da maioria das empresas não está confinada a um único provedor. E-mails e arquivos residem no Microsoft 365 ou Google Workspace, servidores rodam na AWS e equipes usam dezenas de ferramentas SaaS integradas. Quando um invasor compromete uma credencial ou obtém um consentimento OAuth indevido, ele não fica preso ao sistema inicial: move-se lateralmente entre plataformas.</p>
+        </header>
+        <div class="prose">
+          <p>Nas empresas contemporâneas, a rotina de trabalho distribui-se por múltiplos serviços em nuvem. As organizações operam em ecossistemas híbridos onde colaboradores alternam entre contas do Microsoft 365, documentos no Google Workspace, servidores em nuvens como AWS e rotinas em softwares como serviço (SaaS). Diferente de análises focadas apenas na categorização de identidades ou em golpes pontuais de intermediação (Adversary-in-the-Middle), este artigo analisa como criminosos utilizam a interconexão entre plataformas para se movimentar silenciosamente e como proteger tokens e autorizações OAuth entre nuvens.</p>
+
+          <h2 id="login-varias-plataformas"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#world"/></svg>Um login, várias plataformas: o risco do ambiente híbrido</h2>
+          <p>O relatório Cloud Threat Horizons (H1 2026, com dados do segundo semestre de 2025) da Google Cloud revela a dimensão do risco estrutural em ambientes multinuvem e SaaS: o comprometimento de identidades esteve presente em 83% dos incidentes corporativos investigados. A entrada por software de terceiros representou 44,5% dos casos, enquanto o abuso de relações de confiança com terceiros e erros de configuração responderam cada um por 21% das ocorrências (dados globais, não específicos de PMEs brasileiras).</p>
+
+          <p>A pesquisa detalhou um caso real em que uma relação de confiança federada via OIDC, configurada em uma esteira de integração contínua (CI/CD), foi explorada por atacantes. O acesso inicial indevido resultou no comprometimento total da infraestrutura de nuvem em apenas 72 horas. Em outro incidente documentado no mesmo relatório, tokens de autorização OAuth vinculados ao aplicativo Salesloft Drift foram utilizados por invasores para contornar defesas e exportar dados corporativos diretamente de instâncias do Salesforce.</p>
+
+          <p>Na análise da Oryxon, esses casos mostram que conexões de confiança e permissões delegadas também precisam de controle.</p>
+
+          <h2 id="caso-unc6040"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#spy"/></svg>UNC6040: do telefone ao Salesforce e ao Microsoft 365, sem explorar falha</h2>
+          <p>Uma das investigações mais elucidativas conduzidas pelo Google Threat Intelligence Group (GTIG), documentada no relatório "The Cost of a Call: From Voice Phishing to Data Extortion" (publicado em junho de 2025 e atualizado em agosto de 2025), analisou a operação do grupo de ameaça identificado como UNC6040. A campanha demonstrou como uma invasão atravessa ecossistemas corporativos inteiros sem explorar nenhuma falha de software nos sistemas-alvo.</p>
+
+          <p>A sequência técnica do ataque seguiu etapas claras de movimentação lateral entre plataformas:</p>
+
+          <div class="qbox">
+            <div class="qnum">1</div>
+            <div class="qbody">
+              <h4>Acesso inicial via engenharia social por telefone (vishing)</h4>
+              <p>Os operadores do UNC6040 ligaram para colaboradores da empresa simulando o suporte técnico interno de TI, induzindo as vítimas a acessar um portal falso que clonava a página de autenticação do provedor de identidade Okta.</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">2</div>
+            <div class="qbody">
+              <h4>Comprometimento das credenciais e app conectado no Salesforce</h4>
+              <p>No painel falso, o grupo pedia credenciais e códigos de MFA. Depois, a vítima era guiada até a tela de configuração de apps conectados do Salesforce e inseria um "código de conexão", vinculando ao ambiente uma versão modificada do Data Loader controlada pelos atacantes, não autorizada pela Salesforce. O GTIG afirma que nenhuma vulnerabilidade do Salesforce foi explorada.</p>
+            </div>
+          </div>
+
+          <div class="qbox">
+            <div class="qnum">3</div>
+            <div class="qbody">
+              <h4>Movimento lateral para Okta e Microsoft 365</h4>
+              <p>Com as credenciais obtidas, o grupo acessou e extraiu dados de outras plataformas da vítima, como Okta e Microsoft 365. A extorsão veio depois, às vezes meses após o roubo.</p>
+            </div>
+          </div>
+
+          <p>O caso UNC6040 mostra que, na ausência de controles rígidos de sessão e de restrições em aplicativos conectados, o atacante usa a própria arquitetura de integração da empresa para transitar de uma simples ligação telefônica até dados de várias plataformas.</p>
+
+          <p>Na análise da Oryxon, para uma pequena ou média empresa, a relevância dessa campanha está em desmistificar a ideia de que a invasão depende de um exploit sofisticado de software. Quando as aplicações corporativas confiam mutuamente em tokens e sessões pré-estabelecidas, a captura da identidade inicial basta para franquear o acesso aos demais serviços interligados.</p>
+
+          <h2 id="device-code-phishing"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#id-badge-2"/></svg>Device code phishing e consentimento OAuth</h2>
+          <p>Paralelamente às abordagens por voz, métodos sofisticados de abuso de protocolos padrão de autenticação vêm crescendo em incidentes reais. Em 5 de abril de 2026, a Cloud Security Alliance (CSA) publicou uma nota de pesquisa alertando sobre o aumento em ataques de <em>Device Code Phishing</em>.</p>
+
+          <p>Conforme destacado na nota da CSA, atribuído à Push Security, observou-se aumento de 37,5 vezes nessa modalidade de golpe (dados globais de fornecedor especializado, citados pela CSA). O fluxo do ataque explora o mecanismo legítimo de autenticação OAuth denominado Device Authorization Grant (OAuth Device Flow), originalmente desenhado para dispositivos com entrada limitada de texto, como smart TVs ou terminais de console.</p>
+
+          <p>No golpe, a vítima recebe uma mensagem convincente instruindo-a a acessar uma URL oficial do provedor (como <code>microsoft.com/devicelogin</code>) e inserir um código de dispositivo fornecido pelo atacante. Ao autenticar-se e autorizar o código em sua conta corporativa legítima, a vítima não transfere sua senha, mas sim concede a emissão de um token de acesso diretamente no dispositivo do invasor. A CSA recomenda que organizações sem necessidade do Device Code Flow o bloqueiem por meio de políticas de Acesso Condicional (Conditional Access) no Microsoft Entra ID.</p>
+
+          <div class="cta-mid">
+            <div>
+              <h3>Diagnóstico gratuito</h3>
+              <p>Uma conversa inicial para entender seu ambiente e os próximos passos.</p>
+            </div>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20de%20seguran%C3%A7a%20de%20identidades%20e%20tokens%20OAuth." target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar avaliação</a>
+          </div>
+
+          <h2 id="troca-senha-nao-encerra"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#lock"/></svg>Por que trocar a senha pode não encerrar o acesso</h2>
+          <p>Segundo a nota da CSA, refresh tokens podem durar até 90 dias e se renovam a cada uso; por isso, a troca de senha pode não bastar, e é preciso revogar sessões e rever consentimentos OAuth.</p>
+
+          <p>Na prática, quando uma autenticação é concluída com sucesso, o provedor de identidade emite tokens de acesso (access tokens) e tokens de atualização (refresh tokens), que costumam ser armazenados no navegador ou na aplicação cliente. Se o invasor capturou esse token de sessão, o protocolo OAuth continuará renovando o acesso do invasor sem consultar novamente a senha da conta até que a sessão seja explicitamente revogada no painel administrativo do provedor de identidade.</p>
+
+          <p>Da mesma forma, se a vítima autorizou previamente um aplicativo malicioso ou concedeu permissões amplas de leitura de e-mails via OAuth, o aplicativo continuará conectado diretamente às APIs de nuvem mesmo após dezenas de alterações de senha, exigindo a revogação manual de todos os consentimentos de terceiros concedidos na conta.</p>
+
+          <h2 id="idp-central-mfa-governanca"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-check"/></svg>IdP central, MFA resistente a phishing e governança de tokens</h2>
+          <p>Para fechar essas brechas estruturais em ambientes corporativos que combinam múltiplos serviços em nuvem, a equipe técnica da Oryxon orienta a aplicação de três pilares de governança de identidades:</p>
+
+          <div class="split-row">
+            <div class="split-box">
+              <h4><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#id-badge-2"/></svg>Centralização em um IdP único</h4>
+              <p>O relatório Mandiant M-Trends 2026 recomenda direcionar todas as aplicações SaaS para um provedor de identidade central (IdP). Centralizar o login no Microsoft Entra ID ou Google Workspace permite aplicar políticas de segurança uniformes e revogar acessos de um usuário de forma coordenada.</p>
+            </div>
+            <div class="split-box">
+              <h4><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-lock"/></svg>MFA resistente a phishing</h4>
+              <p>O Cloud Threat Horizons recomenda MFA resistente a phishing, com chaves físicas ou passkeys FIDO2, assegurando que códigos não sejam capturados em conexões intermediárias.</p>
+            </div>
+          </div>
+
+          <p>Complementarmente, a governança de consentimento OAuth deve ser travada no nível do locatário (tenant): colaboradores não devem ter permissão para conceder consentimento livre a qualquer aplicativo que solicite leitura de dados corporativos. Toda integração de software deve exigir aprovação prévia de um administrador de TI homologado.</p>
+
+          <h2 id="checklist-identidades-sessoes"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#list-check"/></svg>Checklist de identidades e sessões (adaptação da Oryxon)</h2>
+          <p>Abaixo apresentamos o checklist adaptado pela Oryxon Systems para que sua empresa audite a segurança de identidades, sessões e aplicações conectadas entre múltiplas plataformas:</p>
+
+          <ul class="checklist">
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Bloqueio de Device Code Flow:</strong> o fluxo de autorização por código de dispositivo (Device Code Flow) foi desabilitado via políticas de Acesso Condicional para usuários padrão?</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Controle de consentimento de usuários para apps:</strong> a permissão para que usuários comuns autorizem novos aplicativos OAuth de terceiros foi bloqueada, exigindo fluxo de aprovação de TI?</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Auditoria periódica de aplicativos conectados:</strong> o inventário de aplicações integradas ao Microsoft 365, Google Workspace e Salesforce é revisado trimestralmente para revogar permissões inativas?</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Procedimento padrão de revogação de sessões:</strong> a rotina de desligamento ou resposta a incidentes inclui a invalidação explícita de tokens e sessões ativas no IdP, além da redefinição de senha?</span></li>
+            <li><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#square-rounded-check"/></svg><span><strong>Unificação de acessos via Single Sign-On (SSO):</strong> aplicações em nuvem e ferramentas de trabalho conectam-se por padrão através do provedor de identidade central da organização?</span></li>
+          </ul>
+
+          <div class="cta-article">
+            <h2>Sua empresa controla as identidades que navegam entre suas nuvens?</h2>
+            <p>A Oryxon Systems estrutura a centralização de acessos, revogação de tokens e governança de aplicativos SaaS para organizações do Alto Tietê e de Guarulhos, fechando o caminho de movimentação lateral de invasores.</p>
+            <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20diagn%C3%B3stico%20gratuito%20de%20identidades%20h%C3%ADbridas%20e%20SaaS." target="_blank" rel="noopener" class="btn btn-primary"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar diagnóstico gratuito</a>
+          </div>
+
+          <div class="author-box">
+            <div class="author-avatar">U</div>
+            <div class="author-info"><strong>Uedson Azevedo</strong><span>CEO & Head de Infraestrutura de TI<br>Oryxon Systems · Parceira oficial Help&nbsp;Digital&nbsp;São&nbsp;Paulo</span></div>
+          </div>
+
+          <div class="sources">
+            <h3>Fontes citadas neste artigo</h3>
+            <ul>
+              <li>Google Threat Intelligence Group (GTIG) — "The Cost of a Call: From Voice Phishing to Data Extortion" (04/06/2025, atualizado em ago/2025): <a href="https://cloud.google.com/blog/topics/threat-intelligence/voice-phishing-data-extortion" target="_blank" rel="noopener">cloud.google.com/blog/topics/threat-intelligence/voice-phishing-data-extortion</a></li>
+              <li>Google Cloud — "Cloud Threat Horizons Report H1 2026" (dados do 2º semestre de 2025): <a href="https://services.google.com/fh/files/misc/cloud_threat_horizons_report_h12026.pdf" target="_blank" rel="noopener">services.google.com/fh/files/misc/cloud_threat_horizons_report_h12026.pdf</a></li>
+              <li>Mandiant — "M-Trends 2026" (dados de 2025): <a href="https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026" target="_blank" rel="noopener">cloud.google.com/blog/topics/threat-intelligence/m-trends-2026</a></li>
+              <li>Cloud Security Alliance (CSA) — "Research Note: OAuth Device Code Phishing Surge" (05/04/2026, com dados reportados pela Push Security): <a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-oauth-device-code-phishing-surge-20260405/" target="_blank" rel="noopener">labs.cloudsecurityalliance.org/research/csa-research-note-oauth-device-code-phishing-surge-20260405/</a></li>
+              <li>NIST e CISA — "NIST IR 8587 (Final): Protection of Tokens and Assertions" (15/09/2026, voltado a órgãos federais e provedores de nuvem): <a href="https://csrc.nist.gov/pubs/ir/8587/final" target="_blank" rel="noopener">csrc.nist.gov/pubs/ir/8587/final</a></li>
+            </ul>
+          </div>
+
+          <div class="related">
+            <h3>Leia também</h3>
+            <a href="/blog/identidade-e-o-novo-perimetro.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#id-badge-2"/></svg><div><strong>Identidade é o novo perímetro: usuários, tokens, automações e agentes precisam do mesmo rigor</strong><span>Cibersegurança</span></div></a>
+            <a href="/blog/farsa-firewall-mfa-ataque-aitm.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#alert-triangle"/></svg><div><strong>A farsa do "Temos Firewall e MFA": por que empresas paulistas estão caindo em golpes que não usam senha roubada</strong><span>Cibersegurança</span></div></a>
+            <a href="/blog/agentes-ia-identidades-zero-trust-automacoes.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#shield-lock"/></svg><div><strong>Agentes de IA já são identidades corporativas: por que Zero Trust também vale para automações</strong><span>Cibersegurança</span></div></a>
+            <a href="/blog/chave-de-api-esquecida-vazamento-dados.html"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#key"/></svg><div><strong>A chave de API esquecida que pode gerar vazamento de dados e uma fatura de nuvem inesperada</strong><span>Cibersegurança</span></div></a>
+          </div>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul class="toc">
+            <li><a href="#login-varias-plataformas">Risco do ambiente híbrido</a></li>
+            <li><a href="#caso-unc6040">Caso UNC6040</a></li>
+            <li><a href="#device-code-phishing">Device code phishing</a></li>
+            <li><a href="#troca-senha-nao-encerra">Troca de senha e tokens</a></li>
+            <li><a href="#idp-central-mfa-governanca">IdP central e MFA</a></li>
+            <li><a href="#checklist-identidades-sessoes">Checklist de identidades</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>Diagnóstico gratuito</h3>
+          <p>Uma conversa inicial para entender seu ambiente e os próximos passos.</p>
+          <a href="https://wa.me/5511934932992?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20Diagn%C3%B3stico%20de%20Identidades%20em%20Nuvem." target="_blank" rel="noopener" class="btn btn-primary btn-sm"><svg class="ti" aria-hidden="true" focusable="false"><use href="/assets/icons/sprite.v1.svg#brand-whatsapp"/></svg>Solicitar agora</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Ver planos MSP</h3>
+          <p>Basic, Standard e Professional — gestão de TI com SLA documentado.</p>
+          <a href="/managed-services.html" class="btn btn-secondary btn-sm">Ver planos →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="inner">
+      <span>© 2026 Oryxon Systems — CNPJ: 66.498.962/0001-20</span>
+      <div class="row-wrap"><a href="/blog.html">← Blog</a><a href="/privacidade.html">Privacidade</a><a href="/suporte/">Central de Suporte</a><a href="/">Site</a></div>
+    </div>
+  </footer>
+  <script>
+    const ss=document.querySelectorAll('[id]');const tl=document.querySelectorAll('.toc a');
+    const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){tl.forEach(l=>l.style.color='');const a=document.querySelector(`.toc a[href="#${x.target.id}"]`);if(a)a.style.color='#67e8ff';}}),{rootMargin:'-30% 0px -60% 0px'});
+    ss.forEach(s=>ob.observe(s));
+  </script>
+</body>
+</html>

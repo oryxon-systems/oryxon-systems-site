@@ -16,6 +16,8 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 
 ## Backlog
 
+- [ ] 2026-11-23 — Pilares 1-3 do lote 2026-11b refeitos em nova rodada — blog/
+
 
 - [ ] 2026-10-21 — Revisar afirmações de que controles específicos são "obrigatórios/exigidos pela LGPD" (exige validação jurídica): `lgpd.html:346` e cards 349-377 ("deve", "não são conformes"), `lgpd.html:545`, `ciberseguranca.html:671` ("controles técnicos obrigatórios"), `blog/gestao-de-ti-suzano.html:253` e `:264`, `blog/ciberseguranca-itaquaquecetuba.html:260` ("Controles técnicos obrigatórios pela LGPD"), `blog/perguntas-cliente-grande-antes-renovar-contrato.html:231`
 
@@ -55,6 +57,7 @@ Formato: `- [ ] AAAA-MM-DD — descrição — arquivo(s)`.
 - [ ] 2026-10-20 — `ti-*/`: box "Parceira oficial" Help Digital ainda com `style=""` inline (não é botão; Fase 1b) — `ti-*/index.html`
 
 ## Concluído
+- [x] 2026-11-23 — Lote 2026-11b (Etapa A): 3 artigos específicos concluídos (`agentes-ia-exploram-falhas-reduzir-exposicao`, `credenciais-temporarias-automacoes-sem-chave-fixa`, `identidade-ambiente-hibrido-m365-google-aws`); `blog.html` (36 cards e JSON-LD), `sitemap.xml` (54 URLs) e `ARCHITECTURE.md` atualizados — aguardando commit. (1.000 a 1.400). Aguardando commit — `blog/agentes-ia-exploram-falhas-reduzir-exposicao.html`, `blog/credenciais-temporarias-automacoes-sem-chave-fixa.html`, `blog/identidade-ambiente-hibrido-m365-google-aws.html`, `blog.html`, `sitemap.xml`, `ARCHITECTURE.md`
 
 - [x] 2026-11-08 — Índice de projetos com preview que segue o cursor em `index.html` (`#projetos`, `projetos.v1.css` + `projetos.v2.js`, dados em HTML; ADR-021). Pendências (Uedson): (1) fornecer `assets/img/cases/gregtur.webp` e preencher `data-img` do GregTur em `index.html`; (2) preencher as entradas-modelo `TODO Uedson` (comentários HTML) só com dados reais; (3) `assets/img/cases/logo.png` está sem uso; (4) rever visualmente no navegador (não testado aqui) e atualizar `sitemap.xml` lastmod da home se desejar.
 
