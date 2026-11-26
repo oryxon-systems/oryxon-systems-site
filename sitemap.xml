@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://www.oryxonsystems.com.br/blog.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -339,6 +339,12 @@
   <url>
     <loc>https://www.oryxonsystems.com.br/blog/infraestrutura-continuidade-negocio-pme.html</loc>
     <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oryxonsystems.com.br/blog/golpe-do-falso-advogado-como-proteger-escritorio.html</loc>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
